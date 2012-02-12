@@ -417,5 +417,10 @@ class VenueService {
 		return $getYourVenueMySQLManager->getVenues($regionId, $categoryId, $capacityId);
 
 	} //function
+	
+	function autoSuggestVenue($autoSuggest) {
+		$newData = new GetYourVenueMySQLManager();
+		$newData->getVenueJson($autoSuggest);
+	} //function
 }
 ?>
