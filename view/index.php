@@ -113,6 +113,7 @@
                     <option value="ghaziabad">Ghaziabad</option>
                     <option value="noida">Noida</option>
                     <option value="gurgaon">Gurgaon</option>
+                    <option value="destination-wedding">Destination Wedding</option>
                   </select>
                   <label>Category of Venue:</label>
                   <select name="category" id="category">
@@ -120,6 +121,8 @@
                     <option value="farm-house">Farm House</option>
                     <option value="banquet-hall">Banquet Hall</option>
                     <option value="hotel">Hotels</option>
+                    <option value="5-star-banquets">5 Star Banquets</option>
+                    <option value="wedding-tent-houses">Wedding Tent Houses</option>
                   </select>
                   <label>No. of Guests:</label>
                   <select name="capacity" id="capacity">

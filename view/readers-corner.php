@@ -32,6 +32,8 @@ in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi">
 	                	<li><a href="../articles/flamboyant-venues-in-delhi">Elegant, Beautiful and flamboyant Wedding Venues in Delhi</a></li>
 	                	<li><a href="../articles/decor-tips-for-banquet-halls-in-delhi">Fun Ideas for Decorating Delhi Banquet Halls & Making Your Banquet a place of reminiscence</a></li>
 	                	<li><a href="../articles/tips-for-booking-delhi-banquet-halls">Booking Delhi Banquet Halls? Here are some tips to pick up the best</a></li>
+	                	<li><a href="../articles/choosing-perfect-delhi-wedding-venue">Choosing The Perfect Delhi Wedding Venue</a></li>
+	                	<li><a href="../articles/know-about-delhi-wedding-venues">Know About Delhi Wedding Venues</a></li>
 	                </ul>
               </div>
             </div>
