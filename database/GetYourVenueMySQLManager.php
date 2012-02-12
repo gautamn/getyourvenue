@@ -841,6 +841,31 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 	}//function
 	
+	// fuction to get auto suggest data from the database
+	function getVenueJson($autoSuggest){
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			$input = $autoSuggest;
+			$data = array();
+			// query your DataBase here looking for a match to $input
+			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%'");
+		    while ($row = mysql_fetch_assoc($query)) {
+		    	$json = array();
+	      		$json['value'] = $row['venueid'];
+	      		$json['name'] = $row['name'];
+	      		$data[] = $json;
+	      	}
+	      header("Content-type: application/json");
+	      echo json_encode($data);
+		}
+		mysql_close($connection);
+	}//function
+	
+	
 }
 
 ?>
