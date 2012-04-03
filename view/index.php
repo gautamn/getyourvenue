@@ -1,6 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="stylesheet" href="css/autoSuggest.css">
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.autoSuggest.minified.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   $(function(){
+   $("input[type=text]").autoSuggest("/actionController/SearchController.php", {minChars: 2, matchCase: true, selectionLimit: 1});
+});
+ });
+</script>
+ 
+  <form action="" method="get" name="autosuggestform">
+	  <input type="text" />
+	  <input type="submit" value="search"/>
+  </form>
+ 
+ 
 <title>Wedding Venues in Delhi NCR| Book Marriage Venues in South Delhi & NCR</title>
     <meta name="description" content="Wedding Venues in Delhi & NCR including South Delhi, GT Karnal Road, Chattarpur and other Delhi wedding hot spots can now be booked at your door step! Wedding & Marriage Venues experts, GetYourVenue.com are always at your quick service.">
     <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr,delhi wedding venues,wedding venues in south delhi,marriage venues delhi">
