@@ -28,6 +28,26 @@ if ($action == "searchVenue") {
 	require_once ("../view/searchresults.php");
 }
 
+if ($action == "viewSearchResult") {
+	
+	$page=1;
+	if(array_key_exists('page', $_GET) && $_GET['page']!=null) {
+	 $page = $_GET['page'];
+	}	
+	
+	$venueService = new VenueService();
+	$venueList = $venueService->getVenueBySearchResult();
+	$maxPages=ceil(count($venueList)/10);
+	$regionName= "";
+	$categoryName = "";
+	$capacityValue = "";
+	/*$regionName = $venueService->getRegion();
+	$categoryName = $venueService->getCategory();
+	$capacityValue = $venueService->getCapacity();*/
+	
+	require_once ("../view/searchresults.php");
+}
+
 if ($action == "viewChoices") {
 	
 	$page=1;

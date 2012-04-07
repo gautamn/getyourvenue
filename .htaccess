@@ -33,6 +33,7 @@ RewriteRule ^wedding-venues-in-NH8-Pushpanjali$ /search_results?option=4&action=
 RewriteRule ^wedding-venues-in-Vaishali-Vasundhara$ /search_results?option=5&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-delhi-NCR$ /search_results?action=viewChoices [L]
 RewriteRule ^venue/(.*)$  /view/venue-details.php?venueid=$1&action=viewChoices
+RewriteRule ^searchVenue/(.*)$  /search_results [L]
 
 RewriteRule ^contact-confirmation$   /actionController/ConfirmationController.php [L]
 RewriteRule ^booking-confirmation$   /actionController/BookingController.php [L]

@@ -88,7 +88,7 @@ p {
 #header .topNav ul {
     float: left;
     list-style: none outside none;
-    margin: 0 0 0 70px;
+    margin: 0 0 0 0px;
     padding: 0;
 }
 #header .topNav ul li {
@@ -312,17 +312,25 @@ p {
 .homeSearch label {
     display: block;
     font: bold 12px Tahoma,Geneva,sans-serif;
-    margin: 20px 0 10px;
+    margin: 0px 0 8px;
 }
 .homeSearch select {
     border: 1px solid #F8039C;
-    margin: 0 0 15px;
+    margin: 0 0 16px;
     padding: 2px;
     width: 100%;
 }
 .button {
     margin: 30px 0 0 50px;
 }
+.button-sear {
+	margin: 0px 0 15px 0px;
+	float: right;
+	}
+.button-s {
+    margin: 10px 0 15px 50px;
+}
+
 .ourUnique {
     list-style: none outside none;
     margin: 0;
@@ -384,7 +392,7 @@ p.dec {
     border: 1px solid #F8039C;
     font: 11px Tahoma,Geneva,sans-serif;
     padding: 5px 15px;
-    width: 240px;
+    width: 170px;
 }
 .contactform .txt-area {
     border: 1px solid #F8039C;
@@ -446,6 +454,13 @@ p.dec {
     border: 2px solid #F8039C;
     height: 276px;
     width: 529px;
+	margin: 0 10px 10px 0;
+}
+.image-slider-small {
+    border: 2px solid #F8039C;
+    height: 200px;
+    width: 350px;
+	margin: 0 10px 0 0;
 }
 .nivoSlider {
     position: relative;
@@ -576,7 +591,8 @@ p.dec {
     color: #FFFFFF;
 }
 .latest-news {
-    width: 230px;
+    /*width: 230px;*/
+	text-align: justify;
 }
 .latest-news p {
     line-height: 17px;
@@ -779,5 +795,24 @@ span.searchOpt {
     padding: 10px;
     width: 97%;
 }
-
-
+.addthis_toolbox {
+	margin: 8px 0 0 0;
+}
+.addthis_toolbox a {
+	padding: 0!important;
+} 
+.sns-icon {
+	float: right;
+	margin: 6px 0 0 0;
+	width: 174px;
+	text-align: left;
+}
+.sns-icon li {
+	float: left;
+	width: 85px!important;
+	background: none!important;
+	padding: 8px 0 0 0;
+}
+.divider {
+	margin: -2px 0 0 25px;
+}

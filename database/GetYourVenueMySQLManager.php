@@ -9,7 +9,7 @@ require_once ("../model/Capacity.php");
 require_once ("../model/PopularChoice.php");
 
 class GetYourVenueMySQLManager {
-
+  
 	function getVenues($regionId, $categoryId, $capacityId) {
 
 		$dbConstants = new DBConstants();
@@ -244,6 +244,38 @@ class GetYourVenueMySQLManager {
 			//echo $query;
 			while ($row = mysql_fetch_array($result)) {
 
+				$venue = new Venue();
+				$venue->id = $row['id'];
+				$venue->venueId = $row['venueid'];
+				$venue->venueName = $row['name'];
+				$venue->venueAddr1 = $row['address1'];
+				$venue->venueAddr2 = $row['address2'];
+				$venue->content = $row['content'];
+				$venueList[] = $venue;
+			}
+		}
+
+		mysql_close($connection);
+		return $venueList;
+
+	}
+
+       function getVenueBySearchResult($venueName) {
+
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$venueList = array ();
+
+		$dataBaseResponse = "";
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE 
+									      ve.name LIKE '%" . $venueName . "%' ORDER BY ve.rank";
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_array($result)) {
 				$venue = new Venue();
 				$venue->id = $row['id'];
 				$venue->venueId = $row['venueid'];
@@ -840,8 +872,8 @@ class GetYourVenueMySQLManager {
 
 		mysql_close($connection);
 	}//function
-	
-	// fuction to get auto suggest data from the database
+
+        // fuction to get auto suggest data from the database
 	function getVenueJson($autoSuggest){
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
@@ -854,17 +886,19 @@ class GetYourVenueMySQLManager {
 			// query your DataBase here looking for a match to $input
 			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%'");
 		    while ($row = mysql_fetch_assoc($query)) {
-		    	$json = array();
-	      		$json['value'] = $row['venueid'];
-	      		$json['name'] = $row['name'];
-	      		$data[] = $json;
+		    	//$json = array();
+		    	//$json['query'] = $input;
+	      		//$json['data'] = $row['venueid'];
+	      		//$json['suggestions'] = $row['name'];
+	      		$data = $row['name'];
+	      		echo ($data);
+	      		echo ("\n");
 	      	}
-	      header("Content-type: application/json");
-	      echo json_encode($data);
+	      //header("Content-type: application/json");
+	      //echo $data;
 		}
 		mysql_close($connection);
 	}//function
-	
 	
 }
 
