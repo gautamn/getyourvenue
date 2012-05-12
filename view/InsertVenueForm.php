@@ -83,10 +83,13 @@
 		</td>
 	</tr>
 	<tr>
-		<td width="20%">VenueIdentifier:</td>
+		<td width="20%">Seo Id:</td>
 		<td width="5%">&nbsp;</td>
 		<td>
 			<input type="text" name="venueIdentifier" size="60">
+		</td>
+		<td>
+			Example if name is "Shri durga palace" Seo Id can be "shri-durga-palace". please do not use double quotes and spaces betten the seo ids.
 		</td>
 	</tr>
 	<tr>
@@ -95,6 +98,11 @@
 		<td>
 			<input type="text" name="venueName" size="50">
 		</td>
+	</tr>
+	<tr>
+		<td width="20%">Rank:</td>
+		<td width="5%">&nbsp;</td>
+		<td><input type="text" name="rank" size="10"></td>
 	</tr>
 	<tr>
 		<td width="20%">VenueAddr1:</td>
