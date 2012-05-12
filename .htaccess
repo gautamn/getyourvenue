@@ -38,12 +38,13 @@ RewriteRule ^searchVenue/(.*)$  /search_results [L]
 RewriteRule ^contact-confirmation$   /actionController/ConfirmationController.php [L]
 RewriteRule ^booking-confirmation$   /actionController/BookingController.php [L]
 
-
 RewriteRule ^articles/flamboyant-venues-in-delhi$   /articles/venues-in-delhi.php [L]
 RewriteRule ^articles/decor-tips-for-banquet-halls-in-delhi$   /articles/banquethall-in-delhi.php [L]
 RewriteRule ^articles/tips-for-booking-delhi-banquet-halls$   /articles/tips-in-booking-delhiBanquetHalls.php [L]
 RewriteRule ^articles/choosing-perfect-delhi-wedding-venue$   /articles/choosing-perfect-delhi-wedding-venue.php [L]
 RewriteRule ^articles/know-about-delhi-wedding-venues$   /articles/know-about-delhi-wedding-venues.php [L]
+RewriteRule ^perfect-wedding-music-bands$   /article/perfect-wedding-music-bands.php [L]
+
 RewriteRule ^music-band-mystique$   /view/music-band.php [L]
 
 
