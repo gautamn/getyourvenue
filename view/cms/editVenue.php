@@ -1,10 +1,12 @@
 <?php
 /*
- * Created on Jul 21, 2011
+ * Created on Jul 25, 2011
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
+ require_once ("../database/GetYourVenueMySQLManager.php");
+ require_once ("../model/Region.php");
 ?>
 <h2>Edit Venue</h2><hr><br>
 <table>
@@ -16,9 +18,78 @@
 	</tr>
 	
 	<tr>
+		<td width="20%">Region:</td>
+		<td>
+			<select name="regionList">
+			<?php
+				$databaseManager = new GetYourVenueMySQLManager();
+				$regionList = $databaseManager->getRegionList();
+				for($i=0;$i<count($regionList);$i++){
+					if($regionList[$i]->regionId == $venueList[0]->regionid){
+						echo "<option value=".$regionList[$i]->regionId." SELECTED>".$regionList[$i]->regionName."</option>";
+					}
+					else{
+						echo "<option value=".$regionList[$i]->regionId.">".$regionList[$i]->regionName."</option>";
+					}
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	
+	<!--<tr>
+		<td width="20%">VenueType:</td>
+		<td >
+			<select name="venueTypeList[]" multiple="multiple">
+			<?php
+				$databaseManager = new GetYourVenueMySQLManager();
+				$venueTypeList = $databaseManager->getVenueTypeList();
+				for($i=0;$i<count($venueTypeList);$i++)
+					echo "<option value=".$venueTypeList[$i]->venueTypeId.">".$venueTypeList[$i]->venueTypeName."</option>";
+			?>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="20%">Capacity:</td>
+		<td>
+			<select name="capacityList[]" multiple="multiple">
+			<?php
+				$databaseManager = new GetYourVenueMySQLManager();
+				$capacityList = $databaseManager->getCapacityList();
+				for($i=0;$i<count($capacityList);$i++)
+					echo "<option value=".$capacityList[$i]->capacityId.">".$capacityList[$i]->capacityRange."</option>";
+			?>
+			</select>
+		</td>
+	</tr>-->
+	
+	<tr>
+		<td width="20%">PopularChoice:</td>
+		<td>
+			<select name="popularChoiceList" >
+			<?php
+				$databaseManager = new GetYourVenueMySQLManager();
+				$popularChoiceList = $databaseManager->getPopularChoiceList();
+				for($i=0;$i<count($popularChoiceList);$i++)
+				if($popularChoiceList[$i]->popularChoiceId == $venueList[0]->popularchoiceid){
+					echo "<option value=".$popularChoiceList[$i]->popularChoiceId." SELECTED>".$popularChoiceList[$i]->popularChoiceName."</option>";
+				}else{
+					echo "<option value=".$popularChoiceList[$i]->popularChoiceId.">".$popularChoiceList[$i]->popularChoiceName."</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>	
+	
+	<tr>
 		<td width="20%">SEOId:</td>
 		<td><input type="text" name="venueid" value="<?php echo $venueList[0]->venueId  ?>" size='50' ></td>
 		<input type="hidden"  value="<?php echo $venueList[0]->venueId ?>">
+		<td>
+			Example if name is "Shri durga palace" Seo Id can be "shri-durga-palace". please do not use double quotes and spaces between the seo ids.
+		</td>
 	</tr>
 	<tr>
 		<td width="20%">Name:</td>

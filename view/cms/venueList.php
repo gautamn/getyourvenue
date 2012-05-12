@@ -17,6 +17,7 @@
 	<span align='right'><a href='logout'>Logout</a></span><hr>
 </div>
 <a href="../view/InsertVenueForm.php" target="_blank">Insert New Venue</a>
+<a href="../../actionController/CSMController.php?action=viewReport" target="_blank">View Report</a>
 <?php
 if (isset ($message)) echo $message;
 ?>
@@ -27,7 +28,7 @@ if (isset ($message)) echo $message;
 		<td  width="50%"><b>VenueAddr.</b></td>
 		<td  width="10%"><b>Action</b></td>
 	</tr>
-<?php	for ($i = 0; $i < count($venueList); $i++) { ?>		
+<?php	for ($i = 0; $i < count($venueList); $i++) { ?>
     <tr>
 <?php
 echo "<td width='5%' >" . $venueList[$i]->venueId . "</td>";
