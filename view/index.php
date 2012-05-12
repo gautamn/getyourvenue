@@ -1,35 +1,57 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="stylesheet" href="css/autoSuggest.css">
-<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.autoSuggest.minified.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-   $(function(){
-   $("input[type=text]").autoSuggest("/actionController/SearchController.php", {minChars: 2, matchCase: true, selectionLimit: 1});
-});
- });
-</script>
- 
-  <form action="" method="get" name="autosuggestform">
-	  <input type="text" />
-	  <input type="submit" value="search"/>
-  </form>
- 
- 
 <title>Wedding Venues in Delhi NCR| Book Marriage Venues in South Delhi & NCR</title>
     <meta name="description" content="Wedding Venues in Delhi & NCR including South Delhi, GT Karnal Road, Chattarpur and other Delhi wedding hot spots can now be booked at your door step! Wedding & Marriage Venues experts, GetYourVenue.com are always at your quick service.">
     <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr,delhi wedding venues,wedding venues in south delhi,marriage venues delhi">
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <meta name="google-site-verification" content="Y7nJIELMUBhy76D1Ne-8NPSWHQi1xGSXPsg0zHSLOPs" />
+<link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script>
+	google.load("jquery", "1");
+</script>
+<script src="js/jquery.autocomplete.js"></script>
+<style>
+	input {
+		font-size: 120%;
+	}
+</style>
 </head>
 <body>
-
 <div id="wrapper">
   <div id="main">
     
-    <?php  require("header.php") ?>
+    <script language="javascript" src="../js/GYKUtils.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+<div id="header">
+	  <img src="/images/headerLeft.jpg" align="left" alt="" /><img src="/images/headerRight.jpg" align="right" alt="" /><a href="http://getyourvenue.com"><img src="/images/logo.png" class="logo" alt="Get Your Venue, Wedding Venues in Delhi NCR" /></a><img src="/images/hotlinenumber.png" class="hotlineNum" alt="Get Your Venue, Marriage Venues in Delhi NCR" />
+      <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
+      <div class="topNav"><img src="/images/topNavleft.jpg" align="left" alt="" /><img src="/images/topNavRight.jpg" align="right" alt="" />
+        <ul>
+          <li><a href="http://getyourvenue.com/">Home</a></li>
+          <li><a href="http://getyourvenue.com/about-us">About Us</a></li>
+          <li><a href="http://getyourvenue.com/allied-services">Our Allied Services</a></li>
+          <li><a href="http://getyourvenue.com/addvenue">Add Your Venue</a></li>
+          <li><a href="http://getyourvenue.com/non_wedding">Non-Wedding Venues</a></li>
+          <li><a href="http://getyourvenue.com/book_now">Book Now</a></li>
+          <li class="last"><a href="http://getyourvenue.com/contact_us">Contact Us</a></li>
+        </ul>
+        
+        
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ecaa14010f9194d"></script>
+<!-- AddThis Button END -->
+
+
+      </div>
+    </div>
     
     <div id="contentArea">
       <div id="leftNav">
@@ -115,9 +137,28 @@ $(document).ready(function() {
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
-              <div class="boxGr boxheight">
+              <div class="boxGr">
+                 <!--Box Content Start--> 
+                <h3>Search Your Venue by Name</h3>
+                <form name="searchForm" class="contactform" action="searchVenue/venue" method="post">
+                <input class="input-txt" type="text" id="venueid" name="venueid" value="Enter Your Keyword" onfocus="if(this.value=='Enter Your Keyword')this.value='';" onblur="if(this.value=='')this.value='Enter Your Keyword';" />
+                <input type="image" src="../images/btn-search.png" class="button-sear"/>
+                <input type="hidden" name="action" value="viewSearchResult" />
+                </form>
+                 <!--Box Content End--> 
+              </div> <img src="../images/divider.png" class="divider" alt="" />
+            </div>
+           
+          </div>
+      
+          <div class="fullboxBg">
+          
+            <div class="boxContent">
+              <div class="boxGr"><br />
                 <!-- Box Content Start -->
-                <h3>Let Us Know Your Preferences</h3>
+                <h3><center>
+<!--OR-->
+</center>Let Us Know Your Preferences</h3>
                 <form name="searchForm" class="homeSearch" action="#">
                   <label>Region:</label>
                   <select name="region" id="region">
@@ -130,7 +171,6 @@ $(document).ready(function() {
                     <option value="ghaziabad">Ghaziabad</option>
                     <option value="noida">Noida</option>
                     <option value="gurgaon">Gurgaon</option>
-                    <option value="destination-wedding">Destination Wedding</option>
                   </select>
                   <label>Category of Venue:</label>
                   <select name="category" id="category">
@@ -138,8 +178,6 @@ $(document).ready(function() {
                     <option value="farm-house">Farm House</option>
                     <option value="banquet-hall">Banquet Hall</option>
                     <option value="hotel">Hotels</option>
-                    <option value="5-star-banquets">5 Star Banquets</option>
-                    <option value="wedding-tent-houses">Wedding Tent Houses</option>
                   </select>
                   <label>No. of Guests:</label>
                   <select name="capacity" id="capacity">
@@ -149,7 +187,7 @@ $(document).ready(function() {
                     <option value="3">Above 800</option>
                   </select>
                   <br />
-                  <input type="image" src="../images/btn-getmyvenue.png" class="button" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL?>');"/> 
+                  <input type="image" src="../images/btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('http://getyourvenue.com/');"/> 
                   <input type="hidden" name="action" value="searchVenue" />
                 </form>
                 <!-- Box Content End -->
@@ -214,7 +252,12 @@ $(document).ready(function() {
 				to create relationships for a lifetime. Our motive is to provide professional and
 				word class venue selection services with a human angle. We are hardly a phone
 				call or a click away!</p>
-                
+                <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+</div>
+<!-- AddThis Button END -->
                 <!-- Box Content End -->
               </div>
             </div>
@@ -257,8 +300,23 @@ $(document).ready(function() {
         <!-- Box End -->
       </div>
     </div>
-    <?php  require("footer.php") ?>
+    
+<div id="footer"><a href="http://getyourvenue.com/">Home</a> |
+	<a href="http://getyourvenue.com/about-us">About Us</a> | 
+	<a href="http://getyourvenue.com/allied-services">Our Allied Services</a> | 
+	<a href="http://getyourvenue.com/addvenue">Add Your Venue</a> | 
+	<a href="http://getyourvenue.com/non_wedding">Non-Wedding Functions</a> | 
+	<a href="http://getyourvenue.com/readers-corner">Readers Corner</a> | 
+	<a href="http://getyourvenue.com/book_now">Book Now</a> | 
+	<a href="http://getyourvenue.com/contact_us">Contact Us</a> | 
+	<a href="http://getyourvenue.com/site-map">Sitemap</a>
+    <div class="copyright">Copyright &copy; <a href="#">Get Your Venue</a>. All Rights Reserved</div>
+</div>
+<script language="javascript" src="../js/google-analytics.js"></script>
   </div>
 </div>
+<script>
+	$("#venueid").autocomplete("../actionController/SearchController.php");
+</script>
 </body>
 </html>
