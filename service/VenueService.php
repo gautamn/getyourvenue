@@ -73,6 +73,16 @@ class VenueService {
 		return $getYourVenueMySQLManager->getVenueByChoice($choiceId);
 
 	} // function getVenueByChoice
+
+
+	function getVenueBySearchResult() {
+		if (array_key_exists('venueid', $_GET) && $_GET['venueid'] != null)
+			$searchName = $_GET['venueid'];
+		if (array_key_exists('venueid', $_POST) && $_POST['venueid'] != null)
+			$searchName = $_POST['venueid'];
+		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
+		return $getYourVenueMySQLManager->getVenueBySearchResult($searchName);
+	}
 	
 	function getVenueByChoiceForPagination($page) {
 
@@ -205,6 +215,8 @@ class VenueService {
 		$venue->id = $_POST['id'];
 		$venue->rank = $_POST['rank'];
 		$venue->venueName = $_POST['name'];
+		$venue->regionId = $_POST['regionList'];
+		$venue->popularChoiceId = $_POST['popularChoiceList'];
 		$venue->venueAddr1 = $_POST['address1'];
 		$venue->venueAddr2 = $_POST['address2'];
 		$venue->content = $_POST['content'];
@@ -229,6 +241,7 @@ class VenueService {
     	$venue->popularChoiceId = $_POST['popularChoiceList'];
     	$venue->venueId = $_POST['venueIdentifier'];
     	$venue->venueName = $_POST['venueName'];
+    	$venue->rank = $_POST['rank'];
     	$venue->venueAddr1 = $_POST['venueAddr1'];
     	$venue->venueAddr2 = $_POST['venueAddr2'];
     	$venue->content = $_POST['content'];
@@ -417,10 +430,14 @@ class VenueService {
 		return $getYourVenueMySQLManager->getVenues($regionId, $categoryId, $capacityId);
 
 	} //function
-	
+       //function for getting autosuggest data..
 	function autoSuggestVenue($autoSuggest) {
 		$newData = new GetYourVenueMySQLManager();
 		$newData->getVenueJson($autoSuggest);
+	} //function
+	function viewReport() {
+		$newData = new GetYourVenueMySQLManager();
+		return $newData->viewReport();
 	} //function
 }
 ?>

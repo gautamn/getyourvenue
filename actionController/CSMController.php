@@ -1,18 +1,3 @@
-<head>
-<script>
-	document.onload = test();
-	
-	function test(){
-		var index = document.cookie.indexOf("gyvsession");
-		//alert(document.cookie);
-		//alert(index);
-		if(index == -1)
-			//alert("cookie not exist");
-		else
-			//alert("cookie exist exist");
-	}
-</script>
-</head>
 <?php
 /*
  * Created on Sep 4, 2011
@@ -93,13 +78,25 @@ if ($action == "userAuthetication") {
      }     	
 }
 
-if ($action == "logout") {
+if ($action == "viewReport") {
      $venueService = new VenueService();
-     //$venueService->deleteCookie();
-     if(isset($_COOKIE["gyvsession"]))
-			setcookie("gyvsession", "", 1);
-     
-     $message = "Successfully Logout";
-     require_once ("../view/cms/loginform.php");
+     $bookingList = $venueService->viewReport();
+     require_once ("../view/cms/viewReport.php");
 }
+
+if ($action == "userAuthetication") {
+     
+     $venueService = new VenueService();
+     $status = $venueService->isValidUser();
+     if(!$status){
+     	$message = "Authentication Failed";
+     	require_once ("../view/cms/loginform.php");
+     }else{
+     	$sessionId = $venueService->getSessionId();
+     	$venueService->setCookie($sessionId);
+     	$venueList = $venueService->searchVenueViaPostCall();
+     	require_once ("../view/cms/venueList.php");
+     }     	
+}
+
 ?>

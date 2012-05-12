@@ -1,14 +1,4 @@
 <?php
-/*
- * Created on Jul 7, 2011
- *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
-?>
-
-
-<?php
 
 class Venue {
 	
@@ -32,6 +22,16 @@ class Venue {
 	var $metaKeyword;//used for SEO
 	var $altTag;
 	
+	public function rank() {
+
+		return $this->rank;
+	}
+
+	public function setRank($rank) {
+
+		$this->rank = $rank;
+	}
+	
 	public function getVenueName() {
 
 		return $this->venueName;
@@ -42,15 +42,6 @@ class Venue {
 		$this->venueName = $venueName;
 	}
 	
-	public function getRank() {
-
-		return $this->rank;
-	}
-
-	public function setRank($rank) {
-
-		$this->rank = $rank;
-	}
 	
 	public function getVenueAddr1() {
 

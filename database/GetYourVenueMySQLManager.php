@@ -7,9 +7,10 @@ require_once ("../model/Venue.php");
 require_once ("../model/VenueType.php");
 require_once ("../model/Capacity.php");
 require_once ("../model/PopularChoice.php");
+require_once ("../model/BookingInfo.php");
 
 class GetYourVenueMySQLManager {
-  
+
 	function getVenues($regionId, $categoryId, $capacityId) {
 
 		$dbConstants = new DBConstants();
@@ -96,17 +97,22 @@ class GetYourVenueMySQLManager {
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
-			$result = mysql_query("SELECT ve.*,veseo.title,veseo.meta_description,meta_keyword FROM venue ve LEFT JOIN venue_seo_info veseo ON " .
-					"ve.id=veseo.venueid WHERE ve.venueid='".$venueid."' ");
-					
+			$result = mysql_query("SELECT ve.*,veseo.title,veseo.meta_description,meta_keyword,pc.*,reg.* FROM venue ve LEFT JOIN venue_seo_info veseo ON " .
+					"ve.id=veseo.venueid LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid " .
+					"LEFT JOIN region reg ON ve.regionid=reg.regionid " .
+					"WHERE ve.venueid='".$venueid."' ");
 					
 			while ($row = mysql_fetch_array($result)) {
-
 				$venue = new Venue();
 				$venue->id = $row['id'];
 				$venue->venueId = $row['venueid'];
 				$venue->rank = $row['rank'];
 				$venue->venueName = $row['name'];
+				$venue->regionid = $row['regionid'];
+				$venue->regiontype = $row['regiontype'];
+				$venue->regionname = $row['regionname'];
+				$venue->popularchoiceid = $row['popularchoiceid'];
+				$venue->popularchoicename = $row['popularchoicename'];
 				$venue->venueAddr1 = $row['address1'];
 				$venue->venueAddr2 = $row['address2'];
 				$venue->content = $row['content'];
@@ -120,7 +126,6 @@ class GetYourVenueMySQLManager {
 				$venueList[] = $venue;
 			}
 		}
-
 		mysql_close($connection);
 		return $venueList;
 	}
@@ -158,7 +163,7 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 
-			$query = "UPDATE venue SET venueid = \"".$venue->venueId."\", NAME=\"".$venue->venueName."\",address1=\"".$venue->venueAddr1."\", " .
+			$query = "UPDATE venue SET venueid = \"".$venue->venueId."\", NAME=\"".$venue->venueName."\", regionid=\"".$venue->regionId."\", rank=\"".$venue->rank."\", popular_choice=\"".$venue->popularChoiceId."\",address1=\"".$venue->venueAddr1."\", " .
 					" address2=\"".$venue->venueAddr2."\", content=\"".$venue->content."\", updatedate='".mysql_real_escape_string($venue->updatedDate)."'".
 					",iframe=\"".$venue->iframe."\" WHERE id='".$venue->id."'";
 			//echo $query;
@@ -767,8 +772,8 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 
-			$query = "INSERT INTO venue(venueid,NAME,address1,address2,content,iframe,createdate,regionid,popular_choice)
-					 VALUES ('".$venue->venueId."','".$venue->venueName."','".$venue->venueAddr1."'," .
+			$query = "INSERT INTO venue(venueid,NAME,rank,address1,address2,content,iframe,createdate,regionid,popular_choice)
+					 VALUES ('".$venue->venueId."','".$venue->venueName."','".$venue->rank."','".$venue->venueAddr1."'," .
 					 		" '".$venue->venueAddr2."','".$venue->content."','".mysql_real_escape_string($venue->iframe)."',
 					'".date("Y-m-d")."',".$venue->regionId.",".$venue->popularChoiceId.")";
 					
@@ -899,7 +904,36 @@ class GetYourVenueMySQLManager {
 		}
 		mysql_close($connection);
 	}//function
-	
+	function viewReport() {
+
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$bookingList = array ();
+
+		$dataBaseResponse = "";
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			$query = "SELECT * FROM booking_info WHERE DATEDIFF(NOW(),bookingdate) < 3 ORDER BY bookingdate DESC";
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_array($result)) {
+				$bookingInfo = new BookingInfo();
+				$bookingInfo->Id = $row['id'];
+				$bookingInfo->name = $row['name'];
+				$bookingInfo->email = $row['email'];
+				$bookingInfo->date = $row['date'];
+				$bookingInfo->functions = $row['function'];
+				$bookingInfo->contact = $row['contact'];
+				$bookingInfo->budget = $row['budget'];
+				$bookingInfo->bookingdate = $row['bookingdate'];
+				$bookingList[] = $bookingInfo;
+			}
+		}
+		mysql_close($connection);
+		return $bookingList;
+	}//function
 }
 
 ?>
