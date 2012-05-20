@@ -105,6 +105,7 @@ class GetYourVenueMySQLManager {
 			while ($row = mysql_fetch_array($result)) {
 				$venue = new Venue();
 				$venue->id = $row['id'];
+				$venue->isActive = $row['is_active'];
 				$venue->venueId = $row['venueid'];
 				$venue->rank = $row['rank'];
 				$venue->venueName = $row['name'];
@@ -164,7 +165,7 @@ class GetYourVenueMySQLManager {
 		} else {
 
 			$query = "UPDATE venue SET venueid = \"".$venue->venueId."\", NAME=\"".$venue->venueName."\", regionid=\"".$venue->regionId."\", rank=\"".$venue->rank."\", popular_choice=\"".$venue->popularChoiceId."\",address1=\"".$venue->venueAddr1."\", " .
-					" address2=\"".$venue->venueAddr2."\", content=\"".$venue->content."\", updatedate='".mysql_real_escape_string($venue->updatedDate)."'".
+					" address2=\"".$venue->venueAddr2."\", content=\"".$venue->content."\", is_active=\"".$venue->isActive."\", updatedate='".mysql_real_escape_string($venue->updatedDate)."'".
 					",iframe=\"".$venue->iframe."\" WHERE id='".$venue->id."'";
 			//echo $query;
 					
@@ -208,10 +209,16 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 
-			$dataBaseResponse = mysql_query("INSERT INTO booking_info " .
+			/*$dataBaseResponse = mysql_query("INSERT INTO booking_info " .
 			"(name,email,date,function,contact,budget,bookingdate) VALUES" .
 			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
+			"'" . $budget . "',CURRENT_TIMESTAMP())");*/
+			
+			$dataBaseResponse = mysql_query("INSERT INTO book_now " .
+			"(name,email,preferred_date,type_of_function,contact_no,budget,insertdate) VALUES" .
+			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
 			"'" . $budget . "',CURRENT_TIMESTAMP())");
+
 			
 			/*echo "INSERT INTO booking_info " .
 			"(name,email,date,function,contact,budget,bookingdate) VALUES" .
@@ -238,12 +245,12 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 			if ($choiceId != 0) //TODO (hard code choiceId)
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE 
+				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE ve.is_active='Y'  AND
 									      ve.popular_choice=" . $choiceId;
 			else
 				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
 										 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
-										 ve.popular_choice!=4 AND ve.popular_choice!=5";  
+										 ve.popular_choice!=4 AND ve.popular_choice!=5 AND ve.is_active='Y'";  
 			$result = mysql_query($query);
 			
 			//echo $query;
@@ -278,7 +285,7 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 			$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE 
-									      ve.name LIKE '%" . $venueName . "%' ORDER BY ve.rank";
+									      ve.name LIKE '%" . $venueName . "%'  AND ve.is_active='Y' ORDER BY ve.rank";
 			$result = mysql_query($query);
 			while ($row = mysql_fetch_array($result)) {
 				$venue = new Venue();
@@ -310,12 +317,12 @@ class GetYourVenueMySQLManager {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 			if ($choiceId != 0) //TODO (hard code choiceId)
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE 
+				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE  ve.is_active='Y' AND
 									      ve.popular_choice=" . $choiceId." ORDER BY ve.rank limit ".$startIndex.",".$offset ;
 			else
 				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
 										 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
-										 ve.popular_choice!=4 AND ve.popular_choice!=5 ORDER BY ve.rank limit ".$startIndex.",".$offset;  
+										 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active='Y' ORDER BY ve.rank limit ".$startIndex.",".$offset;  
 			$result = mysql_query($query);
 			//echo $query;
 			while ($row = mysql_fetch_array($result)) {
@@ -336,7 +343,7 @@ class GetYourVenueMySQLManager {
 
 	}
 
-	function submitbookNow($name, $email, $contact_no, $preferred_region, $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function) {
+	function submitbookNow($name, $email, $contact_no, $preferred_region, $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function, $msg) {
 
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
@@ -351,10 +358,10 @@ class GetYourVenueMySQLManager {
 		} else {
 
 			$dataBaseResponse = mysql_query("INSERT INTO book_now (NAME,email,contact_no,preferred_region,preferred_venue,".
-			" preferred_date,no_of_guests,budget,type_of_function) VALUES('".$name."',".
+			" preferred_date,no_of_guests,budget,type_of_function,message) VALUES('".$name."',".
 			"'".$email."','".$contact_no."','".$preferred_region."','".$preferred_venue."',".
 			"'".$preferred_date."','".$no_of_guests."',".
-			"'".$budget."','".$type_of_function."')");
+			"'".$budget."','".$type_of_function."','".$msg."')");
 			
 		}
 
@@ -363,7 +370,7 @@ class GetYourVenueMySQLManager {
 
 	}
 	
-	function submitcontactUs($name,$email,$contact_num,$message){
+	/*function submitcontactUs($name,$email,$contact_num,$message){
 
                $dbConstants = new DBConstants();
                $dBUtils = new DBUtils();
@@ -387,7 +394,7 @@ class GetYourVenueMySQLManager {
 
                return $dataBaseResponse;
 
-       }
+       }*/
        
        function getSearchQuery($regionId,$categoryId,$capacityId){
        	
@@ -437,7 +444,7 @@ class GetYourVenueMySQLManager {
        	
 			$fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe".",IFNULL(v.alttag,'') as alttag"." ";
 			$entity = "from (SELECT ve.*,vi.alttag FROM"." ". 
-					   "venue ve LEFT JOIN venue_image_alttag vi ON ve.id=vi.venueid) v"." ";
+					   "venue ve LEFT JOIN venue_image_alttag vi ON ve.id=vi.venueid WHERE ve.is_active='Y') v"." ";
 			$orderBy = "order by v.rank"." ";
 			$conditionClause = "";
 			$isFirstCondition = true;
@@ -889,7 +896,7 @@ class GetYourVenueMySQLManager {
 			$input = $autoSuggest;
 			$data = array();
 			// query your DataBase here looking for a match to $input
-			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%'");
+			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%' AND is_active='Y'");
 		    while ($row = mysql_fetch_assoc($query)) {
 		    	//$json = array();
 		    	//$json['query'] = $input;
@@ -916,18 +923,21 @@ class GetYourVenueMySQLManager {
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
-			$query = "SELECT * FROM booking_info WHERE DATEDIFF(NOW(),bookingdate) < 3 ORDER BY bookingdate DESC";
+			$query = "select id, name, email, contact_no, preferred_venue, preferred_date, no_of_guests, budget, type_of_function,insertdate from book_now" .
+					 " where datediff(now(),insertdate) < 7 order by insertdate desc";
 			$result = mysql_query($query);
 			while ($row = mysql_fetch_array($result)) {
 				$bookingInfo = new BookingInfo();
 				$bookingInfo->Id = $row['id'];
 				$bookingInfo->name = $row['name'];
 				$bookingInfo->email = $row['email'];
-				$bookingInfo->date = $row['date'];
-				$bookingInfo->functions = $row['function'];
-				$bookingInfo->contact = $row['contact'];
+				$bookingInfo->contact = $row['contact_no'];				
+				$bookingInfo->preferredVenue=$row['preferred_venue'];
+				$bookingInfo->no_of_guests=$row['no_of_guests'];
+				$bookingInfo->date = $row['preferred_date'];
 				$bookingInfo->budget = $row['budget'];
-				$bookingInfo->bookingdate = $row['bookingdate'];
+				$bookingInfo->functions = $row['type_of_function'];
+				$bookingInfo->bookingdate = $row['insertdate'];
 				$bookingList[] = $bookingInfo;
 			}
 		}
