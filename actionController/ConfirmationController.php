@@ -19,16 +19,15 @@ $email = $_POST['email'];
 $contactNumber = $_POST['contact_num'];
 $query = $_POST['txt_area'];
 
-echo "response---->".$response;
+//echo "response---->".$response;
 
 $mailStatus = "";
 if ($response == 1) {
 	$mailService = new MailService();
-	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, 
-	$email, "", "", "", date("Y-m-d"));
+	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, "", "", "", date("Y-m-d"));
 }
 
-echo 'mail---->'.$mailStatus;
+//echo 'mail---->'.$mailStatus;
 require_once ("../view/confirmation.php");
 
 ?>

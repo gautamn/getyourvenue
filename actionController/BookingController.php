@@ -20,12 +20,16 @@ else
 $venueService = new VenueService();
 
 if($action == "bookVenue") {
+	//echo "bookVenue";
 	$response = $venueService->bookVenue();
 }
 
 if($action == "bookNow") {
+	//echo "bookNow";
 	$response = $venueService->bookNow();
 }
+
+//echo "Booking Controller------".$response;
 
 $constants = new Constants();
 
@@ -40,6 +44,7 @@ $function = $_POST['function'];
 $mailStatus = "";
 if ($response == 1) {
 	$mailService = new MailService();
+	//echo "Booking Controller".$name.$email.$contactNumber.$email.$location.$function;
 	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, $location, $function, $budget, $date);
 }
 
