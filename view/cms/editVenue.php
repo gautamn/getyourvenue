@@ -18,6 +18,23 @@
 	</tr>
 	
 	<tr>
+		<td width="20%">Active:</td>
+		<td>
+		<select name="isActive">
+		<?php
+			if($venueList[0]->isActive == 'Y'){
+						echo "<option value=\"Y\" SELECTED>Yes</option>";
+						echo "<option value=\"N\" >No</option>";
+					}
+					else{
+						echo "<option value=\"N\" SELECTED>No</option>";
+						echo "<option value=\"Y\" >Yes</option>";
+					}
+		?>
+		</td>
+	</tr>
+	
+	<tr>
 		<td width="20%">Region:</td>
 		<td>
 			<select name="regionList">

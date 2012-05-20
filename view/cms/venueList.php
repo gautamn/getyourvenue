@@ -36,13 +36,13 @@ echo "<td width='35%' >" . $venueList[$i]->venueName . "</td>";
 echo "<td width='50%' >" . $venueList[$i]->venueAddr1 . "," . $venueList[$i]->venueAddr2 . "</td>";
 ?>	
 		<td width="10%" style="border:1px solid rgb(0, 0, 0);">
-			<a href="../../actionController/CSMController.php?action=loadEditForm&id=<?php echo $venueList[$i]->venueId ?>" target="_blank">edit</a> | 
-			<a href="../../actionController/CSMController.php?action=deleteVenue
+			<a href="../../actionController/CSMController.php?action=loadEditForm&id=<?php echo $venueList[$i]->venueId ?>" target="_blank">edit</a>
+			<!--| <a href="../../actionController/CSMController.php?action=deleteVenue
 			&id=<?php echo $venueList[$i]->venueId ?>
 			&region=<?php echo $_POST['region'] ?>
 			&category=<?php echo $_POST['category'] ?>
 			&capacity=0" >
-			delete</a> 
+			delete</a> -->
 		</td>	
 	</tr>
 <?php }	?>	
