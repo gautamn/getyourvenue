@@ -21,6 +21,7 @@ class Venue {
 	var $metaDescription;//used for SEO
 	var $metaKeyword;//used for SEO
 	var $altTag;
+	var $isActive;
 	
 	public function rank() {
 

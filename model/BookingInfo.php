@@ -17,5 +17,7 @@
 		var $contact;
 		var $budget;
 		var $bookingdate;
+		var $preferredVenue;
+		var $no_of_guests;
 	} 
 ?>

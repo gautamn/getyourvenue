@@ -6,7 +6,6 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
 ?>
-
 <?php
 	
 	class PopularChoice{
