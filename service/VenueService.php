@@ -159,10 +159,11 @@ class VenueService {
 		$no_of_guests = $_POST['no_of_guests'];
 		$budget = $_POST['budget'];
 		$type_of_function = $_POST['function'];
+		$type_of_function = $_POST['function'];
 		
 		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
 		return $getYourVenueMySQLManager->submitbookNow($name, $email, $contact_no, $preferred_region,
-		 $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function);
+		 $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function,'');
 
 	}
 	
@@ -173,10 +174,10 @@ class VenueService {
                $email=$_POST['email'];
                $contact_num=$_POST['contact_num'];
                $message=$_POST['txt_area'];
-
-
+               
                $getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-               return $getYourVenueMySQLManager->submitcontactUs($name,$email,$contact_num,$message);
+               
+               return $getYourVenueMySQLManager->submitbookNow($name, $email,$contact_num,'','','','','','',$message);
 
        }
        
@@ -225,6 +226,7 @@ class VenueService {
 		$venue->metaDescription = $_POST['metadescription'];
 		$venue->metaKeyword = $_POST['metakeyword'];
 		$venue->updatedDate = date("Y-m-d");
+		$venue->isActive = $_POST['isActive'];
 		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
 		$databaseResponse = $getYourVenueMySQLManager->updateVenue($venue);
 		
