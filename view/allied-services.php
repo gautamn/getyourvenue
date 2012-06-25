@@ -4,10 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi</title>
 
-<meta name=”Description” content=”Choosing the right venue for the wedding is the most difficult decision a couple comes across. We at
-getyourvenue.com make sure that all your problems are vanished and we make this arduos task an easy and fun-loving one.”>
+<meta name=ï¿½Descriptionï¿½ content=ï¿½Choosing the right venue for the wedding is the most difficult decision a couple comes across. We at
+getyourvenue.com make sure that all your problems are vanished and we make this arduos task an easy and fun-loving one.ï¿½>
 
-<meta name=”keyword” content=” Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi”>
+<meta name=ï¿½keywordï¿½ content=ï¿½ Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhiï¿½>
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body>
@@ -37,7 +37,7 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
 							<li><p>Caterer</p></li>
 							<li><p>Bridal Fashion</p></li>
 							<li><p>DJ and Music</p></li>
-							<li><p>Ghoriwaala, Baggi</p></li>
+							<li><p><a href="/band-ghori-baggi">Ghoriwaala, Baggi</a></p></li>
 							<li><p>Health and Beauty</p></li>
 						</ul>
 					</td>

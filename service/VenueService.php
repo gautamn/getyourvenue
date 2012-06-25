@@ -61,8 +61,30 @@ class VenueService {
 		
 		return $databaseResponse;		
 	}
+        
+        function bookAlliedService() {
 
-	function getVenueByChoice() {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$date = $_POST['date'];
+		$function = $_POST['function'];
+		$contactNumber = $_POST['contactNumber'];
+		$budget = $_POST['budget'];
+		$location='';
+                if (array_key_exists('venueId', $_POST) && $_POST['venueId'] != null)
+                    $location = $_POST['venueId'];
+                $serviceName = $_POST['serviceName'];
+                
+                if($function!='Enter your Function')
+                    $serviceName=$serviceName." for ".$function;
+
+		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
+		$databaseResponse = $getYourVenueMySQLManager->submitBookingDetails($name, $email, $date, $serviceName, $contactNumber, $budget);
+		
+		return $databaseResponse;		
+	}
+        
+        function getVenueByChoice() {
 
 		if (array_key_exists('option', $_GET) && $_GET['option'] != null)
 			$choiceId = $_GET['option'];

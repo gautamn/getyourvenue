@@ -20,32 +20,45 @@ else
 $venueService = new VenueService();
 
 if($action == "bookVenue") {
-	//echo "bookVenue";
 	$response = $venueService->bookVenue();
 }
 
 if($action == "bookNow") {
-	//echo "bookNow";
 	$response = $venueService->bookNow();
+}
+
+if($action == "bookAlliedService") {
+	$response = $venueService->bookAlliedService();
 }
 
 //echo "Booking Controller------".$response;
 
-$constants = new Constants();
-
 $name = $_POST['name'];
 $email = $_POST['email'];
 $contactNumber = $_POST['contactNumber'];
-$location = $_POST['venueId'];
+$location='';
+if (array_key_exists('venueId', $_POST) && $_POST['venueId'] != null)
+	$location = $_POST['venueId'];
 $date = $_POST['date'];
 $budget = $_POST['budget'];
-$function = $_POST['function'];
 
-$mailStatus = "";
+$function='';
+if (array_key_exists('function', $_POST) && $_POST['function'] != null)
+	$function = $_POST['function'];
+
+$serviceName = '';
+ if (array_key_exists('serviceName', $_POST) && $_POST['serviceName'] != null)
+	$serviceName = $_POST['serviceName'];
+
+ $mailStatus = "";
 if ($response == 1) {
 	$mailService = new MailService();
 	//echo "Booking Controller".$name.$email.$contactNumber.$email.$location.$function;
-	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, $location, $function, $budget, $date);
+       
+        if($serviceName!='')
+            $mailStatus = $mailService->sendServiceBookingNotificationMailviaGmail($name, $contactNumber, $email, $location, $serviceName, $budget, $date);
+        else $mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, $location, $function, $budget, $date);
+            
 }
 
 //echo $mailStatus;

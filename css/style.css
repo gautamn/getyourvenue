@@ -462,6 +462,13 @@ p.dec {
     width: 350px;
 	margin: 0 10px 0 0;
 }
+.image-slider-allied {
+    border: 2px solid #F8039C;
+    height: 360px;
+    width: 771px;
+	margin: 0 10px 10px 0;
+}
+
 .nivoSlider {
     position: relative;
 }
@@ -815,4 +822,46 @@ span.searchOpt {
 }
 .divider {
 	margin: -2px 0 0 25px;
+}
+.nivoSlider-allied {
+	height: 360px;
+	width: 771px;
+}
+.alliedThumb {
+	background:	url(../images/thumbBg.png) no-repeat;
+	float: left;
+    height: 180px;
+    padding: 8px;
+    width: 239px;
+	position: relative;
+}
+.themeTitle {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	background: url(../images/thumbOverlay.png) no-repeat center;
+	width: 236px;
+	color: #fff;
+	height: 32px;
+	z-index: 1;
+	padding: 13px 0 0 5px;
+	font-weight: bold;
+}
+.alliedServices {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.alliedServices li {
+	border-bottom: 1px dotted #000;
+	background:url(../images/arrow.jpg) no-repeat left;
+	padding: 5px 0px 5px 10px;
+}
+.alliedServices li a {
+	color: #000;
+	font-weight: bold;
+}
+.alliedServices li a:hover {
+	text-decoration: none;
+	color: #F8039C;
 }
