@@ -46,6 +46,10 @@ RewriteRule ^articles/know-about-delhi-wedding-venues$   /articles/know-about-de
 RewriteRule ^perfect-wedding-music-bands$   /article/perfect-wedding-music-bands.php [L]
 
 RewriteRule ^music-band-mystique$   /view/music-band.php [L]
+RewriteRule ^band-ghori-baggi$   /view/band.php [L]
+
+
+
 
 
 
