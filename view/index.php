@@ -23,35 +23,10 @@
 <div id="wrapper">
   <div id="main">
     
-    <script language="javascript" src="../js/GYKUtils.js"></script>
+<script language="javascript" src="../js/GYKUtils.js"></script>
 <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
-<div id="header">
-	  <img src="/images/headerLeft.jpg" align="left" alt="" /><img src="/images/headerRight.jpg" align="right" alt="" /><a href="http://getyourvenue.com"><img src="/images/logo.png" class="logo" alt="Get Your Venue, Wedding Venues in Delhi NCR" /></a><img src="/images/hotlinenumber.png" class="hotlineNum" alt="Get Your Venue, Marriage Venues in Delhi NCR" />
-      <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
-      <div class="topNav"><img src="/images/topNavleft.jpg" align="left" alt="" /><img src="/images/topNavRight.jpg" align="right" alt="" />
-        <ul>
-          <li><a href="http://getyourvenue.com/">Home</a></li>
-          <li><a href="http://getyourvenue.com/about-us">About Us</a></li>
-          <li><a href="http://getyourvenue.com/allied-services">Our Allied Services</a></li>
-          <li><a href="http://getyourvenue.com/addvenue">Add Your Venue</a></li>
-          <li><a href="http://getyourvenue.com/non_wedding">Non-Wedding Venues</a></li>
-          <li><a href="http://getyourvenue.com/book_now">Book Now</a></li>
-          <li class="last"><a href="http://getyourvenue.com/contact_us">Contact Us</a></li>
-        </ul>
-        
-        
-        <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
-<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ecaa14010f9194d"></script>
-<!-- AddThis Button END -->
-
-
-      </div>
-    </div>
+    <?php  require("header.php") ?>
     
     <div id="contentArea">
       <div id="leftNav">
@@ -217,7 +192,7 @@
                 <p>A warm welcome to Getyourvenue.com!</p>
 				<p>
 				Draped in the rich fabric of tradition, weddings are the most joyous occasions
-				in one’s life. A splendid bliss of wedding brings alive the golden dream. And the
+				in oneï¿½s life. A splendid bliss of wedding brings alive the golden dream. And the
 				place chosen to flaunt the bash is one significant aspect of the entire affair that
 				remains alive through the life. There is a plethora of wedding venues in Delhi
 				and NCR that can make your marriage as picturesque as you want it to be. The
@@ -226,7 +201,7 @@
 				friend indeed! Whether you want an elaborate farm house in South Delhi, a well-
 				appointed party hall in West Delhi, a splendid marriage lawn in East Delhi or a
 				lavish banquet hall in North Delhi, we get you exactly what you are looking for &amp;
-				precisely what suits your budget and needs. It’s time for you to put your fingers
+				precisely what suits your budget and needs. Itï¿½s time for you to put your fingers
 				to work and tell us about your preferences. You can also call us just once &amp; your
 				hunt for the perfect venue would end right there! So wait no further, Just Get to
 				Us &amp; Get Your Venue!
@@ -243,7 +218,7 @@
 				Road, marriage halls in South Delhi, party lawns in East Delhi and banquet halls
 				in North Delhi. However, majority of these farm houses, banquet halls and party
 				lawns are not suitable for your specific desires. Wedding is a one-time occasion in
-				your life and there is no reason why you shouldn’t try to have a grand celebration.
+				your life and there is no reason why you shouldnï¿½t try to have a grand celebration.
 				Weddings imply a lot of work. Choosing a hotel, marriage hall, farmhouse or
 				banquet hall from the list of hundreds is actually a challenging task. We put on
 				display an extensive and exquisite assortment of wedding venues to meet your

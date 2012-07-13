@@ -27,50 +27,11 @@ in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi">
             <div class="boxContent">
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
-                <h3>Welcome to Our Contact Page</h3>
-                <table>
-                <tr>
-                <td valign="top" width="60%">
-					<b>Head Office:</b>
-					<p>
-					108, Bhagmal Complex,<br>
-					Sector 15,<br>
-					Noida-201301,<br>
-					U.P.<br>
-					Email: <a href="mailto:info@getyourvenue.com">info@getyourvenue.com</a><br>
-					Contact No: +91 8800095444, +91 8800093444<br>
-					</p>
-					<b>Support Centers:</b>
-					<p>
-					B-123,<br>
-					FF Enclave,<br>
-					IGNOU Road,<br>
-					Saket-110068.<br>
-					Email id: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br>
-					Contact No: +91 8800093444<br>
-					</p> 
-				</td>	
-				<td valign="top" halign="right">
-					<p> 
-					H No - 72,<br>
-					Maharajpur,<br>
-					Sahibabad, Ghaziabad-201010<br>
-					U.P.<br>
-					Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br>
-					Contact No: +91 9555666050<br>
-					</p>
-                                        <p>
-                                        C-5/91,<br>
-                                        Sector 6,<br>
-                                        Rohini,<br>
-                                        Delhi - 110085.<br>
-                                        Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br>
-                                        Contact No: +91 7428519266, 011 47019266<br>
-                                        </p>
-					
-                </td>
-                </tr>
-                </table>
+                <h3>Career</h3>
+                   <p>
+                   Getyourvenue welcomes individuals looking to be part of a collaborative, performance-driven culture. Here, teamwork and openness are vital elements
+                   of every work day as employees use innovation, teamwork, and perseverance to build a client-centered organization that makes a difference.
+                   </p>
                 <!-- Box Content End -->
                 <div id='blankBlock'></div>
                 <br><br><br><br>
