@@ -1,11 +1,12 @@
 RewriteEngine On
 RewriteRule ^index.php$   /view/index.php [L] 
-RewriteRule ^home$   		/view/index.php [L]
+RewriteRule ^home$   	/view/index.php [L]
 RewriteRule ^about-us$   /view/about-us.php [L]
 RewriteRule ^addvenue$   /view/addvenue.php [L]
 RewriteRule ^book_now$   /view/book_now.php [L]
 RewriteRule ^venue-details$   /view/venue-details.php [L]
 RewriteRule ^contact_us$   /view/contact_us.php [L]
+RewriteRule ^career$   /view/career.php [L]
 RewriteRule ^non_wedding$   /view/non_wedding.php [L]
 RewriteRule ^allied-services$   /view/allied-services.php [L]
 RewriteRule ^search_results$   /actionController/Controller.php [L]
