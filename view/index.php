@@ -275,21 +275,9 @@
         <!-- Box End -->
       </div>
     </div>
-    
-<div id="footer"><a href="http://getyourvenue.com/">Home</a> |
-	<a href="http://getyourvenue.com/about-us">About Us</a> | 
-	<a href="http://getyourvenue.com/allied-services">Our Allied Services</a> | 
-	<a href="http://getyourvenue.com/addvenue">Add Your Venue</a> | 
-	<a href="http://getyourvenue.com/non_wedding">Non-Wedding Functions</a> | 
-	<a href="http://getyourvenue.com/readers-corner">Readers Corner</a> | 
-	<a href="http://getyourvenue.com/book_now">Book Now</a> | 
-	<a href="http://getyourvenue.com/contact_us">Contact Us</a> | 
-	<a href="http://getyourvenue.com/site-map">Sitemap</a>
-    <div class="copyright">Copyright &copy; <a href="#">Get Your Venue</a>. All Rights Reserved</div>
-</div>
-<script language="javascript" src="../js/google-analytics.js"></script>
   </div>
 </div>
+<?php  require("footer.php") ?>    
 <script>
 	$("#venueid").autocomplete("../actionController/SearchController.php");
 </script>
