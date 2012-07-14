@@ -8,6 +8,7 @@ require_once ("../model/VenueType.php");
 require_once ("../model/Capacity.php");
 require_once ("../model/PopularChoice.php");
 require_once ("../model/BookingInfo.php");
+require_once ("../model/AlliedServices.php");
 
 class GetYourVenueMySQLManager {
 
@@ -943,6 +944,40 @@ class GetYourVenueMySQLManager {
 		}
 		mysql_close($connection);
 		return $bookingList;
+	}//function
+	
+	function alliedServices($seoId) {
+
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$allied = array ();
+
+		$dataBaseResponse = "";
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource."); 
+		} else {
+			$query = "select * from allied_services where seo_id='".$seoId."'";
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_array($result)) {
+				$alliedServices = new AlliedServices();
+				$alliedServices->seoId = $row['SEO_ID'];
+				$alliedServices->bannerPath = $row['BANNER_PATH'];
+				$alliedServices->heading = $row['HEADING'];
+				$alliedServices->html_content = $row['HTML_CONTENT'];
+				$alliedServices->title=$row['TITLE'];
+				$alliedServices->metaDescription=$row['META_DESCRIPTION'];
+				$alliedServices->metaKeyword = $row['META_KEYWORD'];
+				$alliedServices->jcarouselPath = $row['JCAROUSEL_IMAGES_FOLDER_PATH'];
+				$alliedServices->themesUrl = $row['THEMES_URLS'];
+				$allied[] = $alliedServices;
+			}
+		}
+		mysql_close($connection);
+		echo $allied[0] ->seoId;
+		return $allied;
+		
 	}//function
 }
 
