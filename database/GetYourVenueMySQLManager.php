@@ -975,7 +975,6 @@ class GetYourVenueMySQLManager {
 			}
 		}
 		mysql_close($connection);
-		echo $allied[0] ->seoId;
 		return $allied;
 		
 	}//function
