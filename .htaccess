@@ -50,9 +50,12 @@ RewriteRule ^articles/know-about-delhi-wedding-venues$   /articles/know-about-de
 RewriteRule ^perfect-wedding-music-bands$   /article/perfect-wedding-music-bands.php [L]
 
 RewriteRule ^music-band-mystique$   /view/music-band.php [L]
-RewriteRule ^band-ghori-baggi-services-in-delhi$   /view/band.php [L]
+#RewriteRule ^band-ghori-baggi-services-in-delhi$   /view/band.php [L]
 #RewriteRule ^wedding-decorators-in-delhi$   /view/decor.php [L]
-RewriteRule ^wedding-caterers-in-delhi$   /view/caterer.php [L]
-RewriteRule ^transportation-for-wedding-in-delhi$   /view/transportation.php [L]
+#RewriteRule ^wedding-caterers-in-delhi$   /view/caterer.php [L]
+#RewriteRule ^transportation-for-wedding-in-delhi$   /view/transportation.php [L]
 
 RewriteRule ^wedding-decorators-in-delhi$   allied_services?action=alliedServices&seoId=wedding-decorators-in-delhi [L]
+RewriteRule ^band-ghori-baggi-services-in-delhi$   allied_services?action=alliedServices&seoId=band-ghori-baggi-services-in-delhi [L]
+RewriteRule ^wedding-caterers-in-delhi$   allied_services?action=alliedServices&seoId=wedding-caterers-in-delhi [L]
+RewriteRule ^transportation-for-wedding-in-delhi$   allied_services?action=alliedServices&seoId=transportation-for-wedding-in-delhi [L]
