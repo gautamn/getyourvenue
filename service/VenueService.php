@@ -463,5 +463,10 @@ class VenueService {
 		$newData = new GetYourVenueMySQLManager();
 		return $newData->viewReport();
 	} //function
+	
+	function alliedSerices($seoId) {
+		$newData = new GetYourVenueMySQLManager();
+		return $newData->alliedServices($seoId);
+	} //function
 }
 ?>

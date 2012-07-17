@@ -34,10 +34,11 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
 					<td width="60%">
 						<ul>
 							<li><p><a href="/music-band-mystique">Music Band</a></p></li>
+							<li><p><a href="/wedding-decorators-in-delhi">Decor</p></li>
 							<li><p>Caterer</p></li>
 							<li><p>Bridal Fashion</p></li>
 							<li><p>DJ and Music</p></li>
-							<li><p><a href="/band-ghori-baggi">Ghoriwaala, Baggi</a></p></li>
+							<li><p><a href="/band-ghori-baggi-services-in-delhi">Ghoriwaala, Baggi</a></p></li>
 							<li><p>Health and Beauty</p></li>
 						</ul>
 					</td>

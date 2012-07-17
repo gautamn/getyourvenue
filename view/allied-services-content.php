@@ -28,14 +28,14 @@
 <!-- Box Content Start -->
 <h4>Allied Servies</h4>
 <ul class="alliedServices">
-<li><p><a href="/decor">Decor</a></li>
-<li><a href="/band-ghori-baggi">Band, Ghori, Baggi</a></li>
+<li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
+<li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
 <li><a href="#">Photography</a></li>
-<li><a href="/caterer">Caterer</a></li>
+<li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
 <li><a href="#">Celebrity</a></li>
 <li><a href="#">Events</a></li>
 <li><a href="#">Lodging</a></li>
-<li><a href="/transportation">Trasportation</a></li>
+<li><a href="/transportation-for-wedding-in-delhi">Trasportation</a></li>
 <li><a href="#">Bridal Lahenga</a></li>
 <li><a href="#">Groom wear</a></li>
 </ul>
@@ -127,6 +127,40 @@ echo $alliedSerivce[0] ->html_content;
 </div>
 </div>
 <h3 class="clear">Few of the Popular themes are:</h3>
+<?php
+	/*$themes = array ();*/
+	$themes = explode("|",$alliedSerivce[0] ->themesUrl);
+	function endsWith($haystack, $needle) {
+	    $length = strlen($needle);
+	    if ($length == 0) {
+	        return true;
+	    }
+	    return (substr($haystack, -$length) === $needle);
+	}
+?>
+<?php
+	for($i=0 ; $i<count($themes); $i++) {
+		if(endsWith($themes[$i],'@VIDEO')) {
+			$pos = strrpos($themes[$i], "@");
+			$url = substr($themes[$i],0,$pos);
+		?>
+		<iframe width="241" height="180" src="<?php echo $url ?>" frameborder="0" allowfullscreen></iframe>
+	<?php
+		}//if closed
+		?>
+		<?php 
+		if(endsWith($themes[$i],'@IMAGE')) {
+			$pos = strrpos($themes[$i], "@");
+			$url = substr($themes[$i],0,$pos);
+		 // if closed
+		?>
+		<div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><span class="themeTitle">Theme One Title Here</span></div>
+	<?php 
+		}
+	}
+	?>
+
+<!--
 <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
 <div class="alliedThumb">
 <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
@@ -137,6 +171,7 @@ echo $alliedSerivce[0] ->html_content;
 <div class="alliedThumb">
 <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
 </div
+-->
 <!-- Box Content End 
 </div>
 </div>
