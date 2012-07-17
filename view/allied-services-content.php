@@ -13,299 +13,294 @@
 </head>
 <body>
 <div id="wrapper">
-<div id="main">
-<?php  require("../view/header.php") ?>
-<div id="contentArea">
-<div id="leftNavNarrow">
-<!-- Small Left Box Start -->
-<div class="box">
-<div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
-<div class="boxtopbg sml"></div>
-</div>
-<div class="fullboxBg">
-<div class="boxContent">
-<div class="boxGr">
-<!-- Box Content Start -->
-<h4>Allied Servies</h4>
-<ul class="alliedServices">
-<li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
-<li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
-<li><a href="#">Photography</a></li>
-<li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
-<li><a href="#">Celebrity</a></li>
-<li><a href="#">Events</a></li>
-<li><a href="#">Lodging</a></li>
-<li><a href="/transportation-for-wedding-in-delhi">Trasportation</a></li>
-<li><a href="#">Bridal Lahenga</a></li>
-<li><a href="#">Groom wear</a></li>
-</ul>
-<!-- Box Content End -->
-</div>
-</div>
-</div>
-<div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
-<div class="boxbotbg sml"></div>
-</div>
-</div>
-<!-- Small Left Box End -->
-<!-- Small Left Box Start -->
-<div class="box">
-<div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
-<div class="boxtopbg sml"></div>
-</div>
-<div class="fullboxBg">
-<div class="boxContent">
-<div class="boxGr" align="center">
-<!-- Box Content Start -->
-<script type="text/javascript">
-<!--
-google_ad_client = "ca-pub-4918915311035756";
-/* Side Panels */
-google_ad_slot = "6847862507";
-google_ad_width = 120;
-google_ad_height = 600;
-//-->
-</script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-<!-- Box Content End -->
-</div>
-</div>
-</div>
-<div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" />
-<div class="boxbotbg sml"></div>
-</div>
-</div>
-<!-- Small Left Box End -->
-</div>
-<div id="rightNavWide">
-<!-- Box Start -->
-<div class="box">
-<div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
-<div class="boxtopbg"></div>
-</div>
-<div class="fullboxBg">
-<div class="boxContent">
-<div class="boxGr">
-<!-- Box Content Start -->
-<img src="<?php echo "..".$alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
-<br />
-<h3><?php echo $alliedSerivce[0] ->heading ?></h3>
-<?php
-echo $alliedSerivce[0] ->html_content;
-?>
-</div>
-<br><br>
-<div class="latest-news">
-<div class="image-slider-allied f-left">
-<div class="slider-wrapper theme-default">
-<div class="ribbon"></div>
-<div id="slider" class="nivoSlider-allied">
-<?php
-	$results = array();
-	// create a handler for the directory
-	$handler = opendir("..".$alliedSerivce[0] ->jcarouselPath);
-	// open directory and walk through the filenames
-	while ($file = readdir($handler)) {
-		// if file isn't this directory or its parent, add it to the results
-		if ($file != "." && $file != "..") {
-		$results[] = $file;
-		}
-	}
-	// tidy up: close the handler
-	closedir($handler);
-?>
-	<?php
-			 $res = "";
-			for($i=0 ; $i<count($results); $i++) { 
-		
-	?>
-		<img src="<?php echo "..".$alliedSerivce[0] ->jcarouselPath.$results[$i] ?>" alt="" />
-<?php 		}	
-?>	
-</div>
-</div>
-</div>
-</div>
-<h3 class="clear">Few of the Popular themes are:</h3>
-<?php
-	/*$themes = array ();*/
-	$themes = explode("|",$alliedSerivce[0] ->themesUrl);
-	function endsWith($haystack, $needle) {
-	    $length = strlen($needle);
-	    if ($length == 0) {
-	        return true;
-	    }
-	    return (substr($haystack, -$length) === $needle);
-	}
-?>
-<?php
-	for($i=0 ; $i<count($themes); $i++) {
-		if(endsWith($themes[$i],'@VIDEO')) {
-			$pos = strrpos($themes[$i], "@");
-			$url = substr($themes[$i],0,$pos);
-		?>
-		<iframe width="241" height="180" src="<?php echo $url ?>" frameborder="0" allowfullscreen></iframe>
-	<?php
-		}//if closed
-		?>
-		<?php 
-		if(endsWith($themes[$i],'@IMAGE')) {
-			$pos = strrpos($themes[$i], "@");
-			$url = substr($themes[$i],0,$pos);
-		 // if closed
-		?>
-		<div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><span class="themeTitle">Theme One Title Here</span></div>
-	<?php 
-		}
-	}
-	?>
+  <div id="main">
+    <?php  require("../view/header.php") ?>
+    <div id="contentArea">
+      <div id="leftNavNarrow">
+        <!-- Small Left Box Start -->
+        <div class="box">
+          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+            <div class="boxtopbg sml"></div>
+          </div>
+          <div class="fullboxBg">
+            <div class="boxContent">
+              <div class="boxGr">
+                <!-- Box Content Start -->
+                <h4>Allied Servies</h4>
+                <ul class="alliedServices">
+                    <li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
+                    <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
+                    <li><a href="#">Celebrity</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Lodging</a></li>
+                    <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
+                    <li><a href="#">Bridal Lahenga</a></li>
+                    <li><a href="#">Groom wear</a></li>
+                </ul>
+                <!-- Box Content End -->
+              </div>
+            </div>
+          </div>
+          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+            <div class="boxbotbg sml"></div>
+          </div>
+        </div>
+        <!-- Small Left Box End -->
+        <!-- Small Left Box Start -->
+        <div class="box">
+          <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+            <div class="boxtopbg sml"></div>
+          </div>
+          <div class="fullboxBg">
+            <div class="boxContent">
+              <div class="boxGr" align="center">
+                <!-- Box Content Start -->
+                <script type="text/javascript">
+                    <!--
+                    google_ad_client = "ca-pub-4918915311035756";
+                    /* Side Panels */
+                    google_ad_slot = "6847862507";
+                    google_ad_width = 120;
+                    google_ad_height = 600;
+                    //-->
+                    </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                <!-- Box Content End -->
+              </div>
+            </div>
+          </div>
+          <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" />
+            <div class="boxbotbg sml"></div>
+          </div>
+        </div>
+        <!-- Small Left Box End -->
+      </div>
+      <div id="rightNavWide">
+        <!-- Box Start -->
+        <div class="box">
+          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+            <div class="boxtopbg"></div>
+          </div>
+          <div class="fullboxBg">
+            <div class="boxContent">
+              <div class="boxGr">
+                <!-- Box Content Start -->
+                <img src="<?php echo "..".$alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
+                <br />
+                <h3><?php echo $alliedSerivce[0] ->heading ?></h3>
+                <?php echo $alliedSerivce[0] ->html_content; ?>
+                <?php
+                    $results = array();
+                    // create a handler for the directory
+                    $handler = opendir("..".$alliedSerivce[0] ->jcarouselPath);
+                    // open directory and walk through the filenames
+                    while ($file = readdir($handler)) {
+                            // if file isn't this directory or its parent, add it to the results
+                            if ($file != "." && $file != "..") {
+                            $results[] = $file;
+                            }
+                    }
+                    // tidy up: close the handler
+                    closedir($handler);
+                ?>
+                	
+                
+              
+                 <div class="latest-news">
+                  <div class="image-slider-allied f-left">
+                    <div class="slider-wrapper theme-default">
+                      <div class="ribbon"></div>
+                      <div id="slider" class="nivoSlider-allied"> 
+                         <?php
+                            $res = "";
+                            for($i=0 ; $i<count($results); $i++) { 
+                        ?>
+                            <img src="<?php echo '..'.$alliedSerivce[0] ->jcarouselPath.$results[$i] ?>" alt="" />
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>        
+                        
+                <?php
+                        /*$themes = array ();*/
+                        $themes = explode("|",$alliedSerivce[0] ->themesUrl);
+                        function endsWith($haystack, $needle) {
+                            $length = strlen($needle);
+                            if ($length == 0) {
+                                return true;
+                            }
+                            return (substr($haystack, -$length) === $needle);
+                        }
+                ?>
+          
+                <?php if(count($themes)>1){?>        
+                <h3 class="clear">Few of the Popular themes are:</h3>
+                <?php } ?>
+                <?php
+                        for($i=0 ; $i<count($themes); $i++) {
+                                if(endsWith($themes[$i],'@VIDEO')) {
+                                        $pos = strrpos($themes[$i], "@");
+                                        $url = substr($themes[$i],0,$pos);
+                 ?>
+                  <iframe width="241" height="180" src="<?php echo $url ?>" frameborder="0" allowfullscreen></iframe>
+                  <?php }?>
+                  <?php 
+                        if(endsWith($themes[$i],'@IMAGE')) {
+                                $pos = strrpos($themes[$i], "@");
+                                $url = substr($themes[$i],0,$pos);
+                        // if closed
+                        ?>
+                  <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><span class="themeTitle">Theme One Title Here</span></div>
+                  <?php } } ?>
+                
+                <!--h3 class="clear">Few of the Popular themes are:</h3>
+                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb">
+                  <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb">
+                  <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
+                </div-->
+                <!-- Box Content End -->
+              </div>
+            </div>
+          </div>
+          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
+            <div class="boxbotbg"></div>
+          </div>
+        </div>
+        <!-- Box End -->
+        <!-- Box Start -->
+        <div class="box">
+          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /> <img src="../images/boxtopc2.png" align="right" alt="" />
+            <div class="boxtopbg"></div>
+          </div>
+          <div class="fullboxBg">
+            <div class="boxContent">
+              <div class="boxGr">
+                <!-- Box Content Start -->
+                <a name="bookNow"></a>
+                <h3>Get this service now</h3>
+                <div id='errorMessages'></div>
+                <form class="getVenue" name="bookVenueForm" method="POST">
+                  <!-- action="booking-confirmation"-->
+                  <div class="getvenue_cont">
+                    <label>Name:</label>
+                    <input type="text" name="name" class="txt-name" value="Enter Your Name" onblur="if(this.value==''){this.value='Enter Your Name'}" onfocus="if(this.value=='Enter Your Name'){this.value=''}"  />
+                  </div>
+                  <div class="getvenue_cont">
+                    <label>Email:<font color="red">*</font></label>
+                    <input type="text" name="email" class="txt-name" value="Enter your Email Id" onblur="if(this.value==''){this.value='Enter your Email Id'}" onfocus="if(this.value=='Enter your Email Id'){this.value=''}"  />
+                  </div>
+                  <div class="getvenue_cont last">
+                    <label>Contact Number:<font color="red">*</font></label>
+                    <input type="text" name="contactNumber" class="txt-name" value="Enter your Contact Number" onblur="if(this.value==''){this.value='Enter your Contact Number'}" onfocus="if(this.value=='Enter your Contact Number'){this.value=''}"  />
+                  </div>
+                  <!--<div class="getvenue_cont">
+                   <label>Preferred Date:</label>
+                    <input type="text" name="date" class="txt-name" value="Select your Date" onblur="if(this.value==''){this.value='Select your Date'}" onfocus="if(this.value=='Select your Date'){this.value=''}"  />
+                    <a href="#"><img src="../images/cal-icon.png" alt="" class="calicon" /></a> </div>
+                   -->
+                  <div class="getvenue_cont">
+                    <label>Preferred Date:</label>
+                    <input type="text" class="txt-name" name="date" value="" />
+                    <script language="JavaScript">
 
-<!--
-<div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-<div class="alliedThumb">
-<iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-<div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-<div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-<div class="alliedThumb">
-<iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
-</div
--->
-<!-- Box Content End 
-</div>
-</div>
-</div>
-<div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
-<div class="boxbotbg"></div>
-</div>
-</div>
-<!-- Box End -->
-<!-- Box Start -->
-<div class="box">
-<div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /> <img src="../images/boxtopc2.png" align="right" alt="" />
-<div class="boxtopbg"></div>
-</div>
-<div class="fullboxBg">
-<div class="boxContent">
-<div class="boxGr">
-<!-- Box Content Start -->
-<a name="bookNow"></a>
-<h3>Get this service now</h3>
-<div id='errorMessages'></div>
-<form class="getVenue" name="bookVenueForm" method="POST">
-<!-- action="booking-confirmation"-->
-<div class="getvenue_cont">
-<label>Name:</label>
-<input type="text" name="name" class="txt-name" value="Enter Your Name" onblur="if(this.value==''){this.value='Enter Your Name'}" onfocus="if(this.value=='Enter Your Name'){this.value=''}" />
-</div>
-<div class="getvenue_cont">
-<label>Email:<font color="red">*</font></label>
-<input type="text" name="email" class="txt-name" value="Enter your Email Id" onblur="if(this.value==''){this.value='Enter your Email Id'}" onfocus="if(this.value=='Enter your Email Id'){this.value=''}" />
-</div>
-<div class="getvenue_cont last">
-<label>Contact Number:<font color="red">*</font></label>
-<input type="text" name="contactNumber" class="txt-name" value="Enter your Contact Number" onblur="if(this.value==''){this.value='Enter your Contact Number'}" onfocus="if(this.value=='Enter your Contact Number'){this.value=''}" />
-</div>
-<!--<div class="getvenue_cont">
-<label>Preferred Date:</label>
-<input type="text" name="date" class="txt-name" value="Select your Date" onblur="if(this.value==''){this.value='Select your Date'}" onfocus="if(this.value=='Select your Date'){this.value=''}" />
-<a href="#"><img src="../images/cal-icon.png" alt="" class="calicon" /></a> </div>
--->
-<div class="getvenue_cont">
-<label>Preferred Date:</label>
-<input type="text" class="txt-name" name="date" value="" />
-<script language="JavaScript">
-
-new tcal ({
-// form name
-'formname': 'bookVenueForm',
-// input name
-'controlname': 'date',
-});
-</script>
-</div>
-<div class="getvenue_cont">
-<label>Your Function:</label>
-<input type="text" name="function" class="txt-name" value="Enter your Function" onblur="if(this.value==''){this.value='Enter your Function'}" onfocus="if(this.value=='Enter your Function'){this.value=''}" />
-</div>
-<div class="getvenue_cont last">
-<label>Your Budget in INR:</label>
-<input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if(this.value==''){this.value='Enter your Budget'}" onfocus="if(this.value=='Enter your Budget'){this.value=''}" />
-</div>
-<div class="clear"></div>
-<br>
-<div class="getvenue_cont last">
-<input type="image" src="../images/go-btn.png" onClick="return submitVenueBookingForm()"/>
-</div>
-<input type="hidden" name="action" value="bookAlliedService" />
-<input type="hidden" name="serviceName" value="<?php echo $alliedSerivce[0]->seoId ?>" />
-</form>
-<!-- Box Content End -->
-</div>
-</div>
-</div>
-<div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /> <img src="../images/boxbotc4.png" align="right" alt="" />
-<div class="boxbotbg"></div>
-</div>
-</div>
-<!-- Box End -->
-</div>
-</div>
-<br class="clear"/>
-<!-- Box Start -->
-<div class="box">
-<div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
-<div class="boxtopbg"></div>
-</div>
-<div class="fullboxBg">
-<div class="boxContent">
-<div class="boxGr">
-<!-- Box Content Start -->
-<div class="google-adds">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-4918915311035756";
-/* My Ad */
-google_ad_slot = "1466171534";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-</div>
-<!-- Box Content End -->
-</div>
-</div>
-</div>
-<div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" /><img src="/images/flower.png" class="flower" alt="" />
-<div class="boxbotbg"></div>
-</div>
-</div>
-<!-- Box End -->
-<?php require("../view/footer.php") ?>
-</div>
+						new tcal ({
+							// form name
+							'formname': 'bookVenueForm',
+							// input name
+							'controlname': 'date',
+						});
+						</script>
+                  </div>
+                  <div class="getvenue_cont">
+                    <label>Your Function:</label>
+                    <input type="text" name="function" class="txt-name" value="Enter your Function" onblur="if(this.value==''){this.value='Enter your Function'}" onfocus="if(this.value=='Enter your Function'){this.value=''}"  />
+                  </div>
+                  <div class="getvenue_cont last">
+                    <label>Your Budget in INR:</label>
+                    <input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if(this.value==''){this.value='Enter your Budget'}" onfocus="if(this.value=='Enter your Budget'){this.value=''}"  />
+                  </div>
+                  <div class="clear"></div>
+                  <br>
+                  <div class="getvenue_cont last">
+                    <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
+                  </div>
+                  <input type="hidden" name="action" value="bookAlliedService"  />
+                  <input type="hidden" name="serviceName" value="band"  />
+                </form>
+                <!-- Box Content End -->
+              </div>
+            </div>
+          </div>
+          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /> <img src="../images/boxbotc4.png" align="right" alt="" />
+            <div class="boxbotbg"></div>
+          </div>
+        </div>
+        <!-- Box End -->
+      </div>
+    </div>
+    <br class="clear"/>
+    <!-- Box Start -->
+    <div class="box">
+      <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+        <div class="boxtopbg"></div>
+      </div>
+      <div class="fullboxBg">
+        <div class="boxContent">
+          <div class="boxGr">
+            <!-- Box Content Start -->
+            <div class="google-adds">
+              <script type="text/javascript"><!--
+					google_ad_client = "ca-pub-4918915311035756";
+					/* My Ad */
+					google_ad_slot = "1466171534";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					//-->
+					</script>
+              <script type="text/javascript"	src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </div>
+            <!-- Box Content End -->
+          </div>
+        </div>
+      </div>
+      <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" /><img src="/images/flower.png" class="flower" alt="" />
+        <div class="boxbotbg"></div>
+      </div>
+    </div>
+    <!-- Box End -->
+    <?php  require("../view/footer.php") ?>
+  </div>
 </div>
 <script type="text/javascript">
-$(window).load(function() {
-$('#slider').nivoSlider({
-effect:'random',
-slices:17,
-animSpeed:500,
-pauseTime:6000,
-startSlide:0, //Set starting Slide (0 index)
-directionNav:true, //Next & Prev
-directionNavHide:false, //Only show on hover
-controlNav:true, //1,2,3...
-controlNavThumbs:false, //Use thumbnails for Control Nav
-controlNavThumbsFromRel:false, //Use image rel for thumbs
-controlNavThumbsSearch: '.jpg', //Replace this with...
-controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-keyboardNav:true, //Use left & right arrows
-pauseOnHover:true, //Stop animation while hovering
-manualAdvance:false, //Force manual transitions
-captionOpacity:0
-});
-});
-</script>
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+		effect:'random', 
+        slices:17,
+        animSpeed:500,
+        pauseTime:6000,
+        startSlide:0, //Set starting Slide (0 index)
+        directionNav:true, //Next & Prev
+        directionNavHide:false, //Only show on hover
+        controlNav:true, //1,2,3...
+        controlNavThumbs:false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel:false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav:true, //Use left & right arrows
+        pauseOnHover:true, //Stop animation while hovering
+        manualAdvance:false, //Force manual transitions
+        captionOpacity:0
+		});
+    });
+    </script>
 </body>
 </html>
