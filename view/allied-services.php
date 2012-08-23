@@ -34,17 +34,16 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
 					<td width="60%">
 						<ul>
 							<li><p><a href="/music-band-mystique">Music Band</a></p></li>
-							<li><p><a href="/wedding-decorators-in-delhi">Decor</p></li>
-							<li><p>Caterer</p></li>
-							<li><p>Bridal Fashion</p></li>
-							<li><p>DJ and Music</p></li>
-							<li><p><a href="/band-ghori-baggi-services-in-delhi">Ghoriwaala, Baggi</a></p></li>
-							<li><p>Health and Beauty</p></li>
+							<li><p><a href="/wedding-decorators-in-delhi">Decor</a></p></li>
+							<li><p><a href="/wedding-caterers-in-delhi">Caterer</a></p></li>
+                                                        <li><p><a href="/transportation-for-wedding-in-delhi">Transportation</a></p></li>
+                                                        <li><p><a href="/band-ghori-baggi-services-in-delhi">Ghoriwaala, Baggi</a></p></li>
+							<li><p><a href="/wedding-lehengas-in-delhi">Bridal Lahenga</a></p></li>
 						</ul>
 					</td>
 					<td>
 						<ul>
-							<li><p>Wedding Venue</p></li>
+							<li><p><a href="/groom-wedding-attires-in-delhi">Groom wear</a></p></li>
 							<li><p>Jewellery</p></li>
 							<li><p>Photographer</p></li>
 							<li><p>Wedding Card Provider</p></li>

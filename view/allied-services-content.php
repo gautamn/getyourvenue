@@ -29,15 +29,15 @@
                 <h4>Allied Servies</h4>
                 <ul class="alliedServices">
                     <li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
-                    <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
+                    <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
+                    <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    
+                    <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
+                    <li><a href="/wedding-lehengas-in-delhi">Bridal Lahenga</a></li>
+                    <li><a href="/groom-wedding-attires-in-delhi">Groom wear</a></li>
                     <li><a href="#">Photography</a></li>
-                    <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
                     <li><a href="#">Celebrity</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="#">Lodging</a></li>
-                    <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
-                    <li><a href="#">Bridal Lahenga</a></li>
-                    <li><a href="#">Groom wear</a></li>
                 </ul>
                 <!-- Box Content End -->
               </div>
@@ -152,8 +152,8 @@
                                 $pos = strrpos($themes[$i], "@");
                                 $url = substr($themes[$i],0,$pos);
                         // if closed
-                        ?>
-                  <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><span class="themeTitle">Theme One Title Here</span></div>
+                  ?>
+                  <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><!--span class="themeTitle">Theme One Title Here</span--></div>
                   <?php } } ?>
                 
                 <!--h3 class="clear">Few of the Popular themes are:</h3>
@@ -186,7 +186,7 @@
               <div class="boxGr">
                 <!-- Box Content Start -->
                 <a name="bookNow"></a>
-                <h3>Get this service now</h3>
+                <h3>Get This Service Now</h3>
                 <div id='errorMessages'></div>
                 <form class="getVenue" name="bookVenueForm" method="POST">
                   <!-- action="booking-confirmation"-->
