@@ -234,7 +234,7 @@
                     <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>
                   <input type="hidden" name="action" value="bookAlliedService"  />
-                  <input type="hidden" name="serviceName" value="<?php echo str_replace($alliedSerivce[0] ->seoId, '_', ' ') ?>" />
+                  <input type="hidden" name="serviceName" value="<?php echo $alliedSerivce[0] ->title ?>" />
                 </form>
                 <!-- Box Content End -->
               </div>

@@ -53,10 +53,10 @@ $serviceName = '';
  $mailStatus = "";
 if ($response == 1) {
 	$mailService = new MailService();
-	//echo "Booking Controller".$name.$email.$contactNumber.$email.$location.$function;
+	//echo "Booking Controller".$serviceName;
        
         if($serviceName!='')
-            $mailStatus = $mailService->sendServiceBookingNotificationMailviaGmail($name, $contactNumber, $email, $location, $serviceName, $budget, $date,"SERVICE_NOTIFICATION");
+            $mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, $location, $serviceName, $budget, $date,"SERVICE_NOTIFICATION");
         else $mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, $location, $function, $budget, $date,"VENUE_NOTIFICATION");
             
 }

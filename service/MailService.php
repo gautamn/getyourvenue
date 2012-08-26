@@ -37,11 +37,12 @@ class MailService{
 			"from"."\n".
 			"GYK Admin";	
                 
+                //echo "Booking notification mail".$notificationType;
                 if($notificationType=="SERVICE_NOTIFICATION") $subject=$username." wants to Get Allied Service---GYV Admin!!!";
                 if($notificationType=="VENUE_NOTIFICATION") $subject=$username." wants to Get a Venue---GYV Admin!!!";
-		else $subject=$username." wants some Information---GYV Admin!!!";
-		//$to=$constants->mailTo_gmail;
-		mail('gautamn2002@getyourvenue.com',$subject,$msg);
+		if($notificationType=="CONFIRMATION_NOTIFICATION") $subject=$username." wants some Information---GYV Admin!!!";
+		$to=$constants->mailTo_gmail;
+		mail($to,$subject,$msg);
               
 	}
         

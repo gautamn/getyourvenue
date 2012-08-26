@@ -24,7 +24,7 @@ $query = $_POST['txt_area'];
 $mailStatus = "";
 if ($response == 1) {
 	$mailService = new MailService();
-	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, "", "", "", date("Y-m-d"));
+	$mailStatus = $mailService->sendBookingNotificationMail($name, $contactNumber, $email, "", "", "", date("Y-m-d"),"CONFIRMATION_NOTIFICATION");
 }
 
 //echo 'mail---->'.$mailStatus;
