@@ -26,7 +26,7 @@
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h4>Allied Servies</h4>
+                <h4>Allied Services</h4>
                 <ul class="alliedServices">
                     <li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
                     <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
@@ -34,10 +34,10 @@
                     <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
                     <li><a href="/wedding-lehengas-in-delhi">Bridal Lahenga</a></li>
                     <li><a href="/groom-wedding-attires-in-delhi">Groom wear</a></li>
-                    <li><a href="#">Photography</a></li>
+                    <!--li><a href="#">Photography</a></li>
                     <li><a href="#">Celebrity</a></li>
                     <li><a href="#">Events</a></li>
-                    <li><a href="#">Lodging</a></li>
+                    <li><a href="#">Lodging</a></li-->
                 </ul>
                 <!-- Box Content End -->
               </div>
@@ -234,7 +234,7 @@
                     <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>
                   <input type="hidden" name="action" value="bookAlliedService"  />
-                  <input type="hidden" name="serviceName" value="band"  />
+                  <input type="hidden" name="serviceName" value="<?php echo str_replace($alliedSerivce[0]->$seoId, "_", " " ) ?>" />
                 </form>
                 <!-- Box Content End -->
               </div>

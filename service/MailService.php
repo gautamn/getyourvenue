@@ -11,19 +11,19 @@ include("../constants/Constants.php");
 
 class MailService{
 	
-	function sendBookingNotificationMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate){
+	function sendBookingNotificationMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate,$notificationType){
 	
             $constants = new Constants();
             $mailService = new MailService();
             
             if($constants->sendMailviaGMail) 
-                $mailService->sendBookingNotificationMailviaGmail($username,$phone,$emailid,$location,$function,$budget,$preferredDate);
+                $mailService->sendBookingNotificationMailviaGmail($username,$phone,$emailid,$location,$function,$budget,$preferredDate,$notificationType);
             else
-                $mailService->sendBookingNotificationMailviaPHPMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate);
+                $mailService->sendBookingNotificationMailviaPHPMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate,$notificationType);
          
 	}
 	
-        function sendBookingNotificationMailviaPHPMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate){
+        function sendBookingNotificationMailviaPHPMail($username,$phone,$emailid,$location,$function,$budget,$preferredDate,$notificationType){
 		
 		$constants = new Constants();
 		$msg="Hi Team,\n\n".
@@ -36,14 +36,16 @@ class MailService{
 			"Preferred Date: ".$preferredDate."\n\n".
 			"from"."\n".
 			"GYK Admin";	
-
-		$subject=$username." wants to Get a Venue---GYV Admin!!!";
+                
+                if($notificationType=="SERVICE_NOTIFICATION") $subject=$username." wants to Get Allied Service---GYV Admin!!!";
+                if($notificationType=="VENUE_NOTIFICATION") $subject=$username." wants to Get a Venue---GYV Admin!!!";
+		else $subject=$username." wants some Information---GYV Admin!!!";
 		//$to=$constants->mailTo_gmail;
 		mail('gautamn2002@getyourvenue.com',$subject,$msg);
               
 	}
         
-	function sendBookingNotificationMailviaGmail($username,$phone,$emailid,$location,$function,$budget,$preferredDate){
+	function sendBookingNotificationMailviaGmail($username,$phone,$emailid,$location,$function,$budget,$preferredDate,$notificationType){
 		
 		$mailer = new PHPMailer();
 		$constants = new Constants();
