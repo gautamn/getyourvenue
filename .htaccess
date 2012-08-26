@@ -12,7 +12,7 @@ RewriteRule ^allied-services$   /view/allied-services.php [L]
 RewriteRule ^search_results$   /actionController/Controller.php [L]
 RewriteRule ^search_results_pagination$   /actionController/Controller.php [L]
 
-#RewriteRule ^allied_services$   /actionController/AlliedServicesController.php [L]
+RewriteRule ^allied_services$   /actionController/AlliedServicesController.php [L]
 
 RewriteRule ^readers-corner$   /view/readers-corner.php [L]
 RewriteRule ^site-map$   /view/site-map.php [L]
