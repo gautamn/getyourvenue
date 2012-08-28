@@ -11,11 +11,11 @@ require_once ("../service/VenueService.php");
 require_once ("../service/MailService.php");
 require_once ("../constants/Constants.php");
 
-if (array_key_exists('action', $_POST) && $_POST['action'] != null)
-	$action = $_POST['action'];
+if (array_key_exists('actionType', $_POST) && $_POST['actionType'] != null)
+	$action = $_POST['actionType'];
 else
-	if (array_key_exists('action', $_GET) && $_GET['action'] != null)
-		$action = $_GET['action'];
+	if (array_key_exists('actionType', $_GET) && $_GET['actionType'] != null)
+		$action = $_GET['actionType'];
 
 $venueService = new VenueService();
 

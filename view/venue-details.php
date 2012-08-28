@@ -243,7 +243,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                   <div class="getvenue_cont last">
                     <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>
-                  <input type="hidden" name="action" value="bookVenue"  />
+                  <input type="hidden" name="actionType" value="bookVenue"  />
                   <input type="hidden" name="venueId" value="<?php echo $venueList[0]->venueId  ?>" />
                 </form>
                 <!-- Box Content End -->

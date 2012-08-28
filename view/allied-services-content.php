@@ -32,8 +32,8 @@
                     <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
                     <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    
                     <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
-                    <li><a href="/wedding-lehengas-in-delhi">Bridal Lahenga</a></li>
-                    <li><a href="/groom-wedding-attires-in-delhi">Groom wear</a></li>
+                    <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
+                    <li><a href="/groom-wedding-attires-in-delhi">Groom Wear</a></li>
                     <!--li><a href="#">Photography</a></li>
                     <li><a href="#">Celebrity</a></li>
                     <li><a href="#">Events</a></li>

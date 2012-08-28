@@ -24,5 +24,5 @@
   <input type="text" class="input-txt" name="confirm_code" /><br />
   -->
   <input type="image" src="../images/send-us-btn.png" class="button"  onClick="return submitContactUsForm()" />
-  <input type="hidden" name="action" value="contactUs" />
+  <input type="hidden" name="actionType" value="contactUs" />
 </form>
