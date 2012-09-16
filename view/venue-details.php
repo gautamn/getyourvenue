@@ -24,6 +24,9 @@ $venueService = new VenueService();
 echo $venueService->getSEOConstant("venueDetails",$venueList[0]);
 
 ?>
+<?php  require_once ("../constants/Constants.php"); 
+           $constants=new Constants(); 
+?> 
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
@@ -127,14 +130,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </div>
                 -->
                 <br />
-                <div class="venue-desc f-left"> <img src="<?php echo '../images/'.$venueList[0]->id.'/thumbnail.jpg' ?>" alt="" />
+                <div class="venue-desc f-left"> <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id.'/thumbnail.jpg' ?>" alt="" />
                   <div class="addressLine"><?php echo $venueList[0]->venueAddr1?><br />
                     <?php echo $venueList[0]->venueAddr2?></div>
                 </div>
                 
                 <div class="google-map f-right">
                 <iframe width='560' height='310' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src=
-                 	'<?php echo $venueList[0]->mapUrl?>'>
+                 	'<?php echo $venueList[0]->iframe?>'>
                  </iframe>
                   <br /> 
               </div>
@@ -159,7 +162,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 <div class="image-slider f-left">
                   <div class="slider-wrapper theme-default">
                     <div class="ribbon"></div>
-                    <div id="slider" class="nivoSlider"> <img src="<?php echo "../images/".$venueList[0]->id."/gal_1.jpg" ?>"   alt="" /> <img src="<?php echo "../images/".$venueList[0]->id."/gal_2.jpg" ?>"  alt="" /> <img src="<?php echo "../images/".$venueList[0]->id."/gal_3.jpg" ?>"  alt="" /> <img src="<?php echo "../images/".$venueList[0]->id."/gal_4.jpg" ?>" alt="" /> </div>
+                    <div id="slider" class="nivoSlider"> <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_1.jpg" ?>"   alt="" />
+                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_2.jpg" ?>"  alt="" />
+                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_3.jpg" ?>"  alt="" /> 
+                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_4.jpg" ?>" alt="" /> </div>
                   </div>
                 </div>
                 <div class="latest-news f-right">

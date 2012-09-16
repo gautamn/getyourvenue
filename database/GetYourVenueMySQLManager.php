@@ -18,18 +18,14 @@ class GetYourVenueMySQLManager {
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
 		$venueList = array ();
-		//$offset = $dbConstants->pageOffset;TODO
-		$dataBaseResponse = "";
-
+		
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 			
 			$query = $this->getSearchQuery($regionId,$categoryId,$capacityId);
-			//echo $query;
-			$result = mysql_query($query);
-
-			while ($row = mysql_fetch_array($result)) {
+                        $result = mysql_query($query);
+                        while ($row = mysql_fetch_array($result)) {
 
 				$venue = new Venue();
 				$venue->id = $row['id'];
@@ -39,8 +35,7 @@ class GetYourVenueMySQLManager {
 				$venue->venueAddr2 = $row['address2'];
 				$venue->content = $row['content'];
 				$venue->mapUrl = $row['iframe'];
-				$venue->altTag = $row['alttag'];
-				
+							
 				$venueList[] = $venue;
 			}
 		}
@@ -55,15 +50,12 @@ class GetYourVenueMySQLManager {
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
 		$venueList = array ();
-		//$offset = $dbConstants->pageOffset;TODO
-		$dataBaseResponse = "";
-
+		
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
 			
 			$query = $this->getSearchQueryforPagination($regionId,$categoryId,$capacityId,$startIndex,$offset);
-			//echo $query;
 			$result = mysql_query($query);
 
 			while ($row = mysql_fetch_array($result)) {
@@ -76,7 +68,7 @@ class GetYourVenueMySQLManager {
 				$venue->venueAddr2 = $row['address2'];
 				$venue->content = $row['content'];
 				$venue->mapUrl = $row['iframe'];
-				$venue->altTag = $row['alttag'];
+				$venue->altTag = $row['image_alt_tag'];
 				
 				$venueList[] = $venue;
 			}
@@ -85,25 +77,94 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 		return $venueList;
 	}
-	
-	function getVenue($venueid) {
-
-		$dbConstants = new DBConstants();
+        
+        function getVenueByChoice($choiceId) {
+                
+                $dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
 		$venueList = array ();
 
-		$dataBaseResponse = "";
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			if ($choiceId != 0) 
+				$query = "SELECT name,address1,address2,content,id,venueid FROM venue WHERE is_active=1 AND
+									      popular_choice=" . $choiceId;
+			else
+				$query = "SELECT name,address1,address2,content,id,venueid FROM venue ve
+                                        WHERE popular_choice!=1 AND popular_choice!=2 AND popular_choice!=3 AND 
+                                        popular_choice!=4 AND popular_choice!=5 AND is_active=1";  
+			$result = mysql_query($query);
+			
+                        while ($row = mysql_fetch_array($result)) {
+
+				$venue = new Venue();
+				$venue->id = $row['id'];
+				$venue->venueId = $row['venueid'];
+				$venue->venueName = $row['name'];
+				$venue->venueAddr1 = $row['address1'];
+				$venue->venueAddr2 = $row['address2'];
+				$venue->content = $row['content'];
+				$venueList[] = $venue;
+			}
+		}
+                
+                mysql_close($connection);
+		return $venueList;
+	}
+        
+        function getVenueByChoiceForPagination($choiceId,$startIndex,$offset) {
+
+                $dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$venueList = array ();
+		
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			if ($choiceId != 0) 
+				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve 
+                                    WHERE  ve.is_active=1 AND ve.popular_choice=".$choiceId." ORDER BY ve.zone_rank limit ".$startIndex.",".$offset ;
+			else
+				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
+					 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
+					 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active=1 ORDER BY ve.zone_rank limit ".$startIndex.",".$offset;  
+			
+                        $result = mysql_query($query);
+			while ($row = mysql_fetch_array($result)) {
+
+				$venue = new Venue();
+				$venue->id = $row['id'];
+				$venue->venueId = $row['venueid'];
+				$venue->venueName = $row['name'];
+				$venue->venueAddr1 = $row['address1'];
+				$venue->venueAddr2 = $row['address2'];
+				$venue->content = $row['content'];
+				$venueList[] = $venue;
+			}
+		}
+
+		mysql_close($connection);
+		return $venueList;
+	}
+        
+        function getVenue($venueid) {
+                
+                $dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$venueList = array ();
 
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
-			$result = mysql_query("SELECT ve.*,veseo.title,veseo.meta_description,meta_keyword,pc.*,reg.* FROM venue ve LEFT JOIN venue_seo_info veseo ON " .
-					"ve.id=veseo.venueid LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid " .
-					"LEFT JOIN region reg ON ve.regionid=reg.regionid " .
-					"WHERE ve.venueid='".$venueid."' ");
-					
-			while ($row = mysql_fetch_array($result)) {
+			$result = mysql_query("SELECT ve.*,ve.title,ve.meta_description,meta_keyword,pc.*,reg.* FROM venue ve 
+                                               LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid 
+                                               LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='".$venueid."'" );
+			
+                       while ($row = mysql_fetch_array($result)) {
 				$venue = new Venue();
 				$venue->id = $row['id'];
 				$venue->isActive = $row['is_active'];
@@ -117,10 +178,7 @@ class GetYourVenueMySQLManager {
 				$venue->popularchoicename = $row['popularchoicename'];
 				$venue->venueAddr1 = $row['address1'];
 				$venue->venueAddr2 = $row['address2'];
-				$venue->content = $row['content'];
-				$venue->mapUrl = $row['iframe'];
-				$venue->createdDate = $row['createdate'];
-				$venue->updatedDate = $row['updatedate'];
+				$venue->content = $row['content'];				
 				$venue->iframe = $row['iframe'];
 				$venue->title =$row['title'];
 				$venue->metaDescription = $row['meta_description'];
@@ -131,162 +189,20 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 		return $venueList;
 	}
-	
-	function deleteVenue($venueId){
-		
-		$dbConstants = new DBConstants();
+        
+        
+        function getVenueBySearchResult($venueName) {
+                
+                $dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
 		$venueList = array ();
-
-		$dataBaseResponse = "";
-
+                $venueName =  strtolower($venueName);
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
 			throw new DBSourceException("Unable to connect to a datasource.");
 		} else {
-
-			$result = mysql_query("delete from venue where venueid='".$venueId."'");
-		}
-
-		mysql_close($connection);
-		return $result;
-	}
-	
-	function updateVenue($venue){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-
-			$query = "UPDATE venue SET venueid = \"".$venue->venueId."\", NAME=\"".$venue->venueName."\", regionid=\"".$venue->regionId."\", rank=\"".$venue->rank."\", popular_choice=\"".$venue->popularChoiceId."\",address1=\"".$venue->venueAddr1."\", " .
-					" address2=\"".$venue->venueAddr2."\", content=\"".$venue->content."\", is_active=\"".$venue->isActive."\", updatedate='".mysql_real_escape_string($venue->updatedDate)."'".
-					",iframe=\"".$venue->iframe."\" WHERE id='".$venue->id."'";
-			//echo $query;
-					
-			$dataBaseResponse = mysql_query($query) or die(mysql_error());
-			
-			if($dataBaseResponse == 1){
-				$seoInfoUpdateQuery = "UPDATE venue_seo_info SET title='".$venue->title."'," .
-									  "meta_description='".$venue->metaDescription."',meta_keyword='".$venue->metaKeyword."'" .
-									  " where venueid=".$venue->id;
-									  
-				$seoInfoInsertQuery = "INSERT venue_seo_info  VALUES(".$venue->id.",'".$venue->title."'," .
-									  "'".$venue->metaDescription."','".$venue->metaKeyword."' )" ;
-									  
-				$isVenueIdExistQuery = "SELECT venueid from venue_seo_info where venueid=".$venue->id;
-				
-				$isVenueIdExistResult = mysql_query($isVenueIdExistQuery);
-				if(count(mysql_fetch_array($isVenueIdExistResult))>1){
-					$dataBaseResponse = $seoInfoQueryResult = mysql_query($seoInfoUpdateQuery) or die(mysql_error());
-				}else{
-					$dataBaseResponse = $seoInfoQueryResult = mysql_query($seoInfoInsertQuery) or die(mysql_error());
-				}	
-														  
-			}
-		}
-
-		mysql_close($connection);
-		return $dataBaseResponse;
-	}//function
-	
-
-	function submitBookingDetails($name, $email, $date, $function, $contactNumber, $budget) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-
-			/*$dataBaseResponse = mysql_query("INSERT INTO booking_info " .
-			"(name,email,date,function,contact,budget,bookingdate) VALUES" .
-			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
-			"'" . $budget . "',CURRENT_TIMESTAMP())");*/
-			
-			$dataBaseResponse = mysql_query("INSERT INTO book_now " .
-			"(name,email,preferred_date,type_of_function,contact_no,budget,insertdate) VALUES" .
-			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
-			"'" . $budget . "',CURRENT_TIMESTAMP())");
-
-			
-			/*echo "INSERT INTO booking_info " .
-			"(name,email,date,function,contact,budget,bookingdate) VALUES" .
-			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
-			"'" . $budget . "',CURRENT_TIMESTAMP())";*/
-		}
-
-		mysql_close($connection);
-
-		return $dataBaseResponse;
-
-	}
-
-	function getVenueByChoice($choiceId) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-			if ($choiceId != 0) //TODO (hard code choiceId)
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE ve.is_active='Y'  AND
-									      ve.popular_choice=" . $choiceId;
-			else
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
-										 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
-										 ve.popular_choice!=4 AND ve.popular_choice!=5 AND ve.is_active='Y'";  
-			$result = mysql_query($query);
-			
-			//echo $query;
-			while ($row = mysql_fetch_array($result)) {
-
-				$venue = new Venue();
-				$venue->id = $row['id'];
-				$venue->venueId = $row['venueid'];
-				$venue->venueName = $row['name'];
-				$venue->venueAddr1 = $row['address1'];
-				$venue->venueAddr2 = $row['address2'];
-				$venue->content = $row['content'];
-				$venueList[] = $venue;
-			}
-		}
-
-		mysql_close($connection);
-		return $venueList;
-
-	}
-
-       function getVenueBySearchResult($venueName) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-			$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE 
-									      ve.name LIKE '%" . $venueName . "%'  AND ve.is_active='Y' ORDER BY ve.rank";
+	   		$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE ".
+				 " ve.name LIKE '%" . $venueName . "%'  AND ve.is_active=1 ORDER BY ve.rank";
 			$result = mysql_query($query);
 			while ($row = mysql_fetch_array($result)) {
 				$venue = new Venue();
@@ -302,253 +218,10 @@ class GetYourVenueMySQLManager {
 
 		mysql_close($connection);
 		return $venueList;
-
-	}
-
-
-	function getVenueByChoiceForPagination($choiceId,$startIndex,$offset) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-
-		$dataBaseResponse = "";
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-			if ($choiceId != 0) //TODO (hard code choiceId)
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE  ve.is_active='Y' AND
-									      ve.popular_choice=" . $choiceId." ORDER BY ve.rank limit ".$startIndex.",".$offset ;
-			else
-				$query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
-										 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
-										 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active='Y' ORDER BY ve.rank limit ".$startIndex.",".$offset;  
-			$result = mysql_query($query);
-			//echo $query;
-			while ($row = mysql_fetch_array($result)) {
-
-				$venue = new Venue();
-				$venue->id = $row['id'];
-				$venue->venueId = $row['venueid'];
-				$venue->venueName = $row['name'];
-				$venue->venueAddr1 = $row['address1'];
-				$venue->venueAddr2 = $row['address2'];
-				$venue->content = $row['content'];
-				$venueList[] = $venue;
-			}
-		}
-
-		mysql_close($connection);
-		return $venueList;
-
-	}
-
-	function submitbookNow($name, $email, $contact_no, $preferred_region, $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function, $msg) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-
-			throw new DBSourceException("Unable to connect to a datasource.");
-
-		} else {
-
-			$dataBaseResponse = mysql_query("INSERT INTO book_now (NAME,email,contact_no,preferred_region,preferred_venue,".
-			" preferred_date,no_of_guests,budget,type_of_function,message) VALUES('".$name."',".
-			"'".$email."','".$contact_no."','".$preferred_region."','".$preferred_venue."',".
-			"'".$preferred_date."','".$no_of_guests."',".
-			"'".$budget."','".$type_of_function."','".$msg."')");
-			
-		}
-
-		mysql_close($connection);
-		return $dataBaseResponse;
-
-	}
-	
-	/*function submitcontactUs($name,$email,$contact_num,$message){
-
-               $dbConstants = new DBConstants();
-               $dBUtils = new DBUtils();
-               $connection = $dBUtils->getDBConnection();
-               $venueList = array();
-
-               $dataBaseResponse = "";
-
-               if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-                       throw new DBSourceException("Unable to connect to a datasource.");
-               } else{
-
-                       $dataBaseResponse = mysql_query("INSERT INTO contact_us " .
-                                       "(name,email,contact_num,message) VALUES".
-                                       "('".$name."','".$email."','".$contact_num."'," .
-                                       "'".$message."')");
-
-               }
-
-               mysql_close($connection);
-
-               return $dataBaseResponse;
-
-       }*/
-       
-       function getSearchQuery($regionId,$categoryId,$capacityId){
-       	
-			$fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe".",IFNULL(v.alttag,'') as alttag"." ";
-			$entity = "from (SELECT ve.*,vi.alttag FROM"." ". 
-					   "venue ve LEFT JOIN venue_image_alttag vi ON ve.id=vi.venueid) v"." ";
-			$orderBy = "order by v.id desc"." ";
-			$conditionClause = "";
-			$isFirstCondition = true;
-       		
-       			if($regionId!=0){
-       				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="v.regionid=".$regionId." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($categoryId!=0){
-    				$entity.=",venue_type_mapping vtm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($capacityId!=0){
-    				$entity.=",venue_capacity_mapping vcm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    				
-    			$query = $fields.$entity.$conditionClause.$orderBy;
-    			//$query.=" limit ".$pointer.",".$offset;TODO
-    			
-    			return $query;   			
-       }//function
-       
-        function getSearchQueryforPagination($regionId,$categoryId,$capacityId,$startIndex,$offset){
-       	
-			$fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe".",IFNULL(v.alttag,'') as alttag"." ";
-			$entity = "from (SELECT ve.*,vi.alttag FROM"." ". 
-					   "venue ve LEFT JOIN venue_image_alttag vi ON ve.id=vi.venueid WHERE ve.is_active='Y') v"." ";
-			$orderBy = "order by v.rank"." ";
-			$conditionClause = "";
-			$isFirstCondition = true;
-       		
-       			if($regionId!=0){
-       				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="v.regionid=".$regionId." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($categoryId!=0){
-    				$entity.=",venue_type_mapping vtm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($capacityId!=0){
-    				$entity.=",venue_capacity_mapping vcm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    				
-    			$query = $fields.$entity.$conditionClause.$orderBy;
-    			$query.=" limit ".$startIndex.",".$offset;
-
-				//echo "query===".$query;
-    			
-    			return $query;   			
-       }//function
-       
-       function getSearchRecordSize($regionId,$categoryId,$capacityId){
-       	
-			$fields = "SELECT count(v.id) as id ";
-			$entity = "from venue v"." ";
-			$conditionClause = "";
-			$isFirstCondition = true;
-       		
-       			if($regionId!=0){
-       				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="v.regionid=".$regionId." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($categoryId!=0){
-    				$entity.=",venue_type_mapping vtm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    			
-    			if($capacityId!=0){
-    				$entity.=",venue_capacity_mapping vcm"." ";
-    				if($isFirstCondition)
-    					$conditionClause = "WHERE"." ";
-    				else
-    					$conditionClause.="AND"." ";
-    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." ";
-    				$isFirstCondition = false;
-    			}
-    				
-    			$query = $fields.$entity.$conditionClause;
-    			
-    		   $dbConstants = new DBConstants();
-               $dBUtils = new DBUtils();
-               $connection = $dBUtils->getDBConnection();
-               $venueList = array();
-
-               $dataBaseResponse = "";
-
-               if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-                       throw new DBSourceException("Unable to connect to a datasource.");
-               } else{
-               	
-               		$result = mysql_query($query);
-               		while ($row = mysql_fetch_array($result)) {
-               		
-               			$dataBaseResponse = $row['id'];
-               		}
-               }
-
-               mysql_close($connection);
-               return $dataBaseResponse;
-    			
-       }//function
-	
-	function getRegionList(){
+          } 
+        
+          
+          function getRegionList(){
 		
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
@@ -595,8 +268,295 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 		return $regionName;
 	}//function
+        
+        function alliedServices($seoId) {
+
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$allied = array ();
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource."); 
+		} else {
+			$query = "select * from allied_services where seo_id='".$seoId."'";
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_array($result)) {
+				$alliedServices = new AlliedServices();
+				$alliedServices->seoId = $row['SEO_ID'];
+				$alliedServices->bannerPath = $row['BANNER_PATH'];
+				$alliedServices->heading = $row['HEADING'];
+				$alliedServices->html_content = $row['HTML_CONTENT'];
+				$alliedServices->title=$row['TITLE'];
+				$alliedServices->metaDescription=$row['META_DESCRIPTION'];
+				$alliedServices->metaKeyword = $row['META_KEYWORD'];
+				$alliedServices->jcarouselPath = $row['JCAROUSEL_IMAGES_FOLDER_PATH'];
+				$alliedServices->themesUrl = $row['THEMES_URLS'];
+				$allied[] = $alliedServices;
+			}
+		}
+		mysql_close($connection);
+		return $allied;		
+	}//function
+        
+        // fuction to get auto suggest data from the database
+	function getVenueJson($autoSuggest){
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+			$input = $autoSuggest;
+			$data = array();
+			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%' AND is_active='Y'");
+		    while ($row = mysql_fetch_assoc($query)) {
+		    	$data = $row['name'];
+	      		echo ($data);
+	      		echo ("\n");
+                    } 
+		}
+		mysql_close($connection);
+	}//function
+        
+        function getRegionIdByRegionType($regionType){
+		
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$regionId = "";
+		if($regionType=="delhi-ncr"){
+			$regionId = "0";
+		}
+		else{
+			if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+			} else {
+				$result = mysql_query("SELECT regionid from region where regiontype='".$regionType."'");
+				while ($row = mysql_fetch_array($result)) {
+						$regionId = $row['regionid'];	
+				}
+			}
+		}
+		
+		mysql_close($connection);
+		return $regionId;
+	}//function
+        
+        function getVenueTypeIdByVenueType($venueType){
+		
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$venueTypeId = "";
+		
+		if($venueType == "wedding-venues"){
+			$venueTypeId = "0";
+		}else{
+			if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+				throw new DBSourceException("Unable to connect to a datasource.");
+			} else {
 	
-	function getVenueTypeList(){
+				$result = mysql_query("SELECT venuetypeid from venuetype where venuetype='".$venueType."'");
+				while ($row = mysql_fetch_array($result)) {
+						$venueTypeId = $row['venuetypeid'];	
+				}
+			}
+		}
+
+		mysql_close($connection);
+		return $venueTypeId;
+	}//function
+        
+           function getSearchQueryforPagination($regionId,$categoryId,$capacityId,$startIndex,$offset){
+       	
+			$fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe, v.image_alt_tag ";
+			$entity = "from venue v ";
+			$orderBy = "order by v.rank"." ";
+			$conditionClause = "";
+			$isFirstCondition = true;
+       		
+       			if($regionId!=0){
+       				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="v.regionid=".$regionId." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($categoryId!=0){
+    				$entity.=",venue_type_mapping vtm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($capacityId!=0){
+    				$entity.=",venue_capacity_mapping vcm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." AND v.is_active=1 ";
+    				$isFirstCondition = false;
+    			}
+    				
+    			$query = $fields.$entity.$conditionClause.$orderBy;
+    			$query.=" limit ".$startIndex.",".$offset;
+   			
+    			return $query;   			
+       }//function
+       
+       function getVenueByVenueType($venueType){
+		
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$venue = "";
+
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+
+			$result = mysql_query("SELECT * from venuetype where venuetype='".$venueType."'");
+				while ($row = mysql_fetch_array($result)) {
+					$venue = $row['type'];
+			}
+		}
+
+		mysql_close($connection);
+		return $venue;
+	}//function
+        
+        function getCapacityById($capacityId){
+		
+		$dbConstants = new DBConstants();
+		$dBUtils = new DBUtils();
+		$connection = $dBUtils->getDBConnection();
+		$capacityRange = "";
+
+
+		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+			throw new DBSourceException("Unable to connect to a datasource.");
+		} else {
+
+			$result = mysql_query("SELECT * from capacity where capacityid=".$capacityId);
+			while ($row = mysql_fetch_array($result)) {
+					$capacityRange = $row['range'];	
+			}
+		}
+
+		mysql_close($connection);
+		return $capacityRange;
+	}//function
+        
+        function getSearchQuery($regionId,$categoryId,$capacityId){
+       	
+			$fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe ";
+			$entity = "from venue v "." ";
+			$orderBy = "order by v.id desc"." ";
+			$conditionClause = "";
+			$isFirstCondition = true;
+       		
+       			if($regionId!=0){
+       				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="v.regionid=".$regionId." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($categoryId!=0){
+    				$entity.=",venue_type_mapping vtm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($capacityId!=0){
+    				$entity.=",venue_capacity_mapping vcm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." ";
+    				$isFirstCondition = false;
+    			}
+    				
+    			$query = $fields.$entity.$conditionClause.$orderBy;
+    			
+    			return $query;   			
+       }//function
+       
+       function getSearchRecordSize($regionId,$categoryId,$capacityId){
+       	
+			$fields = "SELECT count(v.id) as id ";
+			$entity = "from venue v"." ";
+			$conditionClause = "";
+			$isFirstCondition = true;
+       		
+       			if($regionId!=0){
+       				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="v.regionid=".$regionId." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($categoryId!=0){
+    				$entity.=",venue_type_mapping vtm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vtm.venuetypeid = " .$categoryId." AND v.id=vtm.venueid"." ";
+    				$isFirstCondition = false;
+    			}
+    			
+    			if($capacityId!=0){
+    				$entity.=",venue_capacity_mapping vcm"." ";
+    				if($isFirstCondition)
+    					$conditionClause = "WHERE"." ";
+    				else
+    					$conditionClause.="AND"." ";
+    				$conditionClause.="vcm.capacityid=".$capacityId." AND v.id=vcm.venueid"." ";
+    				$isFirstCondition = false;
+    			}
+    				
+    			$query = $fields.$entity.$conditionClause;
+    			
+    		   $dbConstants = new DBConstants();
+               $dBUtils = new DBUtils();
+               $connection = $dBUtils->getDBConnection();
+               $dataBaseResponse = "";
+
+               if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+                       throw new DBSourceException("Unable to connect to a datasource.");
+               } else{
+               	
+               		$result = mysql_query($query);
+               		while ($row = mysql_fetch_array($result)) {
+               		
+               			$dataBaseResponse = $row['id'];
+               		}
+               }
+
+               mysql_close($connection);
+               return $dataBaseResponse;
+    			
+       }//function
+	
+       function getVenueTypeList(){
 		
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
@@ -622,27 +582,7 @@ class GetYourVenueMySQLManager {
 		return $venueTypeList;
 	}//function
 	
-	function getVenueByVenueType($venueType){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venue = "";
-
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-
-			$result = mysql_query("SELECT * from venuetype where venuetype='".$venueType."'");
-				while ($row = mysql_fetch_array($result)) {
-					$venue = $row['type'];
-			}
-		}
-
-		mysql_close($connection);
-		return $venue;
-	}//function
+	
 	
 	function getCapacityList(){
 		
@@ -669,80 +609,8 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 		return $capacityList;
 	}//function
-	
-	function getCapacityById($capacityId){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$capacityRange = "";
-
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-
-			$result = mysql_query("SELECT * from capacity where capacityid=".$capacityId);
-			while ($row = mysql_fetch_array($result)) {
-					$capacityRange = $row['range'];	
-			}
-		}
-
-		mysql_close($connection);
-		return $capacityRange;
-	}//function
-	
-	function getRegionIdByRegionType($regionType){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$regionId = "";
-		if($regionType=="delhi-ncr"){
-			$regionId = "0";
-		}
-		else{
-			if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-			} else {
-				$result = mysql_query("SELECT regionid from region where regiontype='".$regionType."'");
-				while ($row = mysql_fetch_array($result)) {
-						$regionId = $row['regionid'];	
-				}
-			}
-			
-		}
-		
-		mysql_close($connection);
-		return $regionId;
-	}//function
-	
-	function getVenueTypeIdByVenueType($venueType){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$venueTypeId = "";
-		
-		if($venueType == "wedding-venues"){
-			$venueTypeId = "0";
-		}else{
-			if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-				throw new DBSourceException("Unable to connect to a datasource.");
-			} else {
-	
-				$result = mysql_query("SELECT venuetypeid from venuetype where venuetype='".$venueType."'");
-				while ($row = mysql_fetch_array($result)) {
-						$venueTypeId = $row['venuetypeid'];	
-				}
-			}
-		}
-
-		mysql_close($connection);
-		return $venueTypeId;
-	}//function
-	
-	function getPopularChoiceList(){
+        
+        function getPopularChoiceList(){
 		
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
@@ -767,217 +635,34 @@ class GetYourVenueMySQLManager {
 		mysql_close($connection);
 		return $popularChoiceList;
 	}//function
-	
-	function insertIntoVenueEntity($venue){
-		
-		$dbConstants = new DBConstants();
-		$seoConstants = new SEOConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$popularChoiceList = array ();
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-
-			$query = "INSERT INTO venue(venueid,NAME,rank,address1,address2,content,iframe,createdate,regionid,popular_choice)
-					 VALUES ('".$venue->venueId."','".$venue->venueName."','".$venue->rank."','".$venue->venueAddr1."'," .
-					 		" '".$venue->venueAddr2."','".$venue->content."','".mysql_real_escape_string($venue->iframe)."',
-					'".date("Y-m-d")."',".$venue->regionId.",".$venue->popularChoiceId.")";
-					
-			$result = mysql_query($query) or die(mysql_error());
-			
-			$status = false;
-			
-			if($result==1 ){
-				
-				$getIdQuery = "select id from venue where venueid='".$venue->venueId."'";
-				$getIdQueryResult = mysql_query($getIdQuery);
-				$id = 0;
-				while($row = mysql_fetch_array($getIdQueryResult)){
-					$id = $row['id'];
-				}
-				
-				if($id!=null && $id!=0)
-					$status = $this->insertIntoVenueTypeMappingEntity($id,$venue->venueTypeIdList);
-				if($status)	
-					$status = $this->insertIntoVenueCapacityMappingEntity($id,$venue->venueTypeIdList);
-				if($status)	
-					$status = $this->insertIntoSEOInfoMappingEtity($id,mysql_real_escape_string($seoConstants->defaulTitle),
-							  mysql_real_escape_string($seoConstants->defaulMetaDescription),mysql_real_escape_string($seoConstants->defaulMetaKeyword));
-			}
-			mysql_close($connection);
-			if($status)
-				return $id;
-			else
-				return "fail";
-				
-		}
-	}//function
-	
-	
-	function insertIntoVenueTypeMappingEntity($id,$venueTypeIdList){
-		
-		$query = "INSERT INTO venue_type_mapping(venueid,venuetypeid) VALUES ";
-		for($i=0;$i<count($venueTypeIdList);$i++){
-			$query.=" (".$id.",".$venueTypeIdList[$i].") ,";
-		}//for
-		$query = substr($query,0,strlen($query)-1);
-		$result = mysql_query($query) or die(mysql_error());
-		
-		if($result==1)
-			return true;
-		else
-			return false;
-			
-	}//function
-	
-	function insertIntoSEOInfoMappingEtity($id,$title,$metaDescription,$metaKeyword){
-		
-		$seoInfoQuery = "INSERT INTO venue_seo_info VALUES('".$id."','".$title."','".$metaDescription."'," .
-						"'".$metaKeyword."')";
-		$seoInfoQueryResult = mysql_query($seoInfoQuery) or die(mysql_error());
-		
-		if($seoInfoQueryResult==1)
-			return true;
-		else
-			return false;
-	}//function
-	
-	function insertIntoVenueCapacityMappingEntity($id,$venueCapacityIdList){
-		
-		$query = "INSERT INTO venue_capacity_mapping(venueid,capacityid) VALUES ";
-		for($i=0;$i<count($venueCapacityIdList);$i++){
-			$query.=" (".$id.",".$venueCapacityIdList[$i].") ,";
-		}//for
-		$query = substr($query,0,strlen($query)-1);
-		$result = mysql_query($query) or die(mysql_error());
-		
-		if($result==1)
-			return true;
-		else
-			return false;
-			
-	}//function
-	
-	function isValidUser($userId,$password,$roleId){
-		
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$popularChoiceList = array ();
-
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-			
-			$query = "select * from userinfo where userid='".$userId."' and password = '".$password."' " .
-					" and roleid='".$roleId."' ";
-			$result = mysql_query($query);
-			
-			if(count(mysql_fetch_array($result))>1)
-				return true;
-			else
-				return false;
-			
-		}
-
-		mysql_close($connection);
-	}//function
-
-        // fuction to get auto suggest data from the database
-	function getVenueJson($autoSuggest){
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource.");
-		} else {
-			$input = $autoSuggest;
-			$data = array();
-			// query your DataBase here looking for a match to $input
-			$query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%' AND is_active='Y'");
-		    while ($row = mysql_fetch_assoc($query)) {
-		    	//$json = array();
-		    	//$json['query'] = $input;
-	      		//$json['data'] = $row['venueid'];
-	      		//$json['suggestions'] = $row['name'];
-	      		$data = $row['name'];
-	      		echo ($data);
-	      		echo ("\n");
-	      	}
-	      //header("Content-type: application/json");
-	      //echo $data;
-		}
-		mysql_close($connection);
-	}//function
-	function viewReport() {
+        
+        function submitbookNow($name, $email, $contact_no, $preferred_region, $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function, $msg) {
 
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
-		$bookingList = array ();
-
+		$venueList = array ();
 		$dataBaseResponse = "";
 
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+
 			throw new DBSourceException("Unable to connect to a datasource.");
+
 		} else {
-			$query = "select id, name, email, contact_no, preferred_venue, preferred_date, no_of_guests, budget, type_of_function,insertdate from book_now" .
-					 " where datediff(now(),insertdate) < 7 order by insertdate desc";
-			$result = mysql_query($query);
-			while ($row = mysql_fetch_array($result)) {
-				$bookingInfo = new BookingInfo();
-				$bookingInfo->Id = $row['id'];
-				$bookingInfo->name = $row['name'];
-				$bookingInfo->email = $row['email'];
-				$bookingInfo->contact = $row['contact_no'];				
-				$bookingInfo->preferredVenue=$row['preferred_venue'];
-				$bookingInfo->no_of_guests=$row['no_of_guests'];
-				$bookingInfo->date = $row['preferred_date'];
-				$bookingInfo->budget = $row['budget'];
-				$bookingInfo->functions = $row['type_of_function'];
-				$bookingInfo->bookingdate = $row['insertdate'];
-				$bookingList[] = $bookingInfo;
-			}
+
+			$dataBaseResponse = mysql_query("INSERT INTO book_now (NAME,email,contact_no,preferred_region,preferred_venue,".
+			" preferred_date,no_of_guests,budget,type_of_function,message) VALUES('".$name."',".
+			"'".$email."','".$contact_no."','".$preferred_region."','".$preferred_venue."',".
+			"'".$preferred_date."','".$no_of_guests."',".
+			"'".$budget."','".$type_of_function."','".$msg."')");
+			
 		}
+
 		mysql_close($connection);
-		return $bookingList;
-	}//function
+		return $dataBaseResponse;
+
+	}
 	
-	function alliedServices($seoId) {
-
-		$dbConstants = new DBConstants();
-		$dBUtils = new DBUtils();
-		$connection = $dBUtils->getDBConnection();
-		$allied = array ();
-
-		$dataBaseResponse = "";
-
-		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-			throw new DBSourceException("Unable to connect to a datasource."); 
-		} else {
-			$query = "select * from allied_services where seo_id='".$seoId."'";
-			$result = mysql_query($query);
-			while ($row = mysql_fetch_array($result)) {
-				$alliedServices = new AlliedServices();
-				$alliedServices->seoId = $row['SEO_ID'];
-				$alliedServices->bannerPath = $row['BANNER_PATH'];
-				$alliedServices->heading = $row['HEADING'];
-				$alliedServices->html_content = $row['HTML_CONTENT'];
-				$alliedServices->title=$row['TITLE'];
-				$alliedServices->metaDescription=$row['META_DESCRIPTION'];
-				$alliedServices->metaKeyword = $row['META_KEYWORD'];
-				$alliedServices->jcarouselPath = $row['JCAROUSEL_IMAGES_FOLDER_PATH'];
-				$alliedServices->themesUrl = $row['THEMES_URLS'];
-				$allied[] = $alliedServices;
-			}
-		}
-		mysql_close($connection);
-		return $allied;
-		
-	}//function
 }
 
 ?>

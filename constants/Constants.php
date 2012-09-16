@@ -10,6 +10,11 @@
 
 	public $DOMAIN_URL = "http://localhost/";
 	//public $DOMAIN_URL = "http://getyourvenue.com/";
+        
+        //public $IMAGE_PATH='/images/';
+        public $IMAGE_PATH='http://images.getyourvenue.com/';
+        
+        
         public $sendMailviaGMail=FALSE;
 	
 	/**Gmail account settings**/

@@ -11,6 +11,8 @@ require_once ("../service/VenueService.php");
 require_once ("../service/MailService.php");
 require_once ("../constants/Constants.php");
 
+$action="";
+
 if (array_key_exists('actionType', $_POST) && $_POST['actionType'] != null)
 	$action = $_POST['actionType'];
 else

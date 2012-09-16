@@ -145,9 +145,8 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
 					-->
 					
 					
-					<input type="image" src="../images/get-venue-btn.png" class="button" onClick="return submitBookNowSForm()"/>
-					
-					<input type="hidden" name="action" value="bookNow" />
+					<input type="image" src="../images/get-venue-btn.png" class="button" onClick="return submitBookNowSForm()"/>					
+					<input type="hidden" name="actionType" value="bookNow" />
 
 				</form>
                 <!-- Box Content End -->

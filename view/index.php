@@ -28,6 +28,10 @@
 
     <?php  require("header.php") ?>
     
+    <?php  require_once ("../constants/Constants.php"); 
+           $constants=new Constants(); 
+    ?>
+    
     <div id="contentArea">
       <div id="leftNav">
         <!-- Box Start -->
@@ -162,7 +166,7 @@
                     <option value="3">Above 800</option>
                   </select>
                   <br />
-                  <input type="image" src="../images/btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('http://getyourvenue.com/');"/> 
+                  <input type="image" src="../images/btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL ?>');"/> 
                   <input type="hidden" name="action" value="searchVenue" />
                 </form>
                 <!-- Box Content End -->

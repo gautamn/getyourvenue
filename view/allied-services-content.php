@@ -14,7 +14,10 @@
 <body>
 <div id="wrapper">
   <div id="main">
-    <?php  require("../view/header.php") ?>
+    <?php  require("header.php") ?>
+    <?php  require_once ("../constants/Constants.php"); 
+           $constants=new Constants(); 
+    ?>  
     <div id="contentArea">
       <div id="leftNavNarrow">
         <!-- Small Left Box Start -->
@@ -87,7 +90,7 @@
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo "..".$alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
+                <img src="<?php echo $constants->IMAGE_PATH.$alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
                 <br />
                 <h3><?php echo $alliedSerivce[0] ->heading ?></h3>
                 <?php echo $alliedSerivce[0] ->html_content; ?>

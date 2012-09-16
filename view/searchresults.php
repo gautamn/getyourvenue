@@ -17,6 +17,9 @@ echo $venueService->getSEOConstant($action,"");
 <div id="wrapper">
   <div id="main">
     <?php  require("header.php") ?>
+    <?php  require_once ("../constants/Constants.php"); 
+           $constants=new Constants(); 
+    ?>  
    
     <div id="contentArea">
       <div id="leftNavNarrow">
@@ -153,7 +156,7 @@ echo $venueService->getSEOConstant($action,"");
 			<div class="boxContent">
 			<div class="boxGr">
 
-			<div  class="searchImg f-left"> <?php echo "<img src='/images/".$venueList[$i]->id."/thumbnail.jpg' alt='".$venueList[$i]->altTag."' />" ?></div>
+			<div  class="searchImg f-left"> <?php echo "<img src='".$constants->IMAGE_PATH.'venue/'.$venueList[$i]->id."/thumbnail.jpg' alt='".$venueList[$i]->altTag."' />" ?></div>
 			<div class="searchDec f-right">
 			
 			<h3>
