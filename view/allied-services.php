@@ -13,7 +13,7 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
 <body>
 <div id="wrapper">
   <div id="main">
-     <?php  require("../view/header.php") ?>
+     <?php  require("header.php") ?>
     
     <div id="contentArea">
       <div id="leftNav">
