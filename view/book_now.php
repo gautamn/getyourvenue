@@ -64,7 +64,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
             <div class="boxtopbg sml2"></div>
           </div>
           <div class="fullboxBg">
-            <div class="boxContent">
+            <div class="boxContent booknow">
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
                 <h3>Book Now</h3>
@@ -115,7 +115,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
 					
 					<label>Preferred Date:</label>
 					
-					<input type="text" class="input-txt" name="date" value="" />
+                                        <div class='calanderCont'><input type="text" class="input-txt" name="date" value="" />
 					<script language="JavaScript">
 
 						new tcal ({
@@ -124,7 +124,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
 							// input name
 							'controlname': 'date',
 						});
-					</script>
+					</script></div>
 					
 					
 					<label>No. of Guests:</label>
