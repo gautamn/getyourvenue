@@ -3,6 +3,8 @@ require_once ("../service/VenueService.php");
 //require_once ("../constants/Constants.php");
 require_once ("../service/MailService.php");
 
+$action="";
+
 if (array_key_exists('action', $_POST) && $_POST['action'] != null)
 	$action = $_POST['action'];
 else

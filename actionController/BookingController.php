@@ -12,6 +12,7 @@ require_once ("../service/MailService.php");
 require_once ("../constants/Constants.php");
 
 $action="";
+$response='';
 
 if (array_key_exists('actionType', $_POST) && $_POST['actionType'] != null)
 	$action = $_POST['actionType'];
@@ -19,6 +20,8 @@ else
 	if (array_key_exists('actionType', $_GET) && $_GET['actionType'] != null)
 		$action = $_GET['actionType'];
 
+//echo "Booking Controller------".$response."  action:".$action;
+        
 $venueService = new VenueService();
 
 if($action == "bookVenue") {
@@ -32,8 +35,6 @@ if($action == "bookNow") {
 if($action == "bookAlliedService") {
 	$response = $venueService->bookAlliedService();
 }
-
-//echo "Booking Controller------".$response;
 
 $name = $_POST['name'];
 $email = $_POST['email'];
