@@ -44,12 +44,12 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
 					<td>
 						<ul>
 							<li><p><a href="/groom-wedding-attires-in-delhi">Groom Wear</a></p></li>
-							<li><p>Jewellery</p></li>
-							<li><p>Photographer</p></li>
-							<li><p>Wedding Card Provider</p></li>
-							<li><p>Wedding Planning and Decoration</p></li>
-							<li><p>Honeymoon Packages</p></li>
-						</ul>
+							<li><p><a href="/fireworks">Fireworks</a></p></li>
+                                                        <li><p><a href="/dj-and-sound-systems">DJ and Sound Systems</a></p></li>
+							<li><p><a href="/vermala-theme">Vermala Theme</a></p></li>
+							<li><p><a href="/wedding-planning">Wedding Planning</p></li>
+							<li><p><a href="/photography">Photography</p></li>
+                                                </ul>
 					</td>
 					</tr>
 				</table>	
@@ -83,7 +83,6 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
                 <h3>Contact Us</h3>
                  <?php  require("../view/contactusForm.php") ?>
                 <!-- Box Content End -->
-                <p><br><br></p>
               </div>
             </div>
           </div>

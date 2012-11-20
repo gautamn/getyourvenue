@@ -34,7 +34,7 @@ in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi">
                    </p>
                 <!-- Box Content End -->
                 <div id='blankBlock'></div>
-                <br><br><br><br>
+                
               </div>
             </div>
           </div>

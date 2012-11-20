@@ -122,13 +122,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               <div class="boxGr relative">
                 <!-- Box Content Start -->
                 <h3><?php echo $venueList[0]->venueName?></h3>
-                <!--
-                <div class="likebuttons">
-                  <iframe src="http://www.facebook.com/plugins/like.php?href=&layout=button_count&show_faces=false&width=80&action=like&font=lucida+grande&colorscheme=light" allowtransparency="true" style="border: medium none; overflow: hidden; width: 80px; height: 21px;" frameborder="0" scrolling="no"></iframe>
-                  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
-                  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-                </div>
-                -->
                 <br />
                 <div class="venue-desc f-left"> <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id.'/thumbnail.jpg' ?>" alt="" />
                   <div class="addressLine"><?php echo $venueList[0]->venueAddr1?><br />
@@ -136,17 +129,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </div>
                 
                 <div class="google-map f-right">
-                <iframe width='560' height='310' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src=
+                <iframe width='560' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src=
                  	'<?php echo $venueList[0]->iframe?>'>
-                 </iframe>
-                  <br /> 
+                 </iframe> 
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
+          
+        </div><div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
-        </div>
         <!-- Box End -->
         <!-- Box Start -->
         <div class="box">
@@ -168,7 +160,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                         <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_4.jpg" ?>" alt="" /> </div>
                   </div>
                 </div>
-                <div class="latest-news f-right">
+                <div class="latest-news">
                   <p><?php echo $venueList[0]->content?></p>
                 </div>
                 <!-- Box Content End -->

@@ -37,10 +37,12 @@
                     <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
                     <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
                     <li><a href="/groom-wedding-attires-in-delhi">Groom Wear</a></li>
-                    <!--li><a href="#">Photography</a></li>
-                    <li><a href="#">Celebrity</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Lodging</a></li-->
+                    <li><a href="/fireworks">Fireworks</a></li>
+                    <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
+                    <li><a href="/vermala-theme">Vermala Theme</a></li>
+                    <li><a href="/wedding-planning">Wedding Planning</a></li>
+                    <li><a href="/photography">Photography</a></li>
+                    
                 </ul>
                 <!-- Box Content End -->
               </div>
@@ -90,7 +92,7 @@
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo $constants->IMAGE_PATH.$alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
+                <img src="<?php echo $alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
                 <br />
                 <h3><?php echo $alliedSerivce[0] ->heading ?></h3>
                 <?php echo $alliedSerivce[0] ->html_content; ?>
@@ -236,7 +238,7 @@
                   <div class="getvenue_cont last">
                     <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>
-                  <input type="hidden" name="action" value="bookAlliedService"  />
+                  <input type="hidden" name="actionType" value="bookAlliedService"  />
                   <input type="hidden" name="serviceName" value="<?php echo $alliedSerivce[0] ->title ?>" />
                 </form>
                 <!-- Box Content End -->

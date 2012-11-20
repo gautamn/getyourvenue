@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Non Wedding Venues, Birthday Party Venues, Engagement Ceremonies, Anniversaries, Corporate Parties “</title>
+<title>Non Wedding Venues, Birthday Party Venues, Engagement Ceremonies, Anniversaries, Corporate Parties ï¿½</title>
 
 <meta name="description" content="GetYourVenue is committed to assist you in finding wedding and non wedding venues in Delhi and NCR region.
 Besides wedding venues, we also help you to find suitable venues for birthday parties, engagement ceremonies, anniversaries, corporate parties and
@@ -41,8 +41,8 @@ function redirectToHost(){
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
-              <div class="boxGr boxheight">
-                <!-- Box Content Start -->
+              <div class="boxGr nonWedBox">
+                <!-- Box Content Start {please replace the class nonWedBox with boxheight } -->
                 <h3>Non Wedding Venues</h3>
                 <p>GetYourVenue is committed to assist you in finding wedding venues in Delhi and NCR region. Besides wedding venues, we also help you to find suitable venues for birthday parties, engagement ceremonies, anniversaries, corporate parties and other non wedding functions. Our large network of partners and service providers has enabled us to offer venue selection services for other domains as well.</p>
                 <br>
@@ -73,7 +73,7 @@ function redirectToHost(){
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
-              <div class="boxGr boxheight">
+              <div class="boxGr nonWedBox">
                 <!-- Box Content Start -->
                 <!-- Box Content Start -->
                 <h3>Let Us Know Your Preferences</h3>
@@ -111,7 +111,7 @@ function redirectToHost(){
                   <input type="image" src="../images/btn-getmyvenue.png" class="button" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL?>');"/> 
                   <input type="hidden" name="action" value="searchVenue" />
                 </form>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
                 <!-- Box Content End -->
               </div>
             </div>
