@@ -96,7 +96,7 @@ class GetYourVenueMySQLManager {
                                         WHERE popular_choice!=1 AND popular_choice!=2 AND popular_choice!=3 AND 
                                         popular_choice!=4 AND popular_choice!=5 AND is_active=1";  
 			$result = mysql_query($query);
-			
+			//echo "Query 99".$query;
                         while ($row = mysql_fetch_array($result)) {
 
 				$venue = new Venue();
@@ -132,6 +132,7 @@ class GetYourVenueMySQLManager {
 					 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
 					 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active=1 ORDER BY ve.zone_rank limit ".$startIndex.",".$offset;  
 			
+                        echo "Query:135:".$query;
                         $result = mysql_query($query);
 			while ($row = mysql_fetch_array($result)) {
 
@@ -636,33 +637,24 @@ class GetYourVenueMySQLManager {
 		return $popularChoiceList;
 	}//function
         
-        function submitbookNow($name, $email, $contact_no, $preferred_region, $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function, $msg) {
+        function submitBookingDetails($name, $email, $date, $function, $contactNumber, $budget) {
 
 		$dbConstants = new DBConstants();
 		$dBUtils = new DBUtils();
 		$connection = $dBUtils->getDBConnection();
-		$venueList = array ();
 		$dataBaseResponse = "";
 
 		if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
-
 			throw new DBSourceException("Unable to connect to a datasource.");
-
-		} else {
-
-			$dataBaseResponse = mysql_query("INSERT INTO book_now (NAME,email,contact_no,preferred_region,preferred_venue,".
-			" preferred_date,no_of_guests,budget,type_of_function,message) VALUES('".$name."',".
-			"'".$email."','".$contact_no."','".$preferred_region."','".$preferred_venue."',".
-			"'".$preferred_date."','".$no_of_guests."',".
-			"'".$budget."','".$type_of_function."','".$msg."')");
-			
+		} else {			
+			$dataBaseResponse = mysql_query("INSERT INTO book_now " .
+			"(name,email,preferred_date,type_of_function,contact_no,budget,insertdate) VALUES" .
+			"('" . $name . "','" . $email . "','" . $date . "','" . $function . "','" . $contactNumber . "'," .
+			"'" . $budget . "',CURRENT_TIMESTAMP())");			
 		}
-
 		mysql_close($connection);
 		return $dataBaseResponse;
-
-	}
-	
+	}  	
 }
 
 ?>

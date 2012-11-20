@@ -45,6 +45,24 @@ class VenueService {
 		return $getYourVenueMySQLManager->getVenuesforPagination($regionId, $categoryId, $capacityId,$startIndex,$offset);
 
 	} //function
+        
+        function bookNow() {
+      
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$contact_no = $_POST['contactNumber'];
+		$preferred_region = $_POST['preferred_region'];
+		$preferred_venue = $_POST['venueId'];
+		$preferred_date = $_POST['date'];
+		$no_of_guests = $_POST['no_of_guests'];
+		$budget = $_POST['budget'];
+		$type_of_function = $_POST['function'];
+		
+		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
+		return $getYourVenueMySQLManager->submitBookingDetails($name, $email, $preferred_date, $type_of_function, 
+                        $contact_no, $budget);
+
+	}
 
 	function bookVenue() {
 
@@ -77,8 +95,8 @@ class VenueService {
                 
                 if($function!='Enter your Function')
                     $serviceName=$serviceName." for ".$function;
-
-		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
+                
+                $getYourVenueMySQLManager = new GetYourVenueMySQLManager();
 		$databaseResponse = $getYourVenueMySQLManager->submitBookingDetails($name, $email, $date, $serviceName, $contactNumber, $budget);
 		
 		return $databaseResponse;		
@@ -170,24 +188,7 @@ class VenueService {
 		return $capacityName;
 	} //function
 
-	function bookNow() {
-      
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$contact_no = $_POST['contactNumber'];
-		$preferred_region = $_POST['preferred_region'];
-		$preferred_venue = $_POST['venueId'];
-		$preferred_date = $_POST['date'];
-		$no_of_guests = $_POST['no_of_guests'];
-		$budget = $_POST['budget'];
-		$type_of_function = $_POST['function'];
-		$type_of_function = $_POST['function'];
-		
-		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-		return $getYourVenueMySQLManager->submitbookNow($name, $email, $contact_no, $preferred_region,
-		 $preferred_venue, $preferred_date, $no_of_guests, $budget, $type_of_function,'');
-
-	}
+	
 	
 	function contactUs(){
 
@@ -199,7 +200,7 @@ class VenueService {
                
                $getYourVenueMySQLManager = new GetYourVenueMySQLManager();
                
-               return $getYourVenueMySQLManager->submitbookNow($name, $email,$contact_num,'','','','','','',$message);
+               return $getYourVenueMySQLManager->submitBookingDetails($name, $email, '', '', $contact_num, '');
 
        }
        
@@ -221,64 +222,6 @@ class VenueService {
     	return $count;
     }   
     
-    function deleteVenue(){
-    	if (array_key_exists('id', $_GET) && $_GET['id'] != null)
-			$venueId = $_GET['id'];
-		else
-			$venueId = 0;
-		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-		$databaseResponse =  $getYourVenueMySQLManager->deleteVenue($venueId);
-		return $databaseResponse;
-    }
-    
-    function editVenue(){
-    	
-    	$venue = new Venue();
-		$venue->venueId = $_POST['venueid'];
-		$venue->id = $_POST['id'];
-		$venue->rank = $_POST['rank'];
-		$venue->venueName = $_POST['name'];
-		$venue->regionId = $_POST['regionList'];
-		$venue->popularChoiceId = $_POST['popularChoiceList'];
-		$venue->venueAddr1 = $_POST['address1'];
-		$venue->venueAddr2 = $_POST['address2'];
-		$venue->content = $_POST['content'];
-		$venue->iframe = $_POST['iframe'];
-		$venue->title = $_POST['title'];
-		$venue->metaDescription = $_POST['metadescription'];
-		$venue->metaKeyword = $_POST['metakeyword'];
-		$venue->updatedDate = date("Y-m-d");
-		$venue->isActive = $_POST['isActive'];
-		$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-		$databaseResponse = $getYourVenueMySQLManager->updateVenue($venue);
-		
-		return $databaseResponse;
-    }
-    
-    function insertVenue(){
-    	
-    	$getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-    	$venue = new Venue();
-    	$venue->regionId = $_POST['regionList'];
-    	$venue->capacityIdList = $_POST['capacityList'];
-    	$venue->venueTypeIdList = $_POST['venueTypeList'];
-    	$venue->popularChoiceId = $_POST['popularChoiceList'];
-    	$venue->venueId = $_POST['venueIdentifier'];
-    	$venue->venueName = $_POST['venueName'];
-    	$venue->rank = $_POST['rank'];
-    	$venue->venueAddr1 = $_POST['venueAddr1'];
-    	$venue->venueAddr2 = $_POST['venueAddr2'];
-    	$venue->content = $_POST['content'];
-    	$venue->iframe = $_POST['iframe'];
-    	/*$venue->title = $_POST['title'];
-    	$venue->metaDescription = $_POST['metadescription'];
-    	$venue->metaKeyword = $_POST['metakeyword'];*/
-
-		$databaseResponse = $getYourVenueMySQLManager->insertIntoVenueEntity($venue);
-		
-		return $databaseResponse;
-		
-    }//function
     
     function getSEOConstant($action,$venue){
     	
