@@ -63,3 +63,7 @@ RewriteRule ^transportation-for-wedding-in-delhi$   /allied_services?action=alli
 
 RewriteRule ^wedding-lehengas-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-lehengas-in-delhi [L]
 RewriteRule ^groom-wedding-attires-in-delhi$   /allied_services?action=alliedServices&seoId=groom-wedding-attires-in-delhi [L]
+RewriteRule ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
+RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
+RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]

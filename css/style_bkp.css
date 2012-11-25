@@ -8,10 +8,10 @@ body {
     padding: 0;
 }
 a {
-    text-decoration: none;	color:#272727;	
+    text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;	color:#F8039C;
+    text-decoration: underline;
 }
 h1 {
 }
@@ -36,9 +36,6 @@ p {
     margin: 0;
     padding: 5px 0;
 }
-input {
-    font-size: 120%;
-}
 #wrapper {
     background: url("../images/currtens.png") repeat-x scroll center top transparent;
     min-height: 500px;
@@ -47,7 +44,6 @@ input {
 #main {
     margin: auto;
     width: 1002px;
-	position:relative;
 }
 #header {
     background: url("../images/headerBg.png") repeat-x scroll center top transparent;
@@ -99,13 +95,11 @@ input {
     background: url("../images/menu-divider.png") no-repeat scroll right center transparent;
     float: left;
     height: 35px;
-    padding: 2px 2px 0 0;
-	position:relative;
-  z-index: 99999;  
+    padding-right: 2px;
 }
 #header .topNav ul li.last {
     background: none repeat scroll 0 0 transparent;
-    padding: 2px 2px 0 0;
+    padding: 0;
 }
 #header .topNav a {
     color: #272727;
@@ -117,33 +111,6 @@ input {
     color: #F8039C;
     text-decoration: underline;
 }
-
-#header .topNav ul ul{position:absolute; top:35px; left:0; width:100%; display:none; background-color:#FFFFFF; min-width:250px; border:2px solid #b5b7c6; }
-#header .topNav ul ul li{float:none; display:block; background:none; }
-#header .topNav ul li:hover ul{display:block;}
-
-/*#header .topNav a.allied {
-    color: #fff;
-    float: left;
-    font-size: 14px;
-    padding: 0 27px 0 10px;
-    border-radius: 14px;
-    margin: 0 5px;
-    height: 32px;
-	background: #f8039c url(../images/new.png) no-repeat 107px -1px;
-}
-#header .topNav a.allied:hover {
-    color: #f8039c;
-    float: left;
-    font-size: 14px;
-    padding: 0 27px 0 10px;
-    border-radius: 14px;
-    margin: 0 5px;
-    height: 32px;
-	text-decoration: none;
-	background: #ccc url(../images/new.png) no-repeat 107px -1px;
-}*/
-
 #contentArea {
     clear: both;
 }
@@ -186,7 +153,7 @@ input {
     color: #272727;
 }
 #footer a:hover {
-    color: #F8039C;
+    color: #FFFFFF;
 }
 .copyright {
     font: 12px "Trebuchet MS",Arial,Helvetica,sans-serif;
@@ -415,8 +382,7 @@ p.dec {
 }
 .contactform {
     width: 100%;
-	float: left;
-	margin: 11px 0;
+    padding: 10px 0 23px 0;
 }
 .contactform label {
     display: block;
@@ -427,11 +393,8 @@ p.dec {
     border: 1px solid #F8039C;
     font: 11px Tahoma,Geneva,sans-serif;
     padding: 5px 15px;
-    width: 240px;
+    width: 170px;
 }
-
-.contactform #venueid{width:170px;}
-
 .contactform .txt-area {
     border: 1px solid #F8039C;
     font: 11px Tahoma,Geneva,sans-serif;
@@ -485,7 +448,7 @@ p.dec {
 }
 .google-map {
     border: 2px solid #F8039C;
-    height: 310px;
+    height: 300px;
     width: 560px;
 }
 .image-slider {
@@ -669,7 +632,7 @@ p.dec {
 .getVenue .getvenue_cont label, .getvenue_capt div label {
     display: block;
     font: bold 12px Tahoma,Geneva,sans-serif;
-    margin: 12px 0 5px;
+    margin: 12px 0 10px;
 }
 .getVenue .getvenue_cont .txt-name {
     border: 1px solid #F8039C;
@@ -747,10 +710,10 @@ span.searchOpt {
     width: 146px;
 }
 .next-Btn {
-     background: url("../images/next-prev-btn.png") no-repeat scroll -147px top transparent;
+    background: url("../images/next-prev-btn.png") no-repeat scroll left top transparent;
     height: 35px;
     text-indent: -10000px;
-    width: 118px;
+    width: 146px;
 }
 .pagi {
     float: left;
@@ -824,7 +787,7 @@ span.searchOpt {
     width: 100%;
 }
 .runSearch .button {
-    margin: 30px 0 0 10px;
+    margin: 6px 0 0 10px;
 }
 .errorMsg {
     border: 1px dashed #F8039C;
@@ -870,7 +833,7 @@ span.searchOpt {
 	float: left;
     height: 180px;
     padding: 8px;
-    width: 242px;
+    width: 239px;
 	position: relative;
 }
 .themeTitle {
@@ -903,14 +866,20 @@ span.searchOpt {
 	text-decoration: none;
 	color: #F8039C;
 }
-.alliedServices li.last{
-  border-bottom: none;
-  margin-bottom: 10px;
-}
-.fb_edge_widget_with_comment {
+.calanderCont {
     position: relative;
-    float: left!important;
-    margin: 7px 0 0 0px!important;
+}
+.calanderCont img.tcalIcon {
+    cursor: pointer;
+    margin-left: 1px;
+    vertical-align: middle;
+    position: absolute;
+    right: 79px;
+    top: 5px;
+}
+.booknow h3, .booknow .contactform {
+    margin:  0px!important;
+    padding: 0px !important;
 }
 .booknow .button {
     margin: 10px 0 0 50px;
@@ -919,41 +888,6 @@ span.searchOpt {
     margin:  11px 0 10px;
 }
 .nonWedBox {
-    min-height:  290px;
-    
+    max-height:  290px;
+    overflow:  auto;
 }
-
-.addThis2{position:fixed; left:-30px; top:500px !important;}
-
-#footer {
-	margin: 0px auto;
-    width: 1001px;
-	float:none;
-}
-.content {
-	width: 150px;
-	float: left;
-	margin:  0px 7px;
-	padding: 0px;
-	list-style:none;
-	text-align:left;
-}
-.content li{
-	display-inline: block;
-	font: normal 12px "Trebuchet MS",Arial,Helvetica,sans-serif;
-}
-.content a{
-	line-height: 24px;
-	width: 120px;
-	font-weight:normal;
-  font-size: 12px;
-}
-.copyright {
-	margin:20px 0px;
-}
-
-#sitemap{list-style:square;}
-
-#sitemap li{float:left; width:200px; margin-right:15px; margin-bottom:10px;}
-.boxGr p{margin-bottom:10px;}
-.boxGr p a{font-weight: bold;}

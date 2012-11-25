@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $alliedSerivce[0] ->title ?></title>
-<meta name="description" content= "<?php echo $alliedSerivce[0]->metaDescription ?>">
-<meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword ?>">
+<meta name="description" content= "<?php echo $alliedSerivce[0]->metaDescription ?>" />
+<meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword ?>" />
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
@@ -31,7 +31,7 @@
                 <!-- Box Content Start -->
                 <h4>Allied Services</h4>
                 <ul class="alliedServices">
-                    <li><p><a href="/wedding-decorators-in-delhi">Decor</a></li>
+                    <li><a href="/wedding-decorators-in-delhi" title="Decor">Decor</a></li>
                     <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
                     <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    
                     <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
@@ -41,8 +41,7 @@
                     <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
                     <li><a href="/vermala-theme">Vermala Theme</a></li>
                     <li><a href="/wedding-planning">Wedding Planning</a></li>
-                    <li><a href="/photography">Photography</a></li>
-                    
+                    <li class="last"><a href="/photography">Photography</a></li>
                 </ul>
                 <!-- Box Content End -->
               </div>
@@ -120,10 +119,12 @@
                       <div id="slider" class="nivoSlider-allied"> 
                          <?php
                             $res = "";
+                            if(!empty($results)){
                             for($i=0 ; $i<count($results); $i++) { 
                         ?>
                             <img src="<?php echo '..'.$alliedSerivce[0] ->jcarouselPath.$results[$i] ?>" alt="" />
-                        <?php } ?>
+                        <?php }
+                            }?>
                       </div>
                     </div>
                   </div>

@@ -132,7 +132,7 @@ class GetYourVenueMySQLManager {
 					 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
 					 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active=1 ORDER BY ve.zone_rank limit ".$startIndex.",".$offset;  
 			
-                        echo "Query:135:".$query;
+                        //echo "Query:135:".$query;
                         $result = mysql_query($query);
 			while ($row = mysql_fetch_array($result)) {
 
