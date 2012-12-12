@@ -78,11 +78,15 @@ $constants = new Constants();
             <li><a href="<?php echo $constants->DOMAIN_URL.'book_now';?>" title="Book Now"><strong>Book Now</strong></a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'career';?>" title="Career"><strong>Career</strong></a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'site-map';?>" title="Sitemap"><strong>Sitemap</strong></a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'contact_us';?>" title="Contact Us"><strong>Contact Us</strong></a></li>
           </ul>
           <ul class="content" style="width: 185px;">
-            <li><a href="<?php echo $constants->DOMAIN_URL.'contact_us';?>" title=""><strong>Where you can find us</strong></a></li>
-            <li>Email: <a href="mailto:sales@getyourvenue.com" title="Email Us">sales@getyourvenue.com</a></li>
-            <li>Mobile: +91-8800095444, <br><span style="padding-left: 45px;">+91-8800093444</span></li>            
+            <li><strong>Follow Us on</strong></li>
+            <li><div class="addthis_toolbox addthis_32x32_style addthis_vertical_style">
+<a class="addthis_button_facebook_follow"></a>
+<a class="addthis_button_twitter_follow"></a>
+<a class="addthis_button_google_follow"></a></div>
+</li>    
           </ul>
           <div class="clear"></div>          
           <div class="copyright">Copyright &copy;2011 <a href="<?php echo $constants->DOMAIN_URL;?>">Get Your Venue</a>. All Rights Reserved</div>

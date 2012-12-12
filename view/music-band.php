@@ -84,9 +84,9 @@
                 <!-- Box Content Start -->
                 <a name="imageGallery"></a>
                 <h3>GYV's  Mystique!</h3>
-                <div class="image-slider-small f-left" style="height:130px !important;">
+                <div class="image-slider-small f-left">
                  
-                    <img src="images/mystique_logosmall.gif" width="350" alt="Mystique The Band" />
+                    <img src="images/mystique_music_band_banner.png" alt="Mystique The Band" />
                 </div>
                 <p>Getyourvenue’s promising live music band 'Mystique' is based in delhi and is run by a bunch of passionate musicians and singers for whom life is beyond eating, earning and having materialistic fun. The wedding music band encompasses multi talented people from various fields of life, fairly successful in their core career such as digital marketing, industrial production, professional photography but they cut a fine balance between their core professional skill-set and god gifted and fondly nurtured music talent. These people are driven by passion of live music and music is their breath and blood. Formed in early 2011, the members of the wedding music band already had great individual track records of performance. They brought synergies in the band as a group and there has been no looking back since then.</p>
                 <p>Personally fond of experimental, fusion, new age music, they have a passion for going about any type of genre, repertoire and have the ability to do justice with it.</p>
@@ -195,7 +195,7 @@
 							// form name
 							'formname': 'bookVenueForm',
 							// input name
-							'controlname': 'date',
+							'controlname': 'date'
 						});
 						</script>
                   </div>
