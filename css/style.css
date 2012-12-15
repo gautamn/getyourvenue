@@ -32,7 +32,7 @@ img {
 }
 p {
     color: #3B3B3B;
-    font: 12px/19px Tahoma,Geneva,sans-serif;
+    font: 13px/20px "Trebuchet MS",Arial,Helvetica,sans-serif;
     margin: 0;
     padding: 5px 0;
 }
@@ -347,7 +347,7 @@ input {
     font: bold 12px Tahoma,Geneva,sans-serif;
     margin: 0px 0 8px;
 }
-.homeSearch select {
+.homeSearch select, select {
     border: 1px solid #F8039C;
     margin: 0 0 16px;
     padding: 2px;
@@ -371,7 +371,7 @@ input {
 }
 .ourUnique li {
     color: #626161;
-    font: 12px Verdana,Arial,Helvetica,sans-serif;
+    font: 14px "Trebuchet MS",Arial,Helvetica,sans-serif;
     margin: 0 20px 5px 0;
     padding: 0 0 0 23px;
 }
@@ -410,7 +410,7 @@ input {
 }
 p.dec {
     color: #626161;
-    font: 12px/18px Verdana,Arial,Helvetica,sans-serif;
+    font: 14px/20px "Trebuchet MS",Arial,Helvetica,sans-serif;
     padding: 0;
 }
 .contactform {
