@@ -142,7 +142,7 @@
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" />
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" title="Mystique Performing at Hotel Taj Palace video - part 1" />
                               </div>
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/pjuD4qCqMkE" frameborder="0" allowfullscreen="">	</iframe>
@@ -152,7 +152,7 @@
                             
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 2" />
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 2" title="Mystique Performing at Hotel Taj Palace video - part 2" />
                               </div>
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/md9vcw_Y5gQ" frameborder="0" allowfullscreen="">	</iframe>
@@ -162,7 +162,7 @@
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 1" />
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 1" title="Mystique Performing at Jhankar Gardens video - Part 1" />
                               </div>
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/0AH7FzIPAV4" frameborder="0" allowfullscreen="">	</iframe>
@@ -172,7 +172,7 @@
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 2" />
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 2" title="Mystique Performing at Jhankar Gardens video - Part 2" />
                               </div>
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com//embed/-6Mxp05DJsA" frameborder="0" allowfullscreen="">	</iframe>

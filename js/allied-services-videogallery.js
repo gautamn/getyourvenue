@@ -57,7 +57,9 @@ $(document).ready( function(){
 		ogg = $(this).attr('ogg');
 		poster = $(this).attr('poster');
 		videoSlider();*/
-    var x= $(this).html()
+    var x= $(this).html();
+    var vtitle = $.trim($(this).parent(".Residentialbox").find(".img img").attr('title'));
+    x += (vtitle!="") ? "<h3>"+vtitle+"<h3>":"";
     $('.youtube').html(x);
     $('.videoCon').fadeIn('slow')
   });
