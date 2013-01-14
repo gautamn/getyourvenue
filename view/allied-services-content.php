@@ -32,6 +32,7 @@
                 <!-- Box Content Start -->
                 <h4>Allied Services</h4>
                 <ul class="alliedServices">
+                    <li><a href="/music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
                     <li><a href="/wedding-decorators-in-delhi" title="Decor">Decor</a></li>
                     <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
                     <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    

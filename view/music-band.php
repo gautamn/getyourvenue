@@ -33,6 +33,23 @@
               </div>
               <div class="fullboxBg">
                 <div class="boxContent">
+                  <div class="boxGr">
+                    <h4>Allied Services</h4>
+                    <ul class="alliedServices">
+                        <li><a href="/music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
+                        <li><a href="/wedding-decorators-in-delhi" title="Decor">Decor</a></li>
+                        <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
+                        <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
+                        <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
+                        <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
+                        <li><a href="/groom-wedding-attires-in-delhi">Grooms Wear</a></li>
+                        <li><a href="/fireworks">Fireworks</a></li>
+                        <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
+                        <li><a href="/vermala-theme">Varmala Themes</a></li>
+                        <li><a href="/wedding-planning">Wedding Planning</a></li>
+                        <li class="last"><a href="/photography">Photography</a></li>
+                    </ul>
+                  </div>
                   <div class="boxGr" align="center">
                     <!-- Box Content Start -->
                     <script type="text/javascript"><!--
@@ -108,8 +125,10 @@
                       <li>Tributes</li>
                       <li>Unplugged format( only acoustics, grand piano, tabla, guitar, etc)</li>
                     </ul>
-                    <div class="clear"> </div>
+                    <div class="clear"></div>
+                    <p>&nbsp;</p>
                     <!--Music Band starts-->
+                    <h3>Mystique Video Gallery</h3>
                     <div class="contentbottomboxright">
                       <div class="videoCon">
                         <div id="jp_container_1" class="jp-video jp-video-360p"><span class="close">X Close</span>
@@ -119,7 +138,7 @@
                       <div id="slider3" class="logoSlider videoSlider">
 
                         <div class="logoSliderCon">
-                          <div class="logoWrapper" >
+                          <div class="logoWrapper">
 
                             <div class="Residentialbox">
                               <div class="img">
@@ -130,7 +149,6 @@
                               </span>
                               <div class="Residential">@Hotel Taj Palace, Video 1</div>
                             </div>
-
                             
                             <div class="Residentialbox">
                               <div class="img">
@@ -169,7 +187,7 @@
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/GZaOBeB6fVA" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
-                              <div class="Residential">Mystique Fusion Video 1</div>
+                              <div class="Residential">Fusion Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
@@ -179,7 +197,7 @@
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/EUb7GwtR6-Y" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
-                              <div class="Residential">Mystique Fusion Video 2</div>
+                              <div class="Residential">Fusion Video 2</div>
                             </div>
 
                             <div class="Residentialbox">
@@ -209,7 +227,7 @@
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/8VRjTD3p_FA" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
-                              <div class="Residential">Instrumental 1</div>
+                              <div class="Residential">Instrumental Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
@@ -219,7 +237,7 @@
                               <span class="play">
                                 <iframe width="560" height="315" src="http://www.youtube.com/embed/VP1oAIgeUvs" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
-                              <div class="Residential">Instrumental 2</div>
+                              <div class="Residential">Instrumental Video 2</div>
                             </div>
 
                             

@@ -37,7 +37,7 @@ $constants = new Constants();
       
       <li><a href="<?php echo $constants->DOMAIN_URL . 'allied-services';?>">Allied Services</a>
         <ul>
-          <li><a href="<?php echo $constants->DOMAIN_URL.'music-band-mystique';?>" title="Music Band">Music Band</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL.'music-band-mystique';?>" title="Mystique Music Band">Mystique Music Band</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'groom-wedding-attires-in-delhi';?>" title="Grooms Wear">Grooms Wear</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-decorators-in-delhi';?>" title="Decor">Decor</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'fireworks';?>" title="Fireworks">Fireworks</a></li>
