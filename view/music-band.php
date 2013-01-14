@@ -126,7 +126,7 @@
                                 <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/8kUX2cO415M" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/pjuD4qCqMkE" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">@Hotel Taj Palace, Video 1</div>
                             </div>
@@ -304,7 +304,7 @@
                       </div>
                       -->
                       <div class="clear"></div>
-                      <br>
+                      <br />
                         <div class="getvenue_cont last">
                           <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                         </div>
