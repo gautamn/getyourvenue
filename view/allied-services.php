@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi</title>
+    <title>Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses in Delhi, Banquet halls in Delhi</title>
     <meta name="Description" content="Choosing the right venue for the wedding is the most difficult decision a couple comes across. We at
           getyourvenue.com make sure that all your problems are vanished and we make this arduos task an easy and fun-loving one." />
     <meta name="keyword" content=" Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi" />
@@ -35,10 +35,10 @@
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi">Transportation</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi">Ghoriwaala, Baggi</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi">Groom Wear</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi">Grooms Wear</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks">Fireworks</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems">DJ and Sound Systems</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme">Vermala Theme</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme">Varmala Themes</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning">Wedding Planning</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>photography">Photography</a></li>
                     </ul>

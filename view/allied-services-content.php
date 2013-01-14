@@ -8,13 +8,14 @@
 <meta name="description" content= "<?php echo $alliedSerivce[0]->metaDescription ?>" />
 <meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword ?>" />
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/albums.css" />
+<link rel="stylesheet" type="text/css" href="../css/styleSlider.css" />
 <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
 </head>
 <body>
 <div id="wrapper">
   <div id="main">
-    <?php  require("header.php") ?>
+    <?php  require("header.php"); ?>
     <?php  require_once ("../constants/Constants.php"); 
            $constants=new Constants(); 
     ?>  
@@ -36,10 +37,10 @@
                     <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    
                     <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
                     <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
-                    <li><a href="/groom-wedding-attires-in-delhi">Groom Wear</a></li>
+                    <li><a href="/groom-wedding-attires-in-delhi">Grooms Wear</a></li>
                     <li><a href="/fireworks">Fireworks</a></li>
                     <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
-                    <li><a href="/vermala-theme">Vermala Theme</a></li>
+                    <li><a href="/vermala-theme">Varmala Themes</a></li>
                     <li><a href="/wedding-planning">Wedding Planning</a></li>
                     <li class="last"><a href="/photography">Photography</a></li>
                 </ul>
@@ -91,10 +92,10 @@
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo $alliedSerivce[0] ->bannerPath ?>" alt="" /><br class="f-left" />
+                <img src="<?php echo $alliedSerivce[0] ->bannerPath ?>" alt="" class="bannerImg" /><br class="f-left" />
                 <br />
                 <h3><?php echo $alliedSerivce[0] ->heading ?></h3>
-                <?php echo $alliedSerivce[0] ->html_content; ?>
+                <div class="allied_content"><?php echo $alliedSerivce[0] ->html_content;?></div>                
                 <?php
                     $results = array();
                     // create a handler for the directory
@@ -111,24 +112,46 @@
                 ?>
                 	
                 
-              
+              <!--
                  <div class="latest-news">
                   <div class="image-slider-allied f-left">
                     <div class="slider-wrapper theme-default">
                       <div class="ribbon"></div>
-                      <div id="slider" class="nivoSlider-allied"> 
+                      <div id="slider" class="nivoSlider-allied"> -->
                          <?php
                             $res = "";
-                            if(!empty($results)){
-                            for($i=0 ; $i<count($results); $i++) { 
+                            if(!empty($results)) { ?>
+                          <div id="wowslider-container1">
+                            <div class="ws_images">
+                              <ul>
+                        <?php
+                            $totalSlides = count($results);
+                            foreach($results as $key=> $slides) {
                         ?>
-                            <img src="<?php echo '..'.$alliedSerivce[0] ->jcarouselPath.$results[$i] ?>" alt="" />
-                        <?php }
-                            }?>
-                      </div>
+                                <li><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="" /><?php echo $alliedSerivce[0] ->heading.' style '.($key+1);?></li>
+                        <?php }?>
+                              </ul>
+                            </div>
+                            <!--large images ends-->                            
+                            <!-- thumbnails starts-->
+                            <div class="ws_thumbs">
+                              <div>
+                                <?php foreach($results as $key=> $slides) {?>
+                                <a title="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img width="115" src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="" /><?php echo $alliedSerivce[0] ->heading.' style '.($key+1);?></a>
+                                <?php }?>
+                              </div>
+                            </div>
+                            <!-- thumbnails ends-->
+                          <div class="ws_shadow"></div>
+                        </div>
+                          <script type="text/javascript" src="../js/wowslider.js"></script>
+                          <script type="text/javascript" src="../js/allied-services-slider.js"></script>
+                        <?php
+                        }?>
+                      <!--</div>
                     </div>
                   </div>
-                </div>        
+                </div>    -->
                         
                 <?php
                         /*$themes = array ();*/
@@ -151,7 +174,7 @@
                                         $pos = strrpos($themes[$i], "@");
                                         $url = substr($themes[$i],0,$pos);
                  ?>
-                  <iframe width="241" height="180" src="<?php echo $url ?>" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="241" height="180" src="<?php echo $url;?>" frameborder="0" allowfullscreen=""></iframe>
                   <?php }?>
                   <?php 
                         if(endsWith($themes[$i],'@IMAGE')) {
@@ -160,7 +183,8 @@
                         // if closed
                   ?>
                   <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><!--span class="themeTitle">Theme One Title Here</span--></div>
-                  <?php } } ?>
+                  <?php } 
+                  } ?>
                 
                 <!--h3 class="clear">Few of the Popular themes are:</h3>
                 <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
@@ -217,12 +241,11 @@
                     <label>Preferred Date:</label>
                     <input type="text" class="txt-name" name="date" value="" />
                     <script language="JavaScript">
-
 						new tcal ({
 							// form name
 							'formname': 'bookVenueForm',
 							// input name
-							'controlname': 'date',
+							'controlname': 'date'
 						});
 						</script>
                   </div>
@@ -283,30 +306,8 @@
       </div>
     </div>
     <!-- Box End -->
-    <?php  require("../view/footer.php") ?>
+    <?php  require("../view/footer.php"); ?>
   </div>
 </div>
-<script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider({
-		effect:'random', 
-        slices:17,
-        animSpeed:500,
-        pauseTime:6000,
-        startSlide:0, //Set starting Slide (0 index)
-        directionNav:true, //Next & Prev
-        directionNavHide:false, //Only show on hover
-        controlNav:true, //1,2,3...
-        controlNavThumbs:false, //Use thumbnails for Control Nav
-        controlNavThumbsFromRel:false, //Use image rel for thumbs
-        controlNavThumbsSearch: '.jpg', //Replace this with...
-        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-        keyboardNav:true, //Use left & right arrows
-        pauseOnHover:true, //Stop animation while hovering
-        manualAdvance:false, //Force manual transitions
-        captionOpacity:0
-		});
-    });
-    </script>
 </body>
 </html>

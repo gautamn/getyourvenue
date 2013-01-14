@@ -60,7 +60,7 @@
                         <br />
                         <a href="wedding-venues-in-Vaishali-Vasundhara" class="moreCat">View Options</a>-->
                       </div>
-                      <div class="venCat"><a href="wedding-venues-in-mundka"><img src="../images/icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundaka" class="pcName"> <a href="wedding-venues-in-mundka" class="moreCat">Mundka</a></span><!--<br />
+                      <div class="venCat"><a href="wedding-venues-in-mundka"><img src="../images/icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundka" class="pcName"> <a href="wedding-venues-in-mundka" class="moreCat">Mundka</a></span><!--<br />
                         <br />
                         <a href="wedding-venues-in-mundka" class="moreCat">View Options</a>--></div>
                       <div class="venCat"><a href="wedding-venues-in-delhi-NCR"><img src="../images/icons/outer/others.jpg" alt="" /></a> <span class="pcName"><a href="wedding-venues-in-delhi-NCR" class="moreCat">Others</a></span><!--<br />
