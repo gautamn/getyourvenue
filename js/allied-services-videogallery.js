@@ -59,7 +59,7 @@ $(document).ready( function(){
 		videoSlider();*/
     var x= $(this).html();
     var vtitle = $.trim($(this).parent(".Residentialbox").find(".img img").attr('title'));
-    x += (vtitle!="") ? "<h3>"+vtitle+"<h3>":"";
+    x = (vtitle!="") ? "<h3>"+vtitle+"</h3>"+x:x;
     $('.youtube').html(x);
     $('.videoCon').fadeIn('slow')
   });
