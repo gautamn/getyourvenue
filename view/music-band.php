@@ -6,6 +6,19 @@
     <meta name="Description" content="Wedding Music Bands in Delhi can now be booked with get your venue. Live Wedding Music needs to be chosen tastefully and our live music band for weddings is mystique in its own way. Our Delhi music band for wedding would truly add the flavor of elegance to your ambience!" />
     <meta name="keyword" content="wedding music band, wedding music bands, music bands for wedding, live band in delhi, live wedding music, music bands for weddings, live music for weddings" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleSlider.css" />
+    <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
+    <style type="text/css">
+                      ul.musicband{margin: 2px 0 0 10px; padding: 2px 5px 0 5px;}
+                      ul.musicband li{
+                        width: 48%;
+                        float: left;
+                        list-style-type: square;
+                        margin: 5px 10px 0 0;
+                        padding: 5px 5px 0 0;
+                      }
+                    </style>
+
   </head>
   <body>
     <div id="wrapper">
@@ -86,61 +99,137 @@
                     <p>Getyourvenue's promising live music band 'Mystique' is based in delhi and is run by a bunch of passionate musicians and singers for whom life is beyond eating, earning and having materialistic fun. The wedding music band encompasses multi talented people from various fields of life, fairly successful in their core career such as digital marketing, industrial production, professional photography but they cut a fine balance between their core professional skill-set and god gifted and fondly nurtured music talent. These people are driven by passion of live music and music is their breath and blood. Formed in early 2011, the members of the wedding music band already had great individual track records of performance. They brought synergies in the band as a group and there has been no looking back since then.</p>
                     <p>Personally fond of experimental, fusion, new age music, they have a passion for going about any type of genre, repertoire and have the ability to do justice with it.</p>
                     <p>Some of the categories can be highlighted as follows:</p>
-                    <table>
-                      <tr>
-                        <td width="60%"><ul>
-                            <li>
-                              <p>Modern Film Music</p>
-                            </li>
-                            <li>
-                              <p>Old Classics</p>
-                            </li>
-                            <li>
-                              <p>Instrumental</p>
-                            </li>
-                            <li>
-                              <p>Semi Classical Instrumental</p>
-                            </li>
-                            <li>
-                              <p>Thematic music</p>
-                            </li>
-                          </ul></td>
-                        <td style="vertical-align:top"><ul>
-                            <li>
-                              <p>Tributes</p>
-                            </li>
-                            <li>
-                              <p>Unplugged format( only acoustics, grand piano, tabla, guitar, etc)</p>
-                            </li>
-                          </ul></td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <table>
-                            <tr>
-                              <td><p>Mystique Performing at Hotel Taj Palace</p>
-                                <iframe width="340" height="315" style="padding:0 10px 10px 0;" src="http://www.youtube.com/embed/pjuD4qCqMkE" frameborder="0" allowfullscreen=""></iframe>
-                              </td>
-                              <td><p>&nbsp;</p>
-                                <iframe width="340" height="315" style="padding:0 10px 10px 0;" src="http://www.youtube.com/embed/md9vcw_Y5gQ" frameborder="0" allowfullscreen=""></iframe>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><p>Mystique Performing at Jhankar Gardens</p>
-                                <iframe width="340" height="315" style="padding:0 10px 10px 0;" src="http://www.youtube.com/embed/0AH7FzIPAV4" frameborder="0" allowfullscreen=""></iframe>
-                              </td>
-                              <td><p>&nbsp;</p>
-                                <iframe width="340" height="315" style="padding:0 10px 10px 0;" src="http://www.youtube.com//embed/-6Mxp05DJsA" frameborder="0" allowfullscreen=""></iframe>
-                              </td>
-                            </tr>
-                          </table>
+                    <ul class="musicband">
+                      <li>Modern Film Music</li>
+                      <li>Old Classics</li>
+                      <li>Instrumental</li>
+                      <li>Semi Classical Instrumental</li>
+                      <li>Thematic music</li>
+                      <li>Tributes</li>
+                      <li>Unplugged format( only acoustics, grand piano, tabla, guitar, etc)</li>
+                    </ul>
+                    <div class="clear"> </div>
+                    <!--Music Band starts-->
+                    <div class="contentbottomboxright">
+                      <div class="videoCon">
+                        <div id="jp_container_1" class="jp-video jp-video-360p"><span class="close">X Close</span>
+                          <div class="youtube">&nbsp;</div>
+                        </div>
+                      </div>
+                      <div id="slider3" class="logoSlider videoSlider">
 
+                        <div class="logoSliderCon">
+                          <div class="logoWrapper" >
 
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/8kUX2cO415M" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">@Hotel Taj Palace, Video 1</div>
+                            </div>
 
-                        </td>
-                      </tr>
-                    </table>
-                    <b>Call our helpline +91 8800095444 to book Mystique now or fill out the contact form along side! </b>
+                            
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 2" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/md9vcw_Y5gQ" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">@Hotel Taj Palace, Video 2</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 1" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/0AH7FzIPAV4" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">@Jhankar Gardens, Video 1</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 2" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com//embed/-6Mxp05DJsA" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">@Jhankar Gardens, Video 2</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 1" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/GZaOBeB6fVA" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Mystique Fusion Video 1</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 2" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/EUb7GwtR6-Y" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Mystique Fusion Video 2</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 1" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/uG7s0q3OGc4" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Sufi Video 1</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 2" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/sKzRIfIti7I" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Sufi Video 2</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 1" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/8VRjTD3p_FA" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Instrumental 1</div>
+                            </div>
+
+                            <div class="Residentialbox">
+                              <div class="img">
+                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 2" />
+                              </div>
+                              <span class="play">
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/VP1oAIgeUvs" frameborder="0" allowfullscreen="">	</iframe>
+                              </span>
+                              <div class="Residential">Instrumental 2</div>
+                            </div>
+
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <script type="text/javascript" src="../js/allied-services-videogallery.js"></script>
+                    <!--Music Band ends-->
+                    <h3>Call our helpline +91 8800095444 to book Mystique now or fill out the contact form along side! </h3>
                     <!-- Box Content End -->
                   </div>
                 </div>
@@ -268,27 +357,5 @@
         <?php require("../view/footer.php") ?>
       </div>
     </div>
-    <script type="text/javascript">
-      $(window).load(function() {
-        $('#slider').nivoSlider({
-          effect:'random',
-          slices:17,
-          animSpeed:500,
-          pauseTime:6000,
-          startSlide:0, //Set starting Slide (0 index)
-          directionNav:true, //Next & Prev
-          directionNavHide:false, //Only show on hover
-          controlNav:true, //1,2,3...
-          controlNavThumbs:false, //Use thumbnails for Control Nav
-          controlNavThumbsFromRel:false, //Use image rel for thumbs
-          controlNavThumbsSearch: '.jpg', //Replace this with...
-          controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-          keyboardNav:true, //Use left & right arrows
-          pauseOnHover:true, //Stop animation while hovering
-          manualAdvance:false, //Force manual transitions
-          captionOpacity:0
-        });
-      });
-    </script>
   </body>
 </html>
