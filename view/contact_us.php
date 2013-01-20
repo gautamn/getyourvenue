@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>"Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR"</title>
+    <title>Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR</title>
     <meta name="description" content="GetYourVenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
     <meta name="keyword" content=" Get Your Venue, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
@@ -11,7 +11,6 @@
     <div id="wrapper">
       <div id="main">
         <?php require_once("../view/header.php"); ?>
-
         <div id="contentArea">
           <div id="leftNav">
             <!-- Box Start -->
@@ -26,14 +25,22 @@
                     <h3>Welcome to Our Contact Page</h3>
                     <table width="100%" cellpadding="5" cellspacing="5">
                       <tr>
-                        <td colspan="2"><b>Head Office:</b></td>
+                        <td><b>Head Office:</b></td>
+                        <td><b>Mailing Address:</b></td>
                       </tr>
-                      <tr>
-                        <td colspan="2">
+                      <tr valign="top">
+                        <td>
+                          <p>
+                            K-52, 2nd Floor, Choudhary Building, Outer Circle, <br />Cannaught Place, New Delhi, India - 110001<br />
+Email: <a href="mailto:info@getyourvenue.com">info@getyourvenue.com</a><br />
+Contact No: +91-8800095444, +91-8800093444
+                          </p>
+                        </td>
+                        <td>
                           <p>
                             H-56, Sector 25, Noida, U.P., India - 201301<br />
 Email: <a href="mailto:info@getyourvenue.com">info@getyourvenue.com</a><br />
-Contact No: +91-8800095444, +91-8800093444
+Contact No: +91-9910163377, +91-120-4266685
                           </p>
                         </td>
                       </tr>
@@ -44,38 +51,37 @@ Contact No: +91-8800095444, +91-8800093444
                         <td width="50%" style="border-bottom: 1px dotted #b5b7c6; margin: 5px;"><b>East Zone</b></td>
                         <td width="50%" style="border-bottom: 1px dotted #b5b7c6; margin: 5px;"><b>West Zone</b></td>
                       </tr>
-                      <tr>
+                      <tr valign="top">
                           <td>
                           <p>H No - 72, Maharajpur, Sahibabad, Ghaziabad<br />U.P., India - 201010<br />
 Email: <a href="sales@getyourvenue.com">sales@getyourvenue.com</a> <br />
-Contact No: +91-9555666050, +91-9015904279
+Contact No: +91-9015904279, +91-9555666050
                           </p>
                           </td>
                           <td>
                           <p>
                             A-4, 197, DDA Flat, Paschim Vihar, New Delhi<br /> India - 110063<br />
 Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br />
-Contact No: +91-9899905106
+Contact No: +91-9899905106, +91-9212802083
                           </p></td>
                       </tr>
                       <tr>
                         <td width="50%" style="border-bottom: 1px dotted #b5b7c6; margin: 5px;"><b>North Zone</b></td>
                         <td width="50%" style="border-bottom: 1px dotted #b5b7c6; margin: 5px;"><b>South Zone</b></td>
                       </tr>
-                      <tr>
+                      <tr valign="top">
                           <td>
                           <p>
                             C-5, 91, Sector 6, Rohini, Delhi, India - 110085<br />
 Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br />
-Contact No: +91-7428519266, +91-7838433266, +91-11-47019266
+Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
                           </p>
                           </td>
                           <td>
                           <p>
-                            H No - 72, Maharajpur, Sahibabad, Ghaziabad, <br />
-                            U.P., India - 201010<br />
+                            B-123, FF Enclave, IGNOU Road, Saket,<br /> New Delhi, India - 110068.<br />
                             Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br />
-                            Mobile: +91 9555666050<br />
+                            Mobile: +91-9810928304, +91-9910163377
                           </p></td>
                       </tr>
                     </table>

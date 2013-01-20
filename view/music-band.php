@@ -1,24 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+require_once ("../constants/Constants.php");
+$constants = new Constants();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Wedding Music Bands Delhi, Live Music Bands for Weddings, Live Wedding Music Bands Delhi</title>
     <meta name="Description" content="Wedding Music Bands in Delhi can now be booked with get your venue. Live Wedding Music needs to be chosen tastefully and our live music band for weddings is mystique in its own way. Our Delhi music band for wedding would truly add the flavor of elegance to your ambience!" />
     <meta name="keyword" content="wedding music band, wedding music bands, music bands for wedding, live band in delhi, live wedding music, music bands for weddings, live music for weddings" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/styleSlider.css" />
-    <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
-    <style type="text/css">
-                      ul.musicband{margin: 2px 0 0 10px; padding: 2px 5px 0 5px;}
-                      ul.musicband li{
-                        width: 48%;
-                        float: left;
-                        list-style-type: square;
-                        margin: 5px 10px 0 0;
-                        padding: 5px 5px 0 0;
-                      }
-                    </style>
-
+    <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
+    <script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/styleSlider.css" />
+    <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-videogallery.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -36,18 +30,18 @@
                   <div class="boxGr">
                     <h4>Allied Services</h4>
                     <ul class="alliedServices">
-                        <li><a href="/music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
-                        <li><a href="/wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-                        <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
-                        <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>
-                        <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
-                        <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
-                        <li><a href="/groom-wedding-attires-in-delhi">Grooms Wear</a></li>
-                        <li><a href="/fireworks">Fireworks</a></li>
-                        <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
-                        <li><a href="/vermala-theme">Varmala Themes</a></li>
-                        <li><a href="/wedding-planning">Wedding Planning</a></li>
-                        <li class="last"><a href="/photography">Photography</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique">Music Band</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi">Decor</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi">Caterer</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi">Transportation</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi">Ghoriwaala, Baggi</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi">Grooms Wear</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks">Fireworks</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems">DJ and Sound Systems</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme">Varmala Themes</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning">Wedding Planning</a></li>
+                      <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>photography">Photography</a></li>
                     </ul>
                   </div>
                   <div class="boxGr" align="center">
@@ -111,12 +105,13 @@
                   <div class="boxGr">
                     <!-- Box Content Start -->
                     <a name="imageGallery"></a>
-                    <div class="f-left"><img src="images/mystique_music_band_banner.jpg" class="bannerImg" alt="Mystique The Band" /></div>
+                    <div class="f-left"><img src="/images/mystique_music_band_banner.jpg" class="bannerImg" alt="Mystique The Band" /></div>
                     <h3>GYV's Mystique!</h3>
+                    <div class="allied_content">
                     <p>Getyourvenue's promising live music band 'Mystique' is based in delhi and is run by a bunch of passionate musicians and singers for whom life is beyond eating, earning and having materialistic fun. The wedding music band encompasses multi talented people from various fields of life, fairly successful in their core career such as digital marketing, industrial production, professional photography but they cut a fine balance between their core professional skill-set and god gifted and fondly nurtured music talent. These people are driven by passion of live music and music is their breath and blood. Formed in early 2011, the members of the wedding music band already had great individual track records of performance. They brought synergies in the band as a group and there has been no looking back since then.</p>
                     <p>Personally fond of experimental, fusion, new age music, they have a passion for going about any type of genre, repertoire and have the ability to do justice with it.</p>
                     <p>Some of the categories can be highlighted as follows:</p>
-                    <ul class="musicband">
+                    <ul>
                       <li>Modern Film Music</li>
                       <li>Old Classics</li>
                       <li>Instrumental</li>
@@ -142,10 +137,10 @@
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" title="Mystique Performing at Hotel Taj Palace video - part 1" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 1" title="Mystique Performing at Hotel Taj Palace video - part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/pjuD4qCqMkE" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/pjuD4qCqMkE" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">@Hotel Taj Palace, Video 1</div>
                             </div>
@@ -155,87 +150,87 @@
                                 <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Hotel Taj Palace video - part 2" title="Mystique Performing at Hotel Taj Palace video - part 2" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/md9vcw_Y5gQ" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/md9vcw_Y5gQ" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">@Hotel Taj Palace, Video 2</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 1" title="Mystique Performing at Jhankar Gardens video - Part 1" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 1" title="Mystique Performing at Jhankar Gardens video - Part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/0AH7FzIPAV4" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/0AH7FzIPAV4" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">@Jhankar Gardens, Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 2" title="Mystique Performing at Jhankar Gardens video - Part 2" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Performing at Jhankar Gardens video - Part 2" title="Mystique Performing at Jhankar Gardens video - Part 2" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com//embed/-6Mxp05DJsA" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/-6Mxp05DJsA" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">@Jhankar Gardens, Video 2</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 1" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/GZaOBeB6fVA" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/GZaOBeB6fVA" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Fusion Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 2" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Fusion video - Part 2" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/EUb7GwtR6-Y" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/EUb7GwtR6-Y" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Fusion Video 2</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 1" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/uG7s0q3OGc4" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/uG7s0q3OGc4" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Sufi Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 2" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Sufi video - Part 2" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/sKzRIfIti7I" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/sKzRIfIti7I" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Sufi Video 2</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 1" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 1" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/8VRjTD3p_FA" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/8VRjTD3p_FA" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Instrumental Video 1</div>
                             </div>
 
                             <div class="Residentialbox">
                               <div class="img">
-                                <img src="images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 2" />
+                                <img src="/images/mystique_video_thumb.jpg" alt="Mystique Instrumental video - Part 2" />
                               </div>
                               <span class="play">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/VP1oAIgeUvs" frameborder="0" allowfullscreen="">	</iframe>
+                                <iframe width="560" height="400" src="http://www.youtube.com/embed/VP1oAIgeUvs" frameborder="0" allowfullscreen="">	</iframe>
                               </span>
                               <div class="Residential">Instrumental Video 2</div>
                             </div>
@@ -245,10 +240,11 @@
                         </div>
                       </div>
                     </div>
-                    <script type="text/javascript" src="../js/allied-services-videogallery.js"></script>
+                    
                     <!--Music Band ends-->
                     <h3>Call our helpline +91 8800095444 to book Mystique now or fill out the contact form along side! </h3>
                     <!-- Box Content End -->
+                    </div>
                   </div>
                 </div>
               </div>

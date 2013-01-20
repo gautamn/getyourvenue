@@ -1,0 +1,77 @@
+RewriteEngine On
+RewriteRule ^index.php$   /view/index.php [L] 
+RewriteRule ^home$   	/view/index.php [L]
+RewriteRule ^about-us$   /view/about-us.php [L]
+RewriteRule ^addvenue$   /view/addvenue.php [L]
+RewriteRule ^book_now$   /view/book_now.php [L]
+RewriteRule ^venue-details$   /view/venue-details.php [L]
+RewriteRule ^contact_us$   /view/contact_us.php [L]
+RewriteRule ^career$   /view/career.php [L]
+RewriteRule ^non_wedding$   /view/non_wedding.php [L]
+RewriteRule ^allied-services$   /view/allied-services.php [L]
+RewriteRule ^search_results$   /actionController/Controller.php [L]
+RewriteRule ^search_results_pagination$   /actionController/Controller.php [L]
+
+RewriteRule ^allied_services$   /actionController/AlliedServicesController.php [L]
+
+#RewriteRule ^readers-corner$   /view/readers-corner.php [L]
+RewriteRule ^readers-corner$    http://blog.getyourvenue.com/ [L,R=301]
+RewriteRule ^site-map$   /view/site-map.php [L]
+
+RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
+RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
+
+RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
+RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
+RewriteRule ^wedding-venues-in-chhatarpur/(.*)$ /search_results?option=1&page=$1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-mundka/(.*)$ /search_results?option=2&page=$1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-gt-karnal-road/(.*)$ /search_results?option=3&page=$1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-NH8-Pushpanjali/(.*)$ /search_results?option=4&page=$1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-Vaishali-Vasundhara/(.*)$ /search_results?option=5&page=$1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-delhi-NCR/(.*)$ /search_results?action=viewChoices&page=$1 [L]
+
+
+RewriteRule ^wedding-venues-in-chhatarpur$ /search_results?option=1&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-mundka$ /search_results?option=2&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-gt-karnal-road$ /search_results?option=3&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-NH8-Pushpanjali$ /search_results?option=4&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-Vaishali-Vasundhara$ /search_results?option=5&action=viewChoices [L]
+RewriteRule ^wedding-venues-in-delhi-NCR$ /search_results?action=viewChoices [L]
+RewriteRule ^venue/(.*)$  /view/venue-details.php?venueid=$1&action=viewChoices
+RewriteRule ^searchVenue/(.*)$  /search_results [L]
+
+RewriteRule ^contact-confirmation$   /actionController/ConfirmationController.php [L]
+RewriteRule ^booking-confirmation$   /actionController/BookingController.php [L]
+
+RewriteRule ^articles/flamboyant-venues-in-delhi$   /articles/venues-in-delhi.php [L]
+RewriteRule ^articles/decor-tips-for-banquet-halls-in-delhi$   /articles/banquethall-in-delhi.php [L]
+RewriteRule ^articles/tips-for-booking-delhi-banquet-halls$   /articles/tips-in-booking-delhiBanquetHalls.php [L]
+RewriteRule ^articles/choosing-perfect-delhi-wedding-venue$   /articles/choosing-perfect-delhi-wedding-venue.php [L]
+RewriteRule ^articles/know-about-delhi-wedding-venues$   /articles/know-about-delhi-wedding-venues.php [L]
+RewriteRule ^perfect-wedding-music-bands$   /article/perfect-wedding-music-bands.php [L]
+
+RewriteRule ^music-band-mystique$   /view/music-band.php [L]
+#RewriteRule ^band-ghori-baggi-services-in-delhi$   /view/band.php [L]
+#RewriteRule ^wedding-decorators-in-delhi$   /view/decor.php [L]
+#RewriteRule ^wedding-caterers-in-delhi$   /view/caterer.php [L]
+#RewriteRule ^transportation-for-wedding-in-delhi$   /view/transportation.php [L]
+
+RewriteRule ^wedding-decorators-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-decorators-in-delhi [L]
+RewriteRule ^band-ghori-baggi-services-in-delhi$   /allied_services?action=alliedServices&seoId=band-ghori-baggi-services-in-delhi [L]
+RewriteRule ^wedding-caterers-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-caterers-in-delhi [L]
+RewriteRule ^transportation-for-wedding-in-delhi$   /allied_services?action=alliedServices&seoId=transportation-for-wedding-in-delhi [L]
+
+RewriteRule ^wedding-lehengas-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-lehengas-in-delhi [L]
+RewriteRule ^groom-wedding-attires-in-delhi$   /allied_services?action=alliedServices&seoId=groom-wedding-attires-in-delhi [L]
+RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+
+RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]
+RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
+RewriteRule  ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+RewriteRule ^fireworks$   /allied_services?action=alliedServices&seoId=fireworks [L]
+RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
+#RewriteRule ^celebrities$   /allied_services?action=alliedServices&seoId=celebrities [L]
+#RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+
+
+

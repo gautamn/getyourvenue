@@ -1,4 +1,7 @@
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
+RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
+
 RewriteRule ^index.php$   /view/index.php [L] 
 RewriteRule ^home$   	/view/index.php [L]
 RewriteRule ^about-us$   /view/about-us.php [L]
@@ -17,9 +20,6 @@ RewriteRule ^allied_services$   /actionController/AlliedServicesController.php [
 #RewriteRule ^readers-corner$   /view/readers-corner.php [L]
 RewriteRule ^readers-corner$    http://blog.getyourvenue.com/ [L,R=301]
 RewriteRule ^site-map$   /view/site-map.php [L]
-
-RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
-RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
 
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
@@ -67,3 +67,25 @@ RewriteRule ^photography$   /allied_services?action=alliedServices&seoId=photogr
 RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
 RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
 RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]
+
+##social functions
+RewriteRule ^social-functions$   /view/social-functions.php [L]
+RewriteRule ^social_functions$   /actionController/SocialFunctionsController.php [L]
+RewriteRule ^social-functions$   /view/social-functions-content.php [L]
+RewriteRule ^social-functions/bachelor-party$   /social_functions?action=socialFunctions&seoId=bachelor-party [L]
+RewriteRule ^social-functions/ring-ceremony$   /social_functions?action=socialFunctions&seoId=ring-ceremony [L]
+RewriteRule ^social-functions/wedding-reception$   /social_functions?action=socialFunctions&seoId=wedding-reception [L]
+RewriteRule ^social-functions/birthday$   /social_functions?action=socialFunctions&seoId=birthday [L]
+RewriteRule ^social-functions/anniversary$   /social_functions?action=socialFunctions&seoId=anniversary [L]
+RewriteRule ^social-functions/mehendi-ki-raat$   /social_functions?action=socialFunctions&seoId=mehendi-ki-raat [L]
+RewriteRule ^social-functions/bachelor-party$   /social_functions?action=socialFunctions&seoId=bachelor-party [L]
+
+##corporate functions
+RewriteRule ^corporate-functions$   /view/corporate-functions.php [L]
+RewriteRule ^corporate_functions$   /actionController/CorporateFunctionsController.php [L]
+RewriteRule ^corporate-functions$   /view/corporate-functions-content.php [L]
+RewriteRule ^corporate-functions/dealers-meet$   /corporate_functions?action=corporateFunctions&seoId=dealers-meet [L]
+RewriteRule ^corporate-functions/product-launch$   /corporate_functions?action=corporateFunctions&seoId=product-launch [L]
+RewriteRule ^corporate-functions/exhibition$   /corporate_functions?action=corporateFunctions&seoId=exhibition [L]
+RewriteRule ^corporate-functions/annual-general-meeting$   /corporate_functions?action=corporateFunctions&seoId=annual-general-meeting [L]
+RewriteRule ^corporate-functions/family-day$   /corporate_functions?action=corporateFunctions&seoId=family-day [L]

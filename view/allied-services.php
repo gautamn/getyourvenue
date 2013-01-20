@@ -1,4 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+require_once ("../constants/Constants.php");
+$constants = new Constants();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,7 +8,7 @@
     <meta name="Description" content="Choosing the right venue for the wedding is the most difficult decision a couple comes across. We at
           getyourvenue.com make sure that all your problems are vanished and we make this arduos task an easy and fun-loving one." />
     <meta name="keyword" content=" Get Your Venue Allied Services, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
   </head>
   <body>
     <div id="wrapper">
@@ -25,9 +27,9 @@
                   <div class="boxGr boxheight">
                     <!-- Box Content Start -->
                     <h3>Our Allied Services</h3>
+                    <div class="allied_content">
                     <p>Choosing the right venue for weddings is the most difficult decision a couple comes across. We at
-                      <a href="http://getyourvenue.com">getyourvenue.com</a> make sure that all your problems are eased out and we make this arduos task an enjoyable and fun-loving one. Keeping in mind that a marriage is not only about taking vows in each others presence, our indian culture asks for a bevy of ceremonies and requirements at the event. At <a href="http://getyourvenue.com">getyourvenue.com</a> we provide all required services to make your wedding a complete and enjoyable affair. With our esteemed allied partners, we offer services which are supposed to be the best in the business. At <a href="http://getyourvenue.com">getyourvenue.com</a> we have a solution provider for each and every little thing that is involved in a wedding. Some of them are.</p>
-
+                      <a href="http://getyourvenue.com">getyourvenue.com</a> make sure that all your problems are eased out and we make this arduos task an enjoyable and fun-loving one. Keeping in mind that a marriage is not only about taking vows in each others presence, our indian culture asks for a bevy of ceremonies and requirements at the event. At <a href="http://getyourvenue.com">getyourvenue.com</a> we provide all required services to make your wedding a complete and enjoyable affair. With our esteemed allied partners, we offer services which are supposed to be the best in the business. At <a href="http://getyourvenue.com">getyourvenue.com</a> we have a solution provider for each and every little thing that is involved in a wedding. Some of them are:-</p>
                     <ul>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique">Music Band</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi">Decor</a></li>
@@ -42,13 +44,11 @@
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning">Wedding Planning</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>photography">Photography</a></li>
                     </ul>
-
+                    <div class="clear"></div>
                     <p>At <a href="http://getyourvenue.com">getyourvenue.com</a> we make sure that your needs are satisfied completely and your wedding turns out to be the way you always dreamt of it and wanted it to be.</p>
-                    <!-- Box Content End -->
-                    <!--
-                    <br><br><br><br><br><br><br><br>
-                    -->
-                    <div id='blankBlock'></div><!--<br> -->
+                    <!-- Box Content End -->                    
+                    <div id='blankBlock'></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@
             <!-- Box End -->
           </div>
         </div>
-        <?php require("../view/footer.php") ?>
+        <?php require_once("../view/footer.php"); ?>
       </div>
     </div>
   </body>

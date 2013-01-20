@@ -10,6 +10,8 @@ require_once ("../model/Capacity.php");
 require_once ("../model/PopularChoice.php");
 require_once ("../model/BookingInfo.php");
 require_once ("../model/AlliedServices.php");
+require_once ("../model/CorporateFunctions.php");
+require_once ("../model/SocialFunctions.php");
 
 class GetYourVenueMySQLManager {
 
@@ -673,6 +675,67 @@ class GetYourVenueMySQLManager {
     mysql_close($connection);
     return $dataBaseResponse;
   }
+
+  function corporateFunctions($seoId) {
+
+    $dbConstants = new DBConstants();
+    $dBUtils = new DBUtils();
+    $connection = $dBUtils->getDBConnection();
+    $corporate = array();
+
+    if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+      throw new DBSourceException("Unable to connect to a datasource.");
+    } else {
+      $query = "select * from corporate_functions where seo_id='" . $seoId . "' AND IS_ACTIVE=1";
+      $result = mysql_query($query);
+      while ($row = mysql_fetch_array($result)) {
+        $corporateFunctions = new CorporateFunctions();
+        $corporateFunctions->seoId = $row['SEO_ID'];
+        $corporateFunctions->bannerPath = $row['BANNER_PATH'];
+        $corporateFunctions->heading = $row['HEADING'];
+        $corporateFunctions->html_content = $row['HTML_CONTENT'];
+        $corporateFunctions->title = $row['TITLE'];
+        $corporateFunctions->metaDescription = $row['META_DESCRIPTION'];
+        $corporateFunctions->metaKeyword = $row['META_KEYWORD'];
+        $corporateFunctions->jcarouselPath = $row['JCAROUSEL_IMAGES_FOLDER_PATH'];
+        $corporateFunctions->themesUrl = $row['THEMES_URLS'];
+        $corporate[] = $corporateFunctions;
+      }
+    }
+    mysql_close($connection);
+    return $corporate;
+  }
+
+  function socialFunctions($seoId) {
+
+    $dbConstants = new DBConstants();
+    $dBUtils = new DBUtils();
+    $connection = $dBUtils->getDBConnection();
+    $social = array();
+
+    if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
+      throw new DBSourceException("Unable to connect to a datasource.");
+    } else {
+      $query = "select * from social_functions WHERE SEO_ID='" . $seoId . "' AND IS_ACTIVE=1";
+      $result = mysql_query($query);
+      while ($row = mysql_fetch_array($result)) {
+        $socialFunctions = new CorporateFunctions();
+        $socialFunctions->seoId = $row['SEO_ID'];
+        $socialFunctions->bannerPath = $row['BANNER_PATH'];
+        $socialFunctions->heading = $row['HEADING'];
+        $socialFunctions->html_content = $row['HTML_CONTENT'];
+        $socialFunctions->title = $row['TITLE'];
+        $socialFunctions->metaDescription = $row['META_DESCRIPTION'];
+        $socialFunctions->metaKeyword = $row['META_KEYWORD'];
+        $socialFunctions->jcarouselPath = $row['JCAROUSEL_IMAGES_FOLDER_PATH'];
+        $socialFunctions->themesUrl = $row['THEMES_URLS'];
+        $social[] = $socialFunctions;
+      }
+    }
+    mysql_close($connection);
+    return $social;
+  }
+
 }
 
 ?>

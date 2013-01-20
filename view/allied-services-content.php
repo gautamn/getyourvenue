@@ -1,24 +1,23 @@
+<?php  require_once ("../constants/Constants.php");
+$constants = new Constants(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" href="../css/calendar.css">
-<script language="javascript" src="../js/calendar_us.js"></script>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo $alliedSerivce[0] ->title ?></title>
-<meta name="description" content= "<?php echo $alliedSerivce[0]->metaDescription ?>" />
-<meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword ?>" />
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
-<link rel="stylesheet" type="text/css" href="../css/albums.css" />
-<link rel="stylesheet" type="text/css" href="../css/styleSlider.css" />
-<script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
+<title><?php echo $alliedSerivce[0]->title;?></title>
+<link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
+<script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
+<meta name="description" content="<?php echo $alliedSerivce[0]->metaDescription;?>" />
+<meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword;?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/albums.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/styleSlider.css" />
+<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
   <div id="main">
-    <?php  require("header.php"); ?>
-    <?php  require_once ("../constants/Constants.php"); 
-           $constants=new Constants(); 
-    ?>  
+    <?php  require_once("header.php"); ?>
     <div id="contentArea">
       <div id="leftNavNarrow">
         <!-- Small Left Box Start -->
@@ -32,18 +31,18 @@
                 <!-- Box Content Start -->
                 <h4>Allied Services</h4>
                 <ul class="alliedServices">
-                    <li><a href="/music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
-                    <li><a href="/wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-                    <li><a href="/band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>                   
-                    <li><a href="/wedding-caterers-in-delhi">Caterer</a></li>                    
-                    <li><a href="/transportation-for-wedding-in-delhi">Transportation</a></li>
-                    <li><a href="/wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
-                    <li><a href="/groom-wedding-attires-in-delhi">Grooms Wear</a></li>
-                    <li><a href="/fireworks">Fireworks</a></li>
-                    <li><a href="/dj-and-sound-systems">DJ and Sound Systems</a></li>
-                    <li><a href="/vermala-theme">Varmala Themes</a></li>
-                    <li><a href="/wedding-planning">Wedding Planning</a></li>
-                    <li class="last"><a href="/photography">Photography</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi">Caterer</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi">Transportation</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi">Grooms Wear</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks">Fireworks</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems">DJ and Sound Systems</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme">Varmala Themes</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning">Wedding Planning</a></li>
+                    <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>photography">Photography</a></li>
                 </ul>
                 <!-- Box Content End -->
               </div>
@@ -93,43 +92,41 @@
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo $alliedSerivce[0] ->bannerPath ?>" alt="" class="bannerImg" /><br class="f-left" />
+                <img src="<?php echo $alliedSerivce[0]->bannerPath;?>" alt="" class="bannerImg" /><br class="f-left" />
                 <br />
-                <h3><?php echo $alliedSerivce[0] ->heading ?></h3>
-                <div class="allied_content"><?php echo $alliedSerivce[0] ->html_content;?></div>                
+                <h3><?php echo $alliedSerivce[0]->heading;?></h3>
+                <div class="allied_content"><?php echo stripslashes($alliedSerivce[0]->html_content);?></div>
                 <?php
                     $results = array();
+                    $thumbsImg = array();
                     // create a handler for the directory
-                    $handler = opendir("..".$alliedSerivce[0] ->jcarouselPath);
-                    // open directory and walk through the filenames
-                    while ($file = readdir($handler)) {
+                    if(is_dir("..".$alliedSerivce[0]->jcarouselPath)) {
+                      $handler = opendir("..".$alliedSerivce[0] ->jcarouselPath);
+                      // open directory and walk through the filenames
+                      while ($file = readdir($handler)) {
                             // if file isn't this directory or its parent, add it to the results
-                            if ($file != "." && $file != "..") {
-                            $results[] = $file;
+                          if ($file != "." && $file != "..") {
+                            if(preg_match('/^thumb_/', $file)) {
+                              $thumbsImg[] = $file;
+                            }else{
+                              $results[] = $file;
                             }
+                          }
+                      }
+                      // tidy up: close the handler
+                      closedir($handler);
                     }
-                    // tidy up: close the handler
-                    closedir($handler);
-                ?>
-                	
-                
-              <!--
-                 <div class="latest-news">
-                  <div class="image-slider-allied f-left">
-                    <div class="slider-wrapper theme-default">
-                      <div class="ribbon"></div>
-                      <div id="slider" class="nivoSlider-allied"> -->
-                         <?php
-                            $res = "";
-                            if(!empty($results)) { ?>
-                          <div id="wowslider-container1">
-                            <div class="ws_images">
-                              <ul>
+
+                    $res = "";
+                    if(!empty($results)) { ?>
+                        <div id="wowslider-container1">
+                          <div class="ws_images">
+                            <ul>
                         <?php
                             $totalSlides = count($results);
                             foreach($results as $key=> $slides) {
                         ?>
-                                <li><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="" /><?php echo $alliedSerivce[0] ->heading.' style '.($key+1);?></li>
+                                <li><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="<?php echo $alliedSerivce[0]->heading;?>" title="<?php echo $alliedSerivce[0] ->heading;?>" id="wows1_<?php echo $key;?>" /><?php //echo 'Theme '.($key+1);?></li>
                         <?php }?>
                               </ul>
                             </div>
@@ -137,16 +134,17 @@
                             <!-- thumbnails starts-->
                             <div class="ws_thumbs">
                               <div>
-                                <?php foreach($results as $key=> $slides) {?>
-                                <a title="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img width="115" src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="" /><?php echo $alliedSerivce[0] ->heading.' style '.($key+1);?></a>
+                                <?php //foreach($thumbsImg as $key=> $thumb) {?>
+                                <?php foreach($results as $key=> $thumb) {?>
+                                <a title="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$thumb;?>" width="115" alt="" /><?php echo 'Theme '.($key+1);?></a>
                                 <?php }?>
                               </div>
                             </div>
                             <!-- thumbnails ends-->
                           <div class="ws_shadow"></div>
                         </div>
-                          <script type="text/javascript" src="../js/wowslider.js"></script>
-                          <script type="text/javascript" src="../js/allied-services-slider.js"></script>
+                          <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/wowslider.js"></script>
+                          <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-slider.js"></script>
                         <?php
                         }?>
                       <!--</div>
@@ -186,19 +184,6 @@
                   <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><!--span class="themeTitle">Theme One Title Here</span--></div>
                   <?php } 
                   } ?>
-                
-                <!--h3 class="clear">Few of the Popular themes are:</h3>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb">
-                  <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb">
-                  <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
-                </div-->
-                <!-- Box Content End -->
               </div>
             </div>
           </div>
@@ -233,11 +218,7 @@
                     <label>Contact Number:<font color="red">*</font></label>
                     <input type="text" name="contactNumber" class="txt-name" value="Enter your Contact Number" onblur="if(this.value==''){this.value='Enter your Contact Number'}" onfocus="if(this.value=='Enter your Contact Number'){this.value=''}"  />
                   </div>
-                  <!--<div class="getvenue_cont">
-                   <label>Preferred Date:</label>
-                    <input type="text" name="date" class="txt-name" value="Select your Date" onblur="if(this.value==''){this.value='Select your Date'}" onfocus="if(this.value=='Select your Date'){this.value=''}"  />
-                    <a href="#"><img src="../images/cal-icon.png" alt="" class="calicon" /></a> </div>
-                   -->
+                  
                   <div class="getvenue_cont">
                     <label>Preferred Date:</label>
                     <input type="text" class="txt-name" name="date" value="" />
@@ -259,7 +240,7 @@
                     <input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if(this.value==''){this.value='Enter your Budget'}" onfocus="if(this.value=='Enter your Budget'){this.value=''}"  />
                   </div>
                   <div class="clear"></div>
-                  <br>
+                  <br />
                   <div class="getvenue_cont last">
                     <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>

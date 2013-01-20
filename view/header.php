@@ -28,14 +28,13 @@ $constants = new Constants();
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-NH8-Pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-Vaishali-Vasundhara';?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-mundka';?>" title="Mundka">Mundka</a></li>
-            <li><a href="#" title="Rama Road & Kirti Nagar">Rama Road & Kirti Nagar</a></li>
+            <?php /*<li><a href="#" title="Rama Road & Kirti Nagar">Rama Road & Kirti Nagar</a></li>
             <li><a href="#" title="5 Star Banquets">5 Star Banquets</a></li>
-            <li><a href="#" title="Destination Wedding">Destination Wedding</a></li>
+            <li><a href="#" title="Destination Wedding">Destination Wedding</a></li>*/?>
             <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-delhi-NCR';?>" title="Others">Others</a></li>
         </ul>
-      </li>
-      
-      <li><a href="<?php echo $constants->DOMAIN_URL . 'allied-services';?>">Allied Services</a>
+      </li>      
+      <li><a class="newribbon" href="<?php echo $constants->DOMAIN_URL . 'allied-services';?>">Allied Services</a>
         <ul>
           <li><a href="<?php echo $constants->DOMAIN_URL.'music-band-mystique';?>" title="Mystique Music Band">Mystique Music Band</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'groom-wedding-attires-in-delhi';?>" title="Grooms Wear">Grooms Wear</a></li>
@@ -51,30 +50,32 @@ $constants = new Constants();
             <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'photography';?>" title="Wedding Photography">Photography</a></li>
         </ul>
       </li>
-      <li><a href="#" title="Social Functions"><strong>Social Functions</strong></a>
+      <?php /*
+      <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions';?>" class="newribbon" title="Social Functions"><strong>Social Functions</strong></a>
           <ul>
-            <li><a href="#" title="Ring Ceremony">Ring Ceremony</a></li>
-            <li><a href="#" title="Wedding Reception">Wedding Reception</a></li>
-            <li><a href="#" title="Birthday">Birthday</a></li>
-            <li><a href="#" title="Anniversary">Anniversary</a></li>
-            <li><a href="#" title="Mehendi Ki Raat">Mehendi Ki Raat</a></li>
-            <li class="last"><a href="#" title="Bachelor Party">Bachelor Party</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/ring-ceremony';?>" title="Ring Ceremony">Ring Ceremony</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/wedding-reception';?>" title="Wedding Reception">Wedding Reception</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/birthday';?>" title="Birthday">Birthday</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/anniversary';?>" title="Anniversary">Anniversary</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/mehendi-ki-raat';?>" title="Mehendi Ki Raat">Mehendi Ki Raat</a></li>
+            <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'social-functions/bachelor-party';?>" title="Bachelor Party">Bachelor Party</a></li>
           </ul>
       </li>
       <li>
-          <a href="#" title="Corporate Functions"><strong>Corporate Functions</strong></a>
+          <a href="<?php echo $constants->DOMAIN_URL.'corporate-functions';?>" class="newribbon" title="Corporate Functions"><strong>Corporate Functions</strong></a>
           <ul>            
-            <li><a href="#" title="Dealer's Meet">Dealer's Meet</a></li>
-            <li><a href="#" title="Product Launch">Product Launch</a></li>
-            <li><a href="#" title="Exhibition">Exhibition</a></li>
-            <li><a href="#" title="Annual General Meeting">AGM (Annual General Meeting)</a></li>
-            <li class="last"><a href="#" title="Family Day">Family Day</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/dealers-meet';?>" title="Dealer's Meet">Dealer's Meet</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/product-launch';?>" title="Product Launch">Product Launch</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/exhibition';?>" title="Exhibition">Exhibition</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/annual-general-meeting';?>" title="Annual General Meeting">Annual General Meeting (AGM)</a></li>
+            <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/family-day';?>" title="Family Day">Family Day</a></li>
           </ul>
-      </li>
+      </li>*/?>
+      <li><a href="<?php echo $constants->DOMAIN_URL . 'non_wedding'; ?>" title="Non Wedding Functions">Non Wedding Functions</a></li>
       <li><a href="http://blog.getyourvenue.com/" target="_blank" title="GYV Blog">Blog</a></li>
       <li><a href="<?php echo $constants->DOMAIN_URL . 'book_now'; ?>" title="Book Now">Book Now</a></li>      
       <li><a href="<?php echo $constants->DOMAIN_URL . 'about-us';?>" title="About Us">About Us</a></li>
-      <li class="last"><a href="<?php echo $constants->DOMAIN_URL . 'contact_us'; ?>" title="Contact Us">Contact Us</a></li>
+      <li class="last"><a href="<?php echo $constants->DOMAIN_URL . 'contact_us';?>" title="Contact Us">Contact Us</a></li>
     </ul>
     <!-- AddThis Button BEGIN -->
     <!--<div class="addthis_toolbox addthis_default_style ">
