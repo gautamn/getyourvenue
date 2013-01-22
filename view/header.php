@@ -9,9 +9,6 @@ require_once ("../constants/Constants.php");
 
 $constants = new Constants();
 ?>
-<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50a763eb504042b5"></script>
-<script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/GYKUtils.js"></script>
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo $constants->DOMAIN_URL;?>images/favicon.ico" />
 <div id="header">
   <img src="<?php echo $constants->DOMAIN_URL;?>images/headerLeft.jpg" align="left" alt="" />
   <img src="<?php echo $constants->DOMAIN_URL;?>images/headerRight.jpg" align="right" alt="" />
@@ -36,18 +33,18 @@ $constants = new Constants();
       </li>      
       <li><a class="newribbon" href="<?php echo $constants->DOMAIN_URL . 'allied-services';?>">Allied Services</a>
         <ul>
-          <li><a href="<?php echo $constants->DOMAIN_URL.'music-band-mystique';?>" title="Mystique Music Band">Mystique Music Band</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'groom-wedding-attires-in-delhi';?>" title="Grooms Wear">Grooms Wear</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-decorators-in-delhi';?>" title="Decor">Decor</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'fireworks';?>" title="Fireworks">Fireworks</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-caterers-in-delhi';?>" title="Caterer">Caterer</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'dj-and-sound-systems';?>" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'transportation-for-wedding-in-delhi';?>" title="Transportation">Transportation</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'vermala-theme';?>" title="Varmala Themes">Varmala Themes</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'band-ghori-baggi-services-in-delhi';?>" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-planning';?>" title="Wedding Planning">Wedding Planning</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-lehengas-in-delhi';?>" title="Bridal Lehenga">Bridal Lehenga</a></li>
-            <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'photography';?>" title="Wedding Photography">Photography</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>photography" title="Photography">Photography</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Music Band</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
+          <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
         </ul>
       </li>
       <?php /*

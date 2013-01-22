@@ -6,26 +6,24 @@ if(empty($rowCorporateFunctions))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<?php require_once("header.config.php");?>
 <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
-<script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript" type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
 <title><?php echo $rowCorporateFunctions[0]->title;?></title>
 <meta name="description" content="<?php echo $rowCorporateFunctions[0]->metaDescription;?>" />
 <meta name="keyword" content= "<?php echo $rowCorporateFunctions[0]->metaKeyword;?>" />
-<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/albums.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/styleSlider.css" />
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
   <div id="main">
-    <?php  require("header.php"); ?>
+    <?php  require_once("header.php"); ?>
     <div id="contentArea">
       <div id="leftNavNarrow">
         <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
@@ -45,14 +43,14 @@ if(empty($rowCorporateFunctions))
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
         <!-- Small Left Box End -->
         <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
@@ -73,7 +71,7 @@ if(empty($rowCorporateFunctions))
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
@@ -82,7 +80,7 @@ if(empty($rowCorporateFunctions))
       <div id="rightNavWide">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -175,13 +173,13 @@ if(empty($rowCorporateFunctions))
                   } ?>
                 
                 <!--h3 class="clear">Few of the Popular themes are:</h3>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="<?php echo $constants->DOMAIN_URL;?>images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
                 <div class="alliedThumb">
                   <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
-                <div class="alliedThumb"><img src="../images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="<?php echo $constants->DOMAIN_URL;?>images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="<?php echo $constants->DOMAIN_URL;?>images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
+                <div class="alliedThumb"><img src="<?php echo $constants->DOMAIN_URL;?>images/img_thumb.jpg" alt="" /><span class="themeTitle">Theme One Title Here</span></div>
                 <div class="alliedThumb">
                   <iframe width="241" height="180" src="http://www.youtube.com/embed/rnkndQslmaw" frameborder="0" allowfullscreen></iframe>
                 </div-->
@@ -189,14 +187,14 @@ if(empty($rowCorporateFunctions))
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
         <!-- Box End -->
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /> <img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -223,7 +221,7 @@ if(empty($rowCorporateFunctions))
                   <!--<div class="getvenue_cont">
                    <label>Preferred Date:</label>
                     <input type="text" name="date" class="txt-name" value="Select your Date" onblur="if(this.value==''){this.value='Select your Date'}" onfocus="if(this.value=='Select your Date'){this.value=''}"  />
-                    <a href="#"><img src="../images/cal-icon.png" alt="" class="calicon" /></a> </div>
+                    <a href="#"><img src="<?php echo $constants->DOMAIN_URL;?>images/cal-icon.png" alt="" class="calicon" /></a> </div>
                    -->
                   <div class="getvenue_cont">
                     <label>Preferred Date:</label>
@@ -248,7 +246,7 @@ if(empty($rowCorporateFunctions))
                   <div class="clear"></div>
                   <br />
                   <div class="getvenue_cont last">
-                    <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
+                    <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
                   </div>
                   <input type="hidden" name="actionType" value="bookAlliedService"  />
                   <input type="hidden" name="serviceName" value="<?php echo $rowCorporateFunctions[0]->title;?>" />
@@ -257,7 +255,7 @@ if(empty($rowCorporateFunctions))
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /> <img src="../images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
@@ -267,7 +265,7 @@ if(empty($rowCorporateFunctions))
     <br class="clear"/>
     <!-- Box Start -->
     <div class="box">
-      <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+      <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
         <div class="boxtopbg"></div>
       </div>
       <div class="fullboxBg">
@@ -289,7 +287,7 @@ if(empty($rowCorporateFunctions))
           </div>
         </div>
       </div>
-      <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" /><img src="/images/flower.png" class="flower" alt="" />
+      <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
         <div class="boxbotbg"></div>
       </div>
     </div>

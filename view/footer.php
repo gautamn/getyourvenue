@@ -29,7 +29,7 @@ $constants = new Constants();
           <!-- Box Content Start -->
           <!--<ul class="content" style="width: 180px;">-->
           <ul class="content" style="width: 250px;">
-            <li><a href="<?php echo $constants->DOMAIN_URL;?>popular_choice" title="Popular Choices in Delhi & NCR"><strong>Popular Choices in Delhi & NCR</strong></a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>popular_choice" title="Popular Choices in Delhi &amp; NCR"><strong>Popular Choices in Delhi &amp; NCR</strong></a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-chhatarpur';?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-gt-karnal-road';?>" title="GT Karnal Road">GT Karnal Road</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-NH8-Pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
@@ -41,12 +41,12 @@ $constants = new Constants();
           <!--<ul class="content" style="width:180px;">-->
           <ul class="content" style="width:230px;">
             <li><a href="<?php echo $constants->DOMAIN_URL.'allied-services';?>" title="Allied Services"><strong>Allied Services</strong></a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'music-band-mystique';?>" title="Mystique Music Band">Mystique Music Band</a>, <a href="<?php echo $constants->DOMAIN_URL.'groom-wedding-attires-in-delhi';?>" title="Grooms Wear">Grooms Wear</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-decorators-in-delhi';?>" title="Decor">Decor</a>, <a href="<?php echo $constants->DOMAIN_URL.'wedding-caterers-in-delhi';?>" title="Caterer">Caterer</a>, <a href="<?php echo $constants->DOMAIN_URL.'fireworks';?>" title="Fireworks">Fireworks</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'dj-and-sound-systems';?>" title="DJ and Sound Systems">DJ &amp; Sound Systems</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'transportation-for-wedding-in-delhi';?>" title="Transportation">Transportation</a>, <a href="<?php echo $constants->DOMAIN_URL.'vermala-theme';?>" title="Varmala Themes">Varmala Themes</a>, <a href="<?php echo $constants->DOMAIN_URL.'band-ghori-baggi-services-in-delhi';?>" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-planning';?>" title="Wedding Planning">Wedding Planning</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-lehengas-in-delhi';?>" title="Bridal Lehenga">Bridal Lehenga</a>, <a href="<?php echo $constants->DOMAIN_URL.'photography';?>" title="Wedding Photography">Photography</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi" title="Caterer">Caterer</a>, <a href="<?php echo $constants->DOMAIN_URL;?>photography" title="Photography">Photography</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a>, <a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Music Band</a>, <a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a>, <a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
           </ul>
           <?php /*
           <ul class="content" style="width: 130px;">
@@ -88,9 +88,9 @@ $constants = new Constants();
         </div>
       </div>
     </div>
-    <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt=""><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt=""><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="">
+    <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
       <div class="boxbotbg"></div>
     </div>
   </div>
 </div>
-<script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/google-analytics.js"></script>
+<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/google-analytics.js"></script>

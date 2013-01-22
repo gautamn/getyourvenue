@@ -2,29 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> Book a Wedding Venue in Delhi NCR, Book a Wedding Venue in North, South, East, West Delhi, Noida, Gurgaon, Ghaziabad </title>
-
-<meta name="description" content="Book a Wedding or marriage venue in delhi ncr, north delhi, south delhi, east delhi, west delhi, noida, gurgaon,
-ghaziabad. . Venue Booking Experts at Get Your Venue are always at your service to help you with wedding venues or non wedding venue bookings at
-any time of the year.">
-
+<title>Book a Wedding Venue in Delhi NCR, Book a Wedding Venue in North, South, East, West Delhi, Noida, Gurgaon, Ghaziabad </title>
+<?php require_once("header.config.php");
+require_once ("../constants/Constants.php");
+$constants = new Constants();?>
+<meta name="description" content="Book a Wedding or marriage venue in delhi ncr, north delhi, south delhi, east delhi, west delhi, noida, gurgaon, ghaziabad. Venue Booking Experts at Get Your Venue are always at your service to help you with wedding venues or non wedding venue bookings at any time of the year." />
 <meta name="keyword" content="Book wedding venues in delhi, Book marriage venues in ncr, Book non wedding venues in delhi , wedding venues in
-delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues in delhi ncr">
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
-<link rel="stylesheet" href="../css/calendar.css">
-<script language="javascript" src="../js/calendar_us.js"></script>
+delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues in delhi ncr" />
+<link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
+<script type="text/javascript" language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
 </head>
 <body>
 <div id="wrapper">
   <div id="main">
-     <?php  require("../view/header.php") ?>
+     <?php  require_once("header.php"); ?>
     
     <div id="contentArea">
       <div id="leftNav">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" />
-          <img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" />
+          <img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
           <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -33,25 +31,25 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
                 <!-- Box Content Start -->
                 <div align="left">
                 <h3>Why Book Through Us</h3>
+                <div class="site_content">
                 <p>Memories of the wedding function will forever stay in the deepest corners of your heart.  GetYourVenue team is dedicated to deepen these reminiscences as much as possible. We aren't the genies behind the fairy tales but we understand your wedding venue needs much more than anyone else could ever do! We are here to take all your legwork out of your search to help you seek the best venue for your Big Day. Delhi and NCR region is full of lavish and quaint marriage venues. We are aware that search for a wedding venue is a once in a lifetime event and you certainly deserve expert hands to make sure everything is in place. Choose a stress-free start to your new life by leaving all the last-ditch details to us as we chip in to make it truly fabulous!</p>
 					<ul>
 					<li><p>We are here be it online, or offline: We are a breakthrough business model in the wedding venues arena with online information coupled with dedicated one-on-one offline support.</p></li> 
-					<li><p>We advise you on budget management: We believe your selection of marriage venue is largely influenced by the way you manage the total budget. So, we are here with our key advice on date & budget management before confirming your wedding venue.</p></li>
-					<li><p>We provide effectual information which is much more than plain and simple venue listings: Everyone can supply you with chunks of information on farm houses, banquet halls & marriage halls. We make sure that a wedding venue is chosen on the basis of all important criteria.</p></li>  
+					<li><p>We advise you on budget management: We believe your selection of marriage venue is largely influenced by the way you manage the total budget. So, we are here with our key advice on date &amp; budget management before confirming your wedding venue.</p></li>
+					<li><p>We provide effectual information which is much more than plain and simple venue listings: Everyone can supply you with chunks of information on farm houses, banquet halls &amp; marriage halls. We make sure that a wedding venue is chosen on the basis of all important criteria.</p></li>
 					<li><p>We provide our services for free: Nothing comes for free in this world, but you don't pay anything to us for our friendly and responsive services.</p></li> 
 					<li><p>We make sure your queries are handled immediately: Doorstep service with quick turnaround once we receive a call or query from your side.</p></li> 
 					<li><p>We respect your pocket and ensure value-for-money: Our relationship with venues across the city will ensure best rates that you pay for the most suitable date.</p></li> 
 					</ul>
 				<p>Everything from a grand historical castle to a soothing park or luxurious hotel will be available. Fill out the booking form and we will start working straight away on your requirements!</p>
-                
-                <div id='blankBlock'></div><br>
-                <p><br><br></p>
+                </div>                
+                <div id='blankBlock'></div><br />                
                 </div>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
@@ -60,7 +58,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
       <div id="rightNav">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml2"></div>
           </div>
           <div class="fullboxBg">
@@ -116,13 +114,13 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
 					<label>Preferred Date:</label>
 					
                                         <div class='calanderCont'><input type="text" class="input-txt" name="date" value="" />
-					<script language="JavaScript">
+					<script type="text/javascript" language="JavaScript">
 
 						new tcal ({
 							// form name
 							'formname': 'bookNowForm',
 							// input name
-							'controlname': 'date',
+							'controlname': 'date'
 						});
 					</script></div>
 					
@@ -139,13 +137,13 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
 					
 					<input type="text" name="function" value="Enter your Type of Function" onblur="if(this.value==''){this.value='Enter your Type of Function'}" onfocus="if(this.value=='Enter your Type of Function'){this.value=''}" class="input-txt" />
 					<!--
-					<br><br><center><img src="../EasyCaptcha/easycaptcha.php" /></center>
+					<br /><br /><center><img src="../EasyCaptcha/easycaptcha.php" /></center>
 					<label>Enter code from above image:<font color="red">*</font></label>
 					<input type="text" class="input-txt" name="confirm_code" /><br />
 					-->
 					
 					
-					<input type="image" src="../images/get-venue-btn.png" class="button" onClick="return submitBookNowSForm()"/>					
+					<input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/get-venue-btn.png" class="button" onClick="return submitBookNowSForm()"/>
 					<input type="hidden" name="actionType" value="bookNow" />
 
 				</form>
@@ -153,7 +151,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
             <div class="boxbotbg sml2"></div>
           </div>
         </div>

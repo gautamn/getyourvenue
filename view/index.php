@@ -1,18 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+require_once ("../constants/Constants.php");
+$constants = new Constants();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Wedding Venues in Delhi NCR| Book Marriage Venues in South Delhi &amp; NCR</title>
-    <meta name="description" content="Wedding Venues in Delhi & NCR including South Delhi, GT Karnal Road, Chattarpur and other Delhi wedding hot spots can now be booked at your door step! Wedding & Marriage Venues experts, GetYourVenue.com are always at your quick service." />
+    <title>Wedding Venues in Delhi NCR | Book Marriage Venues in South Delhi &amp; NCR</title>
+    <meta name="description" content="Wedding Venues in Delhi &amp; NCR including South Delhi, GT Karnal Road, Chattarpur and other Delhi wedding hot spots can now be booked at your door step! Wedding &amp; Marriage Venues experts, GetYourVenue.com are always at your quick service." />
     <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr,delhi wedding venues,wedding venues in south delhi,marriage venues delhi" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <meta name="google-site-verification" content="Y7nJIELMUBhy76D1Ne-8NPSWHQi1xGSXPsg0zHSLOPs" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
-    <script src="http://www.google.com/jsapi"></script>
-    <script>
-      google.load("jquery", "1");
-    </script>
-    <script src="js/jquery.autocomplete.js"></script>
-    <style>
+    <?php require_once("header.config.php");?>    
+<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/jquery.autocomplete.css" />
+<meta name="google-site-verification" content="Y7nJIELMUBhy76D1Ne-8NPSWHQi1xGSXPsg0zHSLOPs" />    
+    <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery.autocomplete.js"></script>
+    <style type="text/css">
       input {
         font-size: 120%;
       }
@@ -21,17 +19,13 @@
   <body>
     <div id="wrapper">
       <div id="main">               
-          <?php require("header.php");
-          
-          require_once ("../constants/Constants.php");
-          $constants = new Constants();
-          ?>
+          <?php require_once("header.php");?>
 
           <div id="contentArea">
             <div id="leftNav">
               <!-- Box Start -->
               <div class="box">
-                <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+                <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                   <div class="boxtopbg"></div>
                 </div>
                 <div class="fullboxBg">
@@ -40,44 +34,30 @@
                       <!-- Box Content Start -->
                         <a name="popular_choice"></a>
                       <h3>Popular Choices in Delhi and NCR</h3>
-                      <div class="venCat"><a href="wedding-venues-in-chhatarpur"><img src="../images/icons/outer/chhatarpur.jpg" alt=" Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span title="Chattarpur Road" class="pcName"> <a href="wedding-venues-in-chhatarpur" class="moreCat">Chhattarpur &amp; &nbsp;&nbsp;MG Road</a></span>
-                        <!--<br />
-                        <br />
-                        <a href="wedding-venues-in-chhatarpur" class="moreCat">View Options</a>-->
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span title="Chattarpur Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur" class="moreCat">Chhattarpur &amp; &nbsp;&nbsp;MG Road</a></span>                        
                       </div>
-                      <div class="venCat"><a href="wedding-venues-in-gt-karnal-road"><img src="../images/icons/outer/gt_karnal.jpg" alt=" Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span title="GT Karnal Road" class="pcName"> <a href="wedding-venues-in-gt-karnal-road" class="moreCat">GT Karnal Road</a></span>
-                        <!--<br />
-                        <br />
-                        <a href="wedding-venues-in-gt-karnal-road" class="moreCat">View Options</a>-->
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span title="GT Karnal Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road" class="moreCat">GT Karnal Road</a></span>                        
                       </div>
-                      <div class="venCat"><a href="wedding-venues-in-NH8-Pushpanjali"><img src="../images/icons/outer/nh8.jpg" alt=" Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span title="Pushpanjali and NH-8" class="pcName"> <a href="wedding-venues-in-NH8-Pushpanjali" class="moreCat">NH-8 &amp; &nbsp;&nbsp;Pushpanjali</a></span>
-                        <!--<br />
-                        <br />
-                        <a href="wedding-venues-in-NH8-Pushpanjali" class="moreCat">View Options</a>-->
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/nh8.jpg" alt="Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span title="Pushpanjali and NH-8" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali" class="moreCat">NH-8 &amp; &nbsp;&nbsp;Pushpanjali</a></span>                        
                       </div>
-                      <div class="venCat"><a href="wedding-venues-in-Vaishali-Vasundhara"><img src="../images/icons/outer/vaishali.jpg" alt=" Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span title="Vaishali Extn. and Vasundhara" class="pcName"> <a href="wedding-venues-in-Vaishali-Vasundhara" class="moreCat">Vaishali &amp; &nbsp;&nbsp;Vasundhara</a></span>
-                        <!--<br />
-                        <br />
-                        <a href="wedding-venues-in-Vaishali-Vasundhara" class="moreCat">View Options</a>-->
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/vaishali.jpg" alt=" Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span title="Vaishali Extn. and Vasundhara" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara" class="moreCat">Vaishali &amp; &nbsp;&nbsp;Vasundhara</a></span>
                       </div>
-                      <div class="venCat"><a href="wedding-venues-in-mundka"><img src="../images/icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundka" class="pcName"> <a href="wedding-venues-in-mundka" class="moreCat">Mundka</a></span><!--<br />
-                        <br />
-                        <a href="wedding-venues-in-mundka" class="moreCat">View Options</a>--></div>
-                      <div class="venCat"><a href="wedding-venues-in-delhi-NCR"><img src="../images/icons/outer/others.jpg" alt="" /></a> <span class="pcName"><a href="wedding-venues-in-delhi-NCR" class="moreCat">Others</a></span><!--<br />
-                        <br />
-                      <a href="wedding-venues-in-delhi-NCR" class="moreCat">View Options</a>--></div>
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundka" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka" class="moreCat">Mundka</a></span>
+                      </div>
+                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-NCR"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/outer/others.jpg" alt="" /></a> <span class="pcName"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-NCR" class="moreCat">Others</a></span>
+                      </div>
                       <!-- Box Content End -->
                     </div>
                   </div>
                 </div>
-                <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+                <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                   <div class="boxbotbg"></div>
                 </div>
               </div>
               <!-- Box End -->
               <!-- Box Start -->
               <div class="box">
-                <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+                <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                   <div class="boxtopbg"></div>
                 </div>
                 <div class="fullboxBg">
@@ -86,8 +66,7 @@
                       <!-- Box Content Start -->
                       <h3>Our Unique Propositions</h3>
                       <ul class="ourUnique">
-                        <li class="icon01">Unbiased Advice to Help You Find the
-                          Right Wedding Venue</li>
+                        <li class="icon01">Unbiased Advice to Help You Find the Right Wedding Venue</li>
                         <li class="icon02">Personalized one on one Support till the Time Your Venue is Finalized</li>
                         <li class="icon03">Transparent Deals Handled With Utmost Integrity</li>
                         <li class="icon04">Hassle Free Transaction </li>
@@ -97,7 +76,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+                <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                   <div class="boxbotbg"></div>
                 </div>
               </div>
@@ -106,7 +85,7 @@
             <div id="rightNav">
               <!-- Box Start -->
               <div class="box">
-                <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+                <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                   <div class="boxtopbg sml2"></div>
                 </div>
                 <div class="fullboxBg">
@@ -116,23 +95,19 @@
                       <h3>Search Your Venue by Name</h3>
                       <form name="searchForm" class="contactform" action="searchVenue/venue" method="post">
                         <input class="input-txt" type="text" id="venueid" name="venueid" value="Enter Your Keyword" onfocus="if(this.value=='Enter Your Keyword')this.value='';" onblur="if(this.value=='')this.value='Enter Your Keyword';" />
-                        <input type="image" src="../images/btn-search.png" class="button-sear"/>
+                        <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/btn-search.png" class="button-sear"/>
                         <input type="hidden" name="action" value="viewSearchResult" />
                       </form>
                       <!--Box Content End-->
-                    </div> <img src="../images/divider.png" class="divider" alt="" />
+                    </div> <img src="<?php echo $constants->DOMAIN_URL;?>images/divider.png" class="divider" alt="" />
                   </div>
-
                 </div>
 
                 <div class="fullboxBg">
-
                   <div class="boxContent">
                     <div class="boxGr"><br />
                       <!-- Box Content Start -->
-                      <h3><center>
-                          <!--OR-->
-                        </center>Let Us Know Your Preferences</h3>
+                      <h3>Let Us Know Your Preferences</h3>
                       <form name="searchForm" class="homeSearch" action="#">
                         <label>Region:</label>
                         <select name="region" id="region">
@@ -161,16 +136,16 @@
                           <option value="3">Above 800</option>
                         </select>
                         <br />
-                        <input type="image" src="../images/btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL ?>');"/>
+                        <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL ?>');"/>
                         <input type="hidden" name="action" value="searchVenue" />
                       </form>
                       <!-- Box Content End -->
                     </div>
                   </div>
                 </div>
-                <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" />
-                  <img src="../images/boxbotc4.png" align="right" alt="" />
-                  <img src="../images/flower.png" class="flower" alt="" />
+                <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" />
+                  <img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
+                  <img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                   <div class="boxbotbg sml2"></div>
                 </div>
               </div>
@@ -179,7 +154,7 @@
             <div id="content">
               <!-- Box Start -->
               <div class="box">
-                <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+                <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                   <div class="boxtopbg"></div>
                 </div>
                 <div class="fullboxBg">
@@ -187,7 +162,7 @@
                     <div class="boxGr">
                       <!-- Box Content Start -->
                       <h3>Your One Stop Shop For Wedding Venues in Delhi &amp; NCR</h3>
-                      <p class="dec">
+                      <div class="site_content">
                         <p>A warm welcome to Getyourvenue.com!</p>
                         <p>
                           Draped in the rich fabric of tradition, weddings are the most joyous occasions
@@ -235,16 +210,17 @@
                          <?php */?>
                         <!-- AddThis Button END -->
                         <!-- Box Content End -->
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+                <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                   <div class="boxbotbg"></div>
                 </div>
               </div>
               <!-- Box End --><!-- Box Start -->
               <div class="box">
-                <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+                <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                   <div class="boxtopbg"></div>
                 </div>
                 <div class="fullboxBg">
@@ -269,7 +245,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+                <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                   <div class="boxbotbg"></div>
                 </div>
               </div>

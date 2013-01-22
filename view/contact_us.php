@@ -1,16 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <?php require_once("header.config.php");
+require_once ("../constants/Constants.php");
+$constants = new Constants();?>
     <title>Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR</title>
     <meta name="description" content="GetYourVenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
-    <meta name="keyword" content=" Get Your Venue, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta name="keyword" content="Get Your Venue, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />    
   </head>
   <body>
     <div id="wrapper">
       <div id="main">
-        <?php require_once("../view/header.php"); ?>
+        <?php require_once("header.php"); ?>
         <div id="contentArea">
           <div id="leftNav">
             <!-- Box Start -->
@@ -108,7 +109,7 @@ Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
                   <div class="boxGr boxheight">
                     <!-- Box Content Start -->
                     <h3>Contact Us</h3>
-                    <?php require("../view/contactusForm.php") ?>
+                    <?php require("../view/contactusForm.php"); ?>
                     <!-- Box Content End -->
                   </div>
                 </div>
@@ -121,7 +122,7 @@ Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
           </div>
 
         </div>
-        <?php require("../view/footer.php") ?>
+        <?php require("../view/footer.php"); ?>
       </div>
     </div>
   </body>

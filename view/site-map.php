@@ -1,25 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>    
     <title>site map</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <?php require_once("header.config.php");
+require_once ("../constants/Constants.php");
+$constants = new Constants();?>
   </head>
   <body>
     <div id="wrapper">
       <div id="main">
-        <?php require("../view/header.php"); ?>
+        <?php require_once("header.php"); ?>
 
         <div id="contentArea">
           <div id="content">
             <!-- Box Start -->
             <div class="box">
-              <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+              <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
                 <div class="boxtopbg"></div>
               </div>
               <div class="fullboxBg">
                 <div class="boxContent">
                   <div class="boxGr boxheight">
+                    <h3>Sitemap</h3>
                     <!-- Box Content Start -->
                     <ul id="sitemap">
                       <li><a href='http://getyourvenue.com/'>Home</a></li>
@@ -260,7 +262,7 @@
                   </div>
                 </div>
               </div>
-              <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                 <div class="boxbotbg"></div>
               </div>
             </div>

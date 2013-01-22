@@ -3,16 +3,14 @@ $constants = new Constants(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <?php require_once("header.config.php");?>
 <title><?php echo $alliedSerivce[0]->title;?></title>
 <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
-<script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
 <meta name="description" content="<?php echo $alliedSerivce[0]->metaDescription;?>" />
-<meta name="keyword" content= "<?php echo $alliedSerivce[0]->metaKeyword;?>" />
-<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
+<meta name="keyword" content="<?php echo $alliedSerivce[0]->metaKeyword;?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/albums.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/styleSlider.css" />
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -22,7 +20,7 @@ $constants = new Constants(); ?>
       <div id="leftNavNarrow">
         <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
@@ -31,31 +29,31 @@ $constants = new Constants(); ?>
                 <!-- Box Content Start -->
                 <h4>Allied Services</h4>
                 <ul class="alliedServices">
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi">Band, Ghori, Baggi</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi">Caterer</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi">Transportation</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi">Bridal Lehenga</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi">Grooms Wear</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks">Fireworks</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems">DJ and Sound Systems</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme">Varmala Themes</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning">Wedding Planning</a></li>
-                    <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>photography">Photography</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>photography" title="Photography">Photography</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Music Band</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
+                    <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
                 </ul>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" /><img src="../images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
         <!-- Small Left Box End -->
         <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
@@ -76,7 +74,7 @@ $constants = new Constants(); ?>
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
@@ -85,7 +83,7 @@ $constants = new Constants(); ?>
       <div id="rightNavWide">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /><img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -187,14 +185,14 @@ $constants = new Constants(); ?>
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /><img src="../images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
         <!-- Box End -->
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="../images/boxtopc1.png" align="left" alt="" /> <img src="../images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -222,7 +220,7 @@ $constants = new Constants(); ?>
                   <div class="getvenue_cont">
                     <label>Preferred Date:</label>
                     <input type="text" class="txt-name" name="date" value="" />
-                    <script language="JavaScript">
+                    <script type="text/javascript" language="JavaScript">
 						new tcal ({
 							// form name
 							'formname': 'bookVenueForm',
@@ -242,16 +240,16 @@ $constants = new Constants(); ?>
                   <div class="clear"></div>
                   <br />
                   <div class="getvenue_cont last">
-                    <input type="image" src="../images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
+                    <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/go-btn.png" onClick="return submitVenueBookingForm();" />
                   </div>
                   <input type="hidden" name="actionType" value="bookAlliedService"  />
-                  <input type="hidden" name="serviceName" value="<?php echo $alliedSerivce[0] ->title ?>" />
+                  <input type="hidden" name="serviceName" value="<?php echo $alliedSerivce[0]->title;?>" />
                 </form>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="../images/boxbotc3.png" align="left" alt="" /> <img src="../images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
@@ -261,7 +259,7 @@ $constants = new Constants(); ?>
     <br class="clear"/>
     <!-- Box Start -->
     <div class="box">
-      <div class="boxtop"><img src="/images/boxtopc1.png" align="left" alt="" /><img src="/images/boxtopc2.png" align="right" alt="" />
+      <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
         <div class="boxtopbg"></div>
       </div>
       <div class="fullboxBg">
@@ -283,7 +281,7 @@ $constants = new Constants(); ?>
           </div>
         </div>
       </div>
-      <div class="boxbot"><img src="/images/boxbotc3.png" align="left" alt="" /><img src="/images/boxbotc4.png" align="right" alt="" /><img src="/images/flower.png" class="flower" alt="" />
+      <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
         <div class="boxbotbg"></div>
       </div>
     </div>

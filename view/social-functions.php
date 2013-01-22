@@ -4,15 +4,13 @@ $constants = new Constants();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php require_once("header.config.php");?>
 <title>Get Your Venue Social Functions, Wedding Venues in Delhi, Wedding Farmhouses in Delhi, Banquet halls in Delhi</title>
 <meta name="Description" content="Choosing the right venue for the wedding is the most difficult decision a couple comes across. We at
 getyourvenue.com make sure that all your problems are vanished and we make this arduos task an easy and fun-loving one." />
 <meta name="keyword" content="Get Your Venue Social Functions, Wedding Venues in Delhi, Wedding Farmhouses In delhi, Banquet halls in Delhi" />
 <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
 <script language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
