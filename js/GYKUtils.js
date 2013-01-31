@@ -56,7 +56,8 @@ function submitContactUsForm(){
   if(isValidContactUsForm()){
     
     document.contactform.action='contact-confirmation';
-    document.contactform.submit;
+    document.contactform.submit();
+    return true;
   }else{
  		var msg="";
 	    msg+="Please complete the following Information:";
@@ -155,7 +156,8 @@ function submitVenueBookingForm(){
 	if(isValidVenueBookingForm()){
     
     document.bookVenueForm.action='/booking-confirmation';
-    document.bookVenueForm.submit;
+    document.bookVenueForm.submit();
+    return true;
   }else{
  		var msg="<div style='display: block;' class='errorMsg'>";
 	    msg+="Please complete the following Information:";
@@ -237,22 +239,19 @@ var bookNowErrors = [];
 
 function submitBookNowSForm(){
 
-	if(isValidBookNowForm()){
-    
+	if(isValidBookNowForm()){    
     document.bookNowForm.action='/booking-confirmation';
-    document.bookNowForm.submit;
+    document.bookNowForm.submit();
+    return true;
   }else{
- 		var msg="";
-	    msg+="Please complete the following Information:";
-		msg+="<ul>";
-		
-	  	for (var i = 0; i<bookNowErrors.length; i++) {
- 			
-  			msg += '<li>'+ bookNowErrors[i]+'</li>';
-		}
-		
-		msg+="</ul>"
-		msg+="</div>";
+      var msg="";
+      msg+="Please complete the following Information:";
+      msg+="<ul>";
+	  	for (var i = 0; i<bookNowErrors.length; i++) { 			
+          msg += '<li>'+ bookNowErrors[i]+'</li>';
+      }		
+      msg+="</ul>"
+      msg+="</div>";
 		
 		//alert(msg);
 		document.getElementById('errorMessages').innerHTML="<div style='display: block;' class='errorMsg'>"+msg+"</div>";
@@ -260,7 +259,6 @@ function submitBookNowSForm(){
 		bookNowErrors = [];
 		return false; 
   }
-
 }
 
 function isValidBookNowForm(){
@@ -296,7 +294,6 @@ function isValidBookNowForm(){
  	}
  	*/
  	
- 
 	if (bookNowErrors.length > 0) {
 	     
 	  return false;
@@ -314,8 +311,3 @@ function isValidBookNowForm(){
 	
   return true;
 }
-
-
-
-
-

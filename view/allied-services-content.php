@@ -38,7 +38,7 @@ $constants = new Constants(); ?>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-                    <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Music Band</a></li>
+                    <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
                     <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
                 </ul>

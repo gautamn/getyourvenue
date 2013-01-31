@@ -7,7 +7,6 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
 ?>
-
 <div id='errorMessages'></div>
 <form  class="contactform" name="contactform"  method="post"><!-- action="contact-confirmation"-->
   <label>Name:</label>
@@ -23,6 +22,6 @@
   <label>Enter code from above image:<font color="red">*</font></label>
   <input type="text" class="input-txt" name="confirm_code" /><br />
   -->
-  <input type="image" src="../images/send-us-btn.png" class="button"  onClick="return submitContactUsForm()" />
+  <input type="image" src="../images/send-us-btn.png" class="button" onClick="return submitContactUsForm();" />
   <input type="hidden" name="actionType" value="contactUs" />
 </form>

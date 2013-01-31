@@ -16,7 +16,7 @@ $constants = new Constants();
   <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
   <div class="topNav"><img src="<?php echo $constants->IMAGE_PATH;?>topNavleft.jpg" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>topNavRight.jpg" align="right" alt="" />
     <ul>
-      <li><a href="<?php echo $constants->DOMAIN_URL;?>" title="Home"><img style="margin-top: 5px; height: 20px;" src="<?php echo $constants->IMAGE_PATH;?>home.png" title="home" alt="home" /></a></li>
+      <li><a href="<?php echo $constants->DOMAIN_URL;?>" title="Home"><img style="margin-top: 5px; height: 20px;" src="<?php echo $constants->DOMAIN_URL;?>images/home.png" title="home" alt="home" /></a></li>
       <li><a href="javascript:void(0);">Popular Choices</a>
         <ul>
           <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-chhatarpur';?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
@@ -41,7 +41,7 @@ $constants = new Constants();
           <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Music Band</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
           <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
         </ul>

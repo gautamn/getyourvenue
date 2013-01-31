@@ -23,7 +23,7 @@ $constants = new Constants();?>
                 <div class="boxContent">
                   <div class="boxGr boxheight">
                     <!-- Box Content Start -->
-                    <h3>Welcome to Our Contact Page</h3>
+                    <h1>Welcome to Our Contact Page</h1>
                     <table width="100%" cellpadding="5" cellspacing="5">
                       <tr>
                         <td><b>Head Office:</b></td>

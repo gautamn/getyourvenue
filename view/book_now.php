@@ -30,7 +30,7 @@ delhi , marriage venues in delhi, wedding venues in delhi ncr , marriage venues 
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
                 <div align="left">
-                <h3>Why Book Through Us</h3>
+                <h1>Why Book Through Us</h1>
                 <div class="site_content">
                 <p>Memories of the wedding function will forever stay in the deepest corners of your heart.  GetYourVenue team is dedicated to deepen these reminiscences as much as possible. We aren't the genies behind the fairy tales but we understand your wedding venue needs much more than anyone else could ever do! We are here to take all your legwork out of your search to help you seek the best venue for your Big Day. Delhi and NCR region is full of lavish and quaint marriage venues. We are aware that search for a wedding venue is a once in a lifetime event and you certainly deserve expert hands to make sure everything is in place. Choose a stress-free start to your new life by leaving all the last-ditch details to us as we chip in to make it truly fabulous!</p>
 					<ul>

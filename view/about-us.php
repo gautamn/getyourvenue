@@ -26,14 +26,11 @@ because special moments happen once in a lifetime." />
             <div class="boxContent">
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
-                <h3>Our Concept</h3>
+                <h1>Our Concept</h1>
                 <p>GetYourVenue.com is a breakthrough organization which aims at bringing about a paradigm shift in the way wedding venues were being booked till date. We at GetYourVenue understand the need of selecting the best possible location for your big day because special moments happen once in a lifetime. We therefore offer you the most robust search for venues of your preferred region, capacity &amp; budget, right from the relative comfort of your home. Shortlist your choices with just a click of your mouse and a call to us and our dedicated one on one sales team will be right there at your service. We make sure that you get the place of your choice booked for you at the best rates available. So the effort you had to put in for locating venues and reaching out to their owners for the best deals would now be done away with. GetYourVenue eases it out for you in one go!</p>
-                <h3>Who we are</h3>
+                <h1>Who we are</h1>
                 <p>GetYourVenue.com is the brainchild of three dynamic IT &amp; MBA professionals from top B Schools of India with 8-10 years of rich experience in Sales, Marketing and IT domains of the Indian Corporate Sector. We work dedicatedly with the aim of providing busy and hassled couples, parents and relatives, the choicest wedding venues guaranteed to meet your requirements in the best possible manner. We understand that the hunt for the best venue is an errand &amp; uses up favorable amount of your precious time. We have hence teamed up with an expert &amp; vibrant sales force that would help you select the best venue per your budget &amp; needs. From farm houses, banquet halls to marriage halls or party lawns, whatever you need, we aim to please.</p>
-                <!-- Box Content End -->
-                <!--
-                <br /><br /><br /><br /><br /><br /><br /><br /><br />
-                -->
+                <!-- Box Content End -->                
                 <div id='blankBlock'></div><br />
               </div>
             </div>

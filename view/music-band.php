@@ -106,7 +106,7 @@ $constants = new Constants();?>
                   <div class="boxGr">
                     <!-- Box Content Start -->
                     <a name="imageGallery"></a>
-                    <div class="f-left"><img src="<?php echo $constants->IMAGE_PATH;?>mystique_music_band_banner.jpg" class="bannerImg" alt="Mystique The Band" /></div>
+                    <div class="f-left"><img src="<?php echo $constants->DOMAIN_URL;?>images/mystique_music_band_banner.jpg" class="bannerImg" alt="Mystique The Band" /></div>
                     <h1>GYV's Music Band Mystique!</h1>
                     <div class="allied_content">
                     <p>Getyourvenue's promising live music band 'Mystique' is based in delhi and is run by a bunch of passionate musicians and singers for whom life is beyond eating, earning and having materialistic fun. The wedding music band encompasses multi talented people from various fields of life, fairly successful in their core career such as digital marketing, industrial production, professional photography but they cut a fine balance between their core professional skill-set and god gifted and fondly nurtured music talent. These people are driven by passion of live music and music is their breath and blood. Formed in early 2011, the members of the wedding music band already had great individual track records of performance. They brought synergies in the band as a group and there has been no looking back since then.</p>

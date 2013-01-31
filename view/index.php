@@ -19,9 +19,8 @@ font-size: 120%;
 </head>
   <body>
     <div id="wrapper">
-      <div id="main">               
+      <div id="main">
           <?php require_once("header.php");?>
-
           <div id="contentArea">
             <div id="leftNav">
               <!-- Box Start -->

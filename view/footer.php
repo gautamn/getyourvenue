@@ -23,7 +23,7 @@ $constants = new Constants();
     $('.addThis2 a.addthis_button_google_plusone').attr('g:plusone:size','tall');
   });
 </script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>
 <!-- AddThis Button END -->
 
 <div id="footer">
@@ -84,7 +84,7 @@ $constants = new Constants();
             <li><a href="<?php echo $constants->DOMAIN_URL.'non_wedding';?>" title="Non Wedding Functions">Non Wedding Functions</a></li>
           </ul>
           <ul class="content" style="width:230px;">
-            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/pages/Getyourvenue/359630997401634" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->IMAGE_PATH;?>icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->IMAGE_PATH;?>icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/s/getyourvenue.com" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->IMAGE_PATH;?>icon_google.png" /></a></li>
+            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/pages/Getyourvenue/359630997401634" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/116875953644480548807" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->DOMAIN_URL;?>images/icon_google.png" /></a></li>
             <li style="border-top: 1px solid #cccccc;"><br /><strong>You can reach us via</strong></li>
             <li>Email: <a href="mailto:sales@getyourvenue.com" title="email us @ sales@getyourvenue.com">sales@getyourvenue.com</a></li>
             <li>Mobile: +91-8800095444, +91-8800093444</li>

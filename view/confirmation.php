@@ -30,7 +30,7 @@ $constants = new Constants();
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h3>Confirmation</h3>
+                <h1>Confirmation</h1>
                 <p>"Thank you for reaching out to us. Stay close to your phone, we'll call you very shortly!"</p>
                 <!-- Box Content End -->
                 <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
@@ -53,7 +53,7 @@ $constants = new Constants();
             <div class="boxContent">
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
-                <h3>Testimonials</h3>
+                <h1>Testimonials</h1>
                 <div class="testi divid-line">
                   <p>The attention to detail service and all round aim to please - this is what you get from the Get Your Venue team. Nothing was too much to ask. They made the tiring hunt so easy! Even with a change of location, the flexibility and the presentation of the locations was impressive. All the staff made it a stress free affair and was always there to answer any questions that we had. Great Service, Great Organization!<span>Sidhhant Juneja &amp; family<br />
                     New Delhi<br />

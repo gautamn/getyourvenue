@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php require_once("header.config.php");?>
-<title>"Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR"</title>
+<title>Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR</title>
 <meta name="description" content="GetYourVenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with
 with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
 <meta name="keyword" content="Get Your Venue, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues
@@ -25,10 +25,9 @@ in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />
             <div class="boxContent">
               <div class="boxGr boxheight">
                 <!-- Box Content Start -->
-                <h3>Career</h3>
+                <h1>Career</h1>
                    <p>
-                   Getyourvenue welcomes individuals looking to be part of a collaborative, performance-driven culture. Here, teamwork and openness are vital elements
-                   of every work day as employees use innovation, teamwork, and perseverance to build a client-centered organization that makes a difference.
+                   Getyourvenue welcomes individuals looking to be part of a collaborative, performance-driven culture. Here, teamwork and openness are vital elements of every work day as employees use innovation, teamwork, and perseverance to build a client-centered organization that makes a difference.
                    </p>
                 <!-- Box Content End -->
                 <div id='blankBlock'></div>
