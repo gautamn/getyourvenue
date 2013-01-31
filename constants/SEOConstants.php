@@ -48,77 +48,77 @@
 						   	Road, Banquets in GT Karnal Road, Wedding venues in GT Karnal Road, GT Karnal Road farm houses for wedding '>";
 						   
    public $delhiNCRBanquetHallTag = "<title> Banquet Halls in Delhi, Banquets in Delhi, Banquets in Delhi NCR </title>
-    								<meta name='description' content=' Find the best Banquet Halls in Delhi and Banquets in Delhi NCR at Get Your Venue. Delhi Banquet Halls are huge in number & we get you the perfect Banquet Hall in Delhi NCR region with ease. Banquets in Delhi are the primary area of our expertise.'>
+    								<meta name='description' content=' Find the best Banquet Halls in Delhi and Banquets in Delhi NCR at Get Your Venue. Delhi Banquet Halls are huge in number &amp; we get you the perfect Banquet Hall in Delhi NCR region with ease. Banquets in Delhi are the primary area of our expertise.'>
 						    		<meta name='keywords' content=' Banquet Halls in Delhi, Delhi Banquets, Banquet Halls Delhi Delhi Banquet Halls, Banquets in Delhi NCR, Banquet Halls in Delhi NCR'>";
 						    
 	public $delhiNCRFarmHouseTag = "<title> Wedding Farm houses in Delhi NCR, Farmhouses for Wedding, Marriage Farm houses in
 									Delhi NCR </title><meta name='description' content=' Find the best wedding farm houses
 									in delhi ncr and marriage farm houses in delhi at Get Your Venue. Farm houses for wedding in
-									delhi are huge in number & we get you the perfect farm houses in Delhi NCR with ease.'>
+									delhi are huge in number &amp; we get you the perfect farm houses in Delhi NCR with ease.'>
 									<meta name='keywords' content=' Farm houses for wedding in delhi, wedding farm houses in
 									delhi, wedding farmhouses delhi, delhi farm houses for marriages, marriage farm houses in delhi,
 									Wedding Farm houses in Delhi NCR'>";
 	
-	public $northDelhiFarmHouseTag = "<title> Wedding Farm houses in North Delhi , Farmhouses for Wedding & Marriage in North
+	public $northDelhiFarmHouseTag = "<title> Wedding Farm houses in North Delhi , Farmhouses for Wedding &amp; Marriage in North
 									  Delhi </title><meta name='description' content=' Find the best wedding farm houses in
 									  North Delhi and marriage farm houses in North Delhi at Get Your Venue. Farm houses for
-									  wedding in North Delhi are huge in number & we get you the perfect farm houses in North Delhi
+									  wedding in North Delhi are huge in number &amp; we get you the perfect farm houses in North Delhi
 									  with ease.'><meta name='keywords' content=' Farm houses for wedding in North Delhi, wedding farm
 									  houses in North Delhi, wedding farmhouses North Delhi, North Delhi farm houses for marriages,
 									  marriage farm houses in North Delhi, Wedding Farm houses in North Delhi'>";
 									  
-   	public $southhDelhiFarmHouseTag =  "<title> Wedding Farm houses in South Delhi , Farmhouses for Wedding & Marriage in South
+   	public $southhDelhiFarmHouseTag =  "<title> Wedding Farm houses in South Delhi , Farmhouses for Wedding &amp; Marriage in South
 									   Delhi </title><meta name='description' content=' Find the best wedding farm houses in
 										South Delhi and marriage farm houses in South Delhi at Get Your Venue. Farm houses for
-										wedding in South Delhi are huge in number & we get you the perfect farm houses in South Delhi
+										wedding in South Delhi are huge in number &amp; we get you the perfect farm houses in South Delhi
 										with ease.'><meta name='keywords' content=' Farm houses for wedding in South Delhi, wedding farm
 										houses in South Delhi, wedding farmhouses South Delhi, South Delhi farm houses for marriages,
 										marriage farm houses in South Delhi, Wedding Farm houses in South Delhi '>";
 										
-	public $eastDelhiFarmHouseTag = "<title> Wedding Farm houses in East Delhi , Farmhouses for Wedding & Marriage in East Delhi
+	public $eastDelhiFarmHouseTag = "<title> Wedding Farm houses in East Delhi , Farmhouses for Wedding &amp; Marriage in East Delhi
 									</title><meta name='description' content=' Find the best wedding farm houses in East
 									Delhi and marriage farm houses in East Delhi at Get Your Venue. Farm houses for wedding in
-									East Delhi are huge in number & we get you the perfect farm houses in East Delhi with ease'>
+									East Delhi are huge in number &amp; we get you the perfect farm houses in East Delhi with ease'>
 									<meta name='keywords' content=' Farm houses for wedding in East Delhi, wedding farm
 									houses in East Delhi, wedding farmhouses East Delhi, East Delhi farm houses for marriages,
 									marriage farm houses in East Delhi, Wedding Farm houses in East Delhi'>";
 
-	public $westDelhiFarmHouseTag = "<title> Wedding Farm houses in West Delhi , Farmhouses for Wedding & Marriage in West
+	public $westDelhiFarmHouseTag = "<title> Wedding Farm houses in West Delhi , Farmhouses for Wedding &amp; Marriage in West
 									Delhi </title><meta name='description' content=' Find the best wedding farm houses
 									in West Delhi and marriage farm houses in West Delhi at Get Your Venue. Farm houses for
-									wedding in West Delhi are huge in number & we get you the perfect farm houses in West Delhi
+									wedding in West Delhi are huge in number &amp; we get you the perfect farm houses in West Delhi
 									with ease'><meta name='keywords' content=' Farm houses for wedding in West Delhi, wedding farm
 									houses in West Delhi, wedding farmhouses West Delhi, West Delhi farm houses for marriages,
 									marriage farm houses in West Delhi, Wedding Farm houses in West Delhi'>";
 
-	public $centralDelhiFarmHouseTag = "<title> Wedding Farm houses in Central Delhi , Farmhouses for Wedding & Marriage in Central
+	public $centralDelhiFarmHouseTag = "<title> Wedding Farm houses in Central Delhi , Farmhouses for Wedding &amp; Marriage in Central
 										Delhi </title><meta name='description' content=' Find the best wedding farm houses in
 										Central Delhi and marriage farm houses in Central Delhi at Get Your Venue. Farm houses for
-										wedding in Central Delhi are huge in number & we get you the perfect farm houses in Central
+										wedding in Central Delhi are huge in number &amp; we get you the perfect farm houses in Central
 										Delhi with ease'><meta name='keywords' content=' Farm houses for wedding in Central Delhi, wedding farm
 										houses in Central Delhi, wedding farmhouses Central Delhi, Central Delhi farm houses for
 										marriages, marriage farm houses in Central Delhi, Wedding Farm houses in Central Delhi'>";
 
-	public $ghaziabadFarmHouseTag = "<title> Wedding Farm houses in Ghaziabad, Farmhouses for Wedding & Marriage in
+	public $ghaziabadFarmHouseTag = "<title> Wedding Farm houses in Ghaziabad, Farmhouses for Wedding &amp; Marriage in
 									Ghaziabad</title><meta name='description' content=' Find the best wedding farm houses
 									in Ghaziabad and marriage farm houses in Ghaziabad at Get Your Venue. Farm houses for
-									wedding in Ghaziabad are huge in number & we get you the perfect farm houses in Ghaziabad
+									wedding in Ghaziabad are huge in number &amp; we get you the perfect farm houses in Ghaziabad
 									with ease'><meta name='keywords' content=' Farm houses for wedding in Ghaziabad, wedding farm
 									houses in Ghaziabad, wedding farmhouses Ghaziabad, Ghaziabad farm houses for marriages,
 									marriage farm houses in Ghaziabad, Wedding Farm houses in Ghaziabad'>";
 
-	public $noidaFarmHouseTag = "<title> Wedding Farm houses in Noida, Farmhouses for Wedding & Marriage in Noida</title>
+	public $noidaFarmHouseTag = "<title> Wedding Farm houses in Noida, Farmhouses for Wedding &amp; Marriage in Noida</title>
 								<meta name='description' content=' Find the best wedding farm houses in Noida and
 								marriage farm houses in Noida at Get Your Venue. Farm houses for wedding in Noida are huge
-								in number & we get you the perfect farm houses in Noida with ease'>
+								in number &amp; we get you the perfect farm houses in Noida with ease'>
 								<meta name='keywords' content=' Farm houses for wedding in Noida, wedding farm houses
 								in Noida, wedding farmhouses Noida, Noida farm houses for marriages, marriage farm houses in
 								Noida, Wedding Farm houses in Noida'>";
 
-	public $gurgaonFarmHouseTag = "<title> Wedding Farm houses in Gurgaon, Farmhouses for Wedding & Marriage in Gurgaon</
+	public $gurgaonFarmHouseTag = "<title> Wedding Farm houses in Gurgaon, Farmhouses for Wedding &amp; Marriage in Gurgaon</
 									title><meta name='description' content=' Find the best wedding farm houses in Gurgaon
 									and marriage farm houses in Gurgaon at Get Your Venue. Farm houses for wedding in Gurgaon
-									are huge in number & we get you the perfect farm houses in Gurgaon with ease'>
+									are huge in number &amp; we get you the perfect farm houses in Gurgaon with ease'>
 									<meta name='keywords' content=' Farm houses for wedding in Gurgaon, wedding farm
 									houses in Gurgaon, wedding farmhouses Gurgaon, Gurgaon farm houses for marriages, marriage
 									farm houses in Gurgaon, Wedding Farm houses in Gurgaon'>";
@@ -143,7 +143,7 @@
 
 	public $eastDelhiBanquetHallTag = "<title> Banquet Halls in East Delhi, Banquets in East Delhi, Banquets Halls East Delhi </
 										title> <meta name='description' content=' Find the best Banquet Halls in East Delhi and
-										Banquets in East Delhi at Get Your Venue. East Delhi Banquet Halls are huge in number & we
+										Banquets in East Delhi at Get Your Venue. East Delhi Banquet Halls are huge in number &amp; we
 										get you the perfect Banquet Hall in East Delhi with ease. Banquets in East Delhi are the primary
 										area of our expertise.'>
 										<meta name='keywords' content=' Banquet Halls in East Delhi, East Delhi Banquets,
@@ -162,7 +162,7 @@
 	public $centralDelhiBanquetHallTag = "<title> Banquet Halls in Central Delhi, Banquets in Central Delhi, Banquets Halls Central Delhi
 									</title> <meta name='description' content=' Find the best Banquet Halls in Central Delhi and
 									Banquets in Central Delhi at Get Your Venue. Central Delhi Banquet Halls are huge in number
-									& we get you the perfect Banquet Hall in Central Delhi with ease. Banquets in Central Delhi are
+									&amp; we get you the perfect Banquet Hall in Central Delhi with ease. Banquets in Central Delhi are
 									the primary area of our expertise.'>
 									<meta name='keywords' content=' Banquet Halls in Central Delhi, Central Delhi Banquets,
 									Banquet Halls Central Delhi Central Delhi Banquet Halls, Banquets in Central Delhi , Banquet
@@ -170,25 +170,25 @@
 
 	public $noidaBanquetHallTag = "<title> Banquet Halls in Noida, Banquets in Noida, Banquets Halls Noida </title> <meta
 								name='description' content=' Find the best Banquet Halls in Noida and Banquets in Noida at
-								Get Your Venue. Noida Banquet Halls are huge in number & we get you the perfect Banquet
+								Get Your Venue. Noida Banquet Halls are huge in number &amp; we get you the perfect Banquet
 								Hall in Noida with ease. Banquets in Noida are the primary area of our expertise.'>
 								<meta name='keywords' content=' Banquet Halls in Noida, Noida Banquets, Banquet Halls
 								Noida Noida Banquet Halls, Banquets in Noida , Banquet Halls in Noida'>";
 
 	public $ghaziabadBanquetHallTag = "<title> Banquet Halls in Ghaziabad, Banquets in Ghaziabad, Banquets Halls Ghaziabad </
 										title> <meta name='description' content=' Find the best Banquet Halls in Ghaziabad and
-										Banquets in Ghaziabad at Get Your Venue. Ghaziabad Banquet Halls are huge in number & we
+										Banquets in Ghaziabad at Get Your Venue. Ghaziabad Banquet Halls are huge in number &amp; we
 										get you the perfect Banquet Hall in Ghaziabad with ease. Banquets in Ghaziabad are the primary
-										area of our expertise.'><meta name='keywords' content=' Banquet Halls in Ghaziabad, Ghaziabad Banquets,
+										area of our expertise.' /><meta name='keywords' content=' Banquet Halls in Ghaziabad, Ghaziabad Banquets,
 										Banquet Halls Ghaziabad Ghaziabad Banquet Halls, Banquets in Ghaziabad , Banquet Halls in
-										Ghaziabad'>";
+										Ghaziabad' />";
 
 	public $gurgaonBanquetHallTag = "<title> Banquet Halls in Gurgaon, Banquets in Gurgaon, Banquets Halls Gurgaon </
 									title> <meta name='description' content=' Find the best Banquet Halls in Gurgaon and
-									Banquets in Gurgaon at Get Your Venue. Gurgaon Banquet Halls are huge in number & we get
+									Banquets in Gurgaon at Get Your Venue. Gurgaon Banquet Halls are huge in number &amp; we get
 									you the perfect Banquet Hall in Gurgaon with ease. Banquets in Gurgaon are the primary area of
-									our expertise.'><meta name='keywords' content=' Banquet Halls in Gurgaon, Gurgaon Banquets, Banquet
-									Halls Gurgaon Gurgaon Banquet Halls, Banquets in Gurgaon , Banquet Halls in Gurgaon'>";									  					    						   
+									our expertise.'/><meta name='keywords' content='Banquet Halls in Gurgaon, Gurgaon Banquets, Banquet
+									Halls Gurgaon Gurgaon Banquet Halls, Banquets in Gurgaon , Banquet Halls in Gurgaon' />";
  	
  }//class
 ?>

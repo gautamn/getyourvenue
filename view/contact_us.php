@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <?php require_once("header.config.php");
 require_once ("../constants/Constants.php");
@@ -55,7 +55,7 @@ Contact No: +91-9910163377, +91-120-4266685
                       <tr valign="top">
                           <td>
                           <p>H No - 72, Maharajpur, Sahibabad, Ghaziabad<br />U.P., India - 201010<br />
-Email: <a href="sales@getyourvenue.com">sales@getyourvenue.com</a> <br />
+Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a> <br />
 Contact No: +91-9015904279, +91-9555666050
                           </p>
                           </td>
@@ -91,7 +91,7 @@ Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
                   </div>
                 </div>
               </div>
-              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL; ?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/flower.png" class="flower" alt="" />
+              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/flower.png" class="flower" alt="" />
                 <div class="boxbotbg"></div>
               </div>
             </div>
@@ -109,12 +109,12 @@ Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
                   <div class="boxGr boxheight">
                     <!-- Box Content Start -->
                     <h3>Contact Us</h3>
-                    <?php require("../view/contactusForm.php"); ?>
+                    <?php require_once("../view/contactusForm.php"); ?>
                     <!-- Box Content End -->
                   </div>
                 </div>
               </div>
-              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL; ?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/flower.png" class="flower" alt="" />
+              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL; ?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
                 <div class="boxbotbg sml2"></div>
               </div>
             </div>

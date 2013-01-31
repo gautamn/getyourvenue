@@ -9,29 +9,33 @@ function redirectToHostPagination(domain, page, fromPage){
 	var region = document.getElementById("region").value;
 	var category=document.getElementById("category").value;
 	var capacity=document.getElementById("capacity").value;
+  var url = '';
 	
 	if(fromPage=='FILTER_SEARCH')	
-		location.href=domain+"venues"+"/"+region+"/"+category+"/"+capacity+"/"+page;
+		url = domain+"venues"+"/"+region+"/"+category+"/"+capacity+"/";
 	
 	if(fromPage=='1')
-		location.href=domain+"wedding-venues-in-chhatarpur/"+page;
+		url = domain+"wedding-venues-in-chhatarpur/";
 	
 	if(fromPage=='2')
-		location.href=domain+"wedding-venues-in-mundka/"+page;
+		url = domain+"wedding-venues-in-mundka/";
 	
 	if(fromPage=='3')
-		location.href=domain+"wedding-venues-in-gt-karnal-road/"+page;
+		url = domain+"wedding-venues-in-gt-karnal-road/";
 	
 	if(fromPage=='4')
-		location.href=domain+"wedding-venues-in-NH8-Pushpanjali/"+page;
+		url = domain+"wedding-venues-in-nh8-pushpanjali/";
 	
 	if(fromPage=='5')
-		location.href=domain+"wedding-venues-in-Vaishali-Vasundhara/"+page;
+		url = domain+"wedding-venues-in-vaishali-vasundhara/";
 	
 	if(fromPage=='0')
-		location.href=domain+"wedding-venues-in-delhi-NCR/"+page;
+		url = domain+"wedding-venues-in-delhi-ncr/";
 
-	
+  if(parseInt(page)>1){
+    url = url+page;
+  }
+  location.href = url;	
 	return false;
 }
 

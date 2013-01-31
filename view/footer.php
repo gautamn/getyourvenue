@@ -8,19 +8,27 @@ require_once ("../constants/Constants.php");
 $constants = new Constants();
 ?>
 <!-- AddThis Button BEGIN -->
-        <div class="addThis2">
-          <div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:50px;top:215px;">
-            <a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
-            <a class="addthis_button_tweet" tw:count="vertical"></a>
-            <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
-            <a class="addthis_counter"></a>
-          </div>
-        </div>
-        <!-- AddThis Button END -->
+<div class="addThis2">
+  <div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:50px;top:215px;">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone"></a>    
+    <a class="addthis_counter"></a>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready( function(){
+    $('.addThis2 a.addthis_button_facebook_like').attr('fb:like:layout','box_count');
+    $('.addThis2 a.addthis_button_tweet').attr('tw:count','vertical');
+    $('.addThis2 a.addthis_button_google_plusone').attr('g:plusone:size','tall');
+  });
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>
+<!-- AddThis Button END -->
 
 <div id="footer">
   <div class="box">
-    <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+    <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
       <div class="boxtopbg"></div>
     </div>
     <div class="fullboxBg">
@@ -29,14 +37,14 @@ $constants = new Constants();
           <!-- Box Content Start -->
           <!--<ul class="content" style="width: 180px;">-->
           <ul class="content" style="width: 250px;">
-            <li><a href="<?php echo $constants->DOMAIN_URL;?>popular_choice" title="Popular Choices in Delhi &amp; NCR"><strong>Popular Choices in Delhi &amp; NCR</strong></a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL;?>" title="Popular Choices in Delhi &amp; NCR"><strong>Popular Choices in Delhi &amp; NCR</strong></a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-chhatarpur';?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-gt-karnal-road';?>" title="GT Karnal Road">GT Karnal Road</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-NH8-Pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-Vaishali-Vasundhara';?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-nh8-pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-vaishali-vasundhara';?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
             <?php /*?>
             <li><a href="#" title="Rama Road & Kirti Nagar">Rama Road & Kirti Nagar</a></li><? */?>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-mundka';?>" title="Mundka">Mundka</a>, <?php /*<a href="#" title="5 Star Banquets">5 Star Banquets</a>, <a href="#" title="Destination Wedding">Destination Wedding</a>, */?><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-delhi-NCR';?>" title="Others">Others</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-mundka';?>" title="Mundka">Mundka</a>, <?php /*<a href="#" title="5 Star Banquets">5 Star Banquets</a>, <a href="#" title="Destination Wedding">Destination Wedding</a>, */?><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-delhi-ncr';?>" title="Others">Others</a></li>
           </ul>
           <!--<ul class="content" style="width:180px;">-->
           <ul class="content" style="width:230px;">
@@ -76,7 +84,7 @@ $constants = new Constants();
             <li><a href="<?php echo $constants->DOMAIN_URL.'non_wedding';?>" title="Non Wedding Functions">Non Wedding Functions</a></li>
           </ul>
           <ul class="content" style="width:230px;">
-            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/pages/Getyourvenuecom/359630997401634" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/16875953644480548807/posts" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->DOMAIN_URL;?>images/icon_google.png" /></a></li>
+            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/pages/Getyourvenue/359630997401634" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->IMAGE_PATH;?>icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->IMAGE_PATH;?>icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/s/getyourvenue.com" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->IMAGE_PATH;?>icon_google.png" /></a></li>
             <li style="border-top: 1px solid #cccccc;"><br /><strong>You can reach us via</strong></li>
             <li>Email: <a href="mailto:sales@getyourvenue.com" title="email us @ sales@getyourvenue.com">sales@getyourvenue.com</a></li>
             <li>Mobile: +91-8800095444, +91-8800093444</li>
@@ -88,9 +96,9 @@ $constants = new Constants();
         </div>
       </div>
     </div>
-    <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+    <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
       <div class="boxbotbg"></div>
     </div>
   </div>
 </div>
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/google-analytics.js"></script>
+<?php require_once("footer.config.php");?>

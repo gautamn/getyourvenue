@@ -1,9 +1,9 @@
 <?php  require_once ("../constants/Constants.php");
 $constants = new Constants(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-  <?php require_once("header.config.php");?>
+<?php require_once("header.config.php");?>
 <title><?php echo $alliedSerivce[0]->title;?></title>
 <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
 <script type="text/javascript" language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
@@ -27,7 +27,7 @@ $constants = new Constants(); ?>
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h4>Allied Services</h4>
+                <h1>Allied Services</h1>
                 <ul class="alliedServices">
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
                     <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
@@ -61,14 +61,14 @@ $constants = new Constants(); ?>
               <div class="boxGr" align="center">
                 <!-- Box Content Start -->
                 <script type="text/javascript">
-                    <!--
-                    google_ad_client = "ca-pub-4918915311035756";
-                    /* Side Panels */
-                    google_ad_slot = "6847862507";
-                    google_ad_width = 120;
-                    google_ad_height = 600;
-                    //-->
-                    </script>
+                <!--
+                google_ad_client = "ca-pub-4918915311035756";
+                /* Side Panels */
+                google_ad_slot = "6847862507";
+                google_ad_width = 120;
+                google_ad_height = 600;
+                //-->
+                </script>
                 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
                 <!-- Box Content End -->
               </div>
@@ -90,9 +90,9 @@ $constants = new Constants(); ?>
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo $alliedSerivce[0]->bannerPath;?>" alt="" class="bannerImg" /><br class="f-left" />
+                <img src="<?php echo $alliedSerivce[0]->bannerPath;?>" alt="<?php echo $alliedSerivce[0]->heading;?> banner" class="bannerImg" /><br class="f-left" />
                 <br />
-                <h3><?php echo $alliedSerivce[0]->heading;?></h3>
+                <h1><?php echo $alliedSerivce[0]->heading;?></h1>
                 <div class="allied_content"><?php echo stripslashes($alliedSerivce[0]->html_content);?></div>
                 <?php
                     $results = array();
@@ -124,7 +124,7 @@ $constants = new Constants(); ?>
                             $totalSlides = count($results);
                             foreach($results as $key=> $slides) {
                         ?>
-                                <li><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="<?php echo $alliedSerivce[0]->heading;?>" title="<?php echo $alliedSerivce[0] ->heading;?>" id="wows1_<?php echo $key;?>" /><?php //echo 'Theme '.($key+1);?></li>
+                                <li><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$slides;?>" alt="<?php echo $alliedSerivce[0]->heading." ".($key+1);?>" title="<?php echo $alliedSerivce[0] ->heading;?>" id="wows1_<?php echo $key;?>" /><?php //echo 'Theme '.($key+1);?></li>
                         <?php }?>
                               </ul>
                             </div>
@@ -134,7 +134,7 @@ $constants = new Constants(); ?>
                               <div>
                                 <?php //foreach($thumbsImg as $key=> $thumb) {?>
                                 <?php foreach($results as $key=> $thumb) {?>
-                                <a title="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$thumb;?>" width="115" alt="" /><?php echo 'Theme '.($key+1);?></a>
+                                <a title="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img src="<?php echo '..'.$alliedSerivce[0]->jcarouselPath.$thumb;?>" width="115" alt="<?php echo $alliedSerivce[0]->heading.' slide '.($key+1);?>" /><?php echo 'Theme '.($key+1);?></a>
                                 <?php }?>
                               </div>
                             </div>
@@ -144,13 +144,7 @@ $constants = new Constants(); ?>
                           <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/wowslider.js"></script>
                           <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-slider.js"></script>
                         <?php
-                        }?>
-                      <!--</div>
-                    </div>
-                  </div>
-                </div>    -->
-                        
-                <?php
+                        }
                         /*$themes = array ();*/
                         $themes = explode("|",$alliedSerivce[0] ->themesUrl);
                         function endsWith($haystack, $needle) {
@@ -163,25 +157,25 @@ $constants = new Constants(); ?>
                 ?>
           
                 <?php if(count($themes)>1){?>        
-                <h3 class="clear">Few of the Popular themes are:</h3>
+                <h1 class="clear">Few of the Popular themes are:</h1>
                 <?php } ?>
                 <?php
-                        for($i=0 ; $i<count($themes); $i++) {
-                                if(endsWith($themes[$i],'@VIDEO')) {
-                                        $pos = strrpos($themes[$i], "@");
-                                        $url = substr($themes[$i],0,$pos);
+                for($i=0 ; $i<count($themes); $i++) {
+                  if(endsWith($themes[$i],'@VIDEO')) {
+                    $pos = strrpos($themes[$i], "@");
+                    $url = substr($themes[$i],0,$pos);
                  ?>
                   <iframe width="241" height="180" src="<?php echo $url;?>" frameborder="0" allowfullscreen=""></iframe>
-                  <?php }?>
-                  <?php 
-                        if(endsWith($themes[$i],'@IMAGE')) {
-                                $pos = strrpos($themes[$i], "@");
-                                $url = substr($themes[$i],0,$pos);
-                        // if closed
-                  ?>
-                  <div class="alliedThumb"><img src="../<?php echo $url ?>" alt="" width="239" height="180"/><!--span class="themeTitle">Theme One Title Here</span--></div>
-                  <?php } 
-                  } ?>
+              <?php }?>
+              <?php 
+                if(endsWith($themes[$i],'@IMAGE')) {
+                  $pos = strrpos($themes[$i], "@");
+                  $url = substr($themes[$i],0,$pos);
+                    // if closed
+              ?>
+              <div class="alliedThumb"><img src="../<?php echo $url;?>" alt="" width="239" height="180" /><!--span class="themeTitle">Theme One Title Here</span--></div>
+              <?php } 
+              } ?>
               </div>
             </div>
           </div>

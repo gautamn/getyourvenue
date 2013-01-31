@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <?php 
 require_once ("../database/GetYourVenueMySQLManager.php"); 
 require_once ("../service/VenueService.php");
@@ -9,23 +9,15 @@ $constants=new Constants();
 $venueid=$_GET['venueid'];
 $databaseManager=new GetYourVenueMySQLManager();
 $venueList=$databaseManager->getVenue($venueid);
-
-/*echo "<h3>".$venueList[0]->venueName."</h3><p>";
-echo $venueList[0]->venueAddr1."<br/>";
-echo $venueList[0]->venueAddr2."<br/>";
-echo $venueList[0]->content."<br/>";*/
 ?>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL;?>css/calendar.css" />
 <script type="text/javascript" language="javascript" src="<?php echo $constants->DOMAIN_URL;?>js/calendar_us.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+require_once("../view/header.config.php");
 $venueService = new VenueService();
 echo $venueService->getSEOConstant("venueDetails",$venueList[0]);
 ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL;?>css/style.css" />
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/jquery.nivo.slider.pack.js"></script>
 </head>
 <body>
@@ -36,50 +28,38 @@ echo $venueService->getSEOConstant("venueDetails",$venueList[0]);
       <div id="leftNavNarrow">
         <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h4>Popular Choices</h4>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/chhatarpur.jpg" alt=" Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur">Chhatarpur &amp; MG Road</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur" class="moreCat">View Options</a>-->
+                <h3>Popular Choices</h3>
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur">Chhatarpur &amp; MG Road</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/gt_karnal.jpg" alt=" Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road">GT Karnal Road</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road" class="moreCat">View Options</a>-->
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road">GT Karnal Road</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-NH8-Pushpanjali"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/nh8.jpg" alt=" Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-NH8-Pushpanjali">NH-8 &amp; Pushpanjali</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-NH8-Pushpanjali" class="moreCat">View Options</a>-->
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/nh8.jpg" alt="Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali">NH-8 &amp; Pushpanjali</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-Vaishali-Vasundhara"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/vaishali.jpg" alt=" Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-Vaishali-Vasundhara">Vaishali &amp; Vasundhara</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-Vaishali-Vasundhara" class="moreCat">View Options</a>-->
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/vaishali.jpg" alt="Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara">Vaishali &amp; Vasundhara</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span class="pcNamein"><a class="catName"  href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka">Mundka</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka" class="moreCat">View Options</a>-->
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/mundaka.jpg" alt="Wedding farm houses Mundka, Banquet halls Mundka" /></a> <span class="pcNamein"><a class="catName"  href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka">Mundka</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-NCR"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/others.jpg" alt="" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-NCR">Others</a></span>
-                  <!--<br />
-                  <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-NCR" class="moreCat">View Options</a>-->
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/others.jpg" alt="Wedding farm houses Delhi-NCR, Banquet halls Delhi-NCR" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr">Others</a></span>
                 </div>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
         <!-- Small Left Box End -->
                 <!-- Small Left Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml"></div>
           </div>
           <div class="fullboxBg">
@@ -94,14 +74,12 @@ google_ad_width = 120;
 google_ad_height = 600;
 //-->
 </script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg sml"></div>
           </div>
         </div>
@@ -111,35 +89,37 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <!-- Box Start -->
         <a name="location"></a>
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
               <div class="boxGr relative">
                 <!-- Box Content Start -->
-                <h3><?php echo $venueList[0]->venueName?></h3>
+                <h1><?php echo $venueList[0]->venueName;?></h1>
                 <br />
-                <div class="venue-desc f-left"> <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id.'/thumbnail.jpg' ?>" alt="" />
-                  <div class="addressLine"><?php echo $venueList[0]->venueAddr1?><br />
-                    <?php echo $venueList[0]->venueAddr2?></div>
+                <div class="venue-desc f-left"> 
+                  <img title="<?php echo $venueList[0]->venueName;?>" src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id.'/thumbnail.jpg';?>" alt="<?php echo $venueList[0]->venueName;?>" />
+                  <div class="addressLine">
+                    <?php echo $venueList[0]->venueAddr1;?><br />
+                    <?php echo $venueList[0]->venueAddr2;?>
+                  </div>
                 </div>
                 
                 <div class="google-map f-right">
-                <iframe width='560' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src=
-                 	'<?php echo $venueList[0]->iframe?>'>
+                <iframe width='560' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='<?php echo $venueList[0]->iframe?>'>
                  </iframe> 
               </div>
             </div>
           </div>
           
-        </div><div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
+        </div><div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         <!-- Box End -->
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -147,31 +127,33 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               <div class="boxGr">
                 <!-- Box Content Start -->
                 <a name="imageGallery"></a>
-                <h3>Latest Gallery</h3>
+                <h1>Latest Gallery</h1>
                 <div class="image-slider f-left">
                   <div class="slider-wrapper theme-default">
                     <div class="ribbon"></div>
-                    <div id="slider" class="nivoSlider"> <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_1.jpg" ?>"   alt="" />
-                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_2.jpg" ?>"  alt="" />
-                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_3.jpg" ?>"  alt="" /> 
-                        <img src="<?php echo  $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_4.jpg" ?>" alt="" /> </div>
+                    <div id="slider" class="nivoSlider">
+                      <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_1.jpg";?>"  alt="<?php echo $venueList[0]->altTag;?> 1" />
+                      <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_2.jpg";?>" alt="<?php echo $venueList[0]->altTag;?> 2" />
+                      <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_3.jpg";?>" alt="<?php echo $venueList[0]->altTag;?> 3" />
+                      <img src="<?php echo $constants->IMAGE_PATH.'venue/'.$venueList[0]->id."/gal_4.jpg";?>" alt="<?php echo $venueList[0]->altTag;?> 4" />
+                    </div>
                   </div>
                 </div>
                 <div class="latest-news">
-                  <p><?php echo $venueList[0]->content?></p>
+                  <p><?php echo $venueList[0]->content;?></p>
                 </div>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
         <!-- Box End -->
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /> <img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
@@ -198,13 +180,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                   <!--<div class="getvenue_cont">
                    <label>Preferred Date:</label>
                     <input type="text" name="date" class="txt-name" value="Select your Date" onblur="if(this.value==''){this.value='Select your Date'}" onfocus="if(this.value=='Select your Date'){this.value=''}"  />
-                    <a href="#"><img src="<?php echo $constants->DOMAIN_URL;?>images/cal-icon.png" alt="" class="calicon" /></a> </div>
+                    <a href="#"><img src="<?php echo $constants->IMAGE_PATH;?>cal-icon.png" alt="" class="calicon" /></a> </div>
                    -->
                   <div class="getvenue_cont">
                     <label>Preferred Date:</label>
-                    <input type="text" class="txt-name" name="date" value="" />
+                    <input type="text" class="txt-name" name="date" id="date" value="" />
                     <script language="JavaScript">
-
 						new tcal ({
 							// form name
 							'formname': 'bookVenueForm',
@@ -221,22 +202,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                     <label>Your Budget in INR:</label>
                     <input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if(this.value==''){this.value='Enter your Budget'}" onfocus="if(this.value=='Enter your Budget'){this.value=''}"  />
                   </div>
-                  <!--
-                  <div class="getvenue_cont">
-                    <center>
-                      <br>
-                      <img src="../EasyCaptcha/easycaptcha.php" />
-                    </center>
-                  </div>
-                  <div class="getvenue_cont">
-                    <label>Enter code of the image:<font color="red">*</font></label>
-                    <input type="text" class="txt-name" name="confirm_code"  />
-                  </div>
-                  -->
+                  
                   <div class="clear"></div>
                   <br />
                   <div class="getvenue_cont last">
-                    <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/go-btn.png"  onClick="return submitVenueBookingForm()"/>
+                    <input type="image" src="<?php echo $constants->IMAGE_PATH;?>go-btn.png" onClick="return submitVenueBookingForm();" />
                   </div>
                   <input type="hidden" name="actionType" value="bookVenue"  />
                   <input type="hidden" name="venueId" value="<?php echo $venueList[0]->venueId  ?>" />
@@ -245,7 +215,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /> <img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /> <img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
@@ -254,14 +224,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </div><br class="clear"/>
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
               <div class="boxGr">
-                <!-- Box Content Start -->
-                
+                <!-- Box Content Start -->                
                 <div class="google-adds">
                   <script type="text/javascript"><!--
 					google_ad_client = "ca-pub-4918915311035756";
@@ -271,43 +240,42 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					google_ad_height = 90;
 					//-->
 					</script>
-					<script type="text/javascript"
-					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-					</script>
+					<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
                 </div>
                 <!-- Box Content End -->
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
         <!-- Box End -->
-    <?php  require("../view/footer.php"); ?>
+        <script type="text/javascript">
+$(window).load(function() {
+  $('#slider').nivoSlider({
+  effect:'random',
+  slices:17,
+  animSpeed:500,
+  pauseTime:6000,
+  startSlide:0, //Set starting Slide (0 index)
+  directionNav:true, //Next and Prev
+  directionNavHide:false, //Only show on hover
+  controlNav:true, //1,2,3...
+  controlNavThumbs:false, //Use thumbnails for Control Nav
+  controlNavThumbsFromRel:false, //Use image rel for thumbs
+  controlNavThumbsSearch: '.jpg', //Replace this with...
+  controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+  keyboardNav:true, //Use left and right arrows
+  pauseOnHover:true, //Stop animation while hovering
+  manualAdvance:false, //Force manual transitions
+  captionOpacity:0
+  });
+});
+</script>
+    <?php  require_once("../view/footer.php"); ?>
   </div>
 </div>
-<script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider({
-		effect:'random', 
-        slices:17,
-        animSpeed:500,
-        pauseTime:6000,
-        startSlide:0, //Set starting Slide (0 index)
-        directionNav:true, //Next & Prev
-        directionNavHide:false, //Only show on hover
-        controlNav:true, //1,2,3...
-        controlNavThumbs:false, //Use thumbnails for Control Nav
-        controlNavThumbsFromRel:false, //Use image rel for thumbs
-        controlNavThumbsSearch: '.jpg', //Replace this with...
-        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-        keyboardNav:true, //Use left & right arrows
-        pauseOnHover:true, //Stop animation while hovering
-        manualAdvance:false, //Force manual transitions
-        captionOpacity:0
-		});
-    });
-    </script>
+</div>
 </body>
 </html>

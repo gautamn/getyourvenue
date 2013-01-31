@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 <?php require_once("header.config.php");
 require_once ("../constants/Constants.php");
@@ -28,14 +28,14 @@ function redirectToHost(){
       <div id="leftNav">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg"></div>
           </div>
           <div class="fullboxBg">
             <div class="boxContent">
               <div class="boxGr nonWedBox">
                 <!-- Box Content Start {please replace the class nonWedBox with boxheight } -->
-                <h3>Non Wedding Venues</h3>
+                <h1>Non Wedding Venues</h1>
                 <p>GetYourVenue is committed to assist you in finding wedding venues in Delhi and NCR region. Besides wedding venues, we also help you to find suitable venues for birthday parties, engagement ceremonies, anniversaries, corporate parties and other non wedding functions. Our large network of partners and service providers has enabled us to offer venue selection services for other domains as well.</p>
                 <br />
                 <b>Let us plan the whole thing just as you want it!</b>
@@ -51,7 +51,7 @@ function redirectToHost(){
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
             <div class="boxbotbg"></div>
           </div>
         </div>
@@ -60,7 +60,7 @@ function redirectToHost(){
       <div id="rightNav">
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml2"></div>
           </div>
           <div class="fullboxBg">
@@ -100,7 +100,7 @@ function redirectToHost(){
                     <option value="3">Above 800</option>
                   </select>
                   <br />
-                  <input type="image" src="<?php echo $constants->DOMAIN_URL;?>images/btn-getmyvenue.png" class="button" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL?>');"/>
+                  <input type="image" src="<?php echo $constants->IMAGE_PATH;?>btn-getmyvenue.png" class="button" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL?>');"/>
                   <input type="hidden" name="action" value="searchVenue" />
                 </form>
 
@@ -108,7 +108,7 @@ function redirectToHost(){
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
             <div class="boxbotbg sml2"></div>
           </div>
         </div>
@@ -116,7 +116,7 @@ function redirectToHost(){
 
         <!-- Box Start -->
         <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
             <div class="boxtopbg sml2"></div>
           </div>
           <div class="fullboxBg">
@@ -136,7 +136,7 @@ function redirectToHost(){
               </div>
             </div>
           </div>
-          <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
             <div class="boxbotbg sml2"></div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>    
     <title>site map</title>
     <?php require_once("header.config.php");
@@ -15,19 +15,18 @@ $constants = new Constants();?>
           <div id="content">
             <!-- Box Start -->
             <div class="box">
-              <div class="boxtop"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxtopc2.png" align="right" alt="" />
+              <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
                 <div class="boxtopbg"></div>
               </div>
               <div class="fullboxBg">
                 <div class="boxContent">
                   <div class="boxGr boxheight">
-                    <h3>Sitemap</h3>
+                    <h1>Sitemap</h1>
                     <!-- Box Content Start -->
                     <ul id="sitemap">
                       <li><a href='http://getyourvenue.com/'>Home</a></li>
                       <li><a href='http://getyourvenue.com/about-us'>about-us</a></li>
-                      <li><a href='http://getyourvenue.com/allied-services'>allied-services</a></li>
-                      <li><a href='http://getyourvenue.com/addvenue'>addvenue</a></li>
+                      <li><a href='http://getyourvenue.com/allied-services'>allied-services</a></li>                      
                       <li><a href='http://getyourvenue.com/non_wedding'>non_wedding</a></li>
                       <li><a href='http://getyourvenue.com/book_now'>book_now</a></li>
                       <li><a href='http://getyourvenue.com/contact_us'>contact_us</a></li>
@@ -262,7 +261,7 @@ $constants = new Constants();?>
                   </div>
                 </div>
               </div>
-              <div class="boxbot"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/flower.png" class="flower" alt="" />
+              <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
                 <div class="boxbotbg"></div>
               </div>
             </div>

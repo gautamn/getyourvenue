@@ -38,6 +38,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
         $venue->mapUrl = $row['iframe'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
 
         $venueList[] = $venue;
       }
@@ -71,7 +72,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
         $venue->mapUrl = $row['iframe'];
-        $venue->altTag = $row['image_alt_tag'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
 
         $venueList[] = $venue;
       }
@@ -92,10 +93,10 @@ class GetYourVenueMySQLManager {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
       if ($choiceId != 0)
-        $query = "SELECT name,address1,address2,content,id,venueid FROM venue WHERE is_active=1 AND
+        $query = "SELECT name,address1,address2,content,id,venueid,image_alt_tag FROM venue WHERE is_active=1 AND
 									      popular_choice=" . $choiceId;
       else
-        $query = "SELECT name,address1,address2,content,id,venueid FROM venue ve
+        $query = "SELECT name,address1,address2,content,id,venueid,image_alt_tag FROM venue ve
                                         WHERE popular_choice!=1 AND popular_choice!=2 AND popular_choice!=3 AND 
                                         popular_choice!=4 AND popular_choice!=5 AND is_active=1";
       $result = mysql_query($query);
@@ -109,6 +110,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -128,9 +130,9 @@ class GetYourVenueMySQLManager {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
       if ($choiceId != 0)
-        $query = "SELECT ve.name, ve.address1, ve.address2, ve.content, ve.id, ve.venueid FROM venue ve WHERE ve.is_active=1 AND ve.popular_choice=" . $choiceId . " ORDER BY ve.zone_rank limit " . $startIndex . "," . $offset;
+        $query = "SELECT ve.name, ve.address1, ve.address2, ve.content, ve.id, ve.venueid, ve.image_alt_tag FROM venue ve WHERE ve.is_active=1 AND ve.popular_choice=" . $choiceId . " ORDER BY ve.zone_rank limit " . $startIndex . "," . $offset;
       else
-        $query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve
+        $query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid, ve.image_alt_tag FROM venue ve
 					 WHERE ve.popular_choice!=1 AND ve.popular_choice!=2 AND ve.popular_choice!=3 AND 
 					 ve.popular_choice!=4 AND ve.popular_choice!=5  AND ve.is_active=1 ORDER BY ve.zone_rank limit " . $startIndex . "," . $offset;
 
@@ -145,6 +147,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -186,6 +189,7 @@ class GetYourVenueMySQLManager {
         $venue->title = $row['title'];
         $venue->metaDescription = $row['meta_description'];
         $venue->metaKeyword = $row['meta_keyword'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -203,7 +207,7 @@ class GetYourVenueMySQLManager {
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
-      $query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid FROM venue ve WHERE " .
+      $query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid, ve.image_alt_tag FROM venue ve WHERE " .
               " ve.name LIKE '%" . $venueName . "%'  AND ve.is_active=1 ORDER BY ve.rank";
       $result = mysql_query($query);
       while ($row = mysql_fetch_array($result)) {
@@ -214,6 +218,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
+        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }

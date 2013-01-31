@@ -1,7 +1,6 @@
 <?php
 /*
  * Created on Jul 6, 2011
- *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
@@ -10,25 +9,25 @@ require_once ("../constants/Constants.php");
 $constants = new Constants();
 ?>
 <div id="header">
-  <img src="<?php echo $constants->DOMAIN_URL;?>images/headerLeft.jpg" align="left" alt="" />
-  <img src="<?php echo $constants->DOMAIN_URL;?>images/headerRight.jpg" align="right" alt="" />
-  <a href="<?php echo $constants->DOMAIN_URL ?>"><img src="<?php echo $constants->DOMAIN_URL;?>images/logo.png" class="logo" alt="Get Your Venue, Wedding Venues in Delhi NCR" /></a>
-  <img src="<?php echo $constants->DOMAIN_URL;?>images/hotlinenumber.png" class="hotlineNum" alt="Get Your Venue, Marriage Venues in Delhi NCR" />
+  <img src="<?php echo $constants->IMAGE_PATH;?>headerLeft.jpg" align="left" alt="" />
+  <img src="<?php echo $constants->IMAGE_PATH;?>headerRight.jpg" align="right" alt="" />
+  <a href="<?php echo $constants->DOMAIN_URL;?>"><img src="<?php echo $constants->IMAGE_PATH;?>logo.png" class="logo" alt="Get Your Venue, Wedding Venues in Delhi NCR" /></a>
+  <img src="<?php echo $constants->IMAGE_PATH;?>hotlinenumber.png" class="hotlineNum" alt="Get Your Venue, Marriage Venues in Delhi NCR" />
   <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
-  <div class="topNav"><img src="<?php echo $constants->DOMAIN_URL;?>images/topNavleft.jpg" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/topNavRight.jpg" align="right" alt="" />
+  <div class="topNav"><img src="<?php echo $constants->IMAGE_PATH;?>topNavleft.jpg" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>topNavRight.jpg" align="right" alt="" />
     <ul>
-      <li><a href="<?php echo $constants->DOMAIN_URL;?>" title="Home"><img style="margin-top: 5px; height: 20px;" src="<?php echo $constants->DOMAIN_URL;?>images/home.png" title="home" alt="home" /></a></li>
+      <li><a href="<?php echo $constants->DOMAIN_URL;?>" title="Home"><img style="margin-top: 5px; height: 20px;" src="<?php echo $constants->IMAGE_PATH;?>home.png" title="home" alt="home" /></a></li>
       <li><a href="javascript:void(0);">Popular Choices</a>
         <ul>
           <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-chhatarpur';?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-gt-karnal-road';?>" title="GT Karnal Road">GT Karnal Road</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-NH8-Pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-Vaishali-Vasundhara';?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-nh8-pushpanjali';?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-vaishali-vasundhara';?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-mundka';?>" title="Mundka">Mundka</a></li>
             <?php /*<li><a href="#" title="Rama Road & Kirti Nagar">Rama Road & Kirti Nagar</a></li>
             <li><a href="#" title="5 Star Banquets">5 Star Banquets</a></li>
             <li><a href="#" title="Destination Wedding">Destination Wedding</a></li>*/?>
-            <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-delhi-NCR';?>" title="Others">Others</a></li>
+            <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'wedding-venues-in-delhi-ncr';?>" title="Others">Others</a></li>
         </ul>
       </li>      
       <li><a class="newribbon" href="<?php echo $constants->DOMAIN_URL . 'allied-services';?>">Allied Services</a>
@@ -79,7 +78,8 @@ $constants = new Constants();
       <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
       <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
     </div>-->
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ecaa14010f9194d"></script>
+    <?php /*<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ecaa14010f9194d"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>*/?>    
     <!-- AddThis Button END -->
   </div>
 </div>
