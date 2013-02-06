@@ -1,0 +1,6 @@
+images/alliedservices/decor/themes/candle-theme/@IMAGE|images/alliedservices/decor/themes/octopus-theme/@IMAGE|images/alliedservices/decor/themes/pink-theme/@IMAGE|images/alliedservices/decor/themes/red-sweet-theme/@IMAGE|images/alliedservices/decor/themes/sufi-theme/@IMAGE|images/alliedservices/decor/themes/taj-flute-theme/@IMAGE
+
+
+../images/alliedservices/decor/themes/gal_1.jpg@IMAGE|../images/alliedservices/decor/themes/gal_2.jpg@IMAGE|../images/alliedservices/decor/themes/gal_3.jpg@IMAGE|../images/alliedservices/decor/themes/gal_4.jpg@IMAGE|../images/alliedservices/decor/themes/gal_5.jpg@IMAGE|../images/alliedservices/decor/themes/gal_6.jpg@IMAGE
+
+UPDATE `allied_services` SET `THEMES_URLS` = 'images/alliedservices/decor/themes/candle-theme/@IMAGE|images/alliedservices/decor/themes/octopus-theme/@IMAGE|images/alliedservices/decor/themes/pink-theme/@IMAGE|images/alliedservices/decor/themes/red-sweet-theme/@IMAGE|images/alliedservices/decor/themes/sufi-theme/@IMAGE|images/alliedservices/decor/themes/taj-flute-theme/@IMAGE' WHERE `allied_services`.`SEO_ID` = 'wedding-decorators-in-delhi';

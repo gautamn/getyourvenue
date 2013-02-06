@@ -33,18 +33,18 @@ font-size: 120%;
                     <div class="boxGr">
                       <!-- Box Content Start -->
                         <a name="popular_choice"></a>
-                      <h1>Popular Choices in Delhi and NCR</h1>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span title="Chattarpur Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur" class="moreCat">Chhattarpur &amp; &nbsp;&nbsp;MG Road</a></span>
+                      <h3>Popular Choices in Delhi and NCR</h3>
+                      <div class="venCat"><a title="Wedding Venues in Chhatarpur &amp; MG Road" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span title="Chattarpur Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur" class="moreCat">Chhattarpur &amp; &nbsp;&nbsp;MG Road</a></span>
                       </div>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span title="GT Karnal Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road" class="moreCat">GT Karnal Road</a></span>
+                      <div class="venCat"><a title="Wedding Venues in GT Karnal Road" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span title="GT Karnal Road" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road" class="moreCat">GT Karnal Road</a></span>
                       </div>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/nh8.jpg" alt="Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span title="Pushpanjali and NH-8" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali" class="moreCat">NH-8 &amp; &nbsp;&nbsp;Pushpanjali</a></span>
+                      <div class="venCat"><a title="Wedding Venues in Pushpanjali &amp; NH-8" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/nh8.jpg" alt="Wedding farm houses NH 8, Banquet halls NH 8, Banquets on NH 8" /></a> <span title="Pushpanjali &amp; NH-8" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-nh8-pushpanjali" class="moreCat">Pushpanjali &amp; &nbsp; &nbsp; &nbsp; NH-8</a></span>
                       </div>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/vaishali.jpg" alt=" Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span title="Vaishali Extn. and Vasundhara" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara" class="moreCat">Vaishali &amp; &nbsp;&nbsp;Vasundhara</a></span>
+                      <div class="venCat"><a title="Wedding Venues in Vaishali &amp; Vasundhara" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/vaishali.jpg" alt=" Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span title="Vaishali Extn. and Vasundhara" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-vaishali-vasundhara" class="moreCat">Vaishali &amp; &nbsp;&nbsp;Vasundhara</a></span>
                       </div>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundka" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka" class="moreCat">Mundka</a></span>
+                      <div class="venCat"><a title="Wedding Venues in Mundka" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/mundaka.jpg" alt=" Wedding farm houses Mundka, Banquet halls Mundka " /></a> <span title="Mundka" class="pcName"> <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka" class="moreCat">Mundka</a></span>
                       </div>
-                      <div class="venCat"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/others.jpg" alt="" /></a> <span class="pcName"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr" class="moreCat">Others</a></span>
+                      <div class="venCat"><a title="Wedding Venues in Delhi-NCR" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->IMAGE_PATH;?>icons/outer/others.jpg" alt="Wedding farm houses Delhi-NCR, Banquet halls Delhi-NCR" /></a> <span class="pcName"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr" title="Wedding Venues in Delhi NCR" class="moreCat">Others</a></span>
                       </div>
                       <!-- Box Content End -->
                     </div>
@@ -64,7 +64,7 @@ font-size: 120%;
                   <div class="boxContent">
                     <div class="boxGr">
                       <!-- Box Content Start -->
-                      <h1>Our Unique Propositions</h1>
+                      <h3>Our Unique Propositions</h3>
                       <ul class="ourUnique">
                         <li class="icon01">Unbiased Advice to Help You Find the Right Wedding Venue</li>
                         <li class="icon02">Personalized one on one Support till the Time Your Venue is Finalized</li>
@@ -92,7 +92,7 @@ font-size: 120%;
                   <div class="boxContent">
                     <div class="boxGr">
                       <!--Box Content Start-->
-                      <h1>Search Your Venue by Name</h1>
+                      <h3>Search Your Venue by Name</h3>
                       <form name="searchForm" class="contactform" action="searchVenue/venue" method="post">
                         <input class="input-txt" type="text" id="venueid" name="venueid" value="Enter Your Keyword" onfocus="if(this.value=='Enter Your Keyword')this.value='';" onblur="if(this.value=='')this.value='Enter Your Keyword';" />
                         <input type="image" src="<?php echo $constants->IMAGE_PATH;?>btn-search.png" class="button-sear"/>
@@ -107,7 +107,7 @@ font-size: 120%;
                   <div class="boxContent">
                     <div class="boxGr"><br />
                       <!-- Box Content Start -->
-                      <h1>Let Us Know Your Preferences</h1>
+                      <h3>Let Us Know Your Preferences</h3>
                       <form name="searchForm" class="homeSearch" action="#">
                         <label>Region:</label>
                         <select name="region" id="region">

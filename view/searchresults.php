@@ -6,7 +6,6 @@ require_once("header.config.php");
 $venueService = new VenueService();
 echo $venueService->getSEOConstant($action, "");
 ?>
-<script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/jquery.nivo.slider.pack.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -29,20 +28,20 @@ echo $venueService->getSEOConstant($action, "");
                     <!-- Box Content Start -->
                     <h4>Popular Choices</h4>
                     <div class="venCatSml">
-                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-chhatarpur" title="Chhatarpur &amp; MG Road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-chhatarpur" title="Chhatarpur &amp; MG Road">Chhatarpur &amp; MG Road</a></span>
+                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-chhatarpur" title="Wedding Venues in Chhatarpur &amp; MG Road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-chhatarpur" title="Chhatarpur &amp; MG Road">Chhatarpur &amp; MG Road</a></span>
                     </div>
                     <div class="venCatSml">
-                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-gt-karnal-road" title="GT Karnal Road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span class="pcNamein"><a class="catName" title="GT Karnal Road" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-gt-karnal-road">GT Karnal Road</a></span>
+                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-gt-karnal-road" title="Wedding Venues in GT Karnal Road"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span class="pcNamein"><a class="catName" title="GT Karnal Road" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-gt-karnal-road">GT Karnal Road</a></span>
                     </div>
                     <div class="venCatSml">
-                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-nh8-pushpanjali" title="NH-8 &amp; Pushpanjali"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/nh8.jpg" alt="Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-nh8-pushpanjali" title="NH-8 &amp; Pushpanjali">NH-8 &amp; Pushpanjali</a></span>
+                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-nh8-pushpanjali" title="Wedding Venues in Pushpanjali &amp; NH-8"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/nh8.jpg" alt="Wedding farm houses NH8, Banquet halls NH 8, Banquets on NH 8" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-nh8-pushpanjali" title="NH-8 &amp; Pushpanjali">NH-8 &amp; Pushpanjali</a></span>
                     </div>
                     <div class="venCatSml">
-                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-vaishali-vasundhara" title="Vaishali &amp; Vasundhara"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/vaishali.jpg" alt="Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span class="pcNamein"><a class="catName" title="Vaishali &amp; Vasundhara" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-vaishali-vasundhara">Vaishali &amp; Vasundhara</a></span>
+                      <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-vaishali-vasundhara" title="Wedding Venues in Vaishali &amp; Vasundhara"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/vaishali.jpg" alt="Wedding farm houses Vaishali Vasundhara, Banquet halls Vaishali Vasundhara" /></a> <span class="pcNamein"><a class="catName" title="Vaishali &amp; Vasundhara" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-vaishali-vasundhara">Vaishali &amp; Vasundhara</a></span>
                     </div>
-                    <div class="venCatSml"><a title="Mundka" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-mundka"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/mundaka.jpg" alt="Wedding farm houses Mundka, Banquet halls Mundka" /></a> <span class="pcNamein"><a class="catName" title="Mundka" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-mundka">Mundka</a></span>
+                    <div class="venCatSml"><a title="Wedding Venues in Mundka" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-mundka"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/mundaka.jpg" alt="Wedding farm houses Mundka, Banquet halls Mundka" /></a> <span class="pcNamein"><a class="catName" title="Mundka" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-mundka">Mundka</a></span>
                     </div>
-                    <div class="venCatSml"><a title="delhi-ncr" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/others.jpg" alt="Wedding farm houses Delhi NCR, Banquet halls Delhi NCR" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-delhi-ncr" title="delhi-ncr">Others</a></span>
+                    <div class="venCatSml"><a title="Wedding Venues in Delhi NCR" href="<?php echo $constants->DOMAIN_URL; ?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->DOMAIN_URL;?>images/icons/inner/others.jpg" alt="Wedding farm houses Delhi NCR, Banquet halls Delhi NCR" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr" title="Wedding Venues in Delhi NCR">Others</a></span>
                     </div>
                     <!-- Box Content End -->
                   </div>
@@ -63,7 +62,7 @@ echo $venueService->getSEOConstant($action, "");
                 <div class="boxContent">
                   <div class="boxGr">
                     <!-- Box Content Start -->
-                    <h4>Testimonials</h4>
+                    <h3>Testimonials</h3>
                     <div class="testi divid-line">
                       <p>"We consider ourselves blessed to have had the privilege of working with someone who translated our vision with such style, grace and professionalism. We sincerely thank you for helping us find such a great wedding destination!"<span>Mitali, Preetha &amp; family<br />
                           New Delhi<br />
@@ -124,16 +123,16 @@ echo $venueService->getSEOConstant($action, "");
                 <div class="boxContent">
                   <div class="boxGr2">
                     <!-- Box Content Start -->
-                    <h1>Your Search Details</h1>
-                    <span class="searchOpt"><strong>Region</strong>: <?php echo $regionName ?></span>
+                    <h1>Wedding Venues in <?php echo ucwords($regionName);?> Region</h1>
+                    <!--<span class="searchOpt"><strong>Region</strong>: <?php echo $regionName;?></span>-->
                     <span class="searchOpt"><?php if ($categoryName != "") {
-          echo "<strong>Category of Venue</strong>: ";
-          echo $categoryName;
-        } ?></span>
+                      echo "<strong>Category of Venue</strong>: ";
+                      echo ucwords(str_replace('-', ' ',$categoryName));
+                    } ?></span>
                     <span><?php if ($capacityValue != "") {
-          echo "<strong>No. of Guests</strong>: ";
-          echo $capacityValue;
-        } ?></span>
+                      echo "<strong>No. of Guests</strong>: ";
+                      echo $capacityValue;
+                    } ?></span>
                     <!-- Box Content End -->
                   </div>
                 </div>
@@ -252,7 +251,7 @@ for ($i = 0; $i < count($venueList); $i++) {
                         <option value="ghaziabad">Ghaziabad</option>
                         <option value="noida">Noida</option>
                         <option value="gurgaon">Gurgaon</option>
-                        <option value="destination-wedding">Destination Wedding</option>
+                        <!--<option value="destination-wedding">Destination Wedding</option>-->
                       </select>
                       <label>Category:</label>
                       <select name="category" id="category">
@@ -369,28 +368,6 @@ for ($i = 0; $i < count($venueList); $i++) {
         <!-- Box End -->
 <?php require("../view/footer.php") ?>
       </div>
-    </div>
-    <script type="text/javascript">
-      $(window).load(function() {
-        $('#slider').nivoSlider({
-          effect:'random',
-          slices:17,
-          animSpeed:500,
-          pauseTime:6000,
-          startSlide:0, //Set starting Slide (0 index)
-          directionNav:true, //Next & Prev
-          directionNavHide:false, //Only show on hover
-          controlNav:true, //1,2,3...
-          controlNavThumbs:false, //Use thumbnails for Control Nav
-          controlNavThumbsFromRel:false, //Use image rel for thumbs
-          controlNavThumbsSearch: '.jpg', //Replace this with...
-          controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-          keyboardNav:true, //Use left & right arrows
-          pauseOnHover:true, //Stop animation while hovering
-          manualAdvance:false, //Force manual transitions
-          captionOpacity:0
-        });
-      });
-    </script>
+    </div>    
   </body>
 </html>

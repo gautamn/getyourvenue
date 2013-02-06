@@ -81,7 +81,7 @@ function redirectToHost(){
                     <option value="ghaziabad">Ghaziabad</option>
                     <option value="noida">Noida</option>
                     <option value="gurgaon">Gurgaon</option>
-                    <option value="destination-wedding">Destination Wedding</option>
+                    <!--<option value="destination-wedding">Destination Wedding</option>-->
                   </select>
                   <label>Category of Venue:</label>
                   <select name="category" id="category">

@@ -29,7 +29,7 @@ $constants = new Constants();?>
               <div class="fullboxBg">
                 <div class="boxContent">
                   <div class="boxGr">
-                    <h1>Allied Services</h1>
+                    <h4>Allied Services</h4>
                     <ul class="alliedServices">
                       <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
                         <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>

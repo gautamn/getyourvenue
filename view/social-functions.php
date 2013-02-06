@@ -57,7 +57,7 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h3>Plan your social gatherings better with an expert!</h3>
+                <h1>Plan your social gatherings better with an expert!</h1>
                 <div class="allied_content">
                   <p>In India, social functions are not just about celebrating your happiness, but also about creating a harmony between people and developing aura of positivity around. There was a time when all the family members came together and organized a social function, but with hectic daily schedules and busier lifestyle, it isn't possible nowadays to organize an event without an exert's help.</p>
                   <p>Professionalization has also taken a seat in the social events sector. Yes, now our experts from GetYourVenue.com can bind your family together on your wedding day or other social gatherings, whether it is simple party to celebrate the success of your children or a farewell to a friend, doing their best to make every ceremony a memorable one.</p>

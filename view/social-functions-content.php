@@ -87,10 +87,11 @@ if(empty($rowSocialFunctions))
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <img src="<?php echo $rowSocialFunctions[0] ->bannerPath ?>" alt="" class="bannerImg" /><br class="f-left" />
+                <img src="<?php echo $rowSocialFunctions[0]->bannerPath;?>" alt="" class="bannerImg" />
+                <br class="f-left" />
                 <br />
-                <h3><?php echo $rowSocialFunctions[0] ->heading ?></h3>
-                <div class="allied_content"><?php echo $rowSocialFunctions[0] ->html_content;?></div>
+                <h1><?php echo $rowSocialFunctions[0]->heading;?></h1>
+                <div class="allied_content"><?php echo stripslashes($rowSocialFunctions[0]->html_content);?></div>
                 <?php
                     $results = array();
                     // create a handler for the directory
@@ -105,40 +106,39 @@ if(empty($rowSocialFunctions))
                     // tidy up: close the handler
                     closedir($handler);
 
-                      $res = "";
-                      if(!empty($results)) { ?>
-                          <div id="wowslider-container1">
-                            <div class="ws_images">
-                              <ul>
+                    $res = "";
+                    if(!empty($results)) { ?>
+                    <div id="wowslider-container1">
+                      <div class="ws_images">
+                        <ul>
                         <?php
                             $totalSlides = count($results);
                             foreach($results as $key=> $slides) {
                         ?>
-                                <li><img height="500px" src="<?php echo '..'.$rowSocialFunctions[0]->jcarouselPath.$slides;?>" alt="<?php echo $rowSocialFunctions[0] ->heading;?>" title="<?php echo $rowSocialFunctions[0] ->heading;?>" id="wows1_<?php echo $key;?>" /><?php echo 'Theme '.($key+1);?></li>
+                          <li><img height="500px" src="<?php echo '..'.$rowSocialFunctions[0]->jcarouselPath.$slides;?>" alt="<?php echo $rowSocialFunctions[0] ->heading;?>" title="<?php echo $rowSocialFunctions[0] ->heading;?>" id="wows1_<?php echo $key;?>" /><?php echo 'Theme '.($key+1);?></li>
                         <?php }?>
-                              </ul>
-                            </div>
-                            <!--large images ends-->                            
-                            <!-- thumbnails starts-->
-                            <div class="ws_thumbs">
-                              <div>
-                                <?php foreach($results as $key=> $slides) {?>
-                                <a title="<?php echo $rowSocialFunctions[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img width="115" src="<?php echo '..'.$rowSocialFunctions[0]->jcarouselPath.$slides;?>" alt="" /><?php echo 'Theme '.($key+1);?></a>
-                                <?php }?>
-                              </div>
-                            </div>
-                            <!-- thumbnails ends-->
-                          <div class="ws_shadow"></div>
+                        </ul>
+                      </div>
+                      <!--large images ends-->                            
+                      <!-- thumbnails starts-->
+                      <div class="ws_thumbs">
+                        <div>
+                            <?php foreach($results as $key=> $slides) {?>
+                            <a title="<?php echo $rowSocialFunctions[0]->heading.' slide '.($key+1);?>" href="javascript:void(0);"><img width="115" src="<?php echo '..'.$rowSocialFunctions[0]->jcarouselPath.$slides;?>" alt="" /><?php echo 'Theme '.($key+1);?></a>
+                            <?php }?>
+                          </div>
                         </div>
-                          <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/wowslider.js"></script>
-                          <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-slider.js"></script>
+                        <!-- thumbnails ends-->
+                        <div class="ws_shadow"></div>
+                      </div>
+                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/wowslider.js"></script>
+                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-slider.js"></script>
                         <?php
                         }?>
                       <!--</div>
                     </div>
                   </div>
-                </div>    -->
-                        
+                </div>    -->                        
                 <?php
                         /*$themes = array ();*/
                         $themes = explode("|",$rowSocialFunctions[0] ->themesUrl);

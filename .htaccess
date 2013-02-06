@@ -1,4 +1,7 @@
 RewriteEngine On
+##RewriteBase /
+ErrorDocument 404 /notfound
+RewriteRule ^notfound$   /view/notfound.php [L]
 RewriteRule ^index.php$   /view/index.php [L] 
 RewriteRule ^home$   	/view/index.php [L]
 RewriteRule ^about-us$   /view/about-us.php [L]
@@ -22,22 +25,25 @@ RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
 RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
 
 #RewriteRule ^wedding-venues-in-nh8-pushpanjali/(.*)$ ^wedding-venues-in-NH8-Pushpanjali/(.*)$  [R=301,L]
+Redirect 301 /wedding-venues-in-NH8-Pushpanjali   /wedding-venues-in-nh8-pushpanjali
+Redirect 301 /wedding-venues-in-Vaishali-Vasundhara   /wedding-venues-in-vaishali-vasundhara
+Redirect 301 /wedding-venues-in-delhi-NCR   /wedding-venues-in-delhi-ncr
 
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
 RewriteRule ^wedding-venues-in-chhatarpur/(.*)$ /search_results?option=1&page=$1&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-mundka/(.*)$ /search_results?option=2&page=$1&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-gt-karnal-road/(.*)$ /search_results?option=3&page=$1&action=viewChoices [L]
-RewriteRule ^wedding-venues-in-NH8-Pushpanjali/(.*)$ /search_results?option=4&page=$1&action=viewChoices [NC,L] 
-RewriteRule ^wedding-venues-in-vaishali-vasundhara/(.*)$ /search_results?option=5&page=$1&action=viewChoices [NC,L] 
-RewriteRule ^wedding-venues-in-delhi-ncr/(.*)$ /search_results?action=viewChoices&page=$1 [NC,L]
+RewriteRule ^wedding-venues-in-nh8-pushpanjali/(.*)$ /search_results?option=4&page=$1&action=viewChoices [L] ##[NC,L]
+RewriteRule ^wedding-venues-in-vaishali-vasundhara/(.*)$ /search_results?option=5&page=$1&action=viewChoices [L] ##[NC,L]
+RewriteRule ^wedding-venues-in-delhi-ncr/(.*)$ /search_results?action=viewChoices&page=$1 [L] ##[NC,L]
 
 RewriteRule ^wedding-venues-in-chhatarpur$ /search_results?option=1&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-mundka$ /search_results?option=2&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-gt-karnal-road$ /search_results?option=3&action=viewChoices [L]
-RewriteRule ^wedding-venues-in-NH8-Pushpanjali$ /search_results?option=4&action=viewChoices [NC,L] 
-RewriteRule ^wedding-venues-in-vaishali-vasundhara$ /search_results?option=5&action=viewChoices [NC,L] 
-RewriteRule ^wedding-venues-in-delhi-ncr$ /search_results?action=viewChoices [NC,L]
+RewriteRule ^wedding-venues-in-nh8-pushpanjali$ /search_results?option=4&action=viewChoices [L] ##[NC,L]
+RewriteRule ^wedding-venues-in-vaishali-vasundhara$ /search_results?option=5&action=viewChoices [L] ##[NC,L]
+RewriteRule ^wedding-venues-in-delhi-ncr$ /search_results?action=viewChoices [L] ##[NC,L]
 RewriteRule ^venue/(.*)$  /view/venue-details.php?venueid=$1&action=viewChoices
 RewriteRule ^searchVenue/(.*)$  /search_results [L]
 
@@ -74,5 +80,27 @@ RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoI
 #RewriteRule ^celebrities$   /allied_services?action=alliedServices&seoId=celebrities [L]
 #RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
 
+##social functions
+RewriteRule ^social-functions$   /view/social-functions.php [L]
+RewriteRule ^social_functions$   /actionController/SocialFunctionsController.php [L]
+RewriteRule ^social-functions$   /view/social-functions-content.php [L]
+RewriteRule ^social-functions/bachelor-party$   /social_functions?action=socialFunctions&seoId=bachelor-party [L]
+RewriteRule ^social-functions/ring-ceremony$   /social_functions?action=socialFunctions&seoId=ring-ceremony [L]
+RewriteRule ^social-functions/wedding-reception$   /social_functions?action=socialFunctions&seoId=wedding-reception [L]
+RewriteRule ^social-functions/birthday$   /social_functions?action=socialFunctions&seoId=birthday [L]
+RewriteRule ^social-functions/anniversary$   /social_functions?action=socialFunctions&seoId=anniversary [L]
+RewriteRule ^social-functions/mehendi-ki-raat$   /social_functions?action=socialFunctions&seoId=mehendi-ki-raat [L]
+RewriteRule ^social-functions/bachelor-party$   /social_functions?action=socialFunctions&seoId=bachelor-party [L]
 
+##corporate functions
+RewriteRule ^corporate-functions$   /view/corporate-functions.php [L]
+RewriteRule ^corporate_functions$   /actionController/CorporateFunctionsController.php [L]
+RewriteRule ^corporate-functions$   /view/corporate-functions-content.php [L]
+RewriteRule ^corporate-functions/dealers-meet$   /corporate_functions?action=corporateFunctions&seoId=dealers-meet [L]
+RewriteRule ^corporate-functions/product-launch$   /corporate_functions?action=corporateFunctions&seoId=product-launch [L]
+RewriteRule ^corporate-functions/exhibition$   /corporate_functions?action=corporateFunctions&seoId=exhibition [L]
+RewriteRule ^corporate-functions/annual-general-meeting$   /corporate_functions?action=corporateFunctions&seoId=annual-general-meeting [L]
+RewriteRule ^corporate-functions/family-day$   /corporate_functions?action=corporateFunctions&seoId=family-day [L]
 
+RewriteRule ^photostack$   /view/photostack.php [L]
+RewriteRule ^photostack/(.*)$   /view/photostack.php?album_name=$1 [L]

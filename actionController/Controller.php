@@ -142,9 +142,4 @@ if ($action == "contactUs") {
 	   //header('Location:'.$constants->DOMAIN_URL.'confirmation');
 		//	header('Location:http://getyourvenue.com/confirmation');
 		require_once ("../view/confirmation.php");
-}
-
-
-
-
-?>
+}?>

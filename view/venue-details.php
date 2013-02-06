@@ -35,7 +35,7 @@ echo $venueService->getSEOConstant("venueDetails",$venueList[0]);
             <div class="boxContent">
               <div class="boxGr">
                 <!-- Box Content Start -->
-                <h3>Popular Choices</h3>
+                <h4>Popular Choices</h4>
                 <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/chhatarpur.jpg" alt="Wedding farm houses chhatarpur, Banquet halls chhatarpur" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur">Chhatarpur &amp; MG Road</a></span>
                 </div>
                 <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/gt_karnal.jpg" alt="Wedding farm houses GT Karnal Road, Banquet halls GT Karnal Road" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-gt-karnal-road">GT Karnal Road</a></span>
@@ -46,7 +46,7 @@ echo $venueService->getSEOConstant("venueDetails",$venueList[0]);
                 </div>
                 <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/mundaka.jpg" alt="Wedding farm houses Mundka, Banquet halls Mundka" /></a> <span class="pcNamein"><a class="catName"  href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-mundka">Mundka</a></span>
                 </div>
-                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/others.jpg" alt="Wedding farm houses Delhi-NCR, Banquet halls Delhi-NCR" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr">Others</a></span>
+                <div class="venCatSml"><a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr"><img src="<?php echo $constants->IMAGE_PATH;?>icons/inner/others.jpg" alt="Wedding farm houses Delhi-NCR, Banquet halls Delhi-NCR" /></a> <span class="pcNamein"><a class="catName" href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-delhi-ncr" title="Wedding Venues in Delhi NCR">Others</a></span>
                 </div>
                 <!-- Box Content End -->
               </div>
@@ -127,7 +127,7 @@ google_ad_height = 600;
               <div class="boxGr">
                 <!-- Box Content Start -->
                 <a name="imageGallery"></a>
-                <h1>Latest Gallery</h1>
+                <h3>Latest Gallery</h3>
                 <div class="image-slider f-left">
                   <div class="slider-wrapper theme-default">
                     <div class="ribbon"></div>
