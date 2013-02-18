@@ -56,7 +56,7 @@ Contact No: +91-9910163377, +91-120-4266685
                           <td>
                           <p>H No - 72, Maharajpur, Sahibabad, Ghaziabad<br />U.P., India - 201010<br />
 Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a> <br />
-Contact No: +91-9015904279, +91-9555666050
+Contact No: +91-7503903568, +91-9555666050
                           </p>
                           </td>
                           <td>

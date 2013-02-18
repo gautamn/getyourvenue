@@ -1,5 +1,8 @@
-<?php require_once ("../constants/Constants.php");
-$constants = new Constants(); ?>
+<?php
+require_once ("../constants/Constants.php");
+$constants = new Constants();
+//http://viralpatel.net/blogs/demo/jquery/show-more-link-shortened-content/
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
@@ -10,7 +13,7 @@ $constants = new Constants(); ?>
     <meta name="description" content="<?php echo $alliedSerivce[0]->metaDescription; ?>" />
     <meta name="keyword" content="<?php echo $alliedSerivce[0]->metaKeyword; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/albums.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/styleSlider.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/styleSlider.css" />   
   </head>
   <body>
     <div id="wrapper">
@@ -29,17 +32,17 @@ $constants = new Constants(); ?>
                     <!-- Box Content Start -->
                     <h4>Allied Services</h4>
                     <ul class="alliedServices">
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>photography" title="Photography">Photography</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>fireworks" title="Fireworks">Fireworks</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>photography" title="Photography">Photography</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks" title="Fireworks">Fireworks</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
                       <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
                     </ul>
                     <!-- Box Content End -->
@@ -125,25 +128,25 @@ $constants = new Constants(); ?>
                             $totalSlides = count($results);
                             foreach ($results as $key => $slides) {
                               ?>
-                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides;?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);?></li>
-  <?php } ?>
+                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides; ?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);  ?></li>
+                            <?php } ?>
                           </ul>
                         </div>
                         <!--large images ends-->
                         <!-- thumbnails starts-->
                         <div class="ws_thumbs">
                           <div>
-                            <?php //foreach($thumbsImg as $key=> $thumb) {?>
+                            <?php //foreach($thumbsImg as $key=> $thumb) { ?>
                             <?php foreach ($results as $key => $thumb) { ?>
                               <a title="<?php echo $alliedSerivce[0]->heading . ' slide ' . ($key + 1); ?>" href="javascript:void(0);"><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $thumb; ?>" width="115" alt="<?php echo $alliedSerivce[0]->heading . ' slide ' . ($key + 1); ?>" /><?php echo 'Theme ' . ($key + 1); ?></a>
-  <?php } ?>
+                            <?php } ?>
                           </div>
                         </div>
                         <!-- thumbnails ends-->
                         <div class="ws_shadow"></div>
                       </div>
-                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/wowslider.js"></script>
-                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/allied-services-slider.js"></script>
+                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/wowslider.js"></script>
+                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/allied-services-slider.js"></script>
                       <?php
                     }
                     /* $themes = array (); */
@@ -178,27 +181,27 @@ $constants = new Constants(); ?>
                         // if closed
                         ?>
                         <?php /* <div class="alliedThumb"><img src="../<?php echo $url;?>" alt="" width="239" height="180" /><!--span class="themeTitle">Theme One Title Here</span--></div> */ ?>
-                    <?php
+                        <?php
+                      }
                     }
-                  }
-                  if (!empty($albumImgSet)) {                    
-                    ?>
+                    if (!empty($albumImgSet)) {
+                      ?>
                       <div id="ps_slider" class="ps_slider">
                         <a class="prev disabled"></a>
                         <a class="next disabled"></a>
                         <div id="ps_albums">
                           <?php
-                          foreach($albumImgSet as $album){
+                          foreach ($albumImgSet as $album) {
                             $albumFolder = basename($album);
-                            $album_title = ucwords(str_replace('-',' ', $albumFolder));
+                            $album_title = ucwords(str_replace('-', ' ', $albumFolder));
                             ?>
-                          <div class="ps_album" style="opacity:0;">
-                            <img rel="<?php echo $album;?>" src="<?php echo $constants->DOMAIN_URL.$album;?>thumb/thumb.jpg" alt="<?php echo $album_title;?>" />
-                            <div class="ps_desc">
-                              <h2><?php echo $album_title;?></h2>
+                            <div class="ps_album" style="opacity:0;">
+                              <img rel="<?php echo $album; ?>" src="<?php echo $constants->DOMAIN_URL . $album; ?>thumb/thumb.jpg" alt="<?php echo $album_title; ?>" />
+                              <div class="ps_desc">
+                                <h2><?php echo $album_title; ?></h2>
+                              </div>
                             </div>
-                          </div>
-                          <?php }?>
+                          <?php } ?>
                         </div>
                       </div>
 
@@ -207,10 +210,10 @@ $constants = new Constants(); ?>
                       <div id="ps_container" class="ps_container" style="display:none;">
                         <a id="ps_next_photo" class="ps_next_photo" style="display:none;"></a>
                       </div>
-                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL;?>js/album-set.js"></script>
-  <?php
-}
-?>
+                      <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/album-set.js"></script>
+                      <?php
+                    }
+                    ?>
                   </div>
                 </div>
               </div>
@@ -315,7 +318,7 @@ $constants = new Constants(); ?>
           </div>
         </div>
         <!-- Box End -->
-<?php require("../view/footer.php"); ?>
+        <?php require("../view/footer.php"); ?>
       </div>
     </div>
   </body>
