@@ -38,7 +38,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
         $venue->mapUrl = $row['iframe'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = (isset($row['image_alt_tag']) && $row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
 
         $venueList[] = $venue;
       }
@@ -423,7 +423,7 @@ class GetYourVenueMySQLManager {
 
     $query = $fields . $entity . $conditionClause . $orderBy;
     $query.=" limit " . $startIndex . "," . $offset;
-
+    //echo $query;
     return $query;
   }
 

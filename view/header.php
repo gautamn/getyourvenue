@@ -46,7 +46,6 @@ $constants = new Constants();
           <li class="last"><a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
         </ul>
       </li>
-      <?php /*
       <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions';?>" class="newribbon" title="Social Functions"><strong>Social Functions</strong></a>
           <ul>
             <li><a href="<?php echo $constants->DOMAIN_URL.'social-functions/ring-ceremony';?>" title="Ring Ceremony">Ring Ceremony</a></li>
@@ -66,11 +65,11 @@ $constants = new Constants();
             <li><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/annual-general-meeting';?>" title="Annual General Meeting">Annual General Meeting (AGM)</a></li>
             <li class="last"><a href="<?php echo $constants->DOMAIN_URL.'corporate-functions/family-day';?>" title="Family Day">Family Day</a></li>
           </ul>
-      </li>*/?>
-      <li><a href="<?php echo $constants->DOMAIN_URL . 'non_wedding'; ?>" title="Non Wedding Functions">Non Wedding Functions</a></li>
+      </li>
+      <?php /*<li><a href="<?php echo $constants->DOMAIN_URL . 'non_wedding'; ?>" title="Non Wedding Functions">Non Wedding Functions</a></li>*/?>
       <li><a href="http://blog.getyourvenue.com/" target="_blank" title="GYV Blog">Blog</a></li>
       <li><a href="<?php echo $constants->DOMAIN_URL . 'book_now'; ?>" title="Book Now">Book Now</a></li>      
-      <li><a href="<?php echo $constants->DOMAIN_URL . 'about-us';?>" title="About Us">About Us</a></li>
+      <?php /*<li><a href="<?php echo $constants->DOMAIN_URL . 'about-us';?>" title="About Us">About Us</a></li>*/?>
       <li class="last"><a href="<?php echo $constants->DOMAIN_URL . 'contact_us';?>" title="Contact Us">Contact Us</a></li>
     </ul>
     <!-- AddThis Button BEGIN -->

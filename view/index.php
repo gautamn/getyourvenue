@@ -136,7 +136,7 @@ font-size: 120%;
                           <option value="3">Above 800</option>
                         </select>
                         <br />
-                        <input type="image" src="<?php echo $constants->IMAGE_PATH;?>btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL ?>');"/>
+                        <input type="image" src="<?php echo $constants->IMAGE_PATH;?>btn-getmyvenue.png" class="button-s" onclick="return redirectToHost('<?php echo $constants->DOMAIN_URL;?>');"/>
                         <input type="hidden" name="action" value="searchVenue" />
                       </form>
                       <!-- Box Content End -->

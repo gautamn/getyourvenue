@@ -232,9 +232,9 @@ class VenueService {
 
     $SEOConstants = new SEOConstants();
     $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-    $pageNo = ($page>1) ? " - Page ".$page : "";
+    $pageNo = ($page>1) ? "Page ".$page." - " : "";
     $seoDefaultConstant = "";
-    $seoDefaultConstant = '<title>' . $SEOConstants->defaulTitle.$pageNo . '</title>';
+    $seoDefaultConstant = '<title>' . $pageNo . $SEOConstants->defaulTitle.'</title>';
     $seoDefaultConstant.= '<meta name="description" content="'. $SEOConstants->defaulMetaDescription . '" />';
     $seoDefaultConstant.= '<meta name="keywords" content="'. $SEOConstants->defaulMetaKeyword . '" />';
     
@@ -322,8 +322,8 @@ class VenueService {
           $SEOConstant = "";
 
           $SEOConstant.= "<title>" . $title . "</title>";
-          $SEOConstant.= "<meta name='description' content='" . $description . "' />";
-          $SEOConstant.= "<meta name='keyword' content='" . $keyword . "' />";
+          $SEOConstant.= '<meta name="description" content="' . $description . '" />';
+          $SEOConstant.= '<meta name="keyword" content="' . $keyword . '" />';
 
           return $SEOConstant;
         }else

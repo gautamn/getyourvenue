@@ -123,7 +123,7 @@ echo $venueService->getSEOConstant($action, "");
                 <div class="boxContent">
                   <div class="boxGr2">
                     <!-- Box Content Start -->
-                    <h1>Wedding Venues in <?php echo ucwords($regionName);?> Region</h1>
+                    <h1><?php echo (isset($_GET['action']) && $_GET['action']=="searchVenue") ? 'Search Result: Wedding Venues in '.ucwords($regionName).' Region' : 'Wedding Venues in '.ucwords($regionName).' Region' ;?></h1>
                     <!--<span class="searchOpt"><strong>Region</strong>: <?php echo $regionName;?></span>-->
                     <span class="searchOpt"><?php if ($categoryName != "") {
                       echo "<strong>Category of Venue</strong>: ";
@@ -182,7 +182,7 @@ for ($i = 0; $i < count($venueList); $i++) {
                 </div>
               </div>
 <?php } ?>
-
+            <?php if($maxPages>1) {?>
             <!-- Box Start -->
             <div class="box">
               <div class="boxtop2"><img src="<?php echo $constants->DOMAIN_URL;?>images/boxTop2L.png" align="left" alt="" /><img src="<?php echo $constants->DOMAIN_URL;?>images/boxTop2R.png" align="right" alt="" />
@@ -226,6 +226,7 @@ for ($i = 0; $i < count($venueList); $i++) {
               </div>
             </div>
             <!-- Box End -->
+            <?php }?>
 
           </div>
           <div id="rightNavNarrow">

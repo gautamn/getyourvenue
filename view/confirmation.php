@@ -13,7 +13,7 @@
 require_once ("../constants/Constants.php");
 $constants = new Constants();
 ?>
-<title>:: Get Your Venue - About Us::</title>
+<title>:: Get Your Venue - Book Now - Confirmation ::</title>
 </head>
 <body>
 <div id="wrapper">

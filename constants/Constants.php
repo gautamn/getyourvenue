@@ -9,10 +9,13 @@
 
 class Constants {
 
-  //public $DOMAIN_URL = "http://localhost/";
-  public $DOMAIN_URL = "http://getyourvenue.com/";
+  public $DOMAIN_URL = "http://gyv.local/";
+  public $THEME_URL = "http://gyv.local/images/";
   public $IMAGE_PATH = '/images/';
+  
+  //public $DOMAIN_URL = "http://getyourvenue.com/";
   //public $IMAGE_PATH='http://images.getyourvenue.com/';
+  //public $THEME_URL = $DOMAIN_URL."images/";
 
 
   public $sendMailviaGMail = FALSE;
@@ -26,7 +29,7 @@ class Constants {
   public $password_gmail = 'devprod@123';
   public $mailFrom_gmail = 'gyv.dev@gmail.com';
   public $mailFromName_gmail = 'Administrator - Get Your Venue!!!';
-  public $mailTo_gmail = 'gautamn2002@gmail.com,gyvleads@gmail.com,manish582@gmail.com';
+  public $mailTo_gmail = 'gautamn2002@gmail.com,gyvleads@gmail.com';
   public $host = 'mail.getyourvenue.com';
   public $mailerSMTPAuth = TRUE;
   public $username = 'getyourv';
