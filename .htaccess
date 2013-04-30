@@ -21,8 +21,8 @@ RewriteRule ^allied_services$   /actionController/AlliedServicesController.php [
 RewriteRule ^readers-corner$    http://blog.getyourvenue.com/ [L,R=301]
 RewriteRule ^site-map$   /view/site-map.php [L]
 
-RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
-RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
+##RewriteCond %{HTTP_HOST} ^www\.getyourvenue\.com [NC]
+##RewriteRule ^(.*)$ http://getyourvenue.com/$1 [L,R=301]
 
 #RewriteRule ^wedding-venues-in-nh8-pushpanjali/(.*)$ ^wedding-venues-in-NH8-Pushpanjali/(.*)$  [R=301,L]
 Redirect 301 /wedding-venues-in-NH8-Pushpanjali   /wedding-venues-in-nh8-pushpanjali

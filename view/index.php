@@ -15,6 +15,7 @@ $constants = new Constants();?>
 input {
 font-size: 120%;
 }
+.site_content p a{font-weight: bold;}
 </style>
 </head>
   <body>
@@ -81,6 +82,32 @@ font-size: 120%;
                 </div>
               </div>
               <!-- Box End -->
+              <div class="box">
+                <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
+                  <div class="boxtopbg"></div>
+                </div>
+                <div class="fullboxBg">
+                  <div class="boxContent">
+                    <div class="boxGr">
+                      <!-- Box Content Start -->
+                      <h1>Find the Best Wedding Venues in Delhi &amp; NCR With Us</h1>
+                      <div class="site_content">
+                        <p>Pleasure having you on Getyourvenue.com!</p>
+                        <p>Wedding is a one-time occasion in your life and there is no reason why you shouldn't have a grand celebration. Call us up if you're stuck between short listing wedding venues, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planners">wedding planners</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Wedding Decorators">wedding decorators</a>, <a title="Wedding Catering Services" href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi">wedding catering services</a> and checking out all the wedding venues in Delhi-NCR to find the one that suits your needs.</p>
+                        <p>Draped in the rich fabric of tradition, a splendid bliss of wedding brings alive the golden dream. And the place chosen to flaunt the bash is one significant aspect of the entire affair that remains alive throughout the life. There is no dearth of wedding venues in Delhi and NCR that can make your marriage as picturesque as you want it to be. The only challenge is picking up the right farm house, banquet hall, marriage hall or party lawn for you. And, here is where Get Your Venue comes in as just the right friend indeed! Whether you want an elaborate <a href="<?php echo $constants->DOMAIN_URL;?>venues/south-delhi/farm-house/0">farm house in South Delhi</a>, a well-appointed <a href="<?php echo $constants->DOMAIN_URL;?>venues/west-delhi/banquet-hall/0">party hall in West Delhi</a>, a splendid <a href="<?php echo $constants->DOMAIN_URL;?>venues/east-delhi/farm-house/0">marriage lawn in East Delhi</a> or a lavish <a href="<?php echo $constants->DOMAIN_URL;?>venues/north-delhi/banquet-hall/0">banquet hall in North Delhi</a>, we get you exactly what you are looking for &amp; precisely what suits your budget and needs. It's time for you to put your fingers to work and tell us about your preferences. You can also call us just once &amp; your hunt for the perfect venue would end right there! So wait no further, Just Get to Us &amp; Get Your Venue!</p>
+                        <p>If you think that's all we have in-store for you, we would gladly like to flaunt our allied services that include <a href="<?php echo $constants->DOMAIN_URL;?>vermala-theme" title="Varmala Themes">Varmala Themes</a>, <a href="<?php echo $constants->DOMAIN_URL;?>transportation-for-wedding-in-delhi" title="Lodging and Transportation">Lodging and Transportation</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-decorators-in-delhi" title="Wedding Decor">Wedding Decor</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-caterers-in-delhi" title="Wedding Catering Services">Wedding Catering Services</a>, <a href="<?php echo $constants->DOMAIN_URL;?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a>, <a title="Wedding Photography" href="<?php echo $constants->DOMAIN_URL;?>photography">Wedding Photography</a>, <a href="<?php echo $constants->DOMAIN_URL;?>band-ghori-baggi-services-in-delhi" title="Ghoriwala, Baghiwala">Ghoriwala, Baghiwala</a>, <a href="<?php echo $constants->DOMAIN_URL;?>wedding-planning" title="Wedding Planning">Wedding Planning</a>, and what not! Our plethora of services take account of all that you can think of when the wedding date approaches. And, in case you miss out something, we're always there to remind you all that's required to make your special day all the more remarkable.</p>
+                        <p>Coming back to venues, your choice of wedding venue speaks volumes about your personality. Your guests will follow the mood that your wedding venue ambience sets. We understand that personal priorities as well as admiration from guests are important to you. And the task of finding wedding venues in Delhi-NCR is not an easy one.</p>
+                        <p>From farm houses in <a href="<?php echo $constants->DOMAIN_URL;?>wedding-venues-in-chhatarpur" title="Chattarpur and GT Karnal Road">Chattarpur and GT Karnal Road</a>, and <a href="<?php echo $constants->DOMAIN_URL;?>venues/south-delhi/banquet-hall/0">marriage halls in South Delhi</a>, to <a href="<?php echo $constants->DOMAIN_URL;?>venues/east-delhi/farm-house/0">party lawns in East Delhi</a> and <a href="<?php echo $constants->DOMAIN_URL;?>venues/north-delhi/banquet-hall/0">banquet halls in North Delhi</a>, the options are galore; what's not enough is time and energy that you need to filter the options. </p>
+                        <p>For that reason, we present a comprehensive variety of exquisite wedding venues in Delhi-NCR to meet your needs, to make sure you compromise on simply nothing! Get Your Venue guides you to the venue, atmosphere and setting that your heart has been longing for. For we have in hand, what you have been dreaming of, all these years! </p>
+                        <!-- Box Content End -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
+                  <div class="boxbotbg"></div>
+                </div>
+              </div>
             </div>
             <div id="rightNav">
               <!-- Box Start -->
@@ -150,6 +177,30 @@ font-size: 120%;
                 </div>
               </div>
               <!-- Box End -->
+              <!-- Box Start -->
+              <div class="box">
+                <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
+                  <div class="boxtopbg sml2"></div>
+                </div>
+                <div class="fullboxBg">
+                  <div class="boxContent">
+                    <div class="boxGr">
+                      <!--Box Content Start-->
+                      <h3>Blog Post</h3>                      
+                      <div class="contactform">
+                        <p>sd fsdf kjsdf hsdjkf hskjd f</p>
+                      </div>
+                      <!--Box Content End-->
+                    </div>
+                  </div>
+                </div>
+                <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" />
+                  <img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" />
+                  <img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
+                  <div class="boxbotbg sml2"></div>
+                </div>
+              </div>
+              <!-- Box End -->
             </div>
             <div id="content">
               <!-- Box Start -->
@@ -161,73 +212,6 @@ font-size: 120%;
                   <div class="boxContent">
                     <div class="boxGr">
                       <!-- Box Content Start -->
-                      <h1>Your One Stop Shop For Wedding Venues in Delhi &amp; NCR</h1>
-                      <div class="site_content">
-                        <p>A warm welcome to Getyourvenue.com!</p>
-                        <p>
-                          Draped in the rich fabric of tradition, weddings are the most joyous occasions
-                          in one's life. A splendid bliss of wedding brings alive the golden dream. And the
-                          place chosen to flaunt the bash is one significant aspect of the entire affair that
-                          remains alive through the life. There is a plethora of wedding venues in Delhi
-                          and NCR that can make your marriage as picturesque as you want it to be. The
-                          only challenge is picking up the right farm house, banquet hall, marriage hall or
-                          party lawn for you. And, here is where GetYourVenue comes in as just the right
-                          friend indeed! Whether you want an elaborate farm house in South Delhi, a well-
-                          appointed party hall in West Delhi, a splendid marriage lawn in East Delhi or a
-                          lavish banquet hall in North Delhi, we get you exactly what you are looking for &amp;
-                          precisely what suits your budget and needs. It's time for you to put your fingers
-                          to work and tell us about your preferences. You can also call us just once &amp; your
-                          hunt for the perfect venue would end right there! So wait no further, Just Get to
-                          Us &amp; Get Your Venue!
-                        </p>
-
-                        <p>We will help you find a venue that matches your personality and innermost desire.</p>
-
-                        <p>
-                          Your choice of wedding venue speaks volumes about your personality. Your
-                          guests will immediately get into a particular mood as the wedding venue
-                          suggests. We understand that personal priorities as well as admiration from
-                          guests are important to you. And the task of finding wedding venues in NCR is
-                          not an easy one. There is no dearth of farm houses in Chattarpur and GT Karnal
-                          Road, marriage halls in South Delhi, party lawns in East Delhi and banquet halls
-                          in North Delhi. However, majority of these farm houses, banquet halls and party
-                          lawns are not suitable for your specific desires. Wedding is a one-time occasion in
-                          your life and there is no reason why you shouldn't try to have a grand celebration.
-                          Weddings imply a lot of work. Choosing a hotel, marriage hall, farmhouse or
-                          banquet hall from the list of hundreds is actually a challenging task. We put on
-                          display an extensive and exquisite assortment of wedding venues to meet your
-                          needs, to ensure you compromise on nothing at all. GetYourVenue guides you to
-                          the venue, atmosphere and setting that your heart has been longing for. We want
-                          to create relationships for a lifetime. Our motive is to provide professional and
-                          word class venue selection services with a human angle. We are hardly a phone
-                          call or a click away!</p>
-                        <!-- AddThis Button BEGIN -->
-                        <?php /*?>
-                        <div class="addthis_toolbox addthis_default_style ">
-                          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                          <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                        </div>
-                         <?php */?>
-                        <!-- AddThis Button END -->
-                        <!-- Box Content End -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
-                  <div class="boxbotbg"></div>
-                </div>
-              </div>
-              <!-- Box End --><!-- Box Start -->
-              <div class="box">
-                <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
-                  <div class="boxtopbg"></div>
-                </div>
-                <div class="fullboxBg">
-                  <div class="boxContent">
-                    <div class="boxGr">
-                      <!-- Box Content Start -->
-
                       <div class="google-adds">
                         <script type="text/javascript"><!--
                           google_ad_client = "ca-pub-4918915311035756";

@@ -436,7 +436,6 @@ class GetYourVenueMySQLManager {
     $connection = $dBUtils->getDBConnection();
     $venue = "";
 
-
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
@@ -479,7 +478,7 @@ class GetYourVenueMySQLManager {
 
   function getSearchQuery($regionId, $categoryId, $capacityId) {
 
-    $fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe ";
+    $fields = "SELECT v.id,v.venueid,v.name,v.address1,v.address2,v.content,v.iframe,v.image_alt_tag ";
     $entity = "from venue v " . " ";
     $orderBy = "order by v.id desc" . " ";
     $conditionClause = "";

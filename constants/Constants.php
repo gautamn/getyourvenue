@@ -11,12 +11,12 @@ class Constants {
 
   public $DOMAIN_URL = "http://gyv.local/";
   public $THEME_URL = "http://gyv.local/images/";
-  public $IMAGE_PATH = '/images/';
+  public $IMAGE_URL = 'D:/dev/gyv/getyourvenue/images/';
+  public $IMAGE_PATH = 'http://gyv.local/images/';
   
   //public $DOMAIN_URL = "http://getyourvenue.com/";
   //public $IMAGE_PATH='http://images.getyourvenue.com/';
   //public $THEME_URL = $DOMAIN_URL."images/";
-
 
   public $sendMailviaGMail = FALSE;
 

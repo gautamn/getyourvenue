@@ -93,7 +93,7 @@ $constants = new Constants();
                 <div class="boxContent">
                   <div class="boxGr">
                     <!-- Box Content Start -->
-                    <img src="<?php echo $alliedSerivce[0]->bannerPath; ?>" alt="<?php echo $alliedSerivce[0]->heading; ?> banner" class="bannerImg" /><br class="f-left" />
+                    <img src="<?php echo $constants->DOMAIN_URL.$alliedSerivce[0]->bannerPath; ?>" alt="<?php echo $alliedSerivce[0]->heading; ?> banner" class="bannerImg" /><br class="f-left" />
                     <br />
                     <h1><?php echo $alliedSerivce[0]->heading; ?></h1>
                     <div class="allied_content"><?php echo stripslashes($alliedSerivce[0]->html_content); ?></div>

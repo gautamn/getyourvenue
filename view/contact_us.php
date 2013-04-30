@@ -13,7 +13,7 @@
   <body>
     <div id="wrapper">
       <div id="main">
-<?php require_once("header.php"); ?>
+        <?php require_once("header.php"); ?>
         <div id="contentArea">
           <div id="leftNav">
             <!-- Box Start -->
@@ -58,14 +58,14 @@
                         <td>
                           <p>H No - 72, Maharajpur, Sahibabad, Ghaziabad<br />U.P., India - 201010<br />
                             Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a> <br />
-                            Contact No: +91-7503903568, +91-9555666050
+                            Contact No: +91-8826311444, +91-9555666050
                           </p>
                         </td>
                         <td>
                           <p>
                             A-4, 197, DDA Flat, Paschim Vihar, New Delhi<br /> India - 110063<br />
                             Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br />
-                            Contact No: +91-9899905106, +91-9212802083
+                            Contact No: +91-8826199444, +91-8826799444
                           </p></td>
                       </tr>
                       <tr>
@@ -77,7 +77,7 @@
                           <p>
                             C-5, 91, Sector 6, Rohini, Delhi, India - 110085<br />
                             Email: <a href="mailto:sales@getyourvenue.com">sales@getyourvenue.com</a><br />
-                            Contact No: +91-8586978081, +91-7838433266, +91-11-47019266
+                            Contact No: +91-8586978081, +91-8826399444, +91-11-47019266
                           </p>
                         </td>
                         <td>
@@ -114,7 +114,7 @@
                   <div class="boxGr boxheight">
                     <!-- Box Content Start -->
                     <h3>Contact Us</h3>
-<?php require_once("../view/contactusForm.php"); ?>
+                    <?php require_once("../view/contactusForm.php"); ?>
                     <!-- Box Content End -->
                   </div>
                 </div>
@@ -125,36 +125,36 @@
             </div>
             <!-- Box End -->
             <!-- Box Start -->
-        <div class="box">
-          <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
-            <div class="boxtopbg sml2"></div>
-          </div>
-          <div class="fullboxBg">
-            <div class="boxContent">
-              <div class="boxGr nonWedBox" align="center">
-                <!-- Box Content Start -->
-                <script type="text/javascript"><!--
-                google_ad_client = "ca-pub-4918915311035756";
-                /* GYV 250x250 */
-                google_ad_slot = "9064611558";
-                google_ad_width = 250;
-                google_ad_height = 250;
-                //-->
-                </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-                <!-- Box Content End -->
+            <div class="box">
+              <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH; ?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH; ?>boxtopc2.png" align="right" alt="" />
+                <div class="boxtopbg sml2"></div>
+              </div>
+              <div class="fullboxBg">
+                <div class="boxContent">
+                  <div class="boxGr nonWedBox" align="center">
+                    <!-- Box Content Start -->
+                    <script type="text/javascript"><!--
+                      google_ad_client = "ca-pub-4918915311035756";
+                      /* GYV 250x250 */
+                      google_ad_slot = "9064611558";
+                      google_ad_width = 250;
+                      google_ad_height = 250;
+                      //-->
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    <!-- Box Content End -->
+                  </div>
+                </div>
+              </div>
+              <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH; ?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH; ?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH; ?>flower.png" class="flower" alt="" />
+                <div class="boxbotbg sml2"></div>
               </div>
             </div>
-          </div>
-          <div class="boxbot"><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc3.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxbotc4.png" align="right" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>flower.png" class="flower" alt="" />
-            <div class="boxbotbg sml2"></div>
-          </div>
-        </div>
-        <!-- Box End -->
+            <!-- Box End -->
           </div>
 
         </div>
-<?php require("../view/footer.php"); ?>
+        <?php require("../view/footer.php"); ?>
       </div>
     </div>
   </body>

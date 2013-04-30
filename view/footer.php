@@ -25,7 +25,6 @@ $constants = new Constants();
 </script>
 <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>
 <!-- AddThis Button END -->
-
 <div id="footer">
   <div class="box">
     <div class="boxtop"><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc1.png" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH;?>boxtopc2.png" align="right" alt="" />
@@ -82,14 +81,14 @@ $constants = new Constants();
             <?php /*<li><a href="<?php echo $constants->DOMAIN_URL.'non_wedding';?>" title="Non Wedding Functions">Non Wedding Functions</a></li>*/?>
           </ul>
           <ul class="content">
-            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/pages/Getyourvenue/359630997401634" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/116875953644480548807" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->DOMAIN_URL;?>images/icon_google.png" /></a></li>
+            <li><p><strong>Follow Us on</strong></p><a href="http://facebook.com/getyourvenue" title="follow us @Facebook" target="_blank"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_facebook.png" alt="facebook" /></a> <a href="http://twitter.com/GetYourVenue" target="_blank" title="follow us @twitter"><img src="<?php echo $constants->DOMAIN_URL;?>images/icon_twitter.png" alt="Twitter" /></a> <a target="_blank" href="https://plus.google.com/116875953644480548807" title="Follow us @Google+"><img alt="Google+" src="<?php echo $constants->DOMAIN_URL;?>images/icon_google.png" /></a></li>
             <li style="border-top: 1px solid #cccccc;"><br /><strong>You can reach us via</strong></li>
             <li>Email: <a href="mailto:sales@getyourvenue.com" title="email us @ sales@getyourvenue.com">sales@getyourvenue.com</a></li>
             <li>Mobile: +91-8800095444, +91-8800093444</li>
             
           </ul>
           <div class="clear"></div>
-          <div class="copyright">Copyright &copy;2011 <a href="<?php echo $constants->DOMAIN_URL;?>">Get Your Venue</a>. All Rights Reserved</div>
+          <div class="copyright">Copyright &copy;2011-2013 <a href="<?php echo $constants->DOMAIN_URL;?>">Get Your Venue</a>. All Rights Reserved</div>
           <!-- Box Content End -->
         </div>
       </div>
