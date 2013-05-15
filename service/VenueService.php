@@ -116,13 +116,19 @@ class VenueService {
 
 // function getVenueByChoice
 
-  function getVenueBySearchResult() {
-    if (array_key_exists('venueid', $_GET) && $_GET['venueid'] != null)
-      $searchName = $_GET['venueid'];
-    if (array_key_exists('venueid', $_POST) && $_POST['venueid'] != null)
-      $searchName = $_POST['venueid'];
+  function getVenueBySearchResult($searchKeyword) {
+    $page = 1;
+    if (!empty($_GET['page'])) {
+      $page = (int) $_GET['page'];
+    }
+
+    $offset = 10;
+    $startIndex = 0;
+    $startIndex = ($page - 1) * $offset + $startIndex;
+
+    //$searchKeyword = isset($_REQUEST['venueid']) ? trim($_REQUEST['venueid']) : '';
     $getYourVenueMySQLManager = new GetYourVenueMySQLManager();
-    return $getYourVenueMySQLManager->getVenueBySearchResult($searchName);
+    return $getYourVenueMySQLManager->getVenueBySearchResult($searchKeyword, $startIndex, $offset);
   }
 
   function getVenueByChoiceForPagination($page) {
@@ -232,12 +238,12 @@ class VenueService {
 
     $SEOConstants = new SEOConstants();
     $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-    $pageNo = ($page>1) ? "Page ".$page." - " : "";
+    $pageNo = ($page > 1) ? "Page " . $page . " - " : "";
     $seoDefaultConstant = "";
-    $seoDefaultConstant = '<title>' . $pageNo . $SEOConstants->defaulTitle.'</title>';
-    $seoDefaultConstant.= '<meta name="description" content="'. $SEOConstants->defaulMetaDescription . '" />';
-    $seoDefaultConstant.= '<meta name="keywords" content="'. $SEOConstants->defaulMetaKeyword . '" />';
-    
+    $seoDefaultConstant = '<title>' . $pageNo . $SEOConstants->defaulTitle . '</title>';
+    $seoDefaultConstant.= '<meta name="description" content="' . $SEOConstants->defaulMetaDescription . '" />';
+    $seoDefaultConstant.= '<meta name="keywords" content="' . $SEOConstants->defaulMetaKeyword . '" />';
+
     if ($action == "viewChoices") {
 
       $option = 0;
@@ -307,17 +313,13 @@ class VenueService {
         return $seoDefaultConstant;
     }
 
-
     if ($action == "venueDetails") {
-
       if ($venue != null) {
         $title = $venue->title;
         $description = $venue->metaDescription;
         $keyword = $venue->metaKeyword;
 
-        if (($title != null || $title != "")
-                && ($description != null || $description != "")
-                && ($keyword != null || $keyword != "")) {
+        if (($title != null || $title != "") && ($description != null || $description != "") && ($keyword != null || $keyword != "")) {
 
           $SEOConstant = "";
 
@@ -326,7 +328,8 @@ class VenueService {
           $SEOConstant.= '<meta name="keyword" content="' . $keyword . '" />';
 
           return $SEOConstant;
-        }else
+        }
+        else
           return $seoDefaultConstant;
       }//if venue
     }//if venueDetails
@@ -445,4 +448,5 @@ class VenueService {
 
 //function
 }
+
 ?>

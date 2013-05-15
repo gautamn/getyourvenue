@@ -28,6 +28,8 @@ RewriteRule ^site-map$   /view/site-map.php [L]
 Redirect 301 /wedding-venues-in-NH8-Pushpanjali   /wedding-venues-in-nh8-pushpanjali
 Redirect 301 /wedding-venues-in-Vaishali-Vasundhara   /wedding-venues-in-vaishali-vasundhara
 Redirect 301 /wedding-venues-in-delhi-NCR   /wedding-venues-in-delhi-ncr
+Redirect 301 /photography   /wedding-photography-delhi
+Redirect 301 /bridal-make-up   /bridal-makeup-delhi
 
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
@@ -45,7 +47,8 @@ RewriteRule ^wedding-venues-in-nh8-pushpanjali$ /search_results?option=4&action=
 RewriteRule ^wedding-venues-in-vaishali-vasundhara$ /search_results?option=5&action=viewChoices [L] ##[NC,L]
 RewriteRule ^wedding-venues-in-delhi-ncr$ /search_results?action=viewChoices [L] ##[NC,L]
 RewriteRule ^venue/(.*)$  /view/venue-details.php?venueid=$1&action=viewChoices
-RewriteRule ^searchVenue/(.*)$  /search_results [L]
+RewriteRule ^searchVenue/(.*)$  /search_results?action=viewSearchResult&venueid=$1 [L]
+RewriteRule ^searchVenue/(.*)/(.*)$  /search_results?action=viewSearchResult&venueid=$1&page=$2 [L]
 
 RewriteRule ^contact-confirmation$   /actionController/ConfirmationController.php [L]
 RewriteRule ^booking-confirmation$   /actionController/BookingController.php [L]
@@ -70,14 +73,18 @@ RewriteRule ^transportation-for-wedding-in-delhi$   /allied_services?action=alli
 
 RewriteRule ^wedding-lehengas-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-lehengas-in-delhi [L]
 RewriteRule ^groom-wedding-attires-in-delhi$   /allied_services?action=alliedServices&seoId=groom-wedding-attires-in-delhi [L]
-RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+RewriteRule ^bridal-makeup-delhi$   /allied_services?action=alliedServices&seoId=bridal-makeup-delhi [L]
+##RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
 
 RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]
 RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
-RewriteRule  ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+##RewriteRule  ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+RewriteRule  ^wedding-photography-delhi$   /allied_services?action=alliedServices&seoId=wedding-photography-delhi [L]
 RewriteRule ^fireworks$   /allied_services?action=alliedServices&seoId=fireworks [L]
 RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
-#RewriteRule ^celebrities$   /allied_services?action=alliedServices&seoId=celebrities [L]
+RewriteRule ^bridal-mehndi-delhi$   /allied_services?action=alliedServices&seoId=bridal-mehndi-delhi [L]
+RewriteRule ^wedding-invitation-cards-delhi$   /allied_services?action=alliedServices&seoId=wedding-invitation-cards-delhi [L]
+RewriteRule ^celebrity-artist-management-delhi$   /allied_services?action=alliedServices&seoId=celebrity-artist-management-delhi [L]
 #RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
 
 ##social functions

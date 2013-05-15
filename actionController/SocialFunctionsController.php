@@ -53,9 +53,9 @@ if ($action == "viewChoices") {
 	if (array_key_exists('option', $_GET) && $_GET['option'] != null) {
 		$choiceId = $_GET['option'];
 		if ($choiceId == 1)
-			$regionName = "Chattarpur Road";
+			$regionName = "Chhatarpur Road";
 		if ($choiceId == 2)
-			$regionName = "Mundaka";
+			$regionName = "Mundka and Rohtak Road";
 		if ($choiceId == 3)
 			$regionName = "GT Karnal Road";
 		if ($choiceId == 4)

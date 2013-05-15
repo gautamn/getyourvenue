@@ -4,7 +4,7 @@ $constants = new Constants();
 //http://viralpatel.net/blogs/demo/jquery/show-more-link-shortened-content/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <?php require_once("header.config.php"); ?>
     <title><?php echo $alliedSerivce[0]->title; ?></title>
@@ -35,15 +35,19 @@ $constants = new Constants();
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>photography" title="Photography">Photography</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Band, Ghoriwaala, Baggi">Band, Ghoriwaala, Baggi</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks" title="Fireworks">Fireworks</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
-                      <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-makeup-delhi" title="Bridal Makeup">Bridal Makeup</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>celebrity-artist-management-delhi" title="Celebrity &amp; Artist Management">Celebrity &amp; Artist Management</a></li>
+                      <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>
                     </ul>
                     <!-- Box Content End -->
                   </div>
@@ -93,7 +97,23 @@ $constants = new Constants();
                 <div class="boxContent">
                   <div class="boxGr">
                     <!-- Box Content Start -->
-                    <img src="<?php echo $constants->DOMAIN_URL.$alliedSerivce[0]->bannerPath; ?>" alt="<?php echo $alliedSerivce[0]->heading; ?> banner" class="bannerImg" /><br class="f-left" />
+                    <?php if ($alliedSerivce[0]->bannerPath != "") { ?>
+                      <div class="banner"><img src="<?php echo $constants->DOMAIN_URL . $alliedSerivce[0]->bannerPath; ?>" alt="<?php echo $alliedSerivce[0]->heading; ?> banner" class="bannerImg" />
+                        <?php if ($alliedSerivce[0]->seoId == 'bridal-mehndi-delhi') { ?>
+                          <style type="text/css">
+                            .boxGr .banner .text{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:17px;color:#FFFFFF;position:absolute;bottom:15px;left:10px;}
+                          </style>
+                          <div class="text">Just Call +91 8800095444 for Details</div>
+                        <?php } ?>
+                        <?php if ($alliedSerivce[0]->seoId == 'wedding-invitation-cards-delhi') { ?>
+                          <style type="text/css">
+                            .boxGr .banner .text{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:17px;color:#7B355A;position:absolute;bottom:87px;left:10px;}
+                          </style>
+                          <div class="text">Just Call +91 8800095444<br> for Details</div>
+                        <?php } ?>
+                      </div>
+                    <?php } ?>
+                    <br class="f-left" />
                     <br />
                     <h1><?php echo $alliedSerivce[0]->heading; ?></h1>
                     <div class="allied_content"><?php echo stripslashes($alliedSerivce[0]->html_content); ?></div>
@@ -101,7 +121,9 @@ $constants = new Constants();
                     $results = array();
                     $thumbsImg = array();
                     // create a handler for the directory
-                    if (is_dir(".." . $alliedSerivce[0]->jcarouselPath)) {
+
+                    if (is_dir(".." . $alliedSerivce[0]->jcarouselPath) && $alliedSerivce[0]->jcarouselPath != '') {
+                      //echo $alliedSerivce[0]->jcarouselPath;
                       $handler = opendir(".." . $alliedSerivce[0]->jcarouselPath);
                       // open directory and walk through the filenames
                       while ($file = readdir($handler)) {
@@ -125,10 +147,10 @@ $constants = new Constants();
                         <div class="ws_images">
                           <ul>
                             <?php
-                            $totalSlides = count($results);
+                            //$totalSlides = count($results);
                             foreach ($results as $key => $slides) {
                               ?>
-                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides; ?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);  ?></li>
+                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides; ?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);                                                      ?></li>
                             <?php } ?>
                           </ul>
                         </div>
@@ -150,7 +172,7 @@ $constants = new Constants();
                       <?php
                     }
                     /* $themes = array (); */
-                    $themes = explode("|", $alliedSerivce[0]->themesUrl);
+                    $themes = ($alliedSerivce[0]->themesUrl != "") ? explode("|", $alliedSerivce[0]->themesUrl) : array();
 
                     function endsWith($haystack, $needle) {
                       $length = strlen($needle);
@@ -214,6 +236,20 @@ $constants = new Constants();
                       <?php
                     }
                     ?>
+                    <div class="allied_content">
+                      <h4>Explore Popular Wedding Venues in Delhi-NCR</h4>
+                      <ul>
+                        <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-chhatarpur'; ?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
+                        <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-gt-karnal-road'; ?>" title="GT Karnal Road">GT Karnal Road</a></li>
+                        <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-nh8-pushpanjali'; ?>" title="Pushpanjali &amp; NH-8">Pushpanjali &amp; NH-8</a></li>
+                        <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-vaishali-vasundhara'; ?>" title="Vaishali Extn. &amp; Vasundhara">Vaishali Extn. &amp; Vasundhara</a></li>
+                        <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-mundka'; ?>" title="Mundka and Rohtak Road">Mundka and Rohtak Road</a></li>
+                        <?php /* <li><a href="#" title="Rama Road & Kirti Nagar">Rama Road & Kirti Nagar</a></li>
+                          <li><a href="#" title="5 Star Banquets">5 Star Banquets</a></li>
+                          <li><a href="#" title="Destination Wedding">Destination Wedding</a></li> */ ?>
+                        <li class="last"><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-delhi-ncr'; ?>" title="Others">Others</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -238,36 +274,56 @@ $constants = new Constants();
                       <!-- action="booking-confirmation"-->
                       <div class="getvenue_cont">
                         <label>Name:</label>
-                        <input type="text" name="name" class="txt-name" value="Enter Your Name" onblur="if(this.value==''){this.value='Enter Your Name'}" onfocus="if(this.value=='Enter Your Name'){this.value=''}"  />
+                        <input type="text" name="name" class="txt-name" value="Enter Your Name" onblur="if (this.value == '') {
+                          this.value = 'Enter Your Name'
+                        }" onfocus="if (this.value == 'Enter Your Name') {
+                          this.value = ''
+                        }"  />
                       </div>
                       <div class="getvenue_cont">
                         <label>Email:<font color="red">*</font></label>
-                        <input type="text" name="email" class="txt-name" value="Enter your Email Id" onblur="if(this.value==''){this.value='Enter your Email Id'}" onfocus="if(this.value=='Enter your Email Id'){this.value=''}"  />
+                        <input type="text" name="email" class="txt-name" value="Enter your Email Id" onblur="if (this.value == '') {
+                          this.value = 'Enter your Email Id'
+                        }" onfocus="if (this.value == 'Enter your Email Id') {
+                          this.value = ''
+                        }"  />
                       </div>
                       <div class="getvenue_cont last">
                         <label>Contact Number:<font color="red">*</font></label>
-                        <input type="text" name="contactNumber" class="txt-name" value="Enter your Contact Number" onblur="if(this.value==''){this.value='Enter your Contact Number'}" onfocus="if(this.value=='Enter your Contact Number'){this.value=''}"  />
+                        <input type="text" name="contactNumber" class="txt-name" value="Enter your Contact Number" onblur="if (this.value == '') {
+                          this.value = 'Enter your Contact Number'
+                        }" onfocus="if (this.value == 'Enter your Contact Number') {
+                          this.value = ''
+                        }"  />
                       </div>
 
                       <div class="getvenue_cont">
                         <label>Preferred Date:</label>
                         <input type="text" class="txt-name" name="date" value="" />
                         <script type="text/javascript" language="JavaScript">
-                          new tcal ({
-                            // form name
-                            'formname': 'bookVenueForm',
-                            // input name
-                            'controlname': 'date'
-                          });
+                      new tcal({
+                        // form name
+                        'formname': 'bookVenueForm',
+                        // input name
+                        'controlname': 'date'
+                      });
                         </script>
                       </div>
                       <div class="getvenue_cont">
                         <label>Your Function:</label>
-                        <input type="text" name="function" class="txt-name" value="Enter your Function" onblur="if(this.value==''){this.value='Enter your Function'}" onfocus="if(this.value=='Enter your Function'){this.value=''}"  />
+                        <input type="text" name="function" class="txt-name" value="Enter your Function" onblur="if (this.value == '') {
+                          this.value = 'Enter your Function'
+                        }" onfocus="if (this.value == 'Enter your Function') {
+                          this.value = ''
+                        }"  />
                       </div>
                       <div class="getvenue_cont last">
                         <label>Your Budget in INR:</label>
-                        <input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if(this.value==''){this.value='Enter your Budget'}" onfocus="if(this.value=='Enter your Budget'){this.value=''}"  />
+                        <input type="text" name="budget" class="txt-name" value="Enter your Budget" onblur="if (this.value == '') {
+                          this.value = 'Enter your Budget'
+                        }" onfocus="if (this.value == 'Enter your Budget') {
+                          this.value = ''
+                        }"  />
                       </div>
                       <div class="clear"></div>
                       <br />

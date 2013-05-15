@@ -53,6 +53,7 @@ input {font-size: 120%;}
 .boxGr h1 { font: 20px "Trebuchet MS",Arial,Helvetica,sans-serif; margin: 0 0 8px; padding: 0;}
 .boxGr h4 { font: bold 15px "Trebuchet MS",Arial,Helvetica,sans-serif; margin: 0 0 8px; padding: 0;}
 .boxGr .bannerImg { margin-bottom: 10px;}
+.boxGr .banner{float:left; position:relative;}
 .boxheight { min-height: 391px;}
 .box .boxtop2 { overflow: hidden;}
 .box .boxtop2 .boxtopbg { background: url("../images/boxTop2.png") repeat-x scroll center top transparent; height: 20px; margin: auto; width: 96.2%;}
@@ -211,5 +212,6 @@ span.searchOpt {margin-right: 20px;}
 /*for allied pages */
 .allied_content ul, .social_functions ul, .corporate_functions ul {margin: 5px 0 10px 10px; padding: 2px 5px 10px; clear: both;}
 .allied_content li, .social_functions li, .corporate_functions li {width: 45%; float: left; list-style-type: square; margin: 5px 10px 0 0; padding: 5px 5px 3px 0;}
+.allied_content h2, .allied_content h5 { font:bold 13px "Trebuchet MS",Arial,Helvetica,sans-serif; margin: 3px 0 5px; padding: 0;}
 .site_content ul {margin: 5px 5px 5px 10px; padding: 2px 5px 0; clear: both; font: 13px/20px Tahoma,Geneva,sans-serif;}
 .site_content li {list-style-type: square; padding: 5px 5px 0 0;}

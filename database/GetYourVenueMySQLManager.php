@@ -38,7 +38,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
         $venue->mapUrl = $row['iframe'];
-        $venue->altTag = (isset($row['image_alt_tag']) && $row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = (isset($row['image_alt_tag']) && $row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
 
         $venueList[] = $venue;
       }
@@ -72,7 +72,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
         $venue->mapUrl = $row['iframe'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
 
         $venueList[] = $venue;
       }
@@ -110,7 +110,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -147,7 +147,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -166,9 +166,8 @@ class GetYourVenueMySQLManager {
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
-      $result = mysql_query("SELECT ve.*,ve.title,ve.meta_description,meta_keyword,pc.*,reg.* FROM venue ve
-                                               LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid 
-                                               LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . $venueid . "'");
+      $result = mysql_query("SELECT ve.*,ve.title,ve.meta_description,meta_keyword,pc.*,reg.* FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . $venueid . "'");
+      //$result = mysql_query("SELECT ve.id, ve.venueid, ve.name, ve.zone_rank, ve.rank, ve.address1, ve.address2, ve.content, ve.iframe, ve.regionid, ve.popular_choice, ve.is_active, ve.image_alt_tag, reg.regiontype, reg.regionname, pc.popularchoicename, pc.popularchoiceid, GROUP_CONCAT(vt.venuetype) AS venuetpyeseo, GROUP_CONCAT(vt.type) AS vtypename FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN venue_type_mapping vtm ON vtm.venueid=ve.id LEFT JOIN venuetype vt ON vt.venuetypeid=vtm.venuetypeid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . trim($venueid) . "' GROUP BY ve.id");
 
       while ($row = mysql_fetch_array($result)) {
         $venue = new Venue();
@@ -176,20 +175,21 @@ class GetYourVenueMySQLManager {
         $venue->isActive = $row['is_active'];
         $venue->venueId = $row['venueid'];
         $venue->rank = $row['rank'];
-        $venue->venueName = $row['name'];
-        $venue->regionid = $row['regionid'];
+        $venue->venueName = stripslashes($row['name']);
+        $venue->regionId = $row['regionid'];
         $venue->regiontype = $row['regiontype'];
         $venue->regionname = $row['regionname'];
-        $venue->popularchoiceid = $row['popularchoiceid'];
+        $venue->popularChoiceId = $row['popularchoiceid'];
         $venue->popularchoicename = $row['popularchoicename'];
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
-        $venue->content = $row['content'];
+        $venue->content = stripslashes($row['content']);
         $venue->iframe = $row['iframe'];
-        $venue->title = $row['title'];
-        $venue->metaDescription = $row['meta_description'];
-        $venue->metaKeyword = $row['meta_keyword'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->title = ($row['title'] != "") ? stripslashes($row['title']) : '';
+        $venue->metaDescription = ($row['meta_description'] != "") ? stripslashes($row['meta_description']) : '';
+        $venue->metaKeyword = ($row['meta_keyword'] != '') ? stripslashes($row['meta_keyword']) : '';
+        $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
+        //$venue->venueTypeIdList = $row['vtypename'];
         $venueList[] = $venue;
       }
     }
@@ -197,8 +197,7 @@ class GetYourVenueMySQLManager {
     return $venueList;
   }
 
-  function getVenueBySearchResult($venueName) {
-
+  function getVenueBySearchResult($venueName, $startIndex, $offset) {
     $dbConstants = new DBConstants();
     $dBUtils = new DBUtils();
     $connection = $dBUtils->getDBConnection();
@@ -207,8 +206,10 @@ class GetYourVenueMySQLManager {
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
-      $query = "SELECT ve.name,ve.address1,ve.address2,ve.content,ve.id,ve.venueid, ve.image_alt_tag FROM venue ve WHERE " .
-              " ve.name LIKE '%" . $venueName . "%'  AND ve.is_active=1 ORDER BY ve.rank";
+      $venueName = mysql_real_escape_string($venueName);
+      $query = "SELECT ve.name, ve.address1, ve.address2, ve.content, ve.id, ve.venueid, ve.image_alt_tag FROM venue ve WHERE " .
+              " ve.name LIKE '%" . $venueName . "%'  AND ve.is_active=1 ORDER BY ve.rank limit " . $startIndex . "," . $offset;
+
       $result = mysql_query($query);
       while ($row = mysql_fetch_array($result)) {
         $venue = new Venue();
@@ -218,7 +219,7 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr1 = $row['address1'];
         $venue->venueAddr2 = $row['address2'];
         $venue->content = $row['content'];
-        $venue->altTag = ($row['image_alt_tag']!="") ? $row['image_alt_tag'] : $row['name'];
+        $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
         $venueList[] = $venue;
       }
     }
@@ -228,12 +229,10 @@ class GetYourVenueMySQLManager {
   }
 
   function getRegionList() {
-
     $dbConstants = new DBConstants();
     $dBUtils = new DBUtils();
     $connection = $dBUtils->getDBConnection();
     $regionList = array();
-
 
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
@@ -241,7 +240,6 @@ class GetYourVenueMySQLManager {
 
       $result = mysql_query("SELECT * from region");
       while ($row = mysql_fetch_array($result)) {
-
         $region = new Region();
         $region->regionId = $row['regionid'];
         $region->regionName = $row['regionname'];
@@ -256,12 +254,10 @@ class GetYourVenueMySQLManager {
 //function
 
   function getRegionByRegionType($regionType) {
-
     $dbConstants = new DBConstants();
     $dBUtils = new DBUtils();
     $connection = $dBUtils->getDBConnection();
     $regionName = "";
-
 
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
@@ -280,7 +276,6 @@ class GetYourVenueMySQLManager {
 //function
 
   function alliedServices($seoId) {
-
     $dbConstants = new DBConstants();
     $dBUtils = new DBUtils();
     $connection = $dBUtils->getDBConnection();
@@ -320,7 +315,7 @@ class GetYourVenueMySQLManager {
     } else {
       $input = $autoSuggest;
       $data = array();
-      $query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%' AND is_active='Y'");
+      $query = mysql_query("SELECT venueid, name FROM venue WHERE venueid LIKE '%$input%' AND is_active='1'");
       while ($row = mysql_fetch_assoc($query)) {
         $data = $row['name'];
         echo ($data);

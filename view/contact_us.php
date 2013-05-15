@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <?php
     require_once("header.config.php");
     require_once ("../constants/Constants.php");
     $constants = new Constants();
     ?>
-    <title>Get Your Venue: Contact Us for Wedding Venues in Delhi NCR , Banquet Halls in Delhi NCR</title>
-    <meta name="description" content="GetYourVenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
-    <meta name="keyword" content="Get Your Venue, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />    
+    <title>Contact Us for Wedding Venues in Delhi NCR, Banquet Halls in Delhi NCR | Getyourvenue.com</title>
+    <meta name="description" content="Getyourvenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
+    <meta name="keyword" content="Getyourvenue.com, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />
   </head>
   <body>
     <div id="wrapper">
@@ -152,7 +152,6 @@
             </div>
             <!-- Box End -->
           </div>
-
         </div>
         <?php require("../view/footer.php"); ?>
       </div>

@@ -4,7 +4,7 @@
  * @auther: Manish Sahu
  * @created On: Apr 24, 2013, 10:59:36 PM
  */
-
+date_default_timezone_set('Asia/Kolkata');
 $docRoot = realpath(dirname(dirname(__FILE__) . '../'));
 
 require_once ("../constants/Constants.php");
@@ -33,77 +33,77 @@ $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'about-us'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //book_now
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'book_now'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //contact_us
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'contact_us'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //sitemap
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'site-map'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //allied
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'allied-services'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //wedding-venues-in-nh8-pushpanjali
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-nh8-pushpanjali'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //vaishali-vasundhara venues
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-vaishali-vasundhara'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //chhatarpur venues
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-chhatarpur'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //wedding-venues-in-delhi-ncr
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-delhi-ncr'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //wedding-venues-in-gt-karnal-road
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-gt-karnal-road'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 //mundka venues
 $arrSiteMap[] = array(
     'loc' => trim($constants->DOMAIN_URL . 'wedding-venues-in-mundka'),
     'lastmod' => $dateLastModified,
     'changefreq' => 'hourly',
-    'priority' => '1.0'
+    'priority' => '0.9'
 );
 
 //career

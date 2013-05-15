@@ -2,7 +2,7 @@
 $constants = new Constants(); 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <?php require_once("header.config.php");?>
 <title>Get Your Venue Social Functions, Wedding Venues in Delhi, Wedding Farmhouses in Delhi, Banquet halls in Delhi</title>
@@ -60,7 +60,7 @@ getyourvenue.com make sure that all your problems are vanished and we make this 
                 <h1>Plan your social gatherings better with an expert!</h1>
                 <div class="allied_content">
                   <p>In India, social functions are not just about celebrating your happiness, but also about creating a harmony between people and developing aura of positivity around. There was a time when all the family members came together and organized a social function, but with hectic daily schedules and busier lifestyle, it isn't possible nowadays to organize an event without an exert's help.</p>
-                  <p>Professionalization has also taken a seat in the social events sector. Yes, now our experts from GetYourVenue.com can bind your family together on your wedding day or other social gatherings, whether it is simple party to celebrate the success of your children or a farewell to a friend, doing their best to make every ceremony a memorable one.</p>
+                  <p>Professionalization has also taken a seat in the social events sector. Yes, now our experts from Getyourvenue.com can bind your family together on your wedding day or other social gatherings, whether it is simple party to celebrate the success of your children or a farewell to a friend, doing their best to make every ceremony a memorable one.</p>
                   <p>Professional experts are great at organizing social functions, whether it is a birthday party or a wedding. So, whether you want a perfect ring ceremony, a groovy bachelor party, fairytale wedding, a chic wedding reception or even a themed birthday party, we at GetYourVenue are there to arrange everything perfectly for you.
 </p>
                   <p>&nbsp;</p>
