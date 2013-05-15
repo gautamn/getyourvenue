@@ -4,6 +4,8 @@ require_once ("../service/VenueService.php");
 require_once ("../constants/Constants.php");
 $constants = new Constants();
 
+$docRoot = realpath(dirname(dirname(__FILE__) . '../'));
+
 $venueid = $_GET['venueid'];
 $databaseManager = new GetYourVenueMySQLManager();
 $venueList = $databaseManager->getVenue($venueid);
@@ -133,17 +135,35 @@ if ($venueList[0]->isActive < 1) {
                       <!-- Box Content Start -->
                       <a name="imageGallery"></a>
                       <h3><?php echo $venueList[0]->venueName; ?>' Latest Gallery</h3>
-                      <div class="image-slider f-left">
-                        <div class="slider-wrapper theme-default">
-                          <div class="ribbon"></div>
-                          <div id="slider" class="nivoSlider">
-                            <img src="<?php echo $constants->IMAGE_PATH . 'venue/' . $venueList[0]->id . "/gal_1.jpg"; ?>"  alt="<?php echo $venueList[0]->altTag; ?> 1" />
-                            <img src="<?php echo $constants->IMAGE_PATH . 'venue/' . $venueList[0]->id . "/gal_2.jpg"; ?>" alt="<?php echo $venueList[0]->altTag; ?> 2" />
-                            <img src="<?php echo $constants->IMAGE_PATH . 'venue/' . $venueList[0]->id . "/gal_3.jpg"; ?>" alt="<?php echo $venueList[0]->altTag; ?> 3" />
-                            <img src="<?php echo $constants->IMAGE_PATH . 'venue/' . $venueList[0]->id . "/gal_4.jpg"; ?>" alt="<?php echo $venueList[0]->altTag; ?> 4" />
+                      <?php
+                      $galleryImg = array();
+                      $venueDir = $docRoot . '/images/venue/' . $venueList[0]->id . '/';
+                      if (is_dir($venueDir)) {
+                        //echo $alliedSerivce[0]->jcarouselPath;
+                        $handler = opendir($venueDir);
+                        // open directory and walk through the filenames
+                        while ($file = readdir($handler)) {
+                          // if file isn't this directory or its parent, add it to the results
+                          if ($file != "." && $file != ".." && $file != "thumbnail.jpg") {
+                            $galleryImg[] = $constants->IMAGE_PATH . 'venue/' . $venueList[0]->id . '/' . $file;
+                          }
+                        }
+                        // tidy up: close the handler
+                        closedir($handler);
+                      }
+                      if (!empty($galleryImg)) {
+                        ?>
+                        <div class="image-slider f-left">
+                          <div class="slider-wrapper theme-default">
+                            <div class="ribbon"></div>
+                            <div id="slider" class="nivoSlider">
+                              <?php foreach ($galleryImg as $key => $galleryFile) { ?>
+                                <img src="<?php echo $galleryFile; ?>" alt="<?php echo $venueList[0]->altTag . '-' . ($key + 1); ?>" />
+                              <?php } ?>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      <?php } ?>
                       <div class="latest-news">
                         <p><?php echo $venueList[0]->content; ?></p>
                       </div>
