@@ -157,7 +157,6 @@ class GetYourVenueMySQLManager {
   }
 
   function getVenue($venueid) {
-
     $dbConstants = new DBConstants();
     $dBUtils = new DBUtils();
     $connection = $dBUtils->getDBConnection();
@@ -166,8 +165,8 @@ class GetYourVenueMySQLManager {
     if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
       throw new DBSourceException("Unable to connect to a datasource.");
     } else {
-      $result = mysql_query("SELECT ve.*,ve.title,ve.meta_description,meta_keyword,pc.*,reg.* FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . $venueid . "'");
-      //$result = mysql_query("SELECT ve.id, ve.venueid, ve.name, ve.zone_rank, ve.rank, ve.address1, ve.address2, ve.content, ve.iframe, ve.regionid, ve.popular_choice, ve.is_active, ve.image_alt_tag, reg.regiontype, reg.regionname, pc.popularchoicename, pc.popularchoiceid, GROUP_CONCAT(vt.venuetype) AS venuetpyeseo, GROUP_CONCAT(vt.type) AS vtypename FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN venue_type_mapping vtm ON vtm.venueid=ve.id LEFT JOIN venuetype vt ON vt.venuetypeid=vtm.venuetypeid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . trim($venueid) . "' GROUP BY ve.id");
+      //$result = mysql_query("SELECT ve.*,ve.title,ve.meta_description,meta_keyword,pc.*,reg.* FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . $venueid . "'");
+      $result = mysql_query("SELECT ve.id, ve.venueid, ve.name, ve.zone_rank, ve.rank, ve.address1, ve.address2, ve.content, ve.iframe, ve.regionid, ve.popular_choice, ve.is_active, ve.image_alt_tag, reg.regiontype, reg.regionname, pc.popularchoicename, pc.popularchoiceid, GROUP_CONCAT(vt.venuetype) AS venuetpyeseo, GROUP_CONCAT(vt.type) AS vtypename FROM venue ve LEFT JOIN popular_choice pc ON ve.popular_choice=pc.popularchoiceid LEFT JOIN venue_type_mapping vtm ON vtm.venueid=ve.id LEFT JOIN venuetype vt ON vt.venuetypeid=vtm.venuetypeid LEFT JOIN region reg ON ve.regionid=reg.regionid WHERE ve.venueid='" . trim($venueid) . "' GROUP BY ve.id");
 
       while ($row = mysql_fetch_array($result)) {
         $venue = new Venue();
@@ -175,7 +174,7 @@ class GetYourVenueMySQLManager {
         $venue->isActive = $row['is_active'];
         $venue->venueId = $row['venueid'];
         $venue->rank = $row['rank'];
-        $venue->venueName = stripslashes($row['name']);
+        $venue->venueName = stripslashes(trim($row['name']));
         $venue->regionId = $row['regionid'];
         $venue->regiontype = $row['regiontype'];
         $venue->regionname = $row['regionname'];
@@ -185,11 +184,11 @@ class GetYourVenueMySQLManager {
         $venue->venueAddr2 = $row['address2'];
         $venue->content = stripslashes($row['content']);
         $venue->iframe = $row['iframe'];
-        $venue->title = ($row['title'] != "") ? stripslashes($row['title']) : '';
-        $venue->metaDescription = ($row['meta_description'] != "") ? stripslashes($row['meta_description']) : '';
-        $venue->metaKeyword = ($row['meta_keyword'] != '') ? stripslashes($row['meta_keyword']) : '';
+        //$venue->title = ($row['title'] != "") ? stripslashes($row['title']) : '';
+        //$venue->metaDescription = ($row['meta_description'] != "") ? stripslashes($row['meta_description']) : '';
+        //$venue->metaKeyword = ($row['meta_keyword'] != '') ? stripslashes($row['meta_keyword']) : '';
         $venue->altTag = ($row['image_alt_tag'] != "") ? $row['image_alt_tag'] : $row['name'];
-        //$venue->venueTypeIdList = $row['vtypename'];
+        $venue->venueTypeIdList = $row['vtypename'];
         $venueList[] = $venue;
       }
     }

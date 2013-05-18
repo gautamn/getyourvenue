@@ -273,6 +273,20 @@ class VenueService {
       if (array_key_exists('category', $_GET) && $_GET['category'] != null)
         $region = $_GET['region'];
 
+      if ($region == "delhi-ncr") {
+        switch ($category) {
+          case "farm-house":
+            return $SEOConstants->delhiNCRFarmHouseTag;
+            break;
+          case "banquet-hall":
+            return $SEOConstants->delhiNCRBanquetHallTag;
+            break;
+          default :
+            break;
+        }
+      }
+
+
       if ($region == "delhi-ncr" && $category == "farm-house")
         return $SEOConstants->delhiNCRFarmHouseTag;
       if ($region == "delhi-ncr" && $category == "banquet-hall")
@@ -311,6 +325,11 @@ class VenueService {
         return $SEOConstants->gurgaonBanquetHallTag;
       if ($region == "delhi-ncr" && $category == "wedding-venues")
         return $seoDefaultConstant;
+    }
+
+    if ($action == 'viewSearchResult') {
+      $searchKeyword = isset($_REQUEST['venueid']) ? trim($_REQUEST['venueid']) . ' like ' : '';
+      return '<title>' . $searchKeyword . 'Wedding venues in Delhi NCR | Farmhouses, Banquet Halls, Hotel | Getyourvenue.com</title><meta name="description" content="Find the best Banquet Hall, Farm house, Hotels in Delhi NCR' . $searchKeyword . ' can now be booked at your door step! Wedding Farm House experts at GetYourVenue.com are always at your quick service." /><meta name="keywords" content="wedding venue delhi, wedding farm house delhi, wedding banquet hall delhi, find ' . $searchKeyword . 'wedding venue in delhi ncr" />';
     }
 
     if ($action == "venueDetails") {

@@ -52,6 +52,7 @@ RewriteRule ^wedding-venues-in-nh8-pushpanjali$ /search_results?option=4&action=
 RewriteRule ^wedding-venues-in-vaishali-vasundhara$ /search_results?option=5&action=viewChoices [L] ##[NC,L]
 RewriteRule ^wedding-venues-in-delhi-ncr$ /search_results?action=viewChoices [L] ##[NC,L]
 RewriteRule ^venue/(.*)$  /view/venue-details.php?venueid=$1&action=viewChoices
+##RewriteRule ^searchVenue/(.*)$  /search_results [L]
 RewriteRule ^searchVenue/(.*)$  /search_results?action=viewSearchResult&venueid=$1 [L]
 RewriteRule ^searchVenue/(.*)/(.*)$  /search_results?action=viewSearchResult&venueid=$1&page=$2 [L]
 

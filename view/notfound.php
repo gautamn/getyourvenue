@@ -8,7 +8,7 @@
     ?>
     <title>Page Not Found - Contact Us for Wedding Venues in Delhi NCR, Banquet Halls in Delhi NCR | Getyourvenue.com</title>
     <meta name="description" content="Getyourvenue.com are experts in wedding and marriage venue bookings in delhi ncr. We work dedicatedly with the aim of providing the choicest wedding venues and banquet halls guaranteed to meet your requirements in the best possible manner." />
-    <meta name="keyword" content="Getyourvenue.com, Get Your Venue in Delhi &amp; NCR, Wedding Venues In Delhi, Banquet halls in Delhi, Party Venues in Delhi, Banquet halls in Delhi for Marriage, Wedding Places in Delhi" />
+    <meta name="keyword" content="getyourvenue.com, get your venue in delhi ncr, wedding venues in delhi, banquet halls in delhi, party venues in delhi, banquet halls in delhi for marriage, wedding places in delhi" />
   </head>
   <body>
     <div id="wrapper">

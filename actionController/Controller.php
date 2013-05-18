@@ -11,7 +11,6 @@ if (array_key_exists('action', $_GET) && $_GET['action'] != null)
   $action = $_GET['action'];
 
 if ($action == "searchVenue") {
-
   $page = 1;
   if (array_key_exists('page', $_GET) && $_GET['page'] != null) {
     $page = $_GET['page'];
@@ -76,7 +75,7 @@ if ($action == "viewChoices") {
   $categoryName = "";
   $capacityValue = "";
   $fromPage = $choiceId;
-  require_once ("../view/searchresults.php");
+  require_once ("../view/venueresults.php");
 }
 
 if ($action == "bookNow") {

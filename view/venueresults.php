@@ -5,7 +5,6 @@
     require_once("header.config.php");
     $venueService = new VenueService();
     echo $venueService->getSEOConstant($action, "");
-    //echo $action;
     ?>
   </head>
   <body>
