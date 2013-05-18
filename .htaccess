@@ -30,6 +30,11 @@ Redirect 301 /wedding-venues-in-Vaishali-Vasundhara   /wedding-venues-in-vaishal
 Redirect 301 /wedding-venues-in-delhi-NCR   /wedding-venues-in-delhi-ncr
 Redirect 301 /photography   /wedding-photography-delhi
 Redirect 301 /bridal-make-up   /bridal-makeup-delhi
+Redirect 301 /wedding-planning  /wedding-planners-delhi
+Redirect 301 /fireworks  /fireworks-delhi
+Redirect 301 /dj-and-sound-systems  /dj-and-sound-systems-delhi
+Redirect 301 /music-band-mystique  /live-music-band-mystique-delhi
+Redirect 301 /vermala-theme /varmala-themes-delhi
 
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
@@ -60,32 +65,35 @@ RewriteRule ^articles/choosing-perfect-delhi-wedding-venue$   /articles/choosing
 RewriteRule ^articles/know-about-delhi-wedding-venues$   /articles/know-about-delhi-wedding-venues.php [L]
 RewriteRule ^perfect-wedding-music-bands$   /article/perfect-wedding-music-bands.php [L]
 
-RewriteRule ^music-band-mystique$   /view/music-band.php [L]
 #RewriteRule ^band-ghori-baggi-services-in-delhi$   /view/band.php [L]
 #RewriteRule ^wedding-decorators-in-delhi$   /view/decor.php [L]
 #RewriteRule ^wedding-caterers-in-delhi$   /view/caterer.php [L]
 #RewriteRule ^transportation-for-wedding-in-delhi$   /view/transportation.php [L]
+##RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+##RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]
+##RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
+##RewriteRule  ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+##RewriteRule ^fireworks$   /allied_services?action=alliedServices&seoId=fireworks [L]
+##RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
+##RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+##RewriteRule ^music-band-mystique$   /view/music-band.php [L]
 
 RewriteRule ^wedding-decorators-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-decorators-in-delhi [L]
 RewriteRule ^band-ghori-baggi-services-in-delhi$   /allied_services?action=alliedServices&seoId=band-ghori-baggi-services-in-delhi [L]
 RewriteRule ^wedding-caterers-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-caterers-in-delhi [L]
 RewriteRule ^transportation-for-wedding-in-delhi$   /allied_services?action=alliedServices&seoId=transportation-for-wedding-in-delhi [L]
-
 RewriteRule ^wedding-lehengas-in-delhi$   /allied_services?action=alliedServices&seoId=wedding-lehengas-in-delhi [L]
 RewriteRule ^groom-wedding-attires-in-delhi$   /allied_services?action=alliedServices&seoId=groom-wedding-attires-in-delhi [L]
 RewriteRule ^bridal-makeup-delhi$   /allied_services?action=alliedServices&seoId=bridal-makeup-delhi [L]
-##RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
-
-RewriteRule ^vermala-theme$   /allied_services?action=alliedServices&seoId=vermala-theme [L]
-RewriteRule ^wedding-planning$   /allied_services?action=alliedServices&seoId=wedding-planning [L]
-##RewriteRule  ^photography$   /allied_services?action=alliedServices&seoId=photography [L]
+RewriteRule ^varmala-themes-delhi$   /allied_services?action=alliedServices&seoId=varmala-themes-delhi [L]
+RewriteRule ^wedding-planners-delhi$   /allied_services?action=alliedServices&seoId=wedding-planners-delhi [L]
 RewriteRule  ^wedding-photography-delhi$   /allied_services?action=alliedServices&seoId=wedding-photography-delhi [L]
-RewriteRule ^fireworks$   /allied_services?action=alliedServices&seoId=fireworks [L]
-RewriteRule ^dj-and-sound-systems$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems [L]
+RewriteRule ^fireworks-delhi$   /allied_services?action=alliedServices&seoId=fireworks-delhi [L]
+RewriteRule ^dj-and-sound-systems-delhi$   /allied_services?action=alliedServices&seoId=dj-and-sound-systems-delhi [L]
+RewriteRule ^celebrity-artist-management-delhi$   /allied_services?action=alliedServices&seoId=celebrity-artist-management-delhi [L]
 RewriteRule ^bridal-mehndi-delhi$   /allied_services?action=alliedServices&seoId=bridal-mehndi-delhi [L]
 RewriteRule ^wedding-invitation-cards-delhi$   /allied_services?action=alliedServices&seoId=wedding-invitation-cards-delhi [L]
-RewriteRule ^celebrity-artist-management-delhi$   /allied_services?action=alliedServices&seoId=celebrity-artist-management-delhi [L]
-#RewriteRule ^bridal-make-up$   /allied_services?action=alliedServices&seoId=bridal-make-up [L]
+RewriteRule ^live-music-band-mystique-delhi$   /view/music-band.php [L]
 
 ##social functions
 RewriteRule ^social-functions$   /view/social-functions.php [L]

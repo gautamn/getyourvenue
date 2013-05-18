@@ -10,20 +10,14 @@ $constants = new Constants();
 <!-- AddThis Button BEGIN -->
 <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50d34c4634cc5b81"></script>
 <div class="addThis2">
-  <div class="addthis_toolbox addthis_floating_style addthis_counter_style" style="left:50px;top:215px;">
-    <a class="addthis_button_facebook_like"></a>
-    <a class="addthis_button_tweet"></a>
-    <a class="addthis_button_google_plusone"></a>    
-    <a class="addthis_counter"></a>
+  <div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:50px;top:215px;">
+    <a class="addthis_button_facebook"></a>
+    <a class="addthis_button_twitter"></a>
+    <a class="addthis_button_pinterest_share"></a>
+    <a class="addthis_button_google_plusone_share"></a>
+    <a class="addthis_button_compact"></a>
   </div>
 </div>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.addThis2 a.addthis_button_facebook_like').attr('fb:like:layout', 'box_count');
-    $('.addThis2 a.addthis_button_tweet').attr('tw:count', 'vertical');
-    $('.addThis2 a.addthis_button_google_plusone').attr('g:plusone:size', 'tall');
-  });
-</script>
 <!-- AddThis Button END -->
 <div id="footer">
   <div class="box">
@@ -48,12 +42,12 @@ $constants = new Constants();
           <!--<ul class="content" style="width:180px;">-->
           <ul class="content" style="width:230px;">
             <li><a href="<?php echo $constants->DOMAIN_URL . 'allied-services'; ?>" title="Allied Services"><strong>Allied Services</strong></a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planning" title="Wedding Planning">Wedding Planning</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li><li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planners-delhi" title="Wedding Planning">Wedding Planning</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Catering Services">Catering Services</a></li><li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>varmala-themes-delhi" title="Varmala Themes">Varmala Themes</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
-            <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Band, Ghoriwaala, Baggi">Band, Ghoriwaala, Baggi</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>fireworks" title="Fireworks">Fireworks</a></li>
+            <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Band, Ghoriwaala, Baggi">Band, Ghoriwaala, Baggi</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>fireworks-delhi" title="Fireworks">Fireworks</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
             <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>bridal-makeup-delhi" title="Bridal Makeup">Bridal Makeup</a>,</li>
-            <li><a href="<?php echo $constants->DOMAIN_URL; ?>music-band-mystique" title="Mystique Music Band">Music Band</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a>,</li>
+            <li><a href="<?php echo $constants->DOMAIN_URL; ?>live-music-band-mystique-delhi" title="Mystique Music Band">Music Band</a>, <a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems-delhi" title="DJ and Sound Systems">DJ and Sound Systems</a>,</li>
             <li><a href="<?php echo $constants->DOMAIN_URL; ?>celebrity-artist-management-delhi" title="Celebrity &amp; Artist Management">Celebrity &amp; Artist Management</a>,</li>
             <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>
           </ul>

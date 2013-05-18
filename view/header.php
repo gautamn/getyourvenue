@@ -32,18 +32,18 @@ $constants = new Constants();
       </li>      
       <li><a class="newribbon" href="<?php echo $constants->DOMAIN_URL . 'allied-services'; ?>">Allied Services</a>
         <ul>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planners-delhi" title="Wedding Planning">Wedding Planning</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Wedding Decor">Decor</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Wedding Catering Services">Catering Services</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Band, Ghoriwaala, Baggi">Band, Ghoriwaala, Baggi</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks" title="Fireworks">Fireworks</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks-delhi" title="Fireworks in Delhi">Fireworks</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>music-band-mystique" title="Mystique Music Band">Mystique Music Band</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
-          <li><a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>live-music-band-mystique-delhi" title="Mystique Music Band">Mystique Music Band</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems-delhi" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>varmala-themes-delhi" title="Varmala Themes">Varmala Themes</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>celebrity-artist-management-delhi" title="Celebrity &amp; Artist Management">Celebrity &amp; Artist Management</a></li>
           <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>

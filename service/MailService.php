@@ -26,11 +26,11 @@ class MailService {
   function sendBookingNotificationMailviaPHPMail($username, $phone, $emailid, $location, $function, $budget, $preferredDate, $notificationType) {
 
     $constants = new Constants();
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n".
-    'From: admin@getyourvenue.com' . "\r\n" .
-    'BCC: dailyleads@getyourvenue.com' . "\r\n" .
-    'Reply-To: '.$emailid . "\r\n";
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n" .
+            'From: admin@getyourvenue.com' . "\r\n" .
+            'BCC: dailyleads@getyourvenue.com' . "\r\n" .
+            'Reply-To: ' . $emailid . "\r\n";
 
     $msg = "Hi Team,<br><br>" .
             "User " . $username . " wants to get a venue. The full user information is:<br><br>" .
@@ -51,6 +51,9 @@ class MailService {
       $subject = $username . " wants some Information - GYV Admin";
     $to = $constants->mailTo_gmail;
     mail($to, $subject, $msg, $headers);
+    if (!empty($emailid)) {
+      
+    }
   }
 
   function sendBookingNotificationMailviaGmail($username, $phone, $emailid, $location, $function, $budget, $preferredDate, $notificationType) {
@@ -94,6 +97,9 @@ class MailService {
     } else {
       echo "sent";
     }
+  }
+
+  function sendBookingPromotionalEmailToUser($username, $email) {//once booked
   }
 
   /*

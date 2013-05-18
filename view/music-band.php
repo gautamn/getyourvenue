@@ -32,18 +32,18 @@ $constants = new Constants();
                   <div class="boxGr">
                     <h4>Allied Services</h4>
                     <ul class="alliedServices">
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planning" title="Wedding Planning">Wedding Planning</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-planners-delhi" title="Wedding Planning">Wedding Planning</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-decorators-in-delhi" title="Decor">Decor</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Caterer">Caterer</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Catering Services">Catering Services</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks" title="Fireworks">Fireworks</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks-delhi" title="Fireworks">Fireworks</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>music-band-mystique" title="Mystique Music Band">Music Band</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>vermala-theme" title="Varmala Themes">Varmala Themes</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>live-music-band-mystique-delhi" title="Mystique Music Band">Music Band</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems-delhi" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>varmala-themes-delhi" title="Varmala Themes">Varmala Themes</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-makeup-delhi" title="Bridal Makeup">Bridal Makeup</a></li>
                       <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>
@@ -110,7 +110,7 @@ $constants = new Constants();
                     <!-- Box Content Start -->
                     <a name="imageGallery"></a>
                     <div class="f-left"><img src="<?php echo $constants->DOMAIN_URL; ?>images/mystique_music_band_banner.jpg" class="bannerImg" alt="Mystique The Band" /></div>
-                    <h1>GYV's Music Band Mystique!</h1>
+                    <h1>Live Music Band Mystique in Delhi!</h1>
                     <div class="allied_content">
                       <p>Getyourvenue's promising live music band 'Mystique' is based in delhi and is run by a bunch of passionate musicians and singers for whom life is beyond eating, earning and having materialistic fun. The wedding music band encompasses multi talented people from various fields of life, fairly successful in their core career such as digital marketing, industrial production, professional photography but they cut a fine balance between their core professional skill-set and god gifted and fondly nurtured music talent. These people are driven by passion of live music and music is their breath and blood. Formed in early 2011, the members of the wedding music band already had great individual track records of performance. They brought synergies in the band as a group and there has been no looking back since then.</p>
                       <p>Personally fond of experimental, fusion, new age music, they have a passion for going about any type of genre, repertoire and have the ability to do justice with it.</p>
