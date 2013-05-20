@@ -273,18 +273,18 @@ class VenueService {
       if (array_key_exists('category', $_GET) && $_GET['category'] != null)
         $region = $_GET['region'];
 
-      if ($region == "delhi-ncr") {
+      /* if ($region == "delhi-ncr") {
         switch ($category) {
-          case "farm-house":
-            return $SEOConstants->delhiNCRFarmHouseTag;
-            break;
-          case "banquet-hall":
-            return $SEOConstants->delhiNCRBanquetHallTag;
-            break;
-          default :
-            break;
+        case "farm-house":
+        return $SEOConstants->delhiNCRFarmHouseTag;
+        break;
+        case "banquet-hall":
+        return $SEOConstants->delhiNCRBanquetHallTag;
+        break;
+        default :
+        break;
         }
-      }
+        } */
 
 
       if ($region == "delhi-ncr" && $category == "farm-house")

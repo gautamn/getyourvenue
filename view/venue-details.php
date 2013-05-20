@@ -14,34 +14,37 @@ if ($venueList[0]->isActive < 1) {
   header("Location:" . $constants->DOMAIN_URL);
   die();
 }
-$venueList[0]->title = $venueList[0]->venueName . (($venueList[0]->venueTypeIdList != '') ? ' - ' . $venueList[0]->venueTypeIdList : 'Wedding Venue') . " | Wedding Venue in ";
-$venueList[0]->title .= ($venueList[0]->regionname != "") ? $venueList[0]->regionname . ", " : "";
-$venueList[0]->title .= ($venueList[0]->popularchoicename != "") ? $venueList[0]->popularchoicename : "";
-$venueList[0]->title .= " | Getyourvenue.com";
+//meta tags - auto-pilot
+/* $venueList[0]->title = $venueList[0]->venueName . (($venueList[0]->venueTypeIdList != '') ? ' - ' . $venueList[0]->venueTypeIdList : 'Wedding Venue') . " | Wedding Venue in ";
+  $venueList[0]->title .= ($venueList[0]->regionname != "") ? $venueList[0]->regionname . ", " : "";
+  $venueList[0]->title .= ($venueList[0]->popularchoicename != "") ? $venueList[0]->popularchoicename : "";
+  $venueList[0]->title .= " | Getyourvenue.com";
 
-$venueMetaKeys = '';
-if ($venueList[0]->venueTypeIdList != '') {
+  $venueMetaKeys = '';
+  if ($venueList[0]->venueTypeIdList != '') {
   $venuetypeArr = $venueMetaKeysArr = array();
   $venuetypeArr = explode(',', $venueList[0]->venueTypeIdList);
   foreach ($venuetypeArr as $venueMeta) {
-    $venueMetaKeys .= 'wedding ' . $venueMeta . ' ' . $venueList[0]->regionname . ', ';
+  $venueMetaKeys .= 'wedding ' . $venueMeta . ' ' . $venueList[0]->regionname . ', ';
   }
-}
-//meta description
-$venueList[0]->metaDescription = $venueList[0]->venueName . " is a " . (($venueList[0]->venueTypeIdList != '') ? $venueList[0]->venueTypeIdList : 'venue') . " in " . (($venueList[0]->regionname != '') ? $venueList[0]->regionname : 'Delhi NCR') . ' for wedding venue. Contact GetYourVenue for booking ' . $venueList[0]->venueName . ' or other ' . $venueList[0]->venueTypeIdList . ' in ' . (($venueList[0]->regionname != '') ? $venueList[0]->regionname : 'Delhi NCR') . ', ' . $venueList[0]->popularchoicename;
-//meta keywords
-$venueList[0]->metaKeyword = $venueList[0]->venueName . ' ' . $venueList[0]->regionname . ', ' . $venueList[0]->venueName . ' ' . $venueList[0]->popularchoicename . ', ' . $venueMetaKeys . 'wedding venue ' . $venueList[0]->regionname . ', wedding venue ' . $venueList[0]->popularchoicename;
+  }
+  //meta description
+  $venueList[0]->metaDescription = $venueList[0]->venueName . " is a " . (($venueList[0]->venueTypeIdList != '') ? $venueList[0]->venueTypeIdList : 'venue') . " in " . (($venueList[0]->regionname != '') ? $venueList[0]->regionname : 'Delhi NCR') . ' for wedding venue. Contact GetYourVenue for booking ' . $venueList[0]->venueName . ' or other ' . $venueList[0]->venueTypeIdList . ' in ' . (($venueList[0]->regionname != '') ? $venueList[0]->regionname : 'Delhi NCR') . ', ' . $venueList[0]->popularchoicename;
+  //meta keywords
+  $venueList[0]->metaKeyword = $venueList[0]->venueName . ' ' . $venueList[0]->regionname . ', ' . $venueList[0]->venueName . ' ' . $venueList[0]->popularchoicename . ', ' . $venueMetaKeys . 'wedding venue ' . $venueList[0]->regionname . ', wedding venue ' . $venueList[0]->popularchoicename; */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
-    <title><?php echo $venueList[0]->title; ?></title>
-    <meta name="description" content="<?php echo $venueList[0]->metaDescription; ?>" />
-    <meta name="keywords" content="<?php echo $venueList[0]->metaKeyword; ?>" />
+    <?php /* <title><?php echo $venueList[0]->title; ?></title>
+      <meta name="description" content="<?php echo $venueList[0]->metaDescription; ?>" />
+      <meta name="keywords" content="<?php echo $venueList[0]->metaKeyword; ?>" /> */ ?>
     <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL; ?>css/calendar.css" />
     <script type="text/javascript" language="javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/calendar_us.js"></script>
     <?php
     require_once("../view/header.config.php");
+    $venueService = new VenueService();
+    echo $venueService->getSEOConstant("venueDetails", $venueList[0]);
     ?>
     <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/jquery.nivo.slider.pack.js"></script>
   </head>
