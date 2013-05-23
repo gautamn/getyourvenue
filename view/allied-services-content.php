@@ -236,6 +236,7 @@ $constants = new Constants();
                       <?php
                     }
                     ?>
+					<div class="clear"></div>
                     <div class="allied_content">
                       <h4>Explore Popular Wedding Venues in Delhi-NCR</h4>
                       <ul>

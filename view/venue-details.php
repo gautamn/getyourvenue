@@ -188,6 +188,7 @@ if ($venueList[0]->isActive < 1) {
                       <div class="latest-news">
                         <p><?php echo $venueList[0]->content; ?></p>
                       </div>
+					  <div class="clear"></div>
                       <h4>Explore Our Quality Allied Services</h4>
                       <div class="allied_content">
                         <ul>

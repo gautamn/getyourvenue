@@ -11,13 +11,13 @@ $constants = new Constants();
 <div id="header">
   <img src="<?php echo $constants->IMAGE_PATH; ?>headerLeft.jpg" align="left" alt="" />
   <img src="<?php echo $constants->IMAGE_PATH; ?>headerRight.jpg" align="right" alt="" />
-  <a href="<?php echo $constants->DOMAIN_URL; ?>"><img src="<?php echo $constants->IMAGE_PATH; ?>logo.png" class="logo" alt="Get Your Venue, Wedding Venues in Delhi NCR" /></a>
-  <img src="<?php echo $constants->IMAGE_PATH; ?>hotlinenumber.png" class="hotlineNum" alt="Get Your Venue, Marriage Venues in Delhi NCR" />
+  <a href="<?php echo $constants->DOMAIN_URL; ?>"><img src="<?php echo $constants->IMAGE_PATH; ?>logo.png" class="logo" title="Getyourvenue.com" /></a>
+  <img src="<?php echo $constants->IMAGE_PATH; ?>hotlinenumber.png" class="hotlineNum" alt="" />
   <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
   <div class="topNav"><img src="<?php echo $constants->IMAGE_PATH; ?>topNavleft.jpg" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH; ?>topNavRight.jpg" align="right" alt="" />
     <ul>
       <li><a href="<?php echo $constants->DOMAIN_URL; ?>" title="Home"><img style="margin-top: 5px; height: 20px;" src="<?php echo $constants->DOMAIN_URL; ?>images/home.png" title="home" alt="home" /></a></li>
-      <li><a href="javascript:void(0);">Popular Choices</a>
+      <li><a href="javascript:void(0);" title="Wedding Popular Choices in Delhi NCR">Popular Choices</a>
         <ul>
           <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-chhatarpur'; ?>" title="Chhattarpur &amp; MG Road">Chhattarpur &amp; MG Road</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL . 'wedding-venues-in-gt-karnal-road'; ?>" title="GT Karnal Road">GT Karnal Road</a></li>
@@ -45,6 +45,7 @@ $constants = new Constants();
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems-delhi" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>varmala-themes-delhi" title="Varmala Themes">Varmala Themes</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a></li>
+          <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-makeup-delhi" title="Bridal Makeup">Bridal Makeup</a></li>
           <li><a href="<?php echo $constants->DOMAIN_URL; ?>celebrity-artist-management-delhi" title="Celebrity &amp; Artist Management">Celebrity &amp; Artist Management</a></li>
           <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>
         </ul>
