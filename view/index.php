@@ -8,6 +8,12 @@ $constants = new Constants();
     <title>Wedding Venues in Delhi NCR | Marriage & Reception Halls | Banquet Halls | Farm Houses | Wedding Planner Delhi | Getyourvenue.com</title>
     <meta name="description" content="Wedding Venues in Delhi and NCR including South Delhi, GT Karnal Road, Chhatarpur, NH8 and other Delhi wedding hot spots can now be booked at your door step! Call us for wedding venues, wedding planners, decorators, catering services, banquet halls, farm houses, 5 start hotels and more in Delhi NCR Today!" />
     <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr, wedding venues in south delhi, marriage venues delhi,wedding venues in south Delhi, marriage venues delhi, marriage halls delhi, reception halls delhi, banquet halls, farm houses, wedding planners, decorators, catering services, Getyourvenue" />
+    <meta property="og:site_name" content="Getyourvenue" />
+    <meta property="og:title" content="Wedding Venues in Delhi NCR | Marriage & Reception Halls | Banquet Halls | Farm Houses | Wedding Planner Delhi | Getyourvenue.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php echo $constants->DOMAIN_URL; ?>" />
+    <meta property="og:image" content="<?php echo $constants->DOMAIN_URL . 'images/logo.png'; ?>" />
+    <meta property="og:description" content="Wedding Venues in Delhi and NCR including South Delhi, GT Karnal Road, Chhatarpur, NH8 and other Delhi wedding hot spots can now be booked at your door step! Call us for wedding venues, wedding planners, decorators, catering services, banquet halls, farm houses, 5 start hotels and more in Delhi NCR Today!" />
     <?php require_once("header.config.php"); ?>
     <meta name="google-site-verification" content="Y7nJIELMUBhy76D1Ne-8NPSWHQi1xGSXPsg0zHSLOPs" />
     <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/jquery.autocomplete.css" />

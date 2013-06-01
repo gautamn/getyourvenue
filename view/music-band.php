@@ -9,6 +9,12 @@ $constants = new Constants();
     <title>Wedding Music Bands Delhi, Live Music Bands for Weddings, Live Wedding Music Bands Delhi | Getyourvenue.com</title>
     <meta name="Description" content="Wedding Music Bands in Delhi can now be booked with Getyourvenue.com. Live Wedding Music needs to be chosen tastefully and our live music band for weddings is mystique in its own way. Our Delhi music band for wedding would truly add the flavor of elegance to your ambience!" />
     <meta name="keyword" content="wedding music band, wedding music bands, music bands for wedding, live band in delhi, live wedding music, music bands for weddings, live music for weddings" />
+    <meta property="og:site_name" content="Getyourvenue" />
+    <meta property="og:title" content="Wedding Music Bands Delhi, Live Music Bands for Weddings, Live Wedding Music Bands Delhi | Getyourvenue.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php echo $constants->DOMAIN_URL . 'live-music-band-mystique-delhi'; ?>" />
+    <meta property="og:image" content="<?php echo $constants->DOMAIN_URL . 'images/logo.png'; ?>" />
+    <meta property="og:description" content="Wedding Music Bands in Delhi can now be booked with Getyourvenue.com. Live Wedding Music needs to be chosen tastefully and our live music band for weddings is mystique in its own way. Our Delhi music band for wedding would truly add the flavor of elegance to your ambience!" />
     <link rel="stylesheet" href="<?php echo $constants->DOMAIN_URL; ?>css/calendar.css" />
     <script language="javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/calendar_us.js"></script>    
     <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/styleSlider.css" />    
@@ -37,15 +43,16 @@ $constants = new Constants();
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-caterers-in-delhi" title="Catering Services">Catering Services</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-photography-delhi" title="Wedding Photography">Wedding Photography</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>transportation-for-wedding-in-delhi" title="Lodging &amp; Transportation">Lodging &amp; Transportation</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Ghoriwaala, Baggi">Ghoriwaala, Baggi</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>band-ghori-baggi-services-in-delhi" title="Band, Ghoriwaala, Baggi">Band, Ghoriwaala, Baggi</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>fireworks-delhi" title="Fireworks">Fireworks</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Bridal &amp; Grooms Wear">Bridal &amp; Grooms Wear</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>groom-wedding-attires-in-delhi" title="Grooms Wear">Grooms Wear</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-lehengas-in-delhi" title="Bridal Lehengas">Bridal Lehengas</a></li>
-                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>live-music-band-mystique-delhi" title="Mystique Music Band">Music Band</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>live-music-band-mystique-delhi" title="Mystique Music Band">Mystique Music Band</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>dj-and-sound-systems-delhi" title="DJ and Sound Systems">DJ and Sound Systems</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>varmala-themes-delhi" title="Varmala Themes">Varmala Themes</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-mehndi-delhi" title="Bridal Mehndi">Bridal Mehndi</a></li>
                       <li><a href="<?php echo $constants->DOMAIN_URL; ?>bridal-makeup-delhi" title="Bridal Makeup">Bridal Makeup</a></li>
+                      <li><a href="<?php echo $constants->DOMAIN_URL; ?>celebrity-artist-management-delhi" title="Celebrity &amp; Artist Management">Celebrity &amp; Artist Management</a></li>
                       <li class="last"><a href="<?php echo $constants->DOMAIN_URL; ?>wedding-invitation-cards-delhi" title="Wedding Invitation Cards">Wedding Invitation Cards</a></li>
                     </ul>
                   </div>

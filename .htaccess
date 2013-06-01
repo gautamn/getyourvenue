@@ -1,5 +1,5 @@
 RewriteEngine On
-##RewriteBase /
+RewriteBase /
 ErrorDocument 404 /notfound
 RewriteRule ^notfound$   /view/notfound.php [L]
 RewriteRule ^index.php$   /view/index.php [L] 

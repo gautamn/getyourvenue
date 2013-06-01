@@ -13,7 +13,13 @@ $constants = new Constants();
     <meta name="description" content="<?php echo $alliedSerivce[0]->metaDescription; ?>" />
     <meta name="keyword" content="<?php echo $alliedSerivce[0]->metaKeyword; ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/albums.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/styleSlider.css" />   
+    <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/styleSlider.css" />
+    <meta property="og:site_name" content="Getyourvenue" />
+    <meta property="og:title" content="<?php echo $alliedSerivce[0]->title; ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php echo $constants->DOMAIN_URL . $alliedSerivce[0]->seoId; ?>" />
+    <meta property="og:image" content="<?php echo $constants->DOMAIN_URL . 'images/logo.png'; ?>" />
+    <meta property="og:description" content="<?php echo $alliedSerivce[0]->metaDescription; ?>" />
   </head>
   <body>
     <div id="wrapper">
@@ -150,7 +156,7 @@ $constants = new Constants();
                             //$totalSlides = count($results);
                             foreach ($results as $key => $slides) {
                               ?>
-                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides; ?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);                                                       ?></li>
+                              <li><img src="<?php echo '..' . $alliedSerivce[0]->jcarouselPath . $slides; ?>" alt="<?php echo $alliedSerivce[0]->heading . " " . ($key + 1); ?>" title="<?php echo $alliedSerivce[0]->heading; ?>" id="wows1_<?php echo $key; ?>" /><?php //echo 'Theme '.($key+1);                                                                 ?></li>
                             <?php } ?>
                           </ul>
                         </div>
@@ -186,24 +192,20 @@ $constants = new Constants();
                     if (count($themes) > 1) {
                       ?>
                       <h3 class="clear">Few of the Popular themes are:</h3>
-                    <?php } ?>
-                    <?php
+                      <?php
+                    }
                     for ($i = 0; $i < count($themes); $i++) {
                       if (endsWith($themes[$i], '@VIDEO')) {
                         $pos = strrpos($themes[$i], "@");
                         $url = substr($themes[$i], 0, $pos);
                         ?>
                         <iframe width="241" height="180" src="<?php echo $url; ?>" frameborder="0" allowfullscreen=""></iframe>
-                      <?php } ?>
-                      <?php
+                        <?php
+                      }
                       if (endsWith($themes[$i], '@IMAGE')) {
                         $pos = strrpos($themes[$i], "@");
                         $url = substr($themes[$i], 0, $pos);
                         $albumImgSet[] = $url;
-                        // if closed
-                        ?>
-                        <?php /* <div class="alliedThumb"><img src="../<?php echo $url;?>" alt="" width="239" height="180" /><!--span class="themeTitle">Theme One Title Here</span--></div> */ ?>
-                        <?php
                       }
                     }
                     if (!empty($albumImgSet)) {
@@ -236,7 +238,7 @@ $constants = new Constants();
                       <?php
                     }
                     ?>
-					<div class="clear"></div>
+                    <div class="clear"></div>
                     <div class="allied_content">
                       <h4>Explore Popular Wedding Venues in Delhi-NCR</h4>
                       <ul>
