@@ -36,6 +36,9 @@ Redirect 301 /dj-and-sound-systems  /dj-and-sound-systems-delhi
 Redirect 301 /music-band-mystique  /live-music-band-mystique-delhi
 Redirect 301 /vermala-theme /varmala-themes-delhi
 
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [L,R=301]
+
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
 RewriteRule ^wedding-venues-in-chhatarpur/(.*)$ /search_results?option=1&page=$1&action=viewChoices [L]

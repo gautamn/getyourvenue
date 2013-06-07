@@ -11,6 +11,7 @@
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-23849459-1']);
+_gaq.push(['_setDomainName', 'getyourvenue.com']);
 _gaq.push(['_trackPageview']);
 
 (function() {
