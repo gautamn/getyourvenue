@@ -1,7 +1,3 @@
-function get_hostname(url) {
-  var m = url.match(/^http:\/\/[^/]+/);
-  return m ? m[0] : null;
-}
 
 function validatedSearchVenue() {
   var venueid = $.trim($("#venueid").val());

@@ -42,6 +42,8 @@ RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [L,R=301]
 
 RewriteRule ^venues/(.*)/(.*)/(.*)/(.*)$   /search_results_pagination?region=$1&category=$2&capacity=$3&page=$4&action=searchVenue [L]
 RewriteRule ^venues/(.*)/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=$3&action=searchVenue [L]
+RewriteRule ^venues/(.*)/(.*)$   /search_results?region=$1&category=$2&capacity=0&action=searchVenue [L]
+RewriteRule ^venues/(.*)$   /search_results?region=$1&category=&capacity=0&action=searchVenue [L]
 RewriteRule ^wedding-venues-in-chhatarpur/(.*)$ /search_results?option=1&page=$1&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-mundka/(.*)$ /search_results?option=2&page=$1&action=viewChoices [L]
 RewriteRule ^wedding-venues-in-gt-karnal-road/(.*)$ /search_results?option=3&page=$1&action=viewChoices [L]

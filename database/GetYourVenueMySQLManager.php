@@ -358,7 +358,7 @@ class GetYourVenueMySQLManager {
     $connection = $dBUtils->getDBConnection();
     $venueTypeId = "";
 
-    if ($venueType == "wedding-venues") {
+    if ($venueType == "wedding-venues" || $venueType == "") {
       $venueTypeId = "0";
     } else {
       if (!(mysql_select_db($dbConstants->DATABASE, $connection))) {
@@ -487,7 +487,7 @@ class GetYourVenueMySQLManager {
       $isFirstCondition = false;
     }
 
-    if ($categoryId != 0) {
+    if ($categoryId != "") {
       $entity.=",venue_type_mapping vtm" . " ";
       if ($isFirstCondition)
         $conditionClause = "WHERE" . " ";

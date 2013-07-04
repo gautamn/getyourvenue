@@ -15,15 +15,15 @@ class VenueService {
   function searchVenue() {
 
     $regionType = $_GET['region'];
-    $categoryType = $_GET['category'];
-    $capacityId = $_GET['capacity'];
+    $categoryType = trim($_GET['category']);
+    $capacityId = (int) $_GET['capacity'];
     $getYourVenueMySQLManager = new GetYourVenueMySQLManager();
     $regionId = $getYourVenueMySQLManager->getRegionIdByRegionType($regionType);
     if ($regionId == "")
       $regionId = -1;
     $categoryId = $getYourVenueMySQLManager->getVenueTypeIdByVenueType($categoryType);
-    if ($categoryId == "")
-      $categoryId = -1;
+    if ($categoryId == 0)
+      $categoryId = '';
     return $getYourVenueMySQLManager->getVenues($regionId, $categoryId, $capacityId);
   }
 

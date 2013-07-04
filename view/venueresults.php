@@ -287,7 +287,7 @@
                     <form class="runSearch" name="searchForm" action="#">
                       <label>Region:</label>
                       <select name="region" id="region">
-                        <option value="delhi-ncr">Select All</option>
+                        <option value="">Select All</option>
                         <option value="north-delhi">North Delhi</option>
                         <option value="south-delhi">South Delhi</option>
                         <option value="east-delhi">East Delhi</option>
@@ -296,11 +296,14 @@
                         <option value="ghaziabad">Ghaziabad</option>
                         <option value="noida">Noida</option>
                         <option value="gurgaon">Gurgaon</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="delhi-ncr">Others</option>
                         <!--<option value="destination-wedding">Destination Wedding</option>-->
                       </select>
                       <label>Category:</label>
                       <select name="category" id="category">
-                        <option value="wedding-venues">Select All</option>
+                        <option value="">Select All</option>
+                        <option value="wedding-venues">Wedding Venues</option>
                         <option value="farm-house">Farm House</option>
                         <option value="banquet-hall">Banquet Hall</option>
                         <option value="hotel">Hotels</option>
