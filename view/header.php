@@ -11,7 +11,7 @@ $constants = new Constants();
 <div id="header">
   <img src="<?php echo $constants->IMAGE_PATH; ?>headerLeft.jpg" align="left" alt="" />
   <img src="<?php echo $constants->IMAGE_PATH; ?>headerRight.jpg" align="right" alt="" />
-  <a href="<?php echo $constants->DOMAIN_URL; ?>"><img src="<?php echo $constants->IMAGE_PATH; ?>logo.png" class="logo" title="Getyourvenue.com" /></a>
+  <a href="<?php echo $constants->DOMAIN_URL; ?>"><img src="<?php echo $constants->IMAGE_PATH; ?>logo.png" alt="" class="logo" title="Getyourvenue.com" /></a>
   <img src="<?php echo $constants->IMAGE_PATH; ?>hotlinenumber.png" class="hotlineNum" alt="" />
   <div class="headerSlogan"><span>Book Your Venue Through Experts,</span> Best Deal Guaranteed</div>
   <div class="topNav"><img src="<?php echo $constants->IMAGE_PATH; ?>topNavleft.jpg" align="left" alt="" /><img src="<?php echo $constants->IMAGE_PATH; ?>topNavRight.jpg" align="right" alt="" />

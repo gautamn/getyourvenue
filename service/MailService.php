@@ -53,7 +53,7 @@ class MailService {
 
     if (!empty($emailid)) {
       mail($to, $subject, $msg, $headers);
-      //sendPromotionalEmailToUser($emailid);
+      $this->sendPromotionalEmailToUser($emailid);
     }
   }
 

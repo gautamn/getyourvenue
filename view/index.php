@@ -3,19 +3,19 @@ require_once ("../constants/Constants.php");
 $constants = new Constants();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
-    <title>Wedding Venues in Delhi NCR | Marriage & Reception Halls | Banquet Halls | Farm Houses | Wedding Planner Delhi | Getyourvenue.com</title>
-    <meta name="description" content="Wedding Venues in Delhi and NCR including South Delhi, GT Karnal Road, Chhatarpur, NH8 and other Delhi wedding hot spots can now be booked at your door step! Call us for wedding venues, wedding planners, decorators, catering services, banquet halls, farm houses, 5 start hotels and more in Delhi NCR Today!" />
-    <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr, wedding venues in south delhi, marriage venues delhi,wedding venues in south Delhi, marriage venues delhi, marriage halls delhi, reception halls delhi, banquet halls, farm houses, wedding planners, decorators, catering services, Getyourvenue" />
+    <title>Wedding Venues in Delhi NCR | Marriage, Party, Reception Halls | Farm Houses in Delhi | Getyourvenue.com</title>
+    <meta name="description" content="Wedding Venues in Delhi NCR including South Delhi, GT Karnal Road, Chhattarpur, MG Road &amp; other Delhi reception &amp; party halls can be booked at your door step! Wedding Farm houses &amp; Marriage Venues experts, GetYourVenue.com are always at your quick service." />
+    <meta name="keywords" content="wedding venues in delhi, wedding venues in delhi ncr, delhi wedding venues,wedding venues in south delhi,marriage venues delhi, reception halls in delhi, party halls in delhi, marriage halls in delhi, wedding farmhouses in delhi, farm houses for wedding in delhi" />
     <meta property="og:site_name" content="Getyourvenue" />
-    <meta property="og:title" content="Wedding Venues in Delhi NCR | Marriage & Reception Halls | Banquet Halls | Farm Houses | Wedding Planner Delhi | Getyourvenue.com" />
+    <meta property="og:title" content="Wedding Venues in Delhi NCR | Marriage, Party, Reception Halls| Farm Houses in Delhi | Getyourvenue.com" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?php echo $constants->DOMAIN_URL; ?>" />
     <meta property="og:image" content="<?php echo $constants->DOMAIN_URL . 'images/logo.png'; ?>" />
     <meta property="og:description" content="Wedding Venues in Delhi and NCR including South Delhi, GT Karnal Road, Chhatarpur, NH8 and other Delhi wedding hot spots can now be booked at your door step! Call us for wedding venues, wedding planners, decorators, catering services, banquet halls, farm houses, 5 start hotels and more in Delhi NCR Today!" />
     <?php require_once("header.config.php"); ?>
-    <meta name="google-site-verification" content="Y7nJIELMUBhy76D1Ne-8NPSWHQi1xGSXPsg0zHSLOPs" />
+    <meta name="google-site-verification" content="vW1hQAish7GnxORC0rnsfYTpko6CNxkILH1YQEP7IYI" />
     <link rel="stylesheet" type="text/css" href="<?php echo $constants->DOMAIN_URL; ?>css/jquery.autocomplete.css" />
     <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/jquery.autocomplete.js"></script>
     <script type="text/javascript" src="<?php echo $constants->DOMAIN_URL; ?>js/search.js"></script>
@@ -209,7 +209,11 @@ $constants = new Constants();
                   <div class="boxGr" style="padding:0 0 0 5px;">
                     <!--Box Content Start-->                    
                     <div class="contactform" style="min-height:520px;">
-                      <fb:like-box href="http://www.facebook.com/getyourvenue" width="292" height="520" show_faces="true" stream="true" header="true">Facebook Activity</fb:like-box>
+                      <script language="javascript" type="text/javascript">
+      //<![CDATA[
+      document.write('<fb:like-box href="http://www.facebook.com/getyourvenue" width="292px" height="520px" show_faces="true" stream="true" header="true">Facebook Activity</fb:like-box>');
+      //]]>
+                      </script>
                     </div>
                     <!--Box Content End-->
                   </div>

@@ -35,6 +35,7 @@ Redirect 301 /fireworks  /fireworks-delhi
 Redirect 301 /dj-and-sound-systems  /dj-and-sound-systems-delhi
 Redirect 301 /music-band-mystique  /live-music-band-mystique-delhi
 Redirect 301 /vermala-theme /varmala-themes-delhi
+Redirect 301 /index.html /
 
 RewriteCond %{HTTPS} on
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [L,R=301]
